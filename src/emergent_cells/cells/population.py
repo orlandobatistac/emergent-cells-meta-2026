@@ -114,7 +114,7 @@ class CellPopulation:
           frozen:  same initial weights and perceptions, no update
           random:  uniformly random action, no learning
         """
-        if mode not in ("learned", "frozen", "random"):
+        if mode not in ("learned", "frozen", "random", "greedy"):
             raise ValueError("Invalid mode")
         features, messages = self.perceive(world)
         self.total_messages += messages
@@ -128,6 +128,12 @@ class CellPopulation:
         probs /= probs.sum(axis=1, keepdims=True)
         chosen = (np.cumsum(probs, axis=1) < rng.random((self.spec.count, 1))).sum(axis=1)
         chosen = np.minimum(chosen, 3)
+        if mode == "greedy":
+            # Fixed local chemotaxis control: no learning or social steering.
+            # Random ties avoid a privileged direction in flat regions.
+            score = features[:, :, 0] + features[:, :, 1]
+            tied = score == score.max(axis=1, keepdims=True)
+            chosen = np.argmax(rng.random(score.shape) * tied, axis=1)
         moving = self.alive.copy()
         self.x[moving] = (self.x[moving] + MOVES[chosen[moving], 0]) % world.spec.width
         self.y[moving] = (self.y[moving] + MOVES[chosen[moving], 1]) % world.spec.height
@@ -169,3 +175,4 @@ class CellPopulation:
             "messages": messages,
             "mean_abs_weights": float(np.abs(self.weights).mean()),
         }
+

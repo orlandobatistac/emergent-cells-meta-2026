@@ -23,8 +23,8 @@ class RunSpec:
         self.cells.validate()
         if not 1 <= self.steps <= 20000:
             raise ValueError("steps must be 1..20000")
-        if self.mode not in ("learned", "frozen", "random"):
-            raise ValueError("mode must be learned, frozen or random")
+        if self.mode not in ("learned", "frozen", "random", "greedy"):
+            raise ValueError("mode must be learned, frozen, random or greedy")
 
     def digest(self) -> str:
         return hashlib.sha256(json.dumps(asdict(self), sort_keys=True).encode()).hexdigest()[:16]
@@ -113,3 +113,4 @@ def compare(seeds: list[int], steps: int, cells: int = 256,
         "shock_step": shock_step,
         "results": outcomes, "aggregate": aggregates
     }
+

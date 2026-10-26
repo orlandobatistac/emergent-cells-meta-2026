@@ -14,7 +14,8 @@ def main() -> None:
     p = argparse.ArgumentParser(
         description="Local cellular learner prototype; no Meta API dependency"
     )
-    p.add_argument("--mode", choices=("learned", "frozen", "random"), default="learned")
+    p.add_argument("--mode", choices=("learned", "frozen", "random", "greedy"), default="learned")
+    p.add_argument("--interactive", action="store_true", help="Consola interactiva en español")
     p.add_argument("--seed", type=int, default=42)
     p.add_argument("--steps", type=int, default=240)
     p.add_argument("--cells", type=int, default=256)
@@ -25,6 +26,13 @@ def main() -> None:
     p.add_argument("--output", type=Path,
                    help="Save JSON; omit to print JSON to stdout")
     args = p.parse_args()
+
+    if args.interactive:
+        from .interactive import shell
+        shell(RunSpec(seed=args.seed, mode=args.mode, steps=args.steps,
+                      world=WorldSpec(shock_step=args.shock_step),
+                      cells=CellSpec(count=args.cells)))
+        return
 
     if args.compare:
         seeds = [int(s.strip()) for s in args.seeds.split(",") if s.strip()]
@@ -46,3 +54,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

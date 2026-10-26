@@ -55,3 +55,21 @@ python -m emergent_cells --compare --seeds 1,2,3 --steps 240 --cells 256 --shock
 ```
 
 See [engineering limitations](docs/ENGINE_V0.md), [validation log](docs/ENGINE_TEST_LOG.md), and the [proposed evaluation protocol](docs/EXPERIMENT_PROTOCOL.md). Do not confuse resource/energy in the simulator with measured joules or demonstrated general intelligence.
+
+
+## Interactive validation milestone (Oct 26)
+
+The real engine now has a local browser laboratory, explicit-command console,
+and fresh-process five-control benchmark. This remains exploratory research;
+no language, agents, growth or physical energy advantage is demonstrated.
+
+```sh
+python -m pip install -e .
+python -m emergent_cells.demo.server
+```
+
+Open http://127.0.0.1:8765 on the same computer.
+See [usage, evaluation and evidence gates](docs/VALIDATION_AND_INTERACTION.md)
+and [all-control results](results/audited/2026-10-26-SUMMARY.md).
+The simple fixed local rule outperformed the learner in this first evaluation.
+This Oct 26 milestone retains the existing event-eligibility caveat.

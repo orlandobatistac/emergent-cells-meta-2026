@@ -18,3 +18,7 @@ emergent-cells = "emergent_cells.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+
+[tool.setuptools.package-data]
+emergent_cells = ["demo/*.html"]
