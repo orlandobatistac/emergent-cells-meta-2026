@@ -37,3 +37,21 @@ Physical substrate independence is a **design hypothesis**, not evidence of an i
 Code will be published with explicit provenance and applicable licenses when selected; until a LICENSE is committed, **no open-source license is granted by this repository**. Do not submit secrets, personally identifying data, or rights-restricted assets.
 
 *This public repository is separate from the existing private research repository.*
+
+
+## Prototype cellular engine v0 (Oct 26 — exploratory, not a competition claim)
+
+A working *headless* simulator has been added on branch `feat/local-cellular-engine`, with independent cell-level energy and local weight updates, finite resource consumption, local neighbor messages, repeatable world perturbations and three benchmark modes. There is **no live Meta Model API integration or visual demo yet**.
+
+The Participant Guide lists Oct 27–Nov 4 as the building period. This Oct 26 engine is explicitly recorded as *pre-period exploratory work*. Do not label it a new work-period contribution without written rules clarification or a distinct eligible implementation.
+
+Run it with Python 3.10+:
+
+```bash
+python -m pip install -e .
+python -m unittest discover -s tests -v
+python -m emergent_cells --mode learned --seed 42 --steps 240 --cells 256 --output results/runs/single.json
+python -m emergent_cells --compare --seeds 1,2,3 --steps 240 --cells 256 --shock-step 120 --output results/runs/compare.json
+```
+
+See [engineering limitations](docs/ENGINE_V0.md), [validation log](docs/ENGINE_TEST_LOG.md), and the [proposed evaluation protocol](docs/EXPERIMENT_PROTOCOL.md). Do not confuse resource/energy in the simulator with measured joules or demonstrated general intelligence.
