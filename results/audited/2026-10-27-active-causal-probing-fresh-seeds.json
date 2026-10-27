@@ -1,0 +1,2338 @@
+{
+  "aggregate": {
+    "changed_11": {
+      "information_gain": {
+        "coordinated_probe_count": 56.2,
+        "critical_11_success": 0.9812499773181861,
+        "information_request_bits": 110.4,
+        "inverted_slot_count": 95.6,
+        "pair_success_rate": 0.9921439393939394,
+        "pairs_both_discovered_fraction": 0.9958333333333332,
+        "synthetic_probe_cost": 1.8466
+      },
+      "passive": {
+        "coordinated_probe_count": 0.0,
+        "critical_11_success": 0.00425337991797053,
+        "information_request_bits": 0.0,
+        "inverted_slot_count": 0.0,
+        "pair_success_rate": 0.7475757575757576,
+        "pairs_both_discovered_fraction": 0.0,
+        "synthetic_probe_cost": 0.0
+      },
+      "periodic": {
+        "coordinated_probe_count": 55.6,
+        "critical_11_success": 0.9362882032360457,
+        "information_request_bits": 109.4,
+        "inverted_slot_count": 95.0,
+        "pair_success_rate": 0.9809545454545455,
+        "pairs_both_discovered_fraction": 0.9875,
+        "synthetic_probe_cost": 1.8275999999999992
+      },
+      "random": {
+        "coordinated_probe_count": 55.6,
+        "critical_11_success": 0.9566238667520738,
+        "information_request_bits": 58.2,
+        "inverted_slot_count": 95.6,
+        "pair_success_rate": 0.9859545454545454,
+        "pairs_both_discovered_fraction": 0.9958333333333332,
+        "synthetic_probe_cost": 1.6227999999999991
+      }
+    },
+    "global_change": {
+      "information_gain": {
+        "coordinated_probe_count": 222.8,
+        "critical_11_success": 0.9804407061615448,
+        "information_request_bits": 444.0,
+        "inverted_slot_count": 380.8,
+        "pair_success_rate": 0.9765151515151516,
+        "pairs_both_discovered_fraction": 1.0,
+        "synthetic_probe_cost": 7.346000000000002
+      },
+      "passive": {
+        "coordinated_probe_count": 0.0,
+        "critical_11_success": 0.00425337991797053,
+        "information_request_bits": 0.0,
+        "inverted_slot_count": 0.0,
+        "pair_success_rate": 0.004090909090909091,
+        "pairs_both_discovered_fraction": 0.0,
+        "synthetic_probe_cost": 0.0
+      },
+      "periodic": {
+        "coordinated_probe_count": 222.4,
+        "critical_11_success": 0.9285910541662776,
+        "information_request_bits": 443.0,
+        "inverted_slot_count": 377.8,
+        "pair_success_rate": 0.929840909090909,
+        "pairs_both_discovered_fraction": 0.9916666666666666,
+        "synthetic_probe_cost": 7.332000000000008
+      },
+      "random": {
+        "coordinated_probe_count": 226.0,
+        "critical_11_success": 0.9558145955954327,
+        "information_request_bits": 235.6,
+        "inverted_slot_count": 379.8,
+        "pair_success_rate": 0.9449772727272727,
+        "pairs_both_discovered_fraction": 0.9958333333333332,
+        "synthetic_probe_cost": 6.592399999999995
+      }
+    },
+    "scarcity_11": {
+      "information_gain": {
+        "coordinated_probe_count": 98.8,
+        "critical_11_success": 0.9774512320788338,
+        "information_request_bits": 195.4,
+        "inverted_slot_count": 0.4,
+        "pair_success_rate": 0.9911969696969697,
+        "pairs_both_discovered_fraction": 0.004166666666666667,
+        "synthetic_probe_cost": 3.2516
+      },
+      "passive": {
+        "coordinated_probe_count": 0.0,
+        "critical_11_success": 0.9957466200820295,
+        "information_request_bits": 0.0,
+        "inverted_slot_count": 0.0,
+        "pair_success_rate": 0.9959090909090909,
+        "pairs_both_discovered_fraction": 0.0,
+        "synthetic_probe_cost": 0.0
+      },
+      "periodic": {
+        "coordinated_probe_count": 97.6,
+        "critical_11_success": 0.977511655039559,
+        "information_request_bits": 193.2,
+        "inverted_slot_count": 0.6,
+        "pair_success_rate": 0.991280303030303,
+        "pairs_both_discovered_fraction": 0.004166666666666667,
+        "synthetic_probe_cost": 3.212799999999998
+      },
+      "random": {
+        "coordinated_probe_count": 98.2,
+        "critical_11_success": 0.9774512320788338,
+        "information_request_bits": 103.0,
+        "inverted_slot_count": 0.4,
+        "pair_success_rate": 0.9911742424242425,
+        "pairs_both_discovered_fraction": 0.004166666666666667,
+        "synthetic_probe_cost": 2.866999999999998
+      }
+    },
+    "stable": {
+      "information_gain": {
+        "coordinated_probe_count": 4.4,
+        "critical_11_success": 0.9917891832903576,
+        "information_request_bits": 6.4,
+        "inverted_slot_count": 0.6,
+        "pair_success_rate": 0.9937121212121213,
+        "pairs_both_discovered_fraction": 0.004166666666666667,
+        "synthetic_probe_cost": 0.13560000000000003
+      },
+      "passive": {
+        "coordinated_probe_count": 0.0,
+        "critical_11_success": 0.9957466200820295,
+        "information_request_bits": 0.0,
+        "inverted_slot_count": 0.0,
+        "pair_success_rate": 0.9959090909090909,
+        "pairs_both_discovered_fraction": 0.0,
+        "synthetic_probe_cost": 0.0
+      },
+      "periodic": {
+        "coordinated_probe_count": 2.4,
+        "critical_11_success": 0.991909931880753,
+        "information_request_bits": 2.8,
+        "inverted_slot_count": 0.6,
+        "pair_success_rate": 0.9948863636363636,
+        "pairs_both_discovered_fraction": 0.004166666666666667,
+        "synthetic_probe_cost": 0.07120000000000001
+      },
+      "random": {
+        "coordinated_probe_count": 3.8,
+        "critical_11_success": 0.991788916154537,
+        "information_request_bits": 3.8,
+        "inverted_slot_count": 0.4,
+        "pair_success_rate": 0.99475,
+        "pairs_both_discovered_fraction": 0.004166666666666667,
+        "synthetic_probe_cost": 0.1102
+      }
+    },
+    "uniform_drought": {
+      "information_gain": {
+        "coordinated_probe_count": 100.6,
+        "critical_11_success": 0.9925033450835608,
+        "information_request_bits": 199.2,
+        "inverted_slot_count": 0.8,
+        "pair_success_rate": 0.9900530303030303,
+        "pairs_both_discovered_fraction": 0.008333333333333333,
+        "synthetic_probe_cost": 3.311799999999999
+      },
+      "passive": {
+        "coordinated_probe_count": 0.0,
+        "critical_11_success": 0.9957466200820295,
+        "information_request_bits": 0.0,
+        "inverted_slot_count": 0.0,
+        "pair_success_rate": 0.9959090909090909,
+        "pairs_both_discovered_fraction": 0.0,
+        "synthetic_probe_cost": 0.0
+      },
+      "periodic": {
+        "coordinated_probe_count": 48.2,
+        "critical_11_success": 0.990244998392239,
+        "information_request_bits": 94.8,
+        "inverted_slot_count": 0.6,
+        "pair_success_rate": 0.9921590909090909,
+        "pairs_both_discovered_fraction": 0.004166666666666667,
+        "synthetic_probe_cost": 1.5841999999999994
+      },
+      "random": {
+        "coordinated_probe_count": 71.2,
+        "critical_11_success": 0.989278667234623,
+        "information_request_bits": 73.0,
+        "inverted_slot_count": 0.4,
+        "pair_success_rate": 0.9922272727272727,
+        "pairs_both_discovered_fraction": 0.004166666666666667,
+        "synthetic_probe_cost": 2.0719999999999987
+      }
+    }
+  },
+  "boundaries": [
+    "Sender/decoder protocol learned beforehand from local energy; no global critic.",
+    "All probes jointly invert both partners' old actions using one-bit requests.",
+    "Three hypothesis likelihoods and intervention value are hand-designed.",
+    "Challenge rule/resource availability and pair matching are engineered.",
+    "No privileged correct answer or availability sensor is delivered to cells.",
+    "The test is synthetic and does not measure actual joules or general intelligence.",
+    "One bit per cell per signature allocated as learned action correction, not physical growth."
+  ],
+  "date": "2026-10-27",
+  "modes": [
+    "passive",
+    "random",
+    "periodic",
+    "information_gain"
+  ],
+  "rows": [
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 1.0,
+        "10": 1.0,
+        "11": 1.0
+      },
+      "coordinated_probe_count": 0,
+      "critical_11_success": 1.0,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 0,
+      "inverted_slot_count": 0,
+      "mode": "passive",
+      "pair_success_rate": 1.0,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.9202272727272728,
+      "scenario": "stable",
+      "seed": 1001,
+      "synthetic_probe_cost": 0.0
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 1.0,
+        "10": 0.9998479781088476,
+        "11": 1.0
+      },
+      "coordinated_probe_count": 1,
+      "critical_11_success": 1.0,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 1,
+      "inverted_slot_count": 0,
+      "mode": "random",
+      "pair_success_rate": 0.9999621212121212,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.9201893939393939,
+      "scenario": "stable",
+      "seed": 1001,
+      "synthetic_probe_cost": 0.029
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 1.0,
+        "10": 1.0,
+        "11": 1.0
+      },
+      "coordinated_probe_count": 0,
+      "critical_11_success": 1.0,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 0,
+      "inverted_slot_count": 0,
+      "mode": "periodic",
+      "pair_success_rate": 1.0,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.9202272727272728,
+      "scenario": "stable",
+      "seed": 1001,
+      "synthetic_probe_cost": 0.0
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 1.0,
+        "10": 1.0,
+        "11": 0.9998502321401828
+      },
+      "coordinated_probe_count": 1,
+      "critical_11_success": 0.9998502321401828,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 2,
+      "inverted_slot_count": 0,
+      "mode": "information_gain",
+      "pair_success_rate": 0.9999621212121212,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.9201893939393939,
+      "scenario": "stable",
+      "seed": 1001,
+      "synthetic_probe_cost": 0.033
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 1.0,
+        "10": 1.0,
+        "11": 1.0
+      },
+      "coordinated_probe_count": 0,
+      "critical_11_success": 1.0,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 0,
+      "inverted_slot_count": 0,
+      "mode": "passive",
+      "pair_success_rate": 1.0,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.687310606060606,
+      "scenario": "scarcity_11",
+      "seed": 1001,
+      "synthetic_probe_cost": 0.0
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 1.0,
+        "10": 0.9998479781088476,
+        "11": 0.9856222854575408
+      },
+      "coordinated_probe_count": 97,
+      "critical_11_success": 0.9856222854575408,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 101,
+      "inverted_slot_count": 0,
+      "mode": "random",
+      "pair_success_rate": 0.9963257575757576,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.6872727272727273,
+      "scenario": "scarcity_11",
+      "seed": 1001,
+      "synthetic_probe_cost": 2.8289999999999975
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 1.0,
+        "10": 1.0,
+        "11": 0.9856222854575408
+      },
+      "coordinated_probe_count": 96,
+      "critical_11_success": 0.9856222854575408,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 192,
+      "inverted_slot_count": 0,
+      "mode": "periodic",
+      "pair_success_rate": 0.9963636363636363,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.687310606060606,
+      "scenario": "scarcity_11",
+      "seed": 1001,
+      "synthetic_probe_cost": 3.167999999999999
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 1.0,
+        "10": 1.0,
+        "11": 0.9856222854575408
+      },
+      "coordinated_probe_count": 96,
+      "critical_11_success": 0.9856222854575408,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 192,
+      "inverted_slot_count": 0,
+      "mode": "information_gain",
+      "pair_success_rate": 0.9963636363636363,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.687310606060606,
+      "scenario": "scarcity_11",
+      "seed": 1001,
+      "synthetic_probe_cost": 3.168
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 1.0,
+        "10": 1.0,
+        "11": 0.0
+      },
+      "coordinated_probe_count": 0,
+      "critical_11_success": 0.0,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 0,
+      "inverted_slot_count": 0,
+      "mode": "passive",
+      "pair_success_rate": 0.7470833333333333,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.687310606060606,
+      "scenario": "changed_11",
+      "seed": 1001,
+      "synthetic_probe_cost": 0.0
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 1.0,
+        "10": 0.9998479781088476,
+        "11": 0.9643552493634866
+      },
+      "coordinated_probe_count": 52,
+      "critical_11_success": 0.9643552493634866,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": 28.104166666666668,
+      "information_request_bits": 53,
+      "inverted_slot_count": 96,
+      "mode": "random",
+      "pair_success_rate": 0.9909469696969697,
+      "pairs_both_discovered_fraction": 1.0,
+      "resource_pulse_rate": 0.9121590909090909,
+      "scenario": "changed_11",
+      "seed": 1001,
+      "synthetic_probe_cost": 1.5119999999999991
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 1.0,
+        "10": 1.0,
+        "11": 0.9442863561479706
+      },
+      "coordinated_probe_count": 54,
+      "critical_11_success": 0.9442863561479706,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": 39.604166666666664,
+      "information_request_bits": 108,
+      "inverted_slot_count": 96,
+      "mode": "periodic",
+      "pair_success_rate": 0.985909090909091,
+      "pairs_both_discovered_fraction": 1.0,
+      "resource_pulse_rate": 0.9072727272727272,
+      "scenario": "changed_11",
+      "seed": 1001,
+      "synthetic_probe_cost": 1.7819999999999994
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 1.0,
+        "10": 1.0,
+        "11": 0.9854725175977235
+      },
+      "coordinated_probe_count": 50,
+      "critical_11_success": 0.9854725175977235,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": 14.645833333333334,
+      "information_request_bits": 100,
+      "inverted_slot_count": 96,
+      "mode": "information_gain",
+      "pair_success_rate": 0.9963257575757576,
+      "pairs_both_discovered_fraction": 1.0,
+      "resource_pulse_rate": 0.9169318181818182,
+      "scenario": "changed_11",
+      "seed": 1001,
+      "synthetic_probe_cost": 1.6500000000000001
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 1.0,
+        "10": 1.0,
+        "11": 1.0
+      },
+      "coordinated_probe_count": 0,
+      "critical_11_success": 1.0,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 0,
+      "inverted_slot_count": 0,
+      "mode": "passive",
+      "pair_success_rate": 1.0,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.5523106060606061,
+      "scenario": "uniform_drought",
+      "seed": 1001,
+      "synthetic_probe_cost": 0.0
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9972062703709452,
+        "01": 0.9973142345568488,
+        "10": 0.9980237154150198,
+        "11": 0.9970046428036543
+      },
+      "coordinated_probe_count": 69,
+      "critical_11_success": 0.9970046428036543,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 71,
+      "inverted_slot_count": 0,
+      "mode": "random",
+      "pair_success_rate": 0.9973863636363637,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.5508333333333333,
+      "scenario": "uniform_drought",
+      "seed": 1001,
+      "synthetic_probe_cost": 2.0089999999999986
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9976718919757877,
+        "01": 0.9983586988958519,
+        "10": 0.9989358467619337,
+        "11": 0.9985023214018272
+      },
+      "coordinated_probe_count": 43,
+      "critical_11_success": 0.9985023214018272,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 86,
+      "inverted_slot_count": 0,
+      "mode": "periodic",
+      "pair_success_rate": 0.9983712121212122,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.5513257575757575,
+      "scenario": "uniform_drought",
+      "seed": 1001,
+      "synthetic_probe_cost": 1.4189999999999994
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9956541983548036,
+        "01": 0.9953745150701283,
+        "10": 0.9966555183946488,
+        "11": 0.9959562677849334
+      },
+      "coordinated_probe_count": 108,
+      "critical_11_success": 0.9959562677849334,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 216,
+      "inverted_slot_count": 0,
+      "mode": "information_gain",
+      "pair_success_rate": 0.9959090909090909,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.5498484848484848,
+      "scenario": "uniform_drought",
+      "seed": 1001,
+      "synthetic_probe_cost": 3.5639999999999983
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.0,
+        "01": 0.0,
+        "10": 0.0,
+        "11": 0.0
+      },
+      "coordinated_probe_count": 0,
+      "critical_11_success": 0.0,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 0,
+      "inverted_slot_count": 0,
+      "mode": "passive",
+      "pair_success_rate": 0.0,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.0,
+      "scenario": "global_change",
+      "seed": 1001,
+      "synthetic_probe_cost": 0.0
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.930932795281701,
+        "01": 0.954341987466428,
+        "10": 0.9446640316205533,
+        "11": 0.9643552493634866
+      },
+      "coordinated_probe_count": 224,
+      "critical_11_success": 0.9643552493634866,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": 12.0625,
+      "information_request_bits": 234,
+      "inverted_slot_count": 382,
+      "mode": "random",
+      "pair_success_rate": 0.94875,
+      "pairs_both_discovered_fraction": 1.0,
+      "resource_pulse_rate": 0.873030303030303,
+      "scenario": "global_change",
+      "seed": 1001,
+      "synthetic_probe_cost": 6.535999999999994
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9255005432252057,
+        "01": 0.9391226499552372,
+        "10": 0.9277896017026451,
+        "11": 0.9442863561479706
+      },
+      "coordinated_probe_count": 220,
+      "critical_11_success": 0.9442863561479706,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": 24.166666666666668,
+      "information_request_bits": 440,
+      "inverted_slot_count": 380,
+      "mode": "periodic",
+      "pair_success_rate": 0.9342803030303031,
+      "pairs_both_discovered_fraction": 1.0,
+      "resource_pulse_rate": 0.8595833333333334,
+      "scenario": "global_change",
+      "seed": 1001,
+      "synthetic_probe_cost": 7.260000000000008
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9846344870401986,
+        "01": 0.9849298716800955,
+        "10": 0.9847978108847674,
+        "11": 0.9854725175977235
+      },
+      "coordinated_probe_count": 220,
+      "critical_11_success": 0.9854725175977235,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": 8.291666666666666,
+      "information_request_bits": 440,
+      "inverted_slot_count": 384,
+      "mode": "information_gain",
+      "pair_success_rate": 0.9849621212121212,
+      "pairs_both_discovered_fraction": 1.0,
+      "resource_pulse_rate": 0.9064772727272727,
+      "scenario": "global_change",
+      "seed": 1001,
+      "synthetic_probe_cost": 7.260000000000003
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 1.0,
+        "10": 1.0,
+        "11": 1.0
+      },
+      "coordinated_probe_count": 0,
+      "critical_11_success": 1.0,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 0,
+      "inverted_slot_count": 0,
+      "mode": "passive",
+      "pair_success_rate": 1.0,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.9221590909090909,
+      "scenario": "stable",
+      "seed": 1002,
+      "synthetic_probe_cost": 0.0
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9996970156036964,
+        "01": 1.0,
+        "10": 0.9998496240601503,
+        "11": 1.0
+      },
+      "coordinated_probe_count": 3,
+      "critical_11_success": 1.0,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 3,
+      "inverted_slot_count": 0,
+      "mode": "random",
+      "pair_success_rate": 0.9998863636363636,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.9220833333333334,
+      "scenario": "stable",
+      "seed": 1002,
+      "synthetic_probe_cost": 0.08700000000000001
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 1.0,
+        "10": 1.0,
+        "11": 1.0
+      },
+      "coordinated_probe_count": 0,
+      "critical_11_success": 1.0,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 0,
+      "inverted_slot_count": 0,
+      "mode": "periodic",
+      "pair_success_rate": 1.0,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.9221590909090909,
+      "scenario": "stable",
+      "seed": 1002,
+      "synthetic_probe_cost": 0.0
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 1.0,
+        "10": 0.9996992481203008,
+        "11": 1.0
+      },
+      "coordinated_probe_count": 2,
+      "critical_11_success": 1.0,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 4,
+      "inverted_slot_count": 0,
+      "mode": "information_gain",
+      "pair_success_rate": 0.9999242424242424,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.9220833333333334,
+      "scenario": "stable",
+      "seed": 1002,
+      "synthetic_probe_cost": 0.066
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 1.0,
+        "10": 1.0,
+        "11": 1.0
+      },
+      "coordinated_probe_count": 0,
+      "critical_11_success": 1.0,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 0,
+      "inverted_slot_count": 0,
+      "mode": "passive",
+      "pair_success_rate": 1.0,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.6927272727272727,
+      "scenario": "scarcity_11",
+      "seed": 1002,
+      "synthetic_probe_cost": 0.0
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9996970156036964,
+        "01": 1.0,
+        "10": 0.9998496240601503,
+        "11": 0.9854435178165277
+      },
+      "coordinated_probe_count": 99,
+      "critical_11_success": 0.9854435178165277,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 102,
+      "inverted_slot_count": 0,
+      "mode": "random",
+      "pair_success_rate": 0.99625,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.6926515151515151,
+      "scenario": "scarcity_11",
+      "seed": 1002,
+      "synthetic_probe_cost": 2.882999999999998
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 1.0,
+        "10": 1.0,
+        "11": 0.9854435178165277
+      },
+      "coordinated_probe_count": 96,
+      "critical_11_success": 0.9854435178165277,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 192,
+      "inverted_slot_count": 0,
+      "mode": "periodic",
+      "pair_success_rate": 0.9963636363636363,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.6927272727272727,
+      "scenario": "scarcity_11",
+      "seed": 1002,
+      "synthetic_probe_cost": 3.1679999999999984
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 1.0,
+        "10": 0.9996992481203008,
+        "11": 0.9854435178165277
+      },
+      "coordinated_probe_count": 98,
+      "critical_11_success": 0.9854435178165277,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 196,
+      "inverted_slot_count": 0,
+      "mode": "information_gain",
+      "pair_success_rate": 0.9962878787878788,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.6926515151515151,
+      "scenario": "scarcity_11",
+      "seed": 1002,
+      "synthetic_probe_cost": 3.234
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 1.0,
+        "10": 1.0,
+        "11": 0.0
+      },
+      "coordinated_probe_count": 0,
+      "critical_11_success": 0.0,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 0,
+      "inverted_slot_count": 0,
+      "mode": "passive",
+      "pair_success_rate": 0.750189393939394,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.6927272727272727,
+      "scenario": "changed_11",
+      "seed": 1002,
+      "synthetic_probe_cost": 0.0
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9996970156036964,
+        "01": 1.0,
+        "10": 0.9998496240601503,
+        "11": 0.9605761940864291
+      },
+      "coordinated_probe_count": 54,
+      "critical_11_success": 0.9605761940864291,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": 29.5,
+      "information_request_bits": 55,
+      "inverted_slot_count": 96,
+      "mode": "random",
+      "pair_success_rate": 0.9900378787878787,
+      "pairs_both_discovered_fraction": 1.0,
+      "resource_pulse_rate": 0.9129924242424242,
+      "scenario": "changed_11",
+      "seed": 1002,
+      "synthetic_probe_cost": 1.5699999999999992
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 1.0,
+        "10": 1.0,
+        "11": 0.9454131918119788
+      },
+      "coordinated_probe_count": 52,
+      "critical_11_success": 0.9454131918119788,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": 38.479166666666664,
+      "information_request_bits": 104,
+      "inverted_slot_count": 96,
+      "mode": "periodic",
+      "pair_success_rate": 0.9863636363636363,
+      "pairs_both_discovered_fraction": 1.0,
+      "resource_pulse_rate": 0.9093181818181818,
+      "scenario": "changed_11",
+      "seed": 1002,
+      "synthetic_probe_cost": 1.715999999999999
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 1.0,
+        "10": 0.9996992481203008,
+        "11": 0.9851402577710386
+      },
+      "coordinated_probe_count": 54,
+      "critical_11_success": 0.9851402577710386,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": 17.541666666666668,
+      "information_request_bits": 108,
+      "inverted_slot_count": 96,
+      "mode": "information_gain",
+      "pair_success_rate": 0.9962121212121212,
+      "pairs_both_discovered_fraction": 1.0,
+      "resource_pulse_rate": 0.9186742424242424,
+      "scenario": "changed_11",
+      "seed": 1002,
+      "synthetic_probe_cost": 1.7820000000000003
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 1.0,
+        "10": 1.0,
+        "11": 1.0
+      },
+      "coordinated_probe_count": 0,
+      "critical_11_success": 1.0,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 0,
+      "inverted_slot_count": 0,
+      "mode": "passive",
+      "pair_success_rate": 1.0,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.5565909090909091,
+      "scenario": "uniform_drought",
+      "seed": 1002,
+      "synthetic_probe_cost": 0.0
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9971216482351158,
+        "01": 0.9975587427525175,
+        "10": 0.9972932330827068,
+        "11": 0.998786959818044
+      },
+      "coordinated_probe_count": 61,
+      "critical_11_success": 0.998786959818044,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 63,
+      "inverted_slot_count": 0,
+      "mode": "random",
+      "pair_success_rate": 0.9976893939393939,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.5554924242424243,
+      "scenario": "uniform_drought",
+      "seed": 1002,
+      "synthetic_probe_cost": 1.7769999999999986
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9983335858203303,
+        "01": 0.9980164784864205,
+        "10": 0.9974436090225564,
+        "11": 0.998786959818044
+      },
+      "coordinated_probe_count": 49,
+      "critical_11_success": 0.998786959818044,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 98,
+      "inverted_slot_count": 0,
+      "mode": "periodic",
+      "pair_success_rate": 0.9981439393939394,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.5555681818181818,
+      "scenario": "uniform_drought",
+      "seed": 1002,
+      "synthetic_probe_cost": 1.616999999999999
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9966671716406605,
+        "01": 0.9949649069270674,
+        "10": 0.9962406015037594,
+        "11": 0.9981804397270659
+      },
+      "coordinated_probe_count": 92,
+      "critical_11_success": 0.9981804397270659,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 184,
+      "inverted_slot_count": 0,
+      "mode": "information_gain",
+      "pair_success_rate": 0.9965151515151515,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.5547348484848484,
+      "scenario": "uniform_drought",
+      "seed": 1002,
+      "synthetic_probe_cost": 3.035999999999999
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.0,
+        "01": 0.0,
+        "10": 0.0,
+        "11": 0.0
+      },
+      "coordinated_probe_count": 0,
+      "critical_11_success": 0.0,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 0,
+      "inverted_slot_count": 0,
+      "mode": "passive",
+      "pair_success_rate": 0.0,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.0,
+      "scenario": "global_change",
+      "seed": 1002,
+      "synthetic_probe_cost": 0.0
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9427359490986215,
+        "01": 0.9417149832163564,
+        "10": 0.9484210526315789,
+        "11": 0.9605761940864291
+      },
+      "coordinated_probe_count": 230,
+      "critical_11_success": 0.9605761940864291,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": 11.583333333333334,
+      "information_request_bits": 238,
+      "inverted_slot_count": 382,
+      "mode": "random",
+      "pair_success_rate": 0.9483712121212121,
+      "pairs_both_discovered_fraction": 1.0,
+      "resource_pulse_rate": 0.8743560606060606,
+      "scenario": "global_change",
+      "seed": 1002,
+      "synthetic_probe_cost": 6.701999999999994
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9454628086653537,
+        "01": 0.9359169972535856,
+        "10": 0.9404511278195489,
+        "11": 0.9454131918119788
+      },
+      "coordinated_probe_count": 224,
+      "critical_11_success": 0.9454131918119788,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": 23.25,
+      "information_request_bits": 448,
+      "inverted_slot_count": 384,
+      "mode": "periodic",
+      "pair_success_rate": 0.9418181818181818,
+      "pairs_both_discovered_fraction": 1.0,
+      "resource_pulse_rate": 0.8681060606060607,
+      "scenario": "global_change",
+      "seed": 1002,
+      "synthetic_probe_cost": 7.392000000000007
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9848507801848205,
+        "01": 0.9635337198657309,
+        "10": 0.9852631578947368,
+        "11": 0.9851402577710386
+      },
+      "coordinated_probe_count": 213,
+      "critical_11_success": 0.9851402577710386,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": 7.666666666666667,
+      "information_request_bits": 426,
+      "inverted_slot_count": 382,
+      "mode": "information_gain",
+      "pair_success_rate": 0.9797348484848485,
+      "pairs_both_discovered_fraction": 1.0,
+      "resource_pulse_rate": 0.9037878787878788,
+      "scenario": "global_change",
+      "seed": 1002,
+      "synthetic_probe_cost": 7.0290000000000035
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 1.0,
+        "10": 1.0,
+        "11": 1.0
+      },
+      "coordinated_probe_count": 0,
+      "critical_11_success": 1.0,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 0,
+      "inverted_slot_count": 0,
+      "mode": "passive",
+      "pair_success_rate": 1.0,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.9209090909090909,
+      "scenario": "stable",
+      "seed": 1003,
+      "synthetic_probe_cost": 0.0
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 0.9998473981382573,
+        "10": 1.0,
+        "11": 1.0
+      },
+      "coordinated_probe_count": 1,
+      "critical_11_success": 1.0,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 1,
+      "inverted_slot_count": 0,
+      "mode": "random",
+      "pair_success_rate": 0.9999621212121212,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.9209090909090909,
+      "scenario": "stable",
+      "seed": 1003,
+      "synthetic_probe_cost": 0.029
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 1.0,
+        "10": 1.0,
+        "11": 1.0
+      },
+      "coordinated_probe_count": 0,
+      "critical_11_success": 1.0,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 0,
+      "inverted_slot_count": 0,
+      "mode": "periodic",
+      "pair_success_rate": 1.0,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.9209090909090909,
+      "scenario": "stable",
+      "seed": 1003,
+      "synthetic_probe_cost": 0.0
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 0.9998473981382573,
+        "10": 1.0,
+        "11": 0.9998481397114655
+      },
+      "coordinated_probe_count": 2,
+      "critical_11_success": 0.9998481397114655,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 4,
+      "inverted_slot_count": 0,
+      "mode": "information_gain",
+      "pair_success_rate": 0.9999242424242424,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.9208712121212121,
+      "scenario": "stable",
+      "seed": 1003,
+      "synthetic_probe_cost": 0.066
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 1.0,
+        "10": 1.0,
+        "11": 1.0
+      },
+      "coordinated_probe_count": 0,
+      "critical_11_success": 1.0,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 0,
+      "inverted_slot_count": 0,
+      "mode": "passive",
+      "pair_success_rate": 1.0,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.6928787878787879,
+      "scenario": "scarcity_11",
+      "seed": 1003,
+      "synthetic_probe_cost": 0.0
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 0.9998473981382573,
+        "10": 1.0,
+        "11": 0.9854214123006834
+      },
+      "coordinated_probe_count": 97,
+      "critical_11_success": 0.9854214123006834,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 104,
+      "inverted_slot_count": 0,
+      "mode": "random",
+      "pair_success_rate": 0.9963257575757576,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.6928787878787879,
+      "scenario": "scarcity_11",
+      "seed": 1003,
+      "synthetic_probe_cost": 2.8409999999999984
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 1.0,
+        "10": 1.0,
+        "11": 0.9854214123006834
+      },
+      "coordinated_probe_count": 96,
+      "critical_11_success": 0.9854214123006834,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 192,
+      "inverted_slot_count": 0,
+      "mode": "periodic",
+      "pair_success_rate": 0.9963636363636363,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.6928787878787879,
+      "scenario": "scarcity_11",
+      "seed": 1003,
+      "synthetic_probe_cost": 3.1679999999999984
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 0.9998473981382573,
+        "10": 1.0,
+        "11": 0.9854214123006834
+      },
+      "coordinated_probe_count": 97,
+      "critical_11_success": 0.9854214123006834,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 194,
+      "inverted_slot_count": 0,
+      "mode": "information_gain",
+      "pair_success_rate": 0.9963257575757576,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.6928787878787879,
+      "scenario": "scarcity_11",
+      "seed": 1003,
+      "synthetic_probe_cost": 3.200999999999999
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 1.0,
+        "10": 1.0,
+        "11": 0.0
+      },
+      "coordinated_probe_count": 0,
+      "critical_11_success": 0.0,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 0,
+      "inverted_slot_count": 0,
+      "mode": "passive",
+      "pair_success_rate": 0.7505681818181819,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.6928787878787879,
+      "scenario": "changed_11",
+      "seed": 1003,
+      "synthetic_probe_cost": 0.0
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 0.9998473981382573,
+        "10": 1.0,
+        "11": 0.9594533029612756
+      },
+      "coordinated_probe_count": 55,
+      "critical_11_success": 0.9594533029612756,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": 29.104166666666668,
+      "information_request_bits": 60,
+      "inverted_slot_count": 96,
+      "mode": "random",
+      "pair_success_rate": 0.9898484848484849,
+      "pairs_both_discovered_fraction": 1.0,
+      "resource_pulse_rate": 0.9115530303030303,
+      "scenario": "changed_11",
+      "seed": 1003,
+      "synthetic_probe_cost": 1.6149999999999998
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 1.0,
+        "10": 1.0,
+        "11": 0.9193621867881548
+      },
+      "coordinated_probe_count": 59,
+      "critical_11_success": 0.9193621867881548,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": 40.51063829787234,
+      "information_request_bits": 118,
+      "inverted_slot_count": 94,
+      "mode": "periodic",
+      "pair_success_rate": 0.9798863636363636,
+      "pairs_both_discovered_fraction": 0.9791666666666666,
+      "resource_pulse_rate": 0.9024621212121212,
+      "scenario": "changed_11",
+      "seed": 1003,
+      "synthetic_probe_cost": 1.946999999999999
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 0.9998473981382573,
+        "10": 1.0,
+        "11": 0.9848139711465452
+      },
+      "coordinated_probe_count": 57,
+      "critical_11_success": 0.9848139711465452,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": 15.5625,
+      "information_request_bits": 114,
+      "inverted_slot_count": 96,
+      "mode": "information_gain",
+      "pair_success_rate": 0.9961742424242425,
+      "pairs_both_discovered_fraction": 1.0,
+      "resource_pulse_rate": 0.9174242424242425,
+      "scenario": "changed_11",
+      "seed": 1003,
+      "synthetic_probe_cost": 1.8809999999999998
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 1.0,
+        "10": 1.0,
+        "11": 1.0
+      },
+      "coordinated_probe_count": 0,
+      "critical_11_success": 1.0,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 0,
+      "inverted_slot_count": 0,
+      "mode": "passive",
+      "pair_success_rate": 1.0,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.5473106060606061,
+      "scenario": "uniform_drought",
+      "seed": 1003,
+      "synthetic_probe_cost": 0.0
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9970073320365106,
+        "01": 0.9966427590416603,
+        "10": 0.9980240158078736,
+        "11": 0.9968109339407745
+      },
+      "coordinated_probe_count": 76,
+      "critical_11_success": 0.9968109339407745,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 78,
+      "inverted_slot_count": 0,
+      "mode": "random",
+      "pair_success_rate": 0.9971212121212121,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.5455681818181818,
+      "scenario": "uniform_drought",
+      "seed": 1003,
+      "synthetic_probe_cost": 2.2119999999999993
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9980547658237319,
+        "01": 0.9980161757973447,
+        "10": 0.9987840097279221,
+        "11": 0.9978739559605163
+      },
+      "coordinated_probe_count": 48,
+      "critical_11_success": 0.9978739559605163,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 96,
+      "inverted_slot_count": 0,
+      "mode": "periodic",
+      "pair_success_rate": 0.9981818181818182,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.5463636363636364,
+      "scenario": "uniform_drought",
+      "seed": 1003,
+      "synthetic_probe_cost": 1.5839999999999996
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9968576986383361,
+        "01": 0.9964901571799176,
+        "10": 0.9972640218878249,
+        "11": 0.9963553530751709
+      },
+      "coordinated_probe_count": 86,
+      "critical_11_success": 0.9963553530751709,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 172,
+      "inverted_slot_count": 0,
+      "mode": "information_gain",
+      "pair_success_rate": 0.9967424242424242,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.5458712121212121,
+      "scenario": "uniform_drought",
+      "seed": 1003,
+      "synthetic_probe_cost": 2.8379999999999987
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.0,
+        "01": 0.0,
+        "10": 0.0,
+        "11": 0.0
+      },
+      "coordinated_probe_count": 0,
+      "critical_11_success": 0.0,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 0,
+      "inverted_slot_count": 0,
+      "mode": "passive",
+      "pair_success_rate": 0.0,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.0,
+      "scenario": "global_change",
+      "seed": 1003,
+      "synthetic_probe_cost": 0.0
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9618434834655095,
+        "01": 0.9491835800396765,
+        "10": 0.9531843745250038,
+        "11": 0.9594533029612756
+      },
+      "coordinated_probe_count": 227,
+      "critical_11_success": 0.9594533029612756,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": 10.770833333333334,
+      "information_request_bits": 236,
+      "inverted_slot_count": 384,
+      "mode": "random",
+      "pair_success_rate": 0.9559469696969697,
+      "pairs_both_discovered_fraction": 1.0,
+      "resource_pulse_rate": 0.8802272727272727,
+      "scenario": "global_change",
+      "seed": 1003,
+      "synthetic_probe_cost": 6.618999999999995
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9497231782133773,
+        "01": 0.9414008850907981,
+        "10": 0.9398084815321477,
+        "11": 0.9193621867881548
+      },
+      "coordinated_probe_count": 221,
+      "critical_11_success": 0.9193621867881548,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": 23.854166666666668,
+      "information_request_bits": 442,
+      "inverted_slot_count": 382,
+      "mode": "periodic",
+      "pair_success_rate": 0.9376136363636364,
+      "pairs_both_discovered_fraction": 1.0,
+      "resource_pulse_rate": 0.8628787878787879,
+      "scenario": "global_change",
+      "seed": 1003,
+      "synthetic_probe_cost": 7.293000000000005
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9848870267843782,
+        "01": 0.9847398138257287,
+        "10": 0.9848001215990272,
+        "11": 0.9848139711465452
+      },
+      "coordinated_probe_count": 227,
+      "critical_11_success": 0.9848139711465452,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": 8.166666666666666,
+      "information_request_bits": 454,
+      "inverted_slot_count": 384,
+      "mode": "information_gain",
+      "pair_success_rate": 0.9848106060606061,
+      "pairs_both_discovered_fraction": 1.0,
+      "resource_pulse_rate": 0.9066287878787879,
+      "scenario": "global_change",
+      "seed": 1003,
+      "synthetic_probe_cost": 7.491000000000002
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9808897722060846,
+        "01": 1.0,
+        "10": 1.0,
+        "11": 0.9787331004101474
+      },
+      "coordinated_probe_count": 0,
+      "critical_11_success": 0.9787331004101474,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 0,
+      "inverted_slot_count": 0,
+      "mode": "passive",
+      "pair_success_rate": 0.9899621212121212,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.9114772727272727,
+      "scenario": "stable",
+      "seed": 1004,
+      "synthetic_probe_cost": 0.0
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9808897722060846,
+        "01": 1.0,
+        "10": 0.9992393123383538,
+        "11": 0.9787331004101474
+      },
+      "coordinated_probe_count": 7,
+      "critical_11_success": 0.9787331004101474,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 7,
+      "inverted_slot_count": 0,
+      "mode": "random",
+      "pair_success_rate": 0.9897727272727272,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.9113257575757576,
+      "scenario": "stable",
+      "seed": 1004,
+      "synthetic_probe_cost": 0.203
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.981042654028436,
+        "01": 1.0,
+        "10": 0.9998478624676708,
+        "11": 0.9788850068357892
+      },
+      "coordinated_probe_count": 3,
+      "critical_11_success": 0.9788850068357892,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 3,
+      "inverted_slot_count": 0,
+      "mode": "periodic",
+      "pair_success_rate": 0.99,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.9114772727272727,
+      "scenario": "stable",
+      "seed": 1004,
+      "synthetic_probe_cost": 0.08700000000000001
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9813484176731386,
+        "01": 0.9998508130687752,
+        "10": 0.9777879202799331,
+        "11": 0.9788850068357892
+      },
+      "coordinated_probe_count": 11,
+      "critical_11_success": 0.9788850068357892,
+      "false_new_memory": 1,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 15,
+      "inverted_slot_count": 1,
+      "mode": "information_gain",
+      "pair_success_rate": 0.9845454545454545,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.9064772727272727,
+      "scenario": "stable",
+      "seed": 1004,
+      "synthetic_probe_cost": 0.3350000000000001
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9808897722060846,
+        "01": 1.0,
+        "10": 1.0,
+        "11": 0.9787331004101474
+      },
+      "coordinated_probe_count": 0,
+      "critical_11_success": 0.9787331004101474,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 0,
+      "inverted_slot_count": 0,
+      "mode": "passive",
+      "pair_success_rate": 0.9899621212121212,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.6874242424242424,
+      "scenario": "scarcity_11",
+      "seed": 1004,
+      "synthetic_probe_cost": 0.0
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9808897722060846,
+        "01": 1.0,
+        "10": 0.9995435874030123,
+        "11": 0.9646058028254595
+      },
+      "coordinated_probe_count": 98,
+      "critical_11_success": 0.9646058028254595,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 100,
+      "inverted_slot_count": 0,
+      "mode": "random",
+      "pair_success_rate": 0.9863257575757576,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.687310606060606,
+      "scenario": "scarcity_11",
+      "seed": 1004,
+      "synthetic_probe_cost": 2.8499999999999974
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.981042654028436,
+        "01": 1.0,
+        "10": 0.9998478624676708,
+        "11": 0.9646058028254595
+      },
+      "coordinated_probe_count": 97,
+      "critical_11_success": 0.9646058028254595,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 191,
+      "inverted_slot_count": 0,
+      "mode": "periodic",
+      "pair_success_rate": 0.986439393939394,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.6874242424242424,
+      "scenario": "scarcity_11",
+      "seed": 1004,
+      "synthetic_probe_cost": 3.188999999999998
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9813484176731386,
+        "01": 0.9998508130687752,
+        "10": 0.9993914498706831,
+        "11": 0.9646058028254595
+      },
+      "coordinated_probe_count": 103,
+      "critical_11_success": 0.9646058028254595,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 200,
+      "inverted_slot_count": 0,
+      "mode": "information_gain",
+      "pair_success_rate": 0.9863636363636363,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.687310606060606,
+      "scenario": "scarcity_11",
+      "seed": 1004,
+      "synthetic_probe_cost": 3.3750000000000004
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9808897722060846,
+        "01": 1.0,
+        "10": 1.0,
+        "11": 0.02126689958985265
+      },
+      "coordinated_probe_count": 0,
+      "critical_11_success": 0.02126689958985265,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 0,
+      "inverted_slot_count": 0,
+      "mode": "passive",
+      "pair_success_rate": 0.7512121212121212,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.6920454545454545,
+      "scenario": "changed_11",
+      "seed": 1004,
+      "synthetic_probe_cost": 0.0
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9808897722060846,
+        "01": 1.0,
+        "10": 0.9995435874030123,
+        "11": 0.9627829257177578
+      },
+      "coordinated_probe_count": 60,
+      "critical_11_success": 0.9627829257177578,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": 27.595744680851062,
+      "information_request_bits": 62,
+      "inverted_slot_count": 94,
+      "mode": "random",
+      "pair_success_rate": 0.9858712121212121,
+      "pairs_both_discovered_fraction": 0.9791666666666666,
+      "resource_pulse_rate": 0.9073863636363636,
+      "scenario": "changed_11",
+      "seed": 1004,
+      "synthetic_probe_cost": 1.747999999999999
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.981042654028436,
+        "01": 1.0,
+        "10": 0.9998478624676708,
+        "11": 0.9500227859638463
+      },
+      "coordinated_probe_count": 49,
+      "critical_11_success": 0.9500227859638463,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": 33.59574468085106,
+      "information_request_bits": 96,
+      "inverted_slot_count": 94,
+      "mode": "periodic",
+      "pair_success_rate": 0.9828030303030303,
+      "pairs_both_discovered_fraction": 0.9791666666666666,
+      "resource_pulse_rate": 0.9046212121212122,
+      "scenario": "changed_11",
+      "seed": 1004,
+      "synthetic_probe_cost": 1.608999999999999
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9813484176731386,
+        "01": 0.9998508130687752,
+        "10": 0.9993914498706831,
+        "11": 0.9851131702871031
+      },
+      "coordinated_probe_count": 63,
+      "critical_11_success": 0.9851131702871031,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": 14.25531914893617,
+      "information_request_bits": 121,
+      "inverted_slot_count": 94,
+      "mode": "information_gain",
+      "pair_success_rate": 0.9914772727272727,
+      "pairs_both_discovered_fraction": 0.9791666666666666,
+      "resource_pulse_rate": 0.9126515151515151,
+      "scenario": "changed_11",
+      "seed": 1004,
+      "synthetic_probe_cost": 2.0589999999999997
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9808897722060846,
+        "01": 1.0,
+        "10": 1.0,
+        "11": 0.9787331004101474
+      },
+      "coordinated_probe_count": 0,
+      "critical_11_success": 0.9787331004101474,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 0,
+      "inverted_slot_count": 0,
+      "mode": "passive",
+      "pair_success_rate": 0.9899621212121212,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.5504924242424243,
+      "scenario": "uniform_drought",
+      "seed": 1004,
+      "synthetic_probe_cost": 0.0
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9775263721143556,
+        "01": 0.9985081306877518,
+        "10": 0.9971093868857447,
+        "11": 0.9755430654716695
+      },
+      "coordinated_probe_count": 78,
+      "critical_11_success": 0.9755430654716695,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 81,
+      "inverted_slot_count": 0,
+      "mode": "random",
+      "pair_success_rate": 0.9872348484848484,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.548939393939394,
+      "scenario": "uniform_drought",
+      "seed": 1004,
+      "synthetic_probe_cost": 2.2739999999999987
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9787494266931662,
+        "01": 0.9800089512158735,
+        "10": 0.9981743496120493,
+        "11": 0.9764545040255203
+      },
+      "coordinated_probe_count": 55,
+      "critical_11_success": 0.9764545040255203,
+      "false_new_memory": 1,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 103,
+      "inverted_slot_count": 1,
+      "mode": "periodic",
+      "pair_success_rate": 0.9833333333333333,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.5468939393939394,
+      "scenario": "uniform_drought",
+      "seed": 1004,
+      "synthetic_probe_cost": 1.786999999999999
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9770677266473017,
+        "01": 0.9774727733850515,
+        "10": 0.9745930321010193,
+        "11": 0.9946832751025368
+      },
+      "coordinated_probe_count": 104,
+      "critical_11_success": 0.9946832751025368,
+      "false_new_memory": 2,
+      "first_pair_discovery_mean": 26.0,
+      "information_request_bits": 203,
+      "inverted_slot_count": 2,
+      "mode": "information_gain",
+      "pair_success_rate": 0.9809469696969697,
+      "pairs_both_discovered_fraction": 0.020833333333333332,
+      "resource_pulse_rate": 0.5459090909090909,
+      "scenario": "uniform_drought",
+      "seed": 1004,
+      "synthetic_probe_cost": 3.4119999999999977
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.019110227793915302,
+        "01": 0.0,
+        "10": 0.0,
+        "11": 0.02126689958985265
+      },
+      "coordinated_probe_count": 0,
+      "critical_11_success": 0.02126689958985265,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 0,
+      "inverted_slot_count": 0,
+      "mode": "passive",
+      "pair_success_rate": 0.010037878787878788,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.009053030303030302,
+      "scenario": "global_change",
+      "seed": 1004,
+      "synthetic_probe_cost": 0.0
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9594863170768996,
+        "01": 0.9342085633298524,
+        "10": 0.9148029818956337,
+        "11": 0.9415160261279052
+      },
+      "coordinated_probe_count": 223,
+      "critical_11_success": 0.9415160261279052,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": 12.106382978723405,
+      "information_request_bits": 234,
+      "inverted_slot_count": 375,
+      "mode": "random",
+      "pair_success_rate": 0.9374621212121212,
+      "pairs_both_discovered_fraction": 0.9791666666666666,
+      "resource_pulse_rate": 0.8632196969696969,
+      "scenario": "global_change",
+      "seed": 1004,
+      "synthetic_probe_cost": 6.510999999999994
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9247821434031493,
+        "01": 0.9013874384603908,
+        "10": 0.9193671078655105,
+        "11": 0.9290596992252772
+      },
+      "coordinated_probe_count": 220,
+      "critical_11_success": 0.9290596992252772,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": 23.80851063829787,
+      "information_request_bits": 433,
+      "inverted_slot_count": 373,
+      "mode": "periodic",
+      "pair_success_rate": 0.9185606060606061,
+      "pairs_both_discovered_fraction": 0.9791666666666666,
+      "resource_pulse_rate": 0.8454166666666667,
+      "scenario": "global_change",
+      "seed": 1004,
+      "synthetic_probe_cost": 7.232000000000005
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9845589359425164,
+        "01": 0.9473370132776369,
+        "10": 0.9421877377148943,
+        "11": 0.9638462706972505
+      },
+      "coordinated_probe_count": 224,
+      "critical_11_success": 0.9638462706972505,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": 7.6875,
+      "information_request_bits": 442,
+      "inverted_slot_count": 374,
+      "mode": "information_gain",
+      "pair_success_rate": 0.9593939393939394,
+      "pairs_both_discovered_fraction": 1.0,
+      "resource_pulse_rate": 0.8835227272727273,
+      "scenario": "global_change",
+      "seed": 1004,
+      "synthetic_probe_cost": 7.368000000000002
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 0.9794887494259911,
+        "10": 0.9790521467835388,
+        "11": 1.0
+      },
+      "coordinated_probe_count": 0,
+      "critical_11_success": 1.0,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 0,
+      "inverted_slot_count": 0,
+      "mode": "passive",
+      "pair_success_rate": 0.9895833333333334,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.9100757575757575,
+      "scenario": "stable",
+      "seed": 1005,
+      "synthetic_probe_cost": 0.0
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9779005524861878,
+        "01": 0.9996938619317313,
+        "10": 0.9790521467835388,
+        "11": 0.9802114803625378
+      },
+      "coordinated_probe_count": 7,
+      "critical_11_success": 0.9802114803625378,
+      "false_new_memory": 2,
+      "first_pair_discovery_mean": 8.0,
+      "information_request_bits": 7,
+      "inverted_slot_count": 2,
+      "mode": "random",
+      "pair_success_rate": 0.9841666666666666,
+      "pairs_both_discovered_fraction": 0.020833333333333332,
+      "resource_pulse_rate": 0.905,
+      "scenario": "stable",
+      "seed": 1005,
+      "synthetic_probe_cost": 0.203
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9783609576427256,
+        "01": 0.9993877238634624,
+        "10": 0.9794978457881444,
+        "11": 0.9806646525679759
+      },
+      "coordinated_probe_count": 9,
+      "critical_11_success": 0.9806646525679759,
+      "false_new_memory": 3,
+      "first_pair_discovery_mean": 12.0,
+      "information_request_bits": 11,
+      "inverted_slot_count": 3,
+      "mode": "periodic",
+      "pair_success_rate": 0.9844318181818181,
+      "pairs_both_discovered_fraction": 0.020833333333333332,
+      "resource_pulse_rate": 0.9051515151515152,
+      "scenario": "stable",
+      "seed": 1005,
+      "synthetic_probe_cost": 0.269
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9779005524861878,
+        "01": 0.9996938619317313,
+        "10": 0.9790521467835388,
+        "11": 0.9803625377643505
+      },
+      "coordinated_probe_count": 6,
+      "critical_11_success": 0.9803625377643505,
+      "false_new_memory": 2,
+      "first_pair_discovery_mean": 8.0,
+      "information_request_bits": 7,
+      "inverted_slot_count": 2,
+      "mode": "information_gain",
+      "pair_success_rate": 0.9842045454545455,
+      "pairs_both_discovered_fraction": 0.020833333333333332,
+      "resource_pulse_rate": 0.905,
+      "scenario": "stable",
+      "seed": 1005,
+      "synthetic_probe_cost": 0.17800000000000002
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 0.9794887494259911,
+        "10": 0.9790521467835388,
+        "11": 1.0
+      },
+      "coordinated_probe_count": 0,
+      "critical_11_success": 1.0,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 0,
+      "inverted_slot_count": 0,
+      "mode": "passive",
+      "pair_success_rate": 0.9895833333333334,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.6782575757575757,
+      "scenario": "scarcity_11",
+      "seed": 1005,
+      "synthetic_probe_cost": 0.0
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9779005524861878,
+        "01": 0.9996938619317313,
+        "10": 0.9790521467835388,
+        "11": 0.9661631419939577
+      },
+      "coordinated_probe_count": 100,
+      "critical_11_success": 0.9661631419939577,
+      "false_new_memory": 2,
+      "first_pair_discovery_mean": 8.0,
+      "information_request_bits": 108,
+      "inverted_slot_count": 2,
+      "mode": "random",
+      "pair_success_rate": 0.9806439393939393,
+      "pairs_both_discovered_fraction": 0.020833333333333332,
+      "resource_pulse_rate": 0.6777651515151515,
+      "scenario": "scarcity_11",
+      "seed": 1005,
+      "synthetic_probe_cost": 2.9319999999999977
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9783609576427256,
+        "01": 0.9993877238634624,
+        "10": 0.9794978457881444,
+        "11": 0.9664652567975831
+      },
+      "coordinated_probe_count": 103,
+      "critical_11_success": 0.9664652567975831,
+      "false_new_memory": 3,
+      "first_pair_discovery_mean": 12.0,
+      "information_request_bits": 199,
+      "inverted_slot_count": 3,
+      "mode": "periodic",
+      "pair_success_rate": 0.9808712121212121,
+      "pairs_both_discovered_fraction": 0.020833333333333332,
+      "resource_pulse_rate": 0.6778030303030304,
+      "scenario": "scarcity_11",
+      "seed": 1005,
+      "synthetic_probe_cost": 3.370999999999998
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9779005524861878,
+        "01": 0.9996938619317313,
+        "10": 0.9790521467835388,
+        "11": 0.9661631419939577
+      },
+      "coordinated_probe_count": 100,
+      "critical_11_success": 0.9661631419939577,
+      "false_new_memory": 2,
+      "first_pair_discovery_mean": 8.0,
+      "information_request_bits": 195,
+      "inverted_slot_count": 2,
+      "mode": "information_gain",
+      "pair_success_rate": 0.9806439393939393,
+      "pairs_both_discovered_fraction": 0.020833333333333332,
+      "resource_pulse_rate": 0.6777272727272727,
+      "scenario": "scarcity_11",
+      "seed": 1005,
+      "synthetic_probe_cost": 3.279999999999999
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 0.9794887494259911,
+        "10": 0.9790521467835388,
+        "11": 0.0
+      },
+      "coordinated_probe_count": 0,
+      "critical_11_success": 0.0,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 0,
+      "inverted_slot_count": 0,
+      "mode": "passive",
+      "pair_success_rate": 0.7388257575757575,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.6782575757575757,
+      "scenario": "changed_11",
+      "seed": 1005,
+      "synthetic_probe_cost": 0.0
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9779005524861878,
+        "01": 0.9996938619317313,
+        "10": 0.9790521467835388,
+        "11": 0.93595166163142
+      },
+      "coordinated_probe_count": 57,
+      "critical_11_success": 0.93595166163142,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": 31.541666666666668,
+      "information_request_bits": 61,
+      "inverted_slot_count": 96,
+      "mode": "random",
+      "pair_success_rate": 0.9730681818181818,
+      "pairs_both_discovered_fraction": 1.0,
+      "resource_pulse_rate": 0.8945833333333333,
+      "scenario": "changed_11",
+      "seed": 1005,
+      "synthetic_probe_cost": 1.668999999999999
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9783609576427256,
+        "01": 0.9993877238634624,
+        "10": 0.9794978457881444,
+        "11": 0.9223564954682779
+      },
+      "coordinated_probe_count": 64,
+      "critical_11_success": 0.9223564954682779,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": 38.87234042553192,
+      "information_request_bits": 121,
+      "inverted_slot_count": 95,
+      "mode": "periodic",
+      "pair_success_rate": 0.9698106060606061,
+      "pairs_both_discovered_fraction": 0.9791666666666666,
+      "resource_pulse_rate": 0.8914015151515151,
+      "scenario": "changed_11",
+      "seed": 1005,
+      "synthetic_probe_cost": 2.083999999999999
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9779005524861878,
+        "01": 0.9996938619317313,
+        "10": 0.9790521467835388,
+        "11": 0.9657099697885196
+      },
+      "coordinated_probe_count": 57,
+      "critical_11_success": 0.9657099697885196,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": 16.083333333333332,
+      "information_request_bits": 109,
+      "inverted_slot_count": 96,
+      "mode": "information_gain",
+      "pair_success_rate": 0.9805303030303031,
+      "pairs_both_discovered_fraction": 1.0,
+      "resource_pulse_rate": 0.901439393939394,
+      "scenario": "changed_11",
+      "seed": 1005,
+      "synthetic_probe_cost": 1.8609999999999998
+    },
+    {
+      "by_case_correctness": {
+        "00": 1.0,
+        "01": 0.9794887494259911,
+        "10": 0.9790521467835388,
+        "11": 1.0
+      },
+      "coordinated_probe_count": 0,
+      "critical_11_success": 1.0,
+      "false_new_memory": 0,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 0,
+      "inverted_slot_count": 0,
+      "mode": "passive",
+      "pair_success_rate": 0.9895833333333334,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.5463257575757576,
+      "scenario": "uniform_drought",
+      "seed": 1005,
+      "synthetic_probe_cost": 0.0
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9743707796193984,
+        "01": 0.997703964487984,
+        "10": 0.9766750854256425,
+        "11": 0.9782477341389728
+      },
+      "coordinated_probe_count": 72,
+      "critical_11_success": 0.9782477341389728,
+      "false_new_memory": 2,
+      "first_pair_discovery_mean": 8.0,
+      "information_request_bits": 72,
+      "inverted_slot_count": 2,
+      "mode": "random",
+      "pair_success_rate": 0.9817045454545454,
+      "pairs_both_discovered_fraction": 0.020833333333333332,
+      "resource_pulse_rate": 0.5419318181818182,
+      "scenario": "uniform_drought",
+      "seed": 1005,
+      "synthetic_probe_cost": 2.087999999999999
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.976365868631062,
+        "01": 0.9973978264197153,
+        "10": 0.9778636161045907,
+        "11": 0.979607250755287
+      },
+      "coordinated_probe_count": 46,
+      "critical_11_success": 0.979607250755287,
+      "false_new_memory": 2,
+      "first_pair_discovery_mean": 12.0,
+      "information_request_bits": 91,
+      "inverted_slot_count": 2,
+      "mode": "periodic",
+      "pair_success_rate": 0.9827651515151515,
+      "pairs_both_discovered_fraction": 0.020833333333333332,
+      "resource_pulse_rate": 0.5422348484848485,
+      "scenario": "uniform_drought",
+      "seed": 1005,
+      "synthetic_probe_cost": 1.5139999999999991
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9723756906077348,
+        "01": 0.9952548599418337,
+        "10": 0.9757836874164314,
+        "11": 0.9773413897280967
+      },
+      "coordinated_probe_count": 113,
+      "critical_11_success": 0.9773413897280967,
+      "false_new_memory": 2,
+      "first_pair_discovery_mean": 8.0,
+      "information_request_bits": 221,
+      "inverted_slot_count": 2,
+      "mode": "information_gain",
+      "pair_success_rate": 0.9801515151515151,
+      "pairs_both_discovered_fraction": 0.020833333333333332,
+      "resource_pulse_rate": 0.540719696969697,
+      "scenario": "uniform_drought",
+      "seed": 1005,
+      "synthetic_probe_cost": 3.7089999999999987
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.0,
+        "01": 0.020511250574008877,
+        "10": 0.02094785321646115,
+        "11": 0.0
+      },
+      "coordinated_probe_count": 0,
+      "critical_11_success": 0.0,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": null,
+      "information_request_bits": 0,
+      "inverted_slot_count": 0,
+      "mode": "passive",
+      "pair_success_rate": 0.010416666666666666,
+      "pairs_both_discovered_fraction": 0.0,
+      "resource_pulse_rate": 0.00962121212121212,
+      "scenario": "global_change",
+      "seed": 1005,
+      "synthetic_probe_cost": 0.0
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9335481890730509,
+        "01": 0.9191795499770397,
+        "10": 0.9313623532907443,
+        "11": 0.9531722054380665
+      },
+      "coordinated_probe_count": 226,
+      "critical_11_success": 0.9531722054380665,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": 12.604166666666666,
+      "information_request_bits": 236,
+      "inverted_slot_count": 376,
+      "mode": "random",
+      "pair_success_rate": 0.9343560606060606,
+      "pairs_both_discovered_fraction": 1.0,
+      "resource_pulse_rate": 0.8595454545454545,
+      "scenario": "global_change",
+      "seed": 1005,
+      "synthetic_probe_cost": 6.593999999999996
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9200429711479435,
+        "01": 0.944895147711618,
+        "10": 0.8986777596196702,
+        "11": 0.904833836858006
+      },
+      "coordinated_probe_count": 227,
+      "critical_11_success": 0.904833836858006,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": 23.872340425531913,
+      "information_request_bits": 452,
+      "inverted_slot_count": 370,
+      "mode": "periodic",
+      "pair_success_rate": 0.9169318181818182,
+      "pairs_both_discovered_fraction": 0.9791666666666666,
+      "resource_pulse_rate": 0.843030303030303,
+      "scenario": "global_change",
+      "seed": 1005,
+      "synthetic_probe_cost": 7.483000000000008
+    },
+    {
+      "by_case_correctness": {
+        "00": 0.9815837937384899,
+        "01": 0.9663248124904332,
+        "10": 0.9640469469618185,
+        "11": 0.9829305135951661
+      },
+      "coordinated_probe_count": 230,
+      "critical_11_success": 0.9829305135951661,
+      "false_new_memory": null,
+      "first_pair_discovery_mean": 8.604166666666666,
+      "information_request_bits": 458,
+      "inverted_slot_count": 380,
+      "mode": "information_gain",
+      "pair_success_rate": 0.9736742424242424,
+      "pairs_both_discovered_fraction": 1.0,
+      "resource_pulse_rate": 0.8953787878787879,
+      "scenario": "global_change",
+      "seed": 1005,
+      "synthetic_probe_cost": 7.582000000000003
+    }
+  ],
+  "scenarios": [
+    "stable",
+    "scarcity_11",
+    "changed_11",
+    "uniform_drought",
+    "global_change"
+  ],
+  "schema": "paired-active-causal-probing-v1",
+  "seeds": [
+    1001,
+    1002,
+    1003,
+    1004,
+    1005
+  ],
+  "spec": {
+    "drought_probability": 0.55,
+    "entropy_threshold": 0.06,
+    "horizon": 550,
+    "intervention_cost": 0.025,
+    "learned_threshold": 0.96,
+    "pairs": 48,
+    "pretrain": 4500,
+    "request_cost": 0.004,
+    "resource_probability": 0.92
+  }
+}

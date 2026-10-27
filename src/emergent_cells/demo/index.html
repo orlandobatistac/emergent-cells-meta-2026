@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es">
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Emergent Cells · Laboratorio</title>
+<title>Emergent Cells · Laboratorio de experimentos</title>
 <style>
 :root{font-family:system-ui,sans-serif;color:#edf5f1;background:#0b1313;color-scheme:dark}*{box-sizing:border-box}body{margin:0}main{max-width:1200px;margin:auto;padding:30px 24px}header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:24px}.eyebrow{letter-spacing:.15em;font-size:11px;color:#8ab5a2;text-transform:uppercase}h1{font-size:30px;margin:8px 0}p{color:#a9bcb5;font-size:14px;line-height:1.5}.tag{border:1px solid #355549;border-radius:30px;padding:8px 12px;font-size:12px;white-space:nowrap}.layout{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:24px}.world{background:#101e1b;border:1px solid #2a3f36;border-radius:16px;padding:18px}canvas{width:100%;aspect-ratio:1;display:block;image-rendering:pixelated;border-radius:9px;background:#08130f}.legend{display:flex;gap:18px;flex-wrap:wrap;color:#9cb0a5;font-size:12px;margin-top:14px}.green{color:#62d59b}.red{color:#e68c83}.white{color:#fff}aside{display:flex;flex-direction:column;gap:16px}.panel{border:1px solid #2a3f36;border-radius:14px;padding:18px;background:#101c19}h2{font-size:15px;margin:0 0 14px}.metrics{display:grid;grid-template-columns:1fr 1fr;gap:18px}.number{font-size:24px;font-variant-numeric:tabular-nums}.label{font-size:11px;color:#a1b5aa;margin-top:4px}button,select{font:inherit;padding:10px;border-radius:8px;border:1px solid #3d594c;background:#1c3027;color:#f1f8f3;cursor:pointer}button:hover{background:#2a4738}button:disabled{opacity:.45;cursor:wait}.primary{background:#b5edca;color:#10251a;border-color:#b5edca;font-weight:600}.buttons{display:grid;grid-template-columns:1fr 1fr;gap:8px}select{width:100%;margin-bottom:12px}.note{font-size:12px;margin-bottom:0}.status{min-height:22px;color:#acd8bd;font-size:12px}footer{color:#80998c;font-size:12px;margin-top:22px;line-height:1.5}@media(max-width:760px){main{padding:20px 14px}.layout{grid-template-columns:1fr}header{align-items:flex-start}.tag{display:none}h1{font-size:26px}aside{display:grid;grid-template-columns:1fr}}
 textarea{width:100%;font:inherit;padding:10px;border-radius:8px;border:1px solid #3d594c;background:#1c3027;color:#f1f8f3;resize:vertical;margin:8px 0 12px}#world-designer button{font-size:12px}#challenge-state{min-height:24px}</style>
@@ -18,6 +18,7 @@ textarea{width:100%;font:inherit;padding:10px;border-radius:8px;border:1px solid
 <p class="note" id="challenge-state">Primero diseña un desafío. Si usas la plantilla, NO se realizará una llamada a Meta.</p>
 <pre id="challenge-result" style="white-space:pre-wrap;overflow-wrap:anywhere;font-size:11px;max-height:220px;overflow:auto;color:#a8dfbd"></pre>
 <p class="note">Meta propone parámetros del entorno. No dirige células ni crea automáticamente una tarea que necesite cooperación.</p></section>
+<section class="panel" id="exploration-lab"><h2>Exploracion cooperativa</h2><button class="primary" id="exploration-run">Comparar pruebas</button><p id="exploration-state" class="note">Exploracion local</p><pre id="exploration-result"></pre></section>
 <section class="panel" id="robust-drift-lab">
 <h2>¿Nueva regla o simplemente menos recursos?</h2>
 <p class="note">Las células comparan su recompensa por clase de señal privada y mensaje recibido. Un cambio de regla puede producir fallos selectivos; una pérdida uniforme de recursos afecta todas las clases. Detectores locales, sin conocer la tarea.</p>
@@ -228,6 +229,25 @@ async function runRobustDrift(){
   }catch(e){$('robust-drift-state').textContent=e.message;}
   finally{b.disabled=false;}
 }
+async function runExploration(){
+  stop();
+  const button=$('exploration-run');
+  button.disabled=true;
+  $('exploration-state').textContent='Ejecutando experimentos coordinados...';
+  try{
+    const data=await challengeCall('/api/active-probes/run',{});
+    const a=data.active_probes.aggregate;
+    const names=['passive','random','periodic','information_gain'];
+    $('exploration-result').textContent=names.map(n=>{
+      const c=a.changed_11[n],s=a.scarcity_11[n];
+      return n+': cambio='+(100*c.critical_11_success).toFixed(1)+'%; falsa memoria='+
+        s.inverted_slot_count.toFixed(1)+'; solicitudes='+c.information_request_bits.toFixed(0);
+    }).join('\n');
+    $('exploration-state').textContent='Comparación terminada; hipótesis y pruebas diseñadas.';
+  }catch(e){$('exploration-state').textContent=e.message;}
+  finally{button.disabled=false;}
+}
+$('exploration-run').onclick=runExploration;
 $('robust-drift-run').onclick=runRobustDrift;
 $('dynamic-memory-run').onclick=runDynamicMemory;
 $('reward-surprise-run').onclick=runRewardSurprise;

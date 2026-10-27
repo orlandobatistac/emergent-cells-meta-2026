@@ -135,3 +135,11 @@ Read [methods and all results](docs/ROBUST_DRIFT_2026-10-27.md), [raw independen
 ### A deliberate adversarial scarcity control (separate study)
 
 If the XOR task is stationary but resource availability disappears selectively for input `11`, **reward-only** detectors still allocate needless banks (44–46 of 48 cells on independent seeds). An **explicit extra local resource-presence sensor** prevented these false allocations (0 of 48) and still learned the third rule (93.0% success, return A 91.3%, return B 92.1%). This is **unequal-information testing**, not a reward-only breakthrough. Physical availability sensing, extra compute/memory cost and transfer to other environmental rules remain unknown. [Full report and raw data](docs/ADVERSARIAL_SCARCITY_LOCAL_SENSOR_2026-10-27.md).
+
+## Locally coordinated counterfactual exploration (October 27)
+
+New experimental milestone: after learning one-bit communication privately, paired artificial cells can **coordinate their own alternate-action probes** when a previously successful world stops rewarding them. The benchmark distinguishes a selectively **flipped XOR gate mapping** from selectively **absent resources** *without an ideal resource-availability sensor*. Each cell updates hand-designed Bayesian-style beliefs from its own gate reward; sender/receiver communication weights are frozen during diagnosis. This is engineered active inference, **not learned curiosity** or general intelligence.
+
+On five independent seeds (48 pairs), information-guided probes reached **98.1%** critical-case success when a mapping changed, versus **0.4%** with no probes. Under unchanged mapping but missing resources for that case, they retained **97.7%** correct actions with only **0.4 false correction bits per 96 cells** on average. Random exploration reached 95.7% changed-case success with *fewer messages and lower simulated cost* than information-gain exploration. Both performance and costs are reported.
+
+Read [scientific protocol and results](docs/ACTIVE_CAUSAL_EXPLORATION_2026-10-27.md), [full raw results](results/audited/2026-10-27-active-causal-probing-fresh-seeds.json), and [local browser instructions](docs/ACTIVE_CAUSAL_EXPLORATION_UI_2026-10-27.md). No Meta API call, measured physical joules or general task transfer is claimed.

@@ -19,6 +19,9 @@ from emergent_cells.experiments.dynamic_memory import (
     GrowthSpec, benchmark as benchmark_dynamic_memory,
 )
 from emergent_cells.experiments.robust_drift import benchmark as benchmark_robust_drift
+from emergent_cells.experiments.active_probes import (
+    ProbeSpec, benchmark as benchmark_active_probes,
+)
 from emergent_cells.meta.world_designer import (
     DesignError, design_world, evaluate_world, validate_proposal,
 )
@@ -35,6 +38,7 @@ class LabServer(HTTPServer):
         self.reward_surprise_report = None
         self.dynamic_memory_report = None
         self.robust_drift_report = None
+        self.active_probes_report = None
         super().__init__(address, Handler)
 
 
@@ -82,7 +86,13 @@ class Handler(BaseHTTPRequestHandler):
             report["reward_surprise_evaluation"] = self.server.reward_surprise_report
             report["dynamic_memory_evaluation"] = self.server.dynamic_memory_report
             report["robust_drift_evaluation"] = self.server.robust_drift_report
+            report["active_probes_evaluation"] = self.server.active_probes_report
             self.respond(200, report)
+        elif self.path == '/api/active-probes':
+            self.respond(200, {
+                'report': self.server.active_probes_report,
+                'source': 'local-coordinated-counterfactual-probes-not-meta',
+            })
         elif self.path == '/api/robust-drift':
             self.respond(200, {
                 'report': self.server.robust_drift_report,
@@ -130,7 +140,8 @@ class Handler(BaseHTTPRequestHandler):
                              '/api/challenge/evaluate', '/api/challenge/apply',
                              '/api/cooperation/run', '/api/protocol/run',
                              '/api/context-switch/run', '/api/reward-surprise/run',
-                             '/api/dynamic-memory/run', '/api/robust-drift/run'):
+                             '/api/dynamic-memory/run', '/api/robust-drift/run',
+                             '/api/active-probes/run'):
             return self.respond(404, {'error': 'Not found'})
         if self.headers.get_content_type() != 'application/json':
             return self.respond(415, {'error': 'JSON required'})
@@ -141,6 +152,19 @@ class Handler(BaseHTTPRequestHandler):
             data = json.loads(self.rfile.read(length))
             if not isinstance(data, dict):
                 raise ValueError('Expected object')
+            if self.path == '/api/active-probes/run':
+                if data:
+                    raise ValueError('Active probes demo accepts empty JSON only')
+                outcome = benchmark_active_probes(
+                    [11, 12],
+                    ProbeSpec(pairs=24, pretrain=3000, horizon=350)
+                )
+                self.server.active_probes_report = outcome
+                return self.respond(200, {
+                    'active_probes': outcome,
+                    'source': 'local-coordinated-probing-no-meta',
+                    'caveat': 'Bayesian hypotheses, partner network and probe logic are engineered',
+                })
             if self.path == '/api/robust-drift/run':
                 if data:
                     raise ValueError('Robust drift demo accepts empty JSON only')
