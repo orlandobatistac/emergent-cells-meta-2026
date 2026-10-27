@@ -85,3 +85,7 @@ This branch extends the existing interactive lab with a **human challenge -> val
 - Once a world is validated, use `Aplicar al mapa` to play it in the real engine.
 
 Detailed [implementation and limits](docs/META_WORLD_DESIGNER.md) and [activation instructions](docs/META_WORLD_SETUP.md). Real Meta requests have **not** been executed in this prototype; no credits or billing availability is assumed. This code was written **Oct 26** and remains pre-period research unless organizers confirm eligibility for an Oct 27 start.
+
+## Unified research lab: cooperative comparisons (October 27 integration)
+
+The new **cooperative gate panel** brings the pre-existing October 26 dual-cue experiments into the existing local browser lab. It runs fixed bounded development seeds, displays all five local-message ablations and the knockout of already-trained policies, and attaches results to the session report. The task is an engineered XOR gate with fixed pair assignments and does **not** run Meta, create a natural-language agent, or demonstrate general intelligence. The Oct 27 integration code is distinct from the Oct 26 scientific prototype; neither is silently represented as original contest-period research. See [integration notes](docs/UNIFIED_LAB_2026-10-27.md).

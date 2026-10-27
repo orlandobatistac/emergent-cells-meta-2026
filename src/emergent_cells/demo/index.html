@@ -18,6 +18,14 @@ textarea{width:100%;font:inherit;padding:10px;border-radius:8px;border:1px solid
 <p class="note" id="challenge-state">Primero diseña un desafío. Si usas la plantilla, NO se realizará una llamada a Meta.</p>
 <pre id="challenge-result" style="white-space:pre-wrap;overflow-wrap:anywhere;font-size:11px;max-height:220px;overflow:auto;color:#a8dfbd"></pre>
 <p class="note">Meta propone parámetros del entorno. No dirige células ni crea automáticamente una tarea que necesite cooperación.</p></section>
+<section class="panel" id="cooperation-lab">
+<h2>Cooperación celular · Desafío de dos señales</h2>
+<p class="note">Dos células tienen información diferente. Una compuerta compartida entrega recursos solo si se coordinan. Comparamos comunicación verdadera, ausente, alterada y aprendizaje congelado.</p>
+<button class="primary" id="cooperation-run" type="button">Ejecutar comparación cooperativa</button>
+<p class="note" id="cooperation-state" role="status">Tres semillas de desarrollo, 64 parejas, 600 episodios de entrenamiento y 120 de evaluación.</p>
+<pre id="cooperation-result" style="white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px;max-height:250px;overflow:auto;color:#a8dfbd"></pre>
+<p class="note">Investigación previa del 26 de octubre: parejas fijas, canal perfecto y una función XOR preparada por nosotros. No es prueba de inteligencia general ni utiliza Meta API.</p>
+</section>
 <section class="panel"><h2>Qué demuestra esta pantalla</h2><p class="note">Ejecuta el motor celular real. Puedes alterar el entorno y observar supervivencia y adaptación.</p><p class="note">Aún sin lenguaje, crecimiento ni agentes. Una intervención manual no demuestra recuperación. La energía mostrada no mide consumo eléctrico.</p></section><div class="status" id="status" role="status">Conectando con el motor…</div></aside></div>
 <footer>Para comparaciones válidas utiliza el benchmark reproducible. Esta sesión es exploratoria y registra tus intervenciones. Descargar el informe conserva métricas y eventos; no permite restaurar el estado.</footer></main>
 <script>
@@ -65,6 +73,26 @@ async function applyChallenge(){
     draw(data);$('challenge-state').textContent='Mundo aplicado al motor real; pulsa Iniciar.';
   }catch(e){$('challenge-state').textContent=e.message;}finally{button.disabled=false;}
 }
+async function runCooperationDemo(){
+  stop();
+  const b=$('cooperation-run');
+  b.disabled=true;
+  $('cooperation-state').textContent='Ejecutando comparación local, sin llamadas a Meta...';
+  try{
+    const data=await challengeCall('/api/cooperation/run',{});
+    const s=data.cooperation.summary;
+    const rows=data.cooperation.rows.filter(row=>row.condition==='local');
+    const block=rows.reduce((sum,row)=>sum+row.trained_local_without_messages,0)/rows.length;
+    const items=['local','none','scrambled','frozen','far'];
+    $('cooperation-result').textContent=items.map(key=>
+      key+': '+(100*s[key].test_fraction.mean).toFixed(1)+'% de compuertas abiertas'
+    ).join('\n')+'\nMensajes bloqueados DESPUÉS de aprender: '+(100*block).toFixed(1)+'%';
+    $('cooperation-state').textContent='Comparación verificada. Tarea XOR diseñada, no inteligencia emergente general.';
+  }catch(e){
+    $('cooperation-state').textContent=e.message;
+  }finally{b.disabled=false;}
+}
+$('cooperation-run').onclick=runCooperationDemo;
 $('challenge-design').onclick=designChallenge;
 $('challenge-evaluate').onclick=evaluateChallenge;
 $('challenge-apply').onclick=applyChallenge;

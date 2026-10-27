@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 from emergent_cells.interactive import Session
 from emergent_cells.simulation import RunSpec
+from emergent_cells.experiments.dual_cue import GateSpec, benchmark as benchmark_cooperation
 from emergent_cells.meta.world_designer import (
     DesignError, design_world, evaluate_world, validate_proposal,
 )
@@ -15,6 +16,7 @@ class LabServer(HTTPServer):
         self.session = Session(spec)
         self.challenge = None
         self.challenge_report = None
+        self.cooperation_report = None
         super().__init__(address, Handler)
 
 
@@ -56,7 +58,14 @@ class Handler(BaseHTTPRequestHandler):
             report = self.server.session.report()
             report["world_design"] = self.server.challenge
             report["world_evaluation"] = self.server.challenge_report
+            report["cooperation_evaluation"] = self.server.cooperation_report
             self.respond(200, report)
+        elif self.path == '/api/cooperation':
+            self.respond(200, {
+                'report': self.server.cooperation_report,
+                'task': 'engineered-dual-cue-gate',
+                'meta_used': False,
+            })
         elif self.path == '/api/challenge':
             self.respond(200, {
                 "challenge": self.server.challenge,
@@ -70,7 +79,8 @@ class Handler(BaseHTTPRequestHandler):
         if not self.allowed_host() or (origin and origin != f'http://{self.headers.get("Host")}'):
             return self.respond(403, {'error': 'Local same-origin request required'})
         if self.path not in ('/api/action', '/api/challenge/design',
-                             '/api/challenge/evaluate', '/api/challenge/apply'):
+                             '/api/challenge/evaluate', '/api/challenge/apply',
+                             '/api/cooperation/run'):
             return self.respond(404, {'error': 'Not found'})
         if self.headers.get_content_type() != 'application/json':
             return self.respond(415, {'error': 'JSON required'})
@@ -81,6 +91,22 @@ class Handler(BaseHTTPRequestHandler):
             data = json.loads(self.rfile.read(length))
             if not isinstance(data, dict):
                 raise ValueError('Expected object')
+            if self.path == '/api/cooperation/run':
+                if data:
+                    raise ValueError('Cooperation demo takes an empty JSON object')
+                # Bounded, deterministic engineering demo; NO Meta request.
+                # The underlying XOR-capable simulator is Oct 26 prior work.
+                report = benchmark_cooperation(
+                    [201, 202, 203],
+                    GateSpec(pairs=64, train_episodes=600, test_episodes=120)
+                )
+                self.server.cooperation_report = report
+                return self.respond(200, {
+                    'cooperation': report,
+                    'source': 'local-engineered-gate-not-meta',
+                    'new_integration_date': '2026-10-27',
+                    'prior_experiment_date': '2026-10-26',
+                })
             if self.path == '/api/challenge/design':
                 if set(data) != {'description', 'source'}:
                     raise ValueError('Only description and source are allowed')
