@@ -1,0 +1,344 @@
+{
+  "date": "2026-10-27",
+  "limitations": [
+    "Thresholds selected on development seeds. Evaluate independent seeds.",
+    "Beta normal-interval approximation is NOT BOCPD.",
+    "World task IDs are inaccessible to adaptive policy and detector.",
+    "The synthetic reward dropout value is NOT observed by the cells.",
+    "A pure reward stream cannot identify the cause of all changes.",
+    "Memory ceiling 3, fixed partners, binary actions and authored task rules.",
+    "Synthetic rewards are not actual measured energy joules."
+  ],
+  "methods": [
+    "availability_sensor"
+  ],
+  "noise_levels": [
+    0.08,
+    0.2,
+    0.35,
+    0.45
+  ],
+  "schema": "reward-noise-versus-task-drift-v1",
+  "seeds": [
+    4001,
+    4002,
+    4003
+  ],
+  "spec": {
+    "cooldown": 140,
+    "dropout": 0.08,
+    "exploration": 0.03,
+    "learning_rate": 0.1,
+    "maturity": 0.78,
+    "maturity_steps": 550,
+    "max_banks": 3,
+    "pairs": 24,
+    "phase_steps": 3500,
+    "probe_accept": 0.78,
+    "probe_steps": 160,
+    "relative_trigger": 0.1,
+    "revisit_steps": 900,
+    "smoothing": 0.005,
+    "test_steps": 180
+  },
+  "stationary_rows": [
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.9197916666666666,
+      "method": "availability_sensor",
+      "seed": 4001,
+      "stress_dropout": 0.08,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.9197916666666666,
+      "method": "availability_sensor",
+      "seed": 4001,
+      "stress_dropout": 0.2,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.9197916666666666,
+      "method": "availability_sensor",
+      "seed": 4001,
+      "stress_dropout": 0.35,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.9197916666666666,
+      "method": "availability_sensor",
+      "seed": 4001,
+      "stress_dropout": 0.45,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.9225,
+      "method": "availability_sensor",
+      "seed": 4002,
+      "stress_dropout": 0.08,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.9225,
+      "method": "availability_sensor",
+      "seed": 4002,
+      "stress_dropout": 0.2,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.9225,
+      "method": "availability_sensor",
+      "seed": 4002,
+      "stress_dropout": 0.35,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.9225,
+      "method": "availability_sensor",
+      "seed": 4002,
+      "stress_dropout": 0.45,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.9183333333333334,
+      "method": "availability_sensor",
+      "seed": 4003,
+      "stress_dropout": 0.08,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.9183333333333334,
+      "method": "availability_sensor",
+      "seed": 4003,
+      "stress_dropout": 0.2,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.9183333333333334,
+      "method": "availability_sensor",
+      "seed": 4003,
+      "stress_dropout": 0.35,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.9183333333333334,
+      "method": "availability_sensor",
+      "seed": 4003,
+      "stress_dropout": 0.45,
+      "train_dropout": 0.08
+    }
+  ],
+  "summary": {
+    "availability_sensor": {
+      "noise": {
+        "0.08": {
+          "false_alarms": 0.0,
+          "false_memory_cells": 0.0
+        },
+        "0.2": {
+          "false_alarms": 0.0,
+          "false_memory_cells": 0.0
+        },
+        "0.35": {
+          "false_alarms": 0.0,
+          "false_memory_cells": 0.0
+        },
+        "0.45": {
+          "false_alarms": 0.0,
+          "false_memory_cells": 0.0
+        }
+      },
+      "stages": {
+        "A": {
+          "banks": 1.0,
+          "late_success": 0.9189583333333333
+        },
+        "B": {
+          "banks": 1.986111111111111,
+          "late_success": 0.9315277777777777
+        },
+        "C": {
+          "banks": 2.972222222222222,
+          "late_success": 0.9303472222222222
+        },
+        "returnA": {
+          "banks": 2.972222222222222,
+          "late_success": 0.9134722222222224
+        },
+        "returnB": {
+          "banks": 2.972222222222222,
+          "late_success": 0.9206944444444444
+        }
+      }
+    }
+  },
+  "task_rows": [
+    {
+      "allocations_total": 96,
+      "method": "availability_sensor",
+      "reused_old_banks": 96,
+      "seed": 4001,
+      "stages": [
+        {
+          "allocated_average": 1.0,
+          "case_11_success": 0.9260162601626016,
+          "early_success": 0.24583333333333332,
+          "late_success": 0.923125,
+          "new_memory_cells": 0,
+          "stage": "A"
+        },
+        {
+          "allocated_average": 2.0,
+          "case_11_success": 0.9394673123486683,
+          "early_success": 0.0008333333333333333,
+          "late_success": 0.93875,
+          "new_memory_cells": 48,
+          "stage": "B"
+        },
+        {
+          "allocated_average": 3.0,
+          "case_11_success": 0.9342762063227953,
+          "early_success": 0.7016666666666665,
+          "late_success": 0.9375,
+          "new_memory_cells": 48,
+          "stage": "C"
+        },
+        {
+          "allocated_average": 3.0,
+          "case_11_success": 0.9205685618729097,
+          "early_success": 0.24666666666666667,
+          "late_success": 0.9202083333333334,
+          "new_memory_cells": 0,
+          "stage": "returnA"
+        },
+        {
+          "allocated_average": 3.0,
+          "case_11_success": 0.9324546952224053,
+          "early_success": 0.0008333333333333333,
+          "late_success": 0.9164583333333333,
+          "new_memory_cells": 0,
+          "stage": "returnB"
+        }
+      ]
+    },
+    {
+      "allocations_total": 92,
+      "method": "availability_sensor",
+      "reused_old_banks": 92,
+      "seed": 4002,
+      "stages": [
+        {
+          "allocated_average": 1.0,
+          "case_11_success": 0.9090136054421769,
+          "early_success": 0.24083333333333332,
+          "late_success": 0.9158333333333333,
+          "new_memory_cells": 0,
+          "stage": "A"
+        },
+        {
+          "allocated_average": 1.9583333333333333,
+          "case_11_success": 0.9087719298245615,
+          "early_success": 0.004166666666666667,
+          "late_success": 0.9160416666666665,
+          "new_memory_cells": 46,
+          "stage": "B"
+        },
+        {
+          "allocated_average": 2.9166666666666665,
+          "case_11_success": 0.9321895424836601,
+          "early_success": 0.6758333333333334,
+          "late_success": 0.9141666666666666,
+          "new_memory_cells": 46,
+          "stage": "C"
+        },
+        {
+          "allocated_average": 2.9166666666666665,
+          "case_11_success": 0.8784313725490196,
+          "early_success": 0.245,
+          "late_success": 0.9066666666666667,
+          "new_memory_cells": 0,
+          "stage": "returnA"
+        },
+        {
+          "allocated_average": 2.9166666666666665,
+          "case_11_success": 0.9472402597402597,
+          "early_success": 0.023333333333333334,
+          "late_success": 0.91125,
+          "new_memory_cells": 0,
+          "stage": "returnB"
+        }
+      ]
+    },
+    {
+      "allocations_total": 96,
+      "method": "availability_sensor",
+      "reused_old_banks": 96,
+      "seed": 4003,
+      "stages": [
+        {
+          "allocated_average": 1.0,
+          "case_11_success": 0.9195596951735817,
+          "early_success": 0.25916666666666666,
+          "late_success": 0.9179166666666667,
+          "new_memory_cells": 0,
+          "stage": "A"
+        },
+        {
+          "allocated_average": 2.0,
+          "case_11_success": 0.9360131255127153,
+          "early_success": 0.0016666666666666666,
+          "late_success": 0.9397916666666667,
+          "new_memory_cells": 48,
+          "stage": "B"
+        },
+        {
+          "allocated_average": 3.0,
+          "case_11_success": 0.9320543565147882,
+          "early_success": 0.6991666666666667,
+          "late_success": 0.9393750000000002,
+          "new_memory_cells": 48,
+          "stage": "C"
+        },
+        {
+          "allocated_average": 3.0,
+          "case_11_success": 0.9196062346185397,
+          "early_success": 0.22916666666666663,
+          "late_success": 0.9135416666666666,
+          "new_memory_cells": 0,
+          "stage": "returnA"
+        },
+        {
+          "allocated_average": 3.0,
+          "case_11_success": 0.920767306088407,
+          "early_success": 0.0016666666666666666,
+          "late_success": 0.934375,
+          "new_memory_cells": 0,
+          "stage": "returnB"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2485 @@
+{
+  "aggregate": {
+    "changed_01": {
+      "locally_learned_probe": {
+        "correct": 0.9740249999999999,
+        "critical": 0.9112592773594456,
+        "false_corrections": 88.2,
+        "probe_cost": 2.3435999999999995,
+        "requests": 118.4
+      },
+      "untrained_probe_policy": {
+        "correct": 0.43570000000000003,
+        "critical": 0.9906624715375572,
+        "false_corrections": 96.0,
+        "probe_cost": 410.70000000000016,
+        "requests": 18010.0
+      }
+    },
+    "changed_11": {
+      "information_gain": {
+        "correct": 0.9917,
+        "critical": 0.9798160410454292,
+        "false_corrections": 95.6,
+        "probe_cost": 1.8466,
+        "requests": 110.4
+      },
+      "locally_learned_probe": {
+        "correct": 0.9751249999999999,
+        "critical": 0.9210820617254949,
+        "false_corrections": 89.6,
+        "probe_cost": 2.3982,
+        "requests": 120.8
+      },
+      "passive": {
+        "correct": 0.7474916666666667,
+        "critical": 0.004203093476798924,
+        "false_corrections": 0.0,
+        "probe_cost": 0.0,
+        "requests": 0.0
+      },
+      "periodic": {
+        "correct": 0.97955,
+        "critical": 0.9310292924168879,
+        "false_corrections": 95.0,
+        "probe_cost": 1.8275999999999992,
+        "requests": 109.4
+      },
+      "random": {
+        "correct": 0.9848916666666667,
+        "critical": 0.9527402854690135,
+        "false_corrections": 95.6,
+        "probe_cost": 1.6227999999999991,
+        "requests": 58.2
+      },
+      "untrained_probe_policy": {
+        "correct": 0.4365166666666666,
+        "critical": 0.9876028139906972,
+        "false_corrections": 96.0,
+        "probe_cost": 409.4449999999998,
+        "requests": 17985.0
+      }
+    },
+    "global_change": {
+      "information_gain": {
+        "correct": 0.9750666666666665,
+        "critical": 0.978965644664066,
+        "false_corrections": 380.8,
+        "probe_cost": 7.346000000000002,
+        "requests": 444.0
+      },
+      "locally_learned_probe": {
+        "correct": 0.9362749999999999,
+        "critical": 0.0,
+        "false_corrections": 361.8,
+        "probe_cost": 6.472200000000001,
+        "requests": 326.8
+      },
+      "passive": {
+        "correct": 0.004066666666666667,
+        "critical": 0.004203093476798924,
+        "false_corrections": 0.0,
+        "probe_cost": 0.0,
+        "requests": 0.0
+      },
+      "periodic": {
+        "correct": 0.924175,
+        "critical": 0.9234743612987882,
+        "false_corrections": 377.8,
+        "probe_cost": 7.332000000000008,
+        "requests": 443.0
+      },
+      "random": {
+        "correct": 0.94055,
+        "critical": 0.9518898890876502,
+        "false_corrections": 379.8,
+        "probe_cost": 6.592399999999995,
+        "requests": 235.6
+      },
+      "untrained_probe_policy": {
+        "correct": 0.9881333333333334,
+        "critical": 0.0,
+        "false_corrections": 381.6,
+        "probe_cost": 12.893799999999988,
+        "requests": 547.2
+      }
+    },
+    "scarcity_10": {
+      "locally_learned_probe": {
+        "correct": 0.9781916666666668,
+        "critical": 0.9361851946460117,
+        "false_corrections": 0.8,
+        "probe_cost": 11.133999999999979,
+        "requests": 441.0
+      },
+      "untrained_probe_policy": {
+        "correct": 0.25275000000000003,
+        "critical": 0.25441327703091376,
+        "false_corrections": 1.0,
+        "probe_cost": 542.0246000000002,
+        "requests": 23807.4
+      }
+    },
+    "scarcity_11": {
+      "information_gain": {
+        "correct": 0.9907833333333332,
+        "critical": 0.976113260957435,
+        "false_corrections": 0.4,
+        "probe_cost": 3.2516,
+        "requests": 195.4
+      },
+      "locally_learned_probe": {
+        "correct": 0.9785583333333333,
+        "critical": 0.9397105894145703,
+        "false_corrections": 0.6,
+        "probe_cost": 12.294599999999974,
+        "requests": 482.4
+      },
+      "passive": {
+        "correct": 0.9959333333333333,
+        "critical": 0.9957969065232011,
+        "false_corrections": 0.0,
+        "probe_cost": 0.0,
+        "requests": 0.0
+      },
+      "periodic": {
+        "correct": 0.990875,
+        "critical": 0.9761796509989289,
+        "false_corrections": 0.6,
+        "probe_cost": 3.212799999999998,
+        "requests": 193.2
+      },
+      "random": {
+        "correct": 0.9907583333333333,
+        "critical": 0.976113260957435,
+        "false_corrections": 0.4,
+        "probe_cost": 2.866999999999998,
+        "requests": 103.0
+      },
+      "untrained_probe_policy": {
+        "correct": 0.24770833333333334,
+        "critical": 0.24865986109835533,
+        "false_corrections": 0.6,
+        "probe_cost": 545.9581999999999,
+        "requests": 24020.8
+      }
+    },
+    "stable": {
+      "information_gain": {
+        "correct": 0.993675,
+        "critical": 0.9918804433652173,
+        "false_corrections": 0.6,
+        "probe_cost": 0.13560000000000003,
+        "requests": 6.4
+      },
+      "locally_learned_probe": {
+        "correct": 0.9933250000000001,
+        "critical": 0.0,
+        "false_corrections": 0.6,
+        "probe_cost": 2.407199999999996,
+        "requests": 101.8
+      },
+      "passive": {
+        "correct": 0.9959333333333333,
+        "critical": 0.9957969065232011,
+        "false_corrections": 0.0,
+        "probe_cost": 0.0,
+        "requests": 0.0
+      },
+      "periodic": {
+        "correct": 0.9948416666666666,
+        "critical": 0.9920131038851233,
+        "false_corrections": 0.6,
+        "probe_cost": 0.07120000000000001,
+        "requests": 2.8
+      },
+      "random": {
+        "correct": 0.9946916666666666,
+        "critical": 0.9918798940750684,
+        "false_corrections": 0.4,
+        "probe_cost": 0.1102,
+        "requests": 3.8
+      },
+      "untrained_probe_policy": {
+        "correct": 0.24766666666666665,
+        "critical": 0.0,
+        "false_corrections": 1.0,
+        "probe_cost": 544.8471999999998,
+        "requests": 23946.8
+      }
+    },
+    "uniform_drought": {
+      "information_gain": {
+        "correct": 0.9896166666666668,
+        "critical": 0.9921871763220173,
+        "false_corrections": 0.8,
+        "probe_cost": 3.311799999999999,
+        "requests": 199.2
+      },
+      "locally_learned_probe": {
+        "correct": 0.973725,
+        "critical": 0.0,
+        "false_corrections": 0.0,
+        "probe_cost": 18.738399999999963,
+        "requests": 744.6
+      },
+      "passive": {
+        "correct": 0.9959333333333333,
+        "critical": 0.9957969065232011,
+        "false_corrections": 0.0,
+        "probe_cost": 0.0,
+        "requests": 0.0
+      },
+      "periodic": {
+        "correct": 0.9919333333333334,
+        "critical": 0.9901810131389771,
+        "false_corrections": 0.6,
+        "probe_cost": 1.5841999999999994,
+        "requests": 94.8
+      },
+      "random": {
+        "correct": 0.9919166666666668,
+        "critical": 0.9891176715254542,
+        "false_corrections": 0.4,
+        "probe_cost": 2.0719999999999987,
+        "requests": 73.0
+      },
+      "untrained_probe_policy": {
+        "correct": 0.24699166666666666,
+        "critical": 0.0,
+        "false_corrections": 0.6,
+        "probe_cost": 546.3518,
+        "requests": 23979.2
+      }
+    }
+  },
+  "date": "2026-10-27",
+  "learned_local_values": [
+    {
+      "q_per_cell_mean": [
+        [
+          0.8387702777421673,
+          -0.019269764499162047
+        ],
+        [
+          0.1866329154976429,
+          0.22504932862098126
+        ],
+        [
+          0.4313163904141161,
+          0.3648695456085507
+        ],
+        [
+          0.049657215741814496,
+          -0.018535954927554204
+        ],
+        [
+          0.904056391532511,
+          0.397474794205206
+        ],
+        [
+          0.4534339717461299,
+          0.09678261363853359
+        ]
+      ],
+      "seed": 1001,
+      "training_log": [
+        {
+          "episode": 0,
+          "probe_cost": 26.880999999999993,
+          "reward_pulses": 0.665
+        },
+        {
+          "episode": 40,
+          "probe_cost": 22.102999999999994,
+          "reward_pulses": 0.6544444444444445
+        },
+        {
+          "episode": 80,
+          "probe_cost": 15.778999999999984,
+          "reward_pulses": 0.6847222222222222
+        },
+        {
+          "episode": 120,
+          "probe_cost": 13.361999999999988,
+          "reward_pulses": 0.7094444444444444
+        },
+        {
+          "episode": 160,
+          "probe_cost": 13.434999999999988,
+          "reward_pulses": 0.7205555555555555
+        },
+        {
+          "episode": 200,
+          "probe_cost": 11.67999999999999,
+          "reward_pulses": 0.7458333333333333
+        },
+        {
+          "episode": 240,
+          "probe_cost": 9.138999999999992,
+          "reward_pulses": 0.7380555555555556
+        },
+        {
+          "episode": 280,
+          "probe_cost": 7.411999999999993,
+          "reward_pulses": 0.7363888888888889
+        }
+      ]
+    },
+    {
+      "q_per_cell_mean": [
+        [
+          0.8616739332781463,
+          -0.015095515135439434
+        ],
+        [
+          0.1991161831626623,
+          0.22564317447604468
+        ],
+        [
+          0.40822977187123727,
+          0.364500629866315
+        ],
+        [
+          0.0595713624394707,
+          -0.015766907995130645
+        ],
+        [
+          0.9138869854647703,
+          0.38781018584624755
+        ],
+        [
+          0.47000891788779126,
+          0.08825186206969943
+        ]
+      ],
+      "seed": 1002,
+      "training_log": [
+        {
+          "episode": 0,
+          "probe_cost": 25.24,
+          "reward_pulses": 0.6763888888888889
+        },
+        {
+          "episode": 40,
+          "probe_cost": 19.164,
+          "reward_pulses": 0.7125
+        },
+        {
+          "episode": 80,
+          "probe_cost": 14.134999999999986,
+          "reward_pulses": 0.7188888888888889
+        },
+        {
+          "episode": 120,
+          "probe_cost": 14.924999999999983,
+          "reward_pulses": 0.6852777777777778
+        },
+        {
+          "episode": 160,
+          "probe_cost": 12.209999999999987,
+          "reward_pulses": 0.7230555555555556
+        },
+        {
+          "episode": 200,
+          "probe_cost": 10.217999999999991,
+          "reward_pulses": 0.7391666666666666
+        },
+        {
+          "episode": 240,
+          "probe_cost": 9.15699999999999,
+          "reward_pulses": 0.7366666666666667
+        },
+        {
+          "episode": 280,
+          "probe_cost": 8.05599999999999,
+          "reward_pulses": 0.7552777777777778
+        }
+      ]
+    },
+    {
+      "q_per_cell_mean": [
+        [
+          0.8747994766447965,
+          -0.016216256242623652
+        ],
+        [
+          0.1939977581950442,
+          0.24897626583446034
+        ],
+        [
+          0.4351600554958215,
+          0.39155495896001563
+        ],
+        [
+          0.048614591208116655,
+          -0.016547542872259402
+        ],
+        [
+          0.8901713363571845,
+          0.39015579111187476
+        ],
+        [
+          0.45546616245985655,
+          0.09511351295790277
+        ]
+      ],
+      "seed": 1003,
+      "training_log": [
+        {
+          "episode": 0,
+          "probe_cost": 27.424999999999997,
+          "reward_pulses": 0.6427777777777778
+        },
+        {
+          "episode": 40,
+          "probe_cost": 17.525999999999996,
+          "reward_pulses": 0.7038888888888889
+        },
+        {
+          "episode": 80,
+          "probe_cost": 15.504999999999987,
+          "reward_pulses": 0.6963888888888888
+        },
+        {
+          "episode": 120,
+          "probe_cost": 14.077999999999983,
+          "reward_pulses": 0.7308333333333333
+        },
+        {
+          "episode": 160,
+          "probe_cost": 11.844999999999985,
+          "reward_pulses": 0.7138888888888889
+        },
+        {
+          "episode": 200,
+          "probe_cost": 11.05999999999999,
+          "reward_pulses": 0.7305555555555555
+        },
+        {
+          "episode": 240,
+          "probe_cost": 9.03599999999999,
+          "reward_pulses": 0.7469444444444444
+        },
+        {
+          "episode": 280,
+          "probe_cost": 8.120999999999992,
+          "reward_pulses": 0.7425
+        }
+      ]
+    },
+    {
+      "q_per_cell_mean": [
+        [
+          0.8499470404308148,
+          -0.012304891744666936
+        ],
+        [
+          0.20727451502528693,
+          0.2285613413813062
+        ],
+        [
+          0.4152997103242684,
+          0.3783428518570004
+        ],
+        [
+          0.05848510398076113,
+          -0.017904529909556197
+        ],
+        [
+          0.9098866001751684,
+          0.38205934471582514
+        ],
+        [
+          0.4474291032952196,
+          0.09244133039022832
+        ]
+      ],
+      "seed": 1004,
+      "training_log": [
+        {
+          "episode": 0,
+          "probe_cost": 26.781,
+          "reward_pulses": 0.6341666666666667
+        },
+        {
+          "episode": 40,
+          "probe_cost": 17.426999999999992,
+          "reward_pulses": 0.7055555555555556
+        },
+        {
+          "episode": 80,
+          "probe_cost": 15.11499999999999,
+          "reward_pulses": 0.6694444444444444
+        },
+        {
+          "episode": 120,
+          "probe_cost": 14.034999999999986,
+          "reward_pulses": 0.6763888888888889
+        },
+        {
+          "episode": 160,
+          "probe_cost": 11.426999999999989,
+          "reward_pulses": 0.7175
+        },
+        {
+          "episode": 200,
+          "probe_cost": 11.39699999999999,
+          "reward_pulses": 0.6705555555555556
+        },
+        {
+          "episode": 240,
+          "probe_cost": 8.95999999999999,
+          "reward_pulses": 0.7191666666666666
+        },
+        {
+          "episode": 280,
+          "probe_cost": 6.582999999999994,
+          "reward_pulses": 0.7863888888888889
+        }
+      ]
+    },
+    {
+      "q_per_cell_mean": [
+        [
+          0.8633702186289872,
+          -0.009754965154973403
+        ],
+        [
+          0.19739681184125182,
+          0.23028502125078287
+        ],
+        [
+          0.43505885900511587,
+          0.37400334411782793
+        ],
+        [
+          0.057820329137538255,
+          -0.018000401108165736
+        ],
+        [
+          0.8728229572209933,
+          0.368012682581992
+        ],
+        [
+          0.4628792659233752,
+          0.09026445321968729
+        ]
+      ],
+      "seed": 1005,
+      "training_log": [
+        {
+          "episode": 0,
+          "probe_cost": 23.308999999999994,
+          "reward_pulses": 0.6772222222222222
+        },
+        {
+          "episode": 40,
+          "probe_cost": 18.564,
+          "reward_pulses": 0.68
+        },
+        {
+          "episode": 80,
+          "probe_cost": 15.215999999999983,
+          "reward_pulses": 0.6941666666666667
+        },
+        {
+          "episode": 120,
+          "probe_cost": 14.808999999999989,
+          "reward_pulses": 0.6619444444444444
+        },
+        {
+          "episode": 160,
+          "probe_cost": 13.676999999999987,
+          "reward_pulses": 0.6897222222222222
+        },
+        {
+          "episode": 200,
+          "probe_cost": 10.551999999999987,
+          "reward_pulses": 0.7247222222222223
+        },
+        {
+          "episode": 240,
+          "probe_cost": 9.448999999999987,
+          "reward_pulses": 0.7308333333333333
+        },
+        {
+          "episode": 280,
+          "probe_cost": 7.654999999999992,
+          "reward_pulses": 0.7427777777777778
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Probe-vs-act policy learned from each cell's own realized net reward.",
+    "Four-slot Bayesian hypotheses and local correction flags remain engineered.",
+    "Partner coordination, two actions, zero-noise message channel fixed.",
+    "Meta training uses hand-designed mixture of XOR-like synthetic worlds.",
+    "No learned intrinsic predictive model, AGI, energy joules or arbitrary agents.",
+    "Score includes simulated probe/message costs but not compute/memory cost."
+  ],
+  "rows": [
+    {
+      "correct": 0.9988333333333334,
+      "critical": 0.0,
+      "earned": 0.9194166666666667,
+      "false_corrections": 0,
+      "method": "locally_learned_probe",
+      "probe_cost": 0.9000000000000002,
+      "probes": 28,
+      "requests": 50,
+      "scenario": "stable",
+      "seed": 1001
+    },
+    {
+      "correct": 0.24520833333333333,
+      "critical": 0.0,
+      "earned": 0.22575,
+      "false_corrections": 0,
+      "method": "untrained_probe_policy",
+      "probe_cost": 549.5149999999995,
+      "probes": 18115,
+      "requests": 24160,
+      "scenario": "stable",
+      "seed": 1001
+    },
+    {
+      "correct": 1.0,
+      "critical": 1.0,
+      "false_corrections": 0,
+      "method": "passive",
+      "probe_cost": 0.0,
+      "requests": 0,
+      "scenario": "stable",
+      "seed": 1001
+    },
+    {
+      "correct": 0.9999583333333333,
+      "critical": 1.0,
+      "false_corrections": 0,
+      "method": "random",
+      "probe_cost": 0.029,
+      "requests": 1,
+      "scenario": "stable",
+      "seed": 1001
+    },
+    {
+      "correct": 1.0,
+      "critical": 1.0,
+      "false_corrections": 0,
+      "method": "periodic",
+      "probe_cost": 0.0,
+      "requests": 0,
+      "scenario": "stable",
+      "seed": 1001
+    },
+    {
+      "correct": 0.9999583333333333,
+      "critical": 0.9998350923482849,
+      "false_corrections": 0,
+      "method": "information_gain",
+      "probe_cost": 0.033,
+      "requests": 2,
+      "scenario": "stable",
+      "seed": 1001
+    },
+    {
+      "correct": 0.9755833333333334,
+      "critical": 0.9073614557485525,
+      "earned": 0.8924583333333334,
+      "false_corrections": 88,
+      "method": "locally_learned_probe",
+      "probe_cost": 2.391,
+      "probes": 75,
+      "requests": 129,
+      "scenario": "changed_11",
+      "seed": 1001
+    },
+    {
+      "correct": 0.4337083333333333,
+      "critical": 0.9961952026468156,
+      "earned": 0.39645833333333336,
+      "false_corrections": 96,
+      "method": "untrained_probe_policy",
+      "probe_cost": 414.0889999999994,
+      "probes": 13649,
+      "requests": 18216,
+      "scenario": "changed_11",
+      "seed": 1001
+    },
+    {
+      "correct": 0.7473333333333333,
+      "critical": 0.0,
+      "false_corrections": 0,
+      "method": "passive",
+      "probe_cost": 0.0,
+      "requests": 0,
+      "scenario": "changed_11",
+      "seed": 1001
+    },
+    {
+      "correct": 0.9900416666666667,
+      "critical": 0.9607519788918206,
+      "false_corrections": 96,
+      "method": "random",
+      "probe_cost": 1.5119999999999991,
+      "requests": 53,
+      "scenario": "changed_11",
+      "seed": 1001
+    },
+    {
+      "correct": 0.9845,
+      "critical": 0.9386543535620053,
+      "false_corrections": 96,
+      "method": "periodic",
+      "probe_cost": 1.7819999999999994,
+      "requests": 108,
+      "scenario": "changed_11",
+      "seed": 1001
+    },
+    {
+      "correct": 0.9959583333333333,
+      "critical": 0.9840039577836411,
+      "false_corrections": 96,
+      "method": "information_gain",
+      "probe_cost": 1.6500000000000001,
+      "requests": 100,
+      "scenario": "changed_11",
+      "seed": 1001
+    },
+    {
+      "correct": 0.9903333333333333,
+      "critical": 0.9649644686828623,
+      "earned": 0.68825,
+      "false_corrections": 0,
+      "method": "locally_learned_probe",
+      "probe_cost": 7.031999999999989,
+      "probes": 232,
+      "requests": 308,
+      "scenario": "scarcity_11",
+      "seed": 1001
+    },
+    {
+      "correct": 0.25133333333333335,
+      "critical": 0.24938026772434307,
+      "earned": 0.173625,
+      "false_corrections": 0,
+      "method": "untrained_probe_policy",
+      "probe_cost": 544.9880000000003,
+      "probes": 17968,
+      "requests": 23947,
+      "scenario": "scarcity_11",
+      "seed": 1001
+    },
+    {
+      "correct": 1.0,
+      "critical": 1.0,
+      "false_corrections": 0,
+      "method": "passive",
+      "probe_cost": 0.0,
+      "requests": 0,
+      "scenario": "scarcity_11",
+      "seed": 1001
+    },
+    {
+      "correct": 0.9959583333333333,
+      "critical": 0.9841688654353562,
+      "false_corrections": 0,
+      "method": "random",
+      "probe_cost": 2.8289999999999975,
+      "requests": 101,
+      "scenario": "scarcity_11",
+      "seed": 1001
+    },
+    {
+      "correct": 0.996,
+      "critical": 0.9841688654353562,
+      "false_corrections": 0,
+      "method": "periodic",
+      "probe_cost": 3.167999999999999,
+      "requests": 192,
+      "scenario": "scarcity_11",
+      "seed": 1001
+    },
+    {
+      "correct": 0.996,
+      "critical": 0.9841688654353562,
+      "false_corrections": 0,
+      "method": "information_gain",
+      "probe_cost": 3.168,
+      "requests": 192,
+      "scenario": "scarcity_11",
+      "seed": 1001
+    },
+    {
+      "correct": 0.9825833333333334,
+      "critical": 0.0,
+      "earned": 0.5392916666666666,
+      "false_corrections": 0,
+      "method": "locally_learned_probe",
+      "probe_cost": 12.617999999999984,
+      "probes": 418,
+      "requests": 542,
+      "scenario": "uniform_drought",
+      "seed": 1001
+    },
+    {
+      "correct": 0.245625,
+      "critical": 0.0,
+      "earned": 0.13504166666666667,
+      "false_corrections": 0,
+      "method": "untrained_probe_policy",
+      "probe_cost": 549.1050000000001,
+      "probes": 18105,
+      "requests": 24120,
+      "scenario": "uniform_drought",
+      "seed": 1001
+    },
+    {
+      "correct": 1.0,
+      "critical": 1.0,
+      "false_corrections": 0,
+      "method": "passive",
+      "probe_cost": 0.0,
+      "requests": 0,
+      "scenario": "uniform_drought",
+      "seed": 1001
+    },
+    {
+      "correct": 0.997125,
+      "critical": 0.9967018469656992,
+      "false_corrections": 0,
+      "method": "random",
+      "probe_cost": 2.0089999999999986,
+      "requests": 71,
+      "scenario": "uniform_drought",
+      "seed": 1001
+    },
+    {
+      "correct": 0.9982083333333334,
+      "critical": 0.9983509234828496,
+      "false_corrections": 0,
+      "method": "periodic",
+      "probe_cost": 1.4189999999999994,
+      "requests": 86,
+      "scenario": "uniform_drought",
+      "seed": 1001
+    },
+    {
+      "correct": 0.9955,
+      "critical": 0.995547493403694,
+      "false_corrections": 0,
+      "method": "information_gain",
+      "probe_cost": 3.5639999999999983,
+      "requests": 216,
+      "scenario": "uniform_drought",
+      "seed": 1001
+    },
+    {
+      "correct": 0.9358333333333333,
+      "critical": 0.0,
+      "earned": 0.858875,
+      "false_corrections": 362,
+      "method": "locally_learned_probe",
+      "probe_cost": 6.6499999999999995,
+      "probes": 210,
+      "requests": 350,
+      "scenario": "global_change",
+      "seed": 1001
+    },
+    {
+      "correct": 0.9958333333333333,
+      "critical": 0.0,
+      "earned": 0.91425,
+      "false_corrections": 384,
+      "method": "untrained_probe_policy",
+      "probe_cost": 10.552999999999997,
+      "probes": 349,
+      "requests": 457,
+      "scenario": "global_change",
+      "seed": 1001
+    },
+    {
+      "correct": 0.0,
+      "critical": 0.0,
+      "false_corrections": 0,
+      "method": "passive",
+      "probe_cost": 0.0,
+      "requests": 0,
+      "scenario": "global_change",
+      "seed": 1001
+    },
+    {
+      "correct": 0.9441666666666667,
+      "critical": 0.9607519788918206,
+      "false_corrections": 382,
+      "method": "random",
+      "probe_cost": 6.535999999999994,
+      "requests": 234,
+      "scenario": "global_change",
+      "seed": 1001
+    },
+    {
+      "correct": 0.9285,
+      "critical": 0.9386543535620053,
+      "false_corrections": 380,
+      "method": "periodic",
+      "probe_cost": 7.260000000000008,
+      "requests": 440,
+      "scenario": "global_change",
+      "seed": 1001
+    },
+    {
+      "correct": 0.9834583333333333,
+      "critical": 0.9840039577836411,
+      "false_corrections": 384,
+      "method": "information_gain",
+      "probe_cost": 7.260000000000003,
+      "requests": 440,
+      "scenario": "global_change",
+      "seed": 1001
+    },
+    {
+      "correct": 0.9697083333333333,
+      "critical": 0.8827905438915523,
+      "earned": 0.8929166666666667,
+      "false_corrections": 86,
+      "method": "locally_learned_probe",
+      "probe_cost": 2.3789999999999996,
+      "probes": 75,
+      "requests": 126,
+      "scenario": "changed_01",
+      "seed": 1001
+    },
+    {
+      "correct": 0.4382916666666667,
+      "critical": 0.9948751859811539,
+      "earned": 0.4039583333333333,
+      "false_corrections": 96,
+      "method": "untrained_probe_policy",
+      "probe_cost": 410.2320000000004,
+      "probes": 13532,
+      "requests": 17983,
+      "scenario": "changed_01",
+      "seed": 1001
+    },
+    {
+      "correct": 0.99,
+      "critical": 0.9630789517059503,
+      "earned": 0.686,
+      "false_corrections": 0,
+      "method": "locally_learned_probe",
+      "probe_cost": 7.271999999999989,
+      "probes": 240,
+      "requests": 318,
+      "scenario": "scarcity_10",
+      "seed": 1001
+    },
+    {
+      "correct": 0.253625,
+      "critical": 0.25844733805834846,
+      "earned": 0.17279166666666668,
+      "false_corrections": 0,
+      "method": "untrained_probe_policy",
+      "probe_cost": 543.333,
+      "probes": 17913,
+      "requests": 23877,
+      "scenario": "scarcity_10",
+      "seed": 1001
+    },
+    {
+      "correct": 0.9982083333333334,
+      "critical": 0.0,
+      "earned": 0.9166666666666666,
+      "false_corrections": 0,
+      "method": "locally_learned_probe",
+      "probe_cost": 1.3549999999999998,
+      "probes": 43,
+      "requests": 70,
+      "scenario": "stable",
+      "seed": 1002
+    },
+    {
+      "correct": 0.2510833333333333,
+      "critical": 0.0,
+      "earned": 0.23033333333333333,
+      "false_corrections": 0,
+      "method": "untrained_probe_policy",
+      "probe_cost": 545.1019999999996,
+      "probes": 17974,
+      "requests": 23938,
+      "scenario": "stable",
+      "seed": 1002
+    },
+    {
+      "correct": 1.0,
+      "critical": 1.0,
+      "false_corrections": 0,
+      "method": "passive",
+      "probe_cost": 0.0,
+      "requests": 0,
+      "scenario": "stable",
+      "seed": 1002
+    },
+    {
+      "correct": 0.999875,
+      "critical": 1.0,
+      "false_corrections": 0,
+      "method": "random",
+      "probe_cost": 0.08700000000000001,
+      "requests": 3,
+      "scenario": "stable",
+      "seed": 1002
+    },
+    {
+      "correct": 1.0,
+      "critical": 1.0,
+      "false_corrections": 0,
+      "method": "periodic",
+      "probe_cost": 0.0,
+      "requests": 0,
+      "scenario": "stable",
+      "seed": 1002
+    },
+    {
+      "correct": 0.9999166666666667,
+      "critical": 1.0,
+      "false_corrections": 0,
+      "method": "information_gain",
+      "probe_cost": 0.066,
+      "requests": 4,
+      "scenario": "stable",
+      "seed": 1002
+    },
+    {
+      "correct": 0.9815833333333334,
+      "critical": 0.9316984858459513,
+      "earned": 0.9029166666666667,
+      "false_corrections": 90,
+      "method": "locally_learned_probe",
+      "probe_cost": 2.7369999999999997,
+      "probes": 89,
+      "requests": 128,
+      "scenario": "changed_11",
+      "seed": 1002
+    },
+    {
+      "correct": 0.43925,
+      "critical": 0.9952271231073074,
+      "earned": 0.40329166666666666,
+      "false_corrections": 96,
+      "method": "untrained_probe_policy",
+      "probe_cost": 410.18600000000004,
+      "probes": 13514,
+      "requests": 18084,
+      "scenario": "changed_11",
+      "seed": 1002
+    },
+    {
+      "correct": 0.74925,
+      "critical": 0.0,
+      "false_corrections": 0,
+      "method": "passive",
+      "probe_cost": 0.0,
+      "requests": 0,
+      "scenario": "changed_11",
+      "seed": 1002
+    },
+    {
+      "correct": 0.9890416666666667,
+      "critical": 0.9567962778331671,
+      "false_corrections": 96,
+      "method": "random",
+      "probe_cost": 1.5699999999999992,
+      "requests": 55,
+      "scenario": "changed_11",
+      "seed": 1002
+    },
+    {
+      "correct": 0.985,
+      "critical": 0.9401794616151545,
+      "false_corrections": 96,
+      "method": "periodic",
+      "probe_cost": 1.715999999999999,
+      "requests": 104,
+      "scenario": "changed_11",
+      "seed": 1002
+    },
+    {
+      "correct": 0.9958333333333333,
+      "critical": 0.9837155201063477,
+      "false_corrections": 96,
+      "method": "information_gain",
+      "probe_cost": 1.7820000000000003,
+      "requests": 108,
+      "scenario": "changed_11",
+      "seed": 1002
+    },
+    {
+      "correct": 0.9852916666666667,
+      "critical": 0.9463011031797534,
+      "earned": 0.682,
+      "false_corrections": 0,
+      "method": "locally_learned_probe",
+      "probe_cost": 10.46899999999998,
+      "probes": 353,
+      "requests": 411,
+      "scenario": "scarcity_11",
+      "seed": 1002
+    },
+    {
+      "correct": 0.245625,
+      "critical": 0.24610642439974043,
+      "earned": 0.167125,
+      "false_corrections": 0,
+      "method": "untrained_probe_policy",
+      "probe_cost": 549.5449999999997,
+      "probes": 18105,
+      "requests": 24230,
+      "scenario": "scarcity_11",
+      "seed": 1002
+    },
+    {
+      "correct": 1.0,
+      "critical": 1.0,
+      "false_corrections": 0,
+      "method": "passive",
+      "probe_cost": 0.0,
+      "requests": 0,
+      "scenario": "scarcity_11",
+      "seed": 1002
+    },
+    {
+      "correct": 0.995875,
+      "critical": 0.9840478564307079,
+      "false_corrections": 0,
+      "method": "random",
+      "probe_cost": 2.882999999999998,
+      "requests": 102,
+      "scenario": "scarcity_11",
+      "seed": 1002
+    },
+    {
+      "correct": 0.996,
+      "critical": 0.9840478564307079,
+      "false_corrections": 0,
+      "method": "periodic",
+      "probe_cost": 3.1679999999999984,
+      "requests": 192,
+      "scenario": "scarcity_11",
+      "seed": 1002
+    },
+    {
+      "correct": 0.9959166666666667,
+      "critical": 0.9840478564307079,
+      "false_corrections": 0,
+      "method": "information_gain",
+      "probe_cost": 3.234,
+      "requests": 196,
+      "scenario": "scarcity_11",
+      "seed": 1002
+    },
+    {
+      "correct": 0.9714166666666667,
+      "critical": 0.0,
+      "earned": 0.538,
+      "false_corrections": 0,
+      "method": "locally_learned_probe",
+      "probe_cost": 20.33399999999996,
+      "probes": 686,
+      "requests": 796,
+      "scenario": "uniform_drought",
+      "seed": 1002
+    },
+    {
+      "correct": 0.24745833333333334,
+      "critical": 0.0,
+      "earned": 0.13775,
+      "false_corrections": 0,
+      "method": "untrained_probe_policy",
+      "probe_cost": 547.801,
+      "probes": 18061,
+      "requests": 24069,
+      "scenario": "uniform_drought",
+      "seed": 1002
+    },
+    {
+      "correct": 1.0,
+      "critical": 1.0,
+      "false_corrections": 0,
+      "method": "passive",
+      "probe_cost": 0.0,
+      "requests": 0,
+      "scenario": "uniform_drought",
+      "seed": 1002
+    },
+    {
+      "correct": 0.9974583333333333,
+      "critical": 0.998670654702559,
+      "false_corrections": 0,
+      "method": "random",
+      "probe_cost": 1.7769999999999986,
+      "requests": 63,
+      "scenario": "uniform_drought",
+      "seed": 1002
+    },
+    {
+      "correct": 0.9979583333333333,
+      "critical": 0.998670654702559,
+      "false_corrections": 0,
+      "method": "periodic",
+      "probe_cost": 1.616999999999999,
+      "requests": 98,
+      "scenario": "uniform_drought",
+      "seed": 1002
+    },
+    {
+      "correct": 0.9961666666666666,
+      "critical": 0.9980059820538385,
+      "false_corrections": 0,
+      "method": "information_gain",
+      "probe_cost": 3.035999999999999,
+      "requests": 184,
+      "scenario": "uniform_drought",
+      "seed": 1002
+    },
+    {
+      "correct": 0.9652916666666667,
+      "critical": 0.0,
+      "earned": 0.8830416666666666,
+      "false_corrections": 374,
+      "method": "locally_learned_probe",
+      "probe_cost": 6.389000000000001,
+      "probes": 205,
+      "requests": 316,
+      "scenario": "global_change",
+      "seed": 1002
+    },
+    {
+      "correct": 0.9960416666666667,
+      "critical": 0.0,
+      "earned": 0.91075,
+      "false_corrections": 384,
+      "method": "untrained_probe_policy",
+      "probe_cost": 10.346999999999998,
+      "probes": 343,
+      "requests": 443,
+      "scenario": "global_change",
+      "seed": 1002
+    },
+    {
+      "correct": 0.0,
+      "critical": 0.0,
+      "false_corrections": 0,
+      "method": "passive",
+      "probe_cost": 0.0,
+      "requests": 0,
+      "scenario": "global_change",
+      "seed": 1002
+    },
+    {
+      "correct": 0.94375,
+      "critical": 0.9567962778331671,
+      "false_corrections": 382,
+      "method": "random",
+      "probe_cost": 6.701999999999994,
+      "requests": 238,
+      "scenario": "global_change",
+      "seed": 1002
+    },
+    {
+      "correct": 0.936,
+      "critical": 0.9401794616151545,
+      "false_corrections": 384,
+      "method": "periodic",
+      "probe_cost": 7.392000000000007,
+      "requests": 448,
+      "scenario": "global_change",
+      "seed": 1002
+    },
+    {
+      "correct": 0.97825,
+      "critical": 0.9837155201063477,
+      "false_corrections": 382,
+      "method": "information_gain",
+      "probe_cost": 7.0290000000000035,
+      "requests": 426,
+      "scenario": "global_change",
+      "seed": 1002
+    },
+    {
+      "correct": 0.986375,
+      "critical": 0.9481481481481482,
+      "earned": 0.9073333333333333,
+      "false_corrections": 92,
+      "method": "locally_learned_probe",
+      "probe_cost": 2.3849999999999993,
+      "probes": 77,
+      "requests": 115,
+      "scenario": "changed_01",
+      "seed": 1002
+    },
+    {
+      "correct": 0.44033333333333335,
+      "critical": 0.9934343434343434,
+      "earned": 0.40379166666666666,
+      "false_corrections": 96,
+      "method": "untrained_probe_policy",
+      "probe_cost": 408.58799999999997,
+      "probes": 13476,
+      "requests": 17922,
+      "scenario": "changed_01",
+      "seed": 1002
+    },
+    {
+      "correct": 0.9859583333333334,
+      "critical": 0.9474754320569299,
+      "earned": 0.6908333333333333,
+      "false_corrections": 0,
+      "method": "locally_learned_probe",
+      "probe_cost": 10.04099999999998,
+      "probes": 337,
+      "requests": 404,
+      "scenario": "scarcity_10",
+      "seed": 1002
+    },
+    {
+      "correct": 0.2535,
+      "critical": 0.248729244323958,
+      "earned": 0.17633333333333334,
+      "false_corrections": 0,
+      "method": "untrained_probe_policy",
+      "probe_cost": 543.6359999999999,
+      "probes": 17916,
+      "requests": 23934,
+      "scenario": "scarcity_10",
+      "seed": 1002
+    },
+    {
+      "correct": 0.999,
+      "critical": 0.0,
+      "earned": 0.9182083333333333,
+      "false_corrections": 0,
+      "method": "locally_learned_probe",
+      "probe_cost": 0.7840000000000001,
+      "probes": 24,
+      "requests": 46,
+      "scenario": "stable",
+      "seed": 1003
+    },
+    {
+      "correct": 0.24529166666666666,
+      "critical": 0.0,
+      "earned": 0.22604166666666667,
+      "false_corrections": 0,
+      "method": "untrained_probe_policy",
+      "probe_cost": 549.1730000000006,
+      "probes": 18113,
+      "requests": 24087,
+      "scenario": "stable",
+      "seed": 1003
+    },
+    {
+      "correct": 1.0,
+      "critical": 1.0,
+      "false_corrections": 0,
+      "method": "passive",
+      "probe_cost": 0.0,
+      "requests": 0,
+      "scenario": "stable",
+      "seed": 1003
+    },
+    {
+      "correct": 0.9999583333333333,
+      "critical": 1.0,
+      "false_corrections": 0,
+      "method": "random",
+      "probe_cost": 0.029,
+      "requests": 1,
+      "scenario": "stable",
+      "seed": 1003
+    },
+    {
+      "correct": 1.0,
+      "critical": 1.0,
+      "false_corrections": 0,
+      "method": "periodic",
+      "probe_cost": 0.0,
+      "requests": 0,
+      "scenario": "stable",
+      "seed": 1003
+    },
+    {
+      "correct": 0.9999166666666667,
+      "critical": 0.9998335552596538,
+      "false_corrections": 0,
+      "method": "information_gain",
+      "probe_cost": 0.066,
+      "requests": 4,
+      "scenario": "stable",
+      "seed": 1003
+    },
+    {
+      "correct": 0.9970416666666667,
+      "critical": 0.9910656270305394,
+      "earned": 0.9137916666666667,
+      "false_corrections": 96,
+      "method": "locally_learned_probe",
+      "probe_cost": 2.3709999999999996,
+      "probes": 75,
+      "requests": 124,
+      "scenario": "changed_11",
+      "seed": 1003
+    },
+    {
+      "correct": 0.4447083333333333,
+      "critical": 0.99545159194282,
+      "earned": 0.4099583333333333,
+      "false_corrections": 96,
+      "method": "untrained_probe_policy",
+      "probe_cost": 405.6559999999998,
+      "probes": 13380,
+      "requests": 17789,
+      "scenario": "changed_11",
+      "seed": 1003
+    },
+    {
+      "correct": 0.7496666666666667,
+      "critical": 0.0,
+      "false_corrections": 0,
+      "method": "passive",
+      "probe_cost": 0.0,
+      "requests": 0,
+      "scenario": "changed_11",
+      "seed": 1003
+    },
+    {
+      "correct": 0.9888333333333333,
+      "critical": 0.9555592543275633,
+      "false_corrections": 96,
+      "method": "random",
+      "probe_cost": 1.6149999999999998,
+      "requests": 60,
+      "scenario": "changed_11",
+      "seed": 1003
+    },
+    {
+      "correct": 0.9785416666666666,
+      "critical": 0.9142809587217043,
+      "false_corrections": 94,
+      "method": "periodic",
+      "probe_cost": 1.946999999999999,
+      "requests": 118,
+      "scenario": "changed_11",
+      "seed": 1003
+    },
+    {
+      "correct": 0.9957916666666666,
+      "critical": 0.9833555259653795,
+      "false_corrections": 96,
+      "method": "information_gain",
+      "probe_cost": 1.8809999999999998,
+      "requests": 114,
+      "scenario": "changed_11",
+      "seed": 1003
+    },
+    {
+      "correct": 0.9730833333333333,
+      "critical": 0.897965933520754,
+      "earned": 0.6868333333333333,
+      "false_corrections": 0,
+      "method": "locally_learned_probe",
+      "probe_cost": 19.065999999999956,
+      "probes": 646,
+      "requests": 729,
+      "scenario": "scarcity_11",
+      "seed": 1003
+    },
+    {
+      "correct": 0.2455,
+      "critical": 0.2336695882255664,
+      "earned": 0.17245833333333332,
+      "false_corrections": 0,
+      "method": "untrained_probe_policy",
+      "probe_cost": 549.7279999999998,
+      "probes": 18108,
+      "requests": 24257,
+      "scenario": "scarcity_11",
+      "seed": 1003
+    },
+    {
+      "correct": 1.0,
+      "critical": 1.0,
+      "false_corrections": 0,
+      "method": "passive",
+      "probe_cost": 0.0,
+      "requests": 0,
+      "scenario": "scarcity_11",
+      "seed": 1003
+    },
+    {
+      "correct": 0.9959583333333333,
+      "critical": 0.9840213049267643,
+      "false_corrections": 0,
+      "method": "random",
+      "probe_cost": 2.8409999999999984,
+      "requests": 104,
+      "scenario": "scarcity_11",
+      "seed": 1003
+    },
+    {
+      "correct": 0.996,
+      "critical": 0.9840213049267643,
+      "false_corrections": 0,
+      "method": "periodic",
+      "probe_cost": 3.1679999999999984,
+      "requests": 192,
+      "scenario": "scarcity_11",
+      "seed": 1003
+    },
+    {
+      "correct": 0.9959583333333333,
+      "critical": 0.9840213049267643,
+      "false_corrections": 0,
+      "method": "information_gain",
+      "probe_cost": 3.200999999999999,
+      "requests": 194,
+      "scenario": "scarcity_11",
+      "seed": 1003
+    },
+    {
+      "correct": 0.9614166666666667,
+      "critical": 0.0,
+      "earned": 0.5271666666666667,
+      "false_corrections": 0,
+      "method": "locally_learned_probe",
+      "probe_cost": 27.39399999999994,
+      "probes": 926,
+      "requests": 1061,
+      "scenario": "uniform_drought",
+      "seed": 1003
+    },
+    {
+      "correct": 0.24791666666666667,
+      "critical": 0.0,
+      "earned": 0.136625,
+      "false_corrections": 0,
+      "method": "untrained_probe_policy",
+      "probe_cost": 547.126,
+      "probes": 18050,
+      "requests": 23969,
+      "scenario": "uniform_drought",
+      "seed": 1003
+    },
+    {
+      "correct": 1.0,
+      "critical": 1.0,
+      "false_corrections": 0,
+      "method": "passive",
+      "probe_cost": 0.0,
+      "requests": 0,
+      "scenario": "uniform_drought",
+      "seed": 1003
+    },
+    {
+      "correct": 0.9968333333333333,
+      "critical": 0.9965046604527297,
+      "false_corrections": 0,
+      "method": "random",
+      "probe_cost": 2.2119999999999993,
+      "requests": 78,
+      "scenario": "uniform_drought",
+      "seed": 1003
+    },
+    {
+      "correct": 0.998,
+      "critical": 0.9976697736351531,
+      "false_corrections": 0,
+      "method": "periodic",
+      "probe_cost": 1.5839999999999996,
+      "requests": 96,
+      "scenario": "uniform_drought",
+      "seed": 1003
+    },
+    {
+      "correct": 0.9964166666666666,
+      "critical": 0.996005326231691,
+      "false_corrections": 0,
+      "method": "information_gain",
+      "probe_cost": 2.8379999999999987,
+      "requests": 172,
+      "scenario": "uniform_drought",
+      "seed": 1003
+    },
+    {
+      "correct": 0.9603333333333334,
+      "critical": 0.0,
+      "earned": 0.88425,
+      "false_corrections": 372,
+      "method": "locally_learned_probe",
+      "probe_cost": 7.048,
+      "probes": 224,
+      "requests": 362,
+      "scenario": "global_change",
+      "seed": 1003
+    },
+    {
+      "correct": 0.9956666666666667,
+      "critical": 0.0,
+      "earned": 0.9169583333333333,
+      "false_corrections": 384,
+      "method": "untrained_probe_policy",
+      "probe_cost": 10.200999999999997,
+      "probes": 337,
+      "requests": 444,
+      "scenario": "global_change",
+      "seed": 1003
+    },
+    {
+      "correct": 0.0,
+      "critical": 0.0,
+      "false_corrections": 0,
+      "method": "passive",
+      "probe_cost": 0.0,
+      "requests": 0,
+      "scenario": "global_change",
+      "seed": 1003
+    },
+    {
+      "correct": 0.9515416666666666,
+      "critical": 0.9555592543275633,
+      "false_corrections": 384,
+      "method": "random",
+      "probe_cost": 6.618999999999995,
+      "requests": 236,
+      "scenario": "global_change",
+      "seed": 1003
+    },
+    {
+      "correct": 0.9320416666666667,
+      "critical": 0.9142809587217043,
+      "false_corrections": 382,
+      "method": "periodic",
+      "probe_cost": 7.293000000000005,
+      "requests": 442,
+      "scenario": "global_change",
+      "seed": 1003
+    },
+    {
+      "correct": 0.9832916666666667,
+      "critical": 0.9833555259653795,
+      "false_corrections": 384,
+      "method": "information_gain",
+      "probe_cost": 7.491000000000002,
+      "requests": 454,
+      "scenario": "global_change",
+      "seed": 1003
+    },
+    {
+      "correct": 0.9915833333333334,
+      "critical": 0.9699348588608652,
+      "earned": 0.9095833333333333,
+      "false_corrections": 94,
+      "method": "locally_learned_probe",
+      "probe_cost": 2.429,
+      "probes": 77,
+      "requests": 126,
+      "scenario": "changed_01",
+      "seed": 1003
+    },
+    {
+      "correct": 0.4382916666666667,
+      "critical": 0.9964924002004343,
+      "earned": 0.4021666666666667,
+      "false_corrections": 96,
+      "method": "untrained_probe_policy",
+      "probe_cost": 410.7570000000002,
+      "probes": 13545,
+      "requests": 18033,
+      "scenario": "changed_01",
+      "seed": 1003
+    },
+    {
+      "correct": 0.9705,
+      "critical": 0.9053695724229367,
+      "earned": 0.68025,
+      "false_corrections": 0,
+      "method": "locally_learned_probe",
+      "probe_cost": 20.79999999999995,
+      "probes": 708,
+      "requests": 775,
+      "scenario": "scarcity_10",
+      "seed": 1003
+    },
+    {
+      "correct": 0.254875,
+      "critical": 0.25389459728206826,
+      "earned": 0.175125,
+      "false_corrections": 0,
+      "method": "untrained_probe_policy",
+      "probe_cost": 542.219,
+      "probes": 17883,
+      "requests": 23786,
+      "scenario": "scarcity_10",
+      "seed": 1003
+    },
+    {
+      "correct": 0.9829583333333334,
+      "critical": 0.0,
+      "earned": 0.9058333333333334,
+      "false_corrections": 3,
+      "method": "locally_learned_probe",
+      "probe_cost": 8.09699999999998,
+      "probes": 277,
+      "requests": 293,
+      "scenario": "stable",
+      "seed": 1004
+    },
+    {
+      "correct": 0.247375,
+      "critical": 0.0,
+      "earned": 0.228,
+      "false_corrections": 2,
+      "method": "untrained_probe_policy",
+      "probe_cost": 539.8499999999997,
+      "probes": 17798,
+      "requests": 23725,
+      "scenario": "stable",
+      "seed": 1004
+    },
+    {
+      "correct": 0.9899583333333334,
+      "critical": 0.9789845326160054,
+      "false_corrections": 0,
+      "method": "passive",
+      "probe_cost": 0.0,
+      "requests": 0,
+      "scenario": "stable",
+      "seed": 1004
+    },
+    {
+      "correct": 0.98975,
+      "critical": 0.9789845326160054,
+      "false_corrections": 0,
+      "method": "random",
+      "probe_cost": 0.203,
+      "requests": 7,
+      "scenario": "stable",
+      "seed": 1004
+    },
+    {
+      "correct": 0.99,
+      "critical": 0.9791526563550773,
+      "false_corrections": 0,
+      "method": "periodic",
+      "probe_cost": 0.08700000000000001,
+      "requests": 3,
+      "scenario": "stable",
+      "seed": 1004
+    },
+    {
+      "correct": 0.984625,
+      "critical": 0.9791526563550773,
+      "false_corrections": 1,
+      "method": "information_gain",
+      "probe_cost": 0.3350000000000001,
+      "requests": 15,
+      "scenario": "stable",
+      "seed": 1004
+    },
+    {
+      "correct": 0.965375,
+      "critical": 0.908051689860835,
+      "earned": 0.8875416666666667,
+      "false_corrections": 87,
+      "method": "locally_learned_probe",
+      "probe_cost": 2.4050000000000002,
+      "probes": 77,
+      "requests": 120,
+      "scenario": "changed_11",
+      "seed": 1004
+    },
+    {
+      "correct": 0.4322916666666667,
+      "critical": 0.9789595758780649,
+      "earned": 0.39979166666666666,
+      "false_corrections": 95,
+      "method": "untrained_probe_policy",
+      "probe_cost": 410.65200000000004,
+      "probes": 13540,
+      "requests": 18038,
+      "scenario": "changed_11",
+      "seed": 1004
+    },
+    {
+      "correct": 0.7525416666666667,
+      "critical": 0.02101546738399462,
+      "false_corrections": 0,
+      "method": "passive",
+      "probe_cost": 0.0,
+      "requests": 0,
+      "scenario": "changed_11",
+      "seed": 1004
+    },
+    {
+      "correct": 0.9848333333333333,
+      "critical": 0.9588096839273705,
+      "false_corrections": 94,
+      "method": "random",
+      "probe_cost": 1.747999999999999,
+      "requests": 62,
+      "scenario": "changed_11",
+      "seed": 1004
+    },
+    {
+      "correct": 0.9814583333333333,
+      "critical": 0.9446872898453261,
+      "false_corrections": 94,
+      "method": "periodic",
+      "probe_cost": 1.608999999999999,
+      "requests": 96,
+      "scenario": "changed_11",
+      "seed": 1004
+    },
+    {
+      "correct": 0.991,
+      "critical": 0.9835238735709482,
+      "false_corrections": 94,
+      "method": "information_gain",
+      "probe_cost": 2.0589999999999997,
+      "requests": 121,
+      "scenario": "changed_11",
+      "seed": 1004
+    },
+    {
+      "correct": 0.975625,
+      "critical": 0.9665103817816477,
+      "earned": 0.6742916666666666,
+      "false_corrections": 1,
+      "method": "locally_learned_probe",
+      "probe_cost": 13.509999999999971,
+      "probes": 458,
+      "requests": 515,
+      "scenario": "scarcity_11",
+      "seed": 1004
+    },
+    {
+      "correct": 0.24958333333333332,
+      "critical": 0.26858673811118555,
+      "earned": 0.167875,
+      "false_corrections": 1,
+      "method": "untrained_probe_policy",
+      "probe_cost": 544.5850000000003,
+      "probes": 17961,
+      "requests": 23890,
+      "scenario": "scarcity_11",
+      "seed": 1004
+    },
+    {
+      "correct": 0.9899583333333334,
+      "critical": 0.9789845326160054,
+      "false_corrections": 0,
+      "method": "passive",
+      "probe_cost": 0.0,
+      "requests": 0,
+      "scenario": "scarcity_11",
+      "seed": 1004
+    },
+    {
+      "correct": 0.9859583333333334,
+      "critical": 0.9633490248823133,
+      "false_corrections": 0,
+      "method": "random",
+      "probe_cost": 2.8499999999999974,
+      "requests": 100,
+      "scenario": "scarcity_11",
+      "seed": 1004
+    },
+    {
+      "correct": 0.9860833333333333,
+      "critical": 0.9633490248823133,
+      "false_corrections": 0,
+      "method": "periodic",
+      "probe_cost": 3.188999999999998,
+      "requests": 191,
+      "scenario": "scarcity_11",
+      "seed": 1004
+    },
+    {
+      "correct": 0.986,
+      "critical": 0.9633490248823133,
+      "false_corrections": 0,
+      "method": "information_gain",
+      "probe_cost": 3.3750000000000004,
+      "requests": 200,
+      "scenario": "scarcity_11",
+      "seed": 1004
+    },
+    {
+      "correct": 0.9765,
+      "critical": 0.0,
+      "earned": 0.5357083333333333,
+      "false_corrections": 0,
+      "method": "locally_learned_probe",
+      "probe_cost": 23.83899999999995,
+      "probes": 807,
+      "requests": 916,
+      "scenario": "uniform_drought",
+      "seed": 1004
+    },
+    {
+      "correct": 0.2519166666666667,
+      "critical": 0.0,
+      "earned": 0.13954166666666667,
+      "false_corrections": 2,
+      "method": "untrained_probe_policy",
+      "probe_cost": 537.9390000000001,
+      "probes": 17739,
+      "requests": 23616,
+      "scenario": "uniform_drought",
+      "seed": 1004
+    },
+    {
+      "correct": 0.9899583333333334,
+      "critical": 0.9789845326160054,
+      "false_corrections": 0,
+      "method": "passive",
+      "probe_cost": 0.0,
+      "requests": 0,
+      "scenario": "uniform_drought",
+      "seed": 1004
+    },
+    {
+      "correct": 0.9869583333333334,
+      "critical": 0.9754539340954943,
+      "false_corrections": 0,
+      "method": "random",
+      "probe_cost": 2.2739999999999987,
+      "requests": 81,
+      "scenario": "uniform_drought",
+      "seed": 1004
+    },
+    {
+      "correct": 0.983125,
+      "critical": 0.976462676529926,
+      "false_corrections": 1,
+      "method": "periodic",
+      "probe_cost": 1.786999999999999,
+      "requests": 103,
+      "scenario": "uniform_drought",
+      "seed": 1004
+    },
+    {
+      "correct": 0.9805,
+      "critical": 0.9941156691324815,
+      "false_corrections": 2,
+      "method": "information_gain",
+      "probe_cost": 3.4119999999999977,
+      "requests": 203,
+      "scenario": "uniform_drought",
+      "seed": 1004
+    },
+    {
+      "correct": 0.923875,
+      "critical": 0.0,
+      "earned": 0.85,
+      "false_corrections": 357,
+      "method": "locally_learned_probe",
+      "probe_cost": 6.286000000000001,
+      "probes": 202,
+      "requests": 309,
+      "scenario": "global_change",
+      "seed": 1004
+    },
+    {
+      "correct": 0.9764583333333333,
+      "critical": 0.0,
+      "earned": 0.8985,
+      "false_corrections": 378,
+      "method": "untrained_probe_policy",
+      "probe_cost": 16.388999999999967,
+      "probes": 545,
+      "requests": 691,
+      "scenario": "global_change",
+      "seed": 1004
+    },
+    {
+      "correct": 0.010041666666666667,
+      "critical": 0.02101546738399462,
+      "false_corrections": 0,
+      "method": "passive",
+      "probe_cost": 0.0,
+      "requests": 0,
+      "scenario": "global_change",
+      "seed": 1004
+    },
+    {
+      "correct": 0.9334583333333333,
+      "critical": 0.9377942165433759,
+      "false_corrections": 375,
+      "method": "random",
+      "probe_cost": 6.510999999999994,
+      "requests": 234,
+      "scenario": "global_change",
+      "seed": 1004
+    },
+    {
+      "correct": 0.9128333333333334,
+      "critical": 0.9240080699394755,
+      "false_corrections": 373,
+      "method": "periodic",
+      "probe_cost": 7.232000000000005,
+      "requests": 433,
+      "scenario": "global_change",
+      "seed": 1004
+    },
+    {
+      "correct": 0.958125,
+      "critical": 0.9625084061869535,
+      "false_corrections": 374,
+      "method": "information_gain",
+      "probe_cost": 7.368000000000002,
+      "requests": 442,
+      "scenario": "global_change",
+      "seed": 1004
+    },
+    {
+      "correct": 0.9655416666666666,
+      "critical": 0.9063282684922358,
+      "earned": 0.8881666666666667,
+      "false_corrections": 89,
+      "method": "locally_learned_probe",
+      "probe_cost": 2.322999999999999,
+      "probes": 75,
+      "requests": 112,
+      "scenario": "changed_01",
+      "seed": 1004
+    },
+    {
+      "correct": 0.4332916666666667,
+      "critical": 0.9921522791784939,
+      "earned": 0.398,
+      "false_corrections": 96,
+      "method": "untrained_probe_policy",
+      "probe_cost": 410.07800000000015,
+      "probes": 13530,
+      "requests": 17957,
+      "scenario": "changed_01",
+      "seed": 1004
+    },
+    {
+      "correct": 0.97475,
+      "critical": 0.943717277486911,
+      "earned": 0.6749583333333333,
+      "false_corrections": 2,
+      "method": "locally_learned_probe",
+      "probe_cost": 7.103999999999989,
+      "probes": 236,
+      "requests": 301,
+      "scenario": "scarcity_10",
+      "seed": 1004
+    },
+    {
+      "correct": 0.24533333333333332,
+      "critical": 0.2468913612565445,
+      "earned": 0.16716666666666666,
+      "false_corrections": 3,
+      "method": "untrained_probe_policy",
+      "probe_cost": 542.1440000000002,
+      "probes": 17872,
+      "requests": 23836,
+      "scenario": "scarcity_10",
+      "seed": 1004
+    },
+    {
+      "correct": 0.987625,
+      "critical": 0.0,
+      "earned": 0.906875,
+      "false_corrections": 0,
+      "method": "locally_learned_probe",
+      "probe_cost": 0.9000000000000002,
+      "probes": 28,
+      "requests": 50,
+      "scenario": "stable",
+      "seed": 1005
+    },
+    {
+      "correct": 0.249375,
+      "critical": 0.0,
+      "earned": 0.22770833333333335,
+      "false_corrections": 3,
+      "method": "untrained_probe_policy",
+      "probe_cost": 540.5959999999997,
+      "probes": 17812,
+      "requests": 23824,
+      "scenario": "stable",
+      "seed": 1005
+    },
+    {
+      "correct": 0.9897083333333333,
+      "critical": 1.0,
+      "false_corrections": 0,
+      "method": "passive",
+      "probe_cost": 0.0,
+      "requests": 0,
+      "scenario": "stable",
+      "seed": 1005
+    },
+    {
+      "correct": 0.9839166666666667,
+      "critical": 0.9804149377593361,
+      "false_corrections": 2,
+      "method": "random",
+      "probe_cost": 0.203,
+      "requests": 7,
+      "scenario": "stable",
+      "seed": 1005
+    },
+    {
+      "correct": 0.9842083333333334,
+      "critical": 0.9809128630705394,
+      "false_corrections": 3,
+      "method": "periodic",
+      "probe_cost": 0.269,
+      "requests": 11,
+      "scenario": "stable",
+      "seed": 1005
+    },
+    {
+      "correct": 0.9839583333333334,
+      "critical": 0.9805809128630706,
+      "false_corrections": 2,
+      "method": "information_gain",
+      "probe_cost": 0.17800000000000002,
+      "requests": 7,
+      "scenario": "stable",
+      "seed": 1005
+    },
+    {
+      "correct": 0.9560416666666667,
+      "critical": 0.8672330501415959,
+      "earned": 0.8799166666666667,
+      "false_corrections": 87,
+      "method": "locally_learned_probe",
+      "probe_cost": 2.0869999999999997,
+      "probes": 67,
+      "requests": 103,
+      "scenario": "changed_11",
+      "seed": 1005
+    },
+    {
+      "correct": 0.432625,
+      "critical": 0.9721805763784774,
+      "earned": 0.398375,
+      "false_corrections": 97,
+      "method": "untrained_probe_policy",
+      "probe_cost": 406.64200000000005,
+      "probes": 13418,
+      "requests": 17798,
+      "scenario": "changed_11",
+      "seed": 1005
+    },
+    {
+      "correct": 0.7386666666666667,
+      "critical": 0.0,
+      "false_corrections": 0,
+      "method": "passive",
+      "probe_cost": 0.0,
+      "requests": 0,
+      "scenario": "changed_11",
+      "seed": 1005
+    },
+    {
+      "correct": 0.9717083333333333,
+      "critical": 0.9317842323651452,
+      "false_corrections": 96,
+      "method": "random",
+      "probe_cost": 1.668999999999999,
+      "requests": 61,
+      "scenario": "changed_11",
+      "seed": 1005
+    },
+    {
+      "correct": 0.96825,
+      "critical": 0.917344398340249,
+      "false_corrections": 95,
+      "method": "periodic",
+      "probe_cost": 2.083999999999999,
+      "requests": 121,
+      "scenario": "changed_11",
+      "seed": 1005
+    },
+    {
+      "correct": 0.9799166666666667,
+      "critical": 0.9644813278008298,
+      "false_corrections": 96,
+      "method": "information_gain",
+      "probe_cost": 1.8609999999999998,
+      "requests": 109,
+      "scenario": "changed_11",
+      "seed": 1005
+    },
+    {
+      "correct": 0.9684583333333333,
+      "critical": 0.9228110599078341,
+      "earned": 0.676875,
+      "false_corrections": 2,
+      "method": "locally_learned_probe",
+      "probe_cost": 11.395999999999978,
+      "probes": 384,
+      "requests": 449,
+      "scenario": "scarcity_11",
+      "seed": 1005
+    },
+    {
+      "correct": 0.2465,
+      "critical": 0.2455562870309414,
+      "earned": 0.17029166666666667,
+      "false_corrections": 2,
+      "method": "untrained_probe_policy",
+      "probe_cost": 540.9449999999998,
+      "probes": 17833,
+      "requests": 23780,
+      "scenario": "scarcity_11",
+      "seed": 1005
+    },
+    {
+      "correct": 0.9897083333333333,
+      "critical": 1.0,
+      "false_corrections": 0,
+      "method": "passive",
+      "probe_cost": 0.0,
+      "requests": 0,
+      "scenario": "scarcity_11",
+      "seed": 1005
+    },
+    {
+      "correct": 0.9800416666666667,
+      "critical": 0.9649792531120331,
+      "false_corrections": 2,
+      "method": "random",
+      "probe_cost": 2.9319999999999977,
+      "requests": 108,
+      "scenario": "scarcity_11",
+      "seed": 1005
+    },
+    {
+      "correct": 0.9802916666666667,
+      "critical": 0.965311203319502,
+      "false_corrections": 3,
+      "method": "periodic",
+      "probe_cost": 3.370999999999998,
+      "requests": 199,
+      "scenario": "scarcity_11",
+      "seed": 1005
+    },
+    {
+      "correct": 0.9800416666666667,
+      "critical": 0.9649792531120331,
+      "false_corrections": 2,
+      "method": "information_gain",
+      "probe_cost": 3.279999999999999,
+      "requests": 195,
+      "scenario": "scarcity_11",
+      "seed": 1005
+    },
+    {
+      "correct": 0.9767083333333333,
+      "critical": 0.0,
+      "earned": 0.5369583333333333,
+      "false_corrections": 0,
+      "method": "locally_learned_probe",
+      "probe_cost": 9.506999999999989,
+      "probes": 315,
+      "requests": 408,
+      "scenario": "uniform_drought",
+      "seed": 1005
+    },
+    {
+      "correct": 0.24204166666666665,
+      "critical": 0.0,
+      "earned": 0.134375,
+      "false_corrections": 1,
+      "method": "untrained_probe_policy",
+      "probe_cost": 549.7879999999998,
+      "probes": 18132,
+      "requests": 24122,
+      "scenario": "uniform_drought",
+      "seed": 1005
+    },
+    {
+      "correct": 0.9897083333333333,
+      "critical": 1.0,
+      "false_corrections": 0,
+      "method": "passive",
+      "probe_cost": 0.0,
+      "requests": 0,
+      "scenario": "uniform_drought",
+      "seed": 1005
+    },
+    {
+      "correct": 0.9812083333333333,
+      "critical": 0.9782572614107884,
+      "false_corrections": 2,
+      "method": "random",
+      "probe_cost": 2.087999999999999,
+      "requests": 72,
+      "scenario": "uniform_drought",
+      "seed": 1005
+    },
+    {
+      "correct": 0.982375,
+      "critical": 0.9797510373443984,
+      "false_corrections": 2,
+      "method": "periodic",
+      "probe_cost": 1.5139999999999991,
+      "requests": 91,
+      "scenario": "uniform_drought",
+      "seed": 1005
+    },
+    {
+      "correct": 0.9795,
+      "critical": 0.9772614107883817,
+      "false_corrections": 2,
+      "method": "information_gain",
+      "probe_cost": 3.7089999999999987,
+      "requests": 221,
+      "scenario": "uniform_drought",
+      "seed": 1005
+    },
+    {
+      "correct": 0.8960416666666666,
+      "critical": 0.0,
+      "earned": 0.8255833333333333,
+      "false_corrections": 344,
+      "method": "locally_learned_probe",
+      "probe_cost": 5.9879999999999995,
+      "probes": 192,
+      "requests": 297,
+      "scenario": "global_change",
+      "seed": 1005
+    },
+    {
+      "correct": 0.9766666666666667,
+      "critical": 0.0,
+      "earned": 0.8995,
+      "false_corrections": 378,
+      "method": "untrained_probe_policy",
+      "probe_cost": 16.97899999999997,
+      "probes": 567,
+      "requests": 701,
+      "scenario": "global_change",
+      "seed": 1005
+    },
+    {
+      "correct": 0.010291666666666666,
+      "critical": 0.0,
+      "false_corrections": 0,
+      "method": "passive",
+      "probe_cost": 0.0,
+      "requests": 0,
+      "scenario": "global_change",
+      "seed": 1005
+    },
+    {
+      "correct": 0.9298333333333333,
+      "critical": 0.9485477178423236,
+      "false_corrections": 376,
+      "method": "random",
+      "probe_cost": 6.593999999999996,
+      "requests": 236,
+      "scenario": "global_change",
+      "seed": 1005
+    },
+    {
+      "correct": 0.9115,
+      "critical": 0.9002489626556016,
+      "false_corrections": 370,
+      "method": "periodic",
+      "probe_cost": 7.483000000000008,
+      "requests": 452,
+      "scenario": "global_change",
+      "seed": 1005
+    },
+    {
+      "correct": 0.9722083333333333,
+      "critical": 0.9812448132780083,
+      "false_corrections": 380,
+      "method": "information_gain",
+      "probe_cost": 7.582000000000003,
+      "requests": 458,
+      "scenario": "global_change",
+      "seed": 1005
+    },
+    {
+      "correct": 0.9569166666666666,
+      "critical": 0.8490945674044266,
+      "earned": 0.8820833333333333,
+      "false_corrections": 80,
+      "method": "locally_learned_probe",
+      "probe_cost": 2.201999999999999,
+      "probes": 70,
+      "requests": 113,
+      "scenario": "changed_01",
+      "seed": 1005
+    },
+    {
+      "correct": 0.4282916666666667,
+      "critical": 0.9763581488933601,
+      "earned": 0.3940416666666667,
+      "false_corrections": 96,
+      "method": "untrained_probe_policy",
+      "probe_cost": 413.84499999999986,
+      "probes": 13649,
+      "requests": 18155,
+      "scenario": "changed_01",
+      "seed": 1005
+    },
+    {
+      "correct": 0.96975,
+      "critical": 0.9212847395573307,
+      "earned": 0.6817916666666667,
+      "false_corrections": 2,
+      "method": "locally_learned_probe",
+      "probe_cost": 10.45299999999998,
+      "probes": 353,
+      "requests": 407,
+      "scenario": "scarcity_10",
+      "seed": 1005
+    },
+    {
+      "correct": 0.2564166666666667,
+      "critical": 0.2641038442336495,
+      "earned": 0.17629166666666668,
+      "false_corrections": 2,
+      "method": "untrained_probe_policy",
+      "probe_cost": 538.7910000000005,
+      "probes": 17775,
+      "requests": 23604,
+      "scenario": "scarcity_10",
+      "seed": 1005
+    }
+  ],
+  "schema": "independently-learned-local-curiosity-v1",
+  "seeds": [
+    1001,
+    1002,
+    1003,
+    1004,
+    1005
+  ],
+  "spec": {
+    "alpha": 0.06,
+    "eval_horizon": 500,
+    "final_epsilon": 0.04,
+    "initial_epsilon": 0.18,
+    "message_cost": 0.004,
+    "meta_episodes": 320,
+    "meta_horizon": 75,
+    "pairs": 48,
+    "pretrain": 3600,
+    "probe_cost": 0.025,
+    "pulse_rate": 0.92
+  }
+}

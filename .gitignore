@@ -1,0 +1,24 @@
+# Python / local dev
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+.env
+.env.*
+!.env.example
+# Secrets / credentials
+*credentials*.json
+*.pem
+# Generated experimental output (keep curated, reproducible summaries only)
+results/runs/
+data/generated/
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/

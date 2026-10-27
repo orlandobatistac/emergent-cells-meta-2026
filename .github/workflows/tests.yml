@@ -1,0 +1,24 @@
+name: Scientific Python tests
+
+on:
+  push:
+    branches: [main, "refactor/**", "experiment/**", "feat/**"]
+  pull_request:
+
+jobs:
+  python-core:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install scientific package
+        run: python -m pip install -e .
+      - name: Test reproducibility and cellular invariants
+        run: python -m unittest discover -s tests -q
+      - name: Verify scientific commands (no browser, no HTTP)
+        run: |
+          python run.py list
+          python run.py simulate --seed 7 --steps 16 --cells 12 --mode learned --output results/runs/ci-simulation.json
+          python run.py dynamic-memory --seeds 7 --pairs 8 --phase-steps 350 --dropout 0.08 --output results/runs/ci-dynamic-memory.json

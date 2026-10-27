@@ -1,0 +1,481 @@
+{
+  "aggregate": {
+    "blocked_messages": {
+      "cumulative_training_energy_proxy": {
+        "mean": 795480.0000000844,
+        "std_population": 2390.480119139527
+      },
+      "sender_symbol_separation": {
+        "mean": 0.046566461532241116,
+        "std_population": 0.001873774999865651
+      },
+      "test_success_fraction": {
+        "mean": 0.49270625,
+        "std_population": 0.001373948461551587
+      }
+    },
+    "fixed_sender": {
+      "cumulative_training_energy_proxy": {
+        "mean": 689761.6000000773,
+        "std_population": 4915.579054394582
+      },
+      "sender_symbol_separation": {
+        "mean": 0.046566461532241116,
+        "std_population": 0.001873774999865651
+      },
+      "test_success_fraction": {
+        "mean": 0.48301875,
+        "std_population": 0.000559139265970479
+      }
+    },
+    "frozen_actor": {
+      "cumulative_training_energy_proxy": {
+        "mean": 398926.400000073,
+        "std_population": 1335.731949157616
+      },
+      "sender_symbol_separation": {
+        "mean": 0.5528619558860172,
+        "std_population": 0.02076932361468787
+      },
+      "test_success_fraction": {
+        "mean": 0.256028125,
+        "std_population": 0.0020549673050927154
+      }
+    },
+    "learned_messages": {
+      "cumulative_training_energy_proxy": {
+        "mean": 1589311.199999821,
+        "std_population": 8985.390150680169
+      },
+      "sender_symbol_separation": {
+        "mean": 0.9927747168570447,
+        "std_population": 0.0035214750916290048
+      },
+      "test_success_fraction": {
+        "mean": 0.9792781250000001,
+        "std_population": 0.0031107707294575505
+      }
+    },
+    "random_messages": {
+      "cumulative_training_energy_proxy": {
+        "mean": 693580.4000000771,
+        "std_population": 5265.563506406827
+      },
+      "sender_symbol_separation": {
+        "mean": 0.046566461532241116,
+        "std_population": 0.001873774999865651
+      },
+      "test_success_fraction": {
+        "mean": 0.48353437499999996,
+        "std_population": 0.0010822791345119862
+      }
+    },
+    "same_policy_knockouts": {
+      "mean_biased_cues": 0.9790749999999999,
+      "mean_randomized_messages": 0.2508625,
+      "mean_received_blocked": 0.251690625
+    }
+  },
+  "conditions": [
+    "learned_messages",
+    "blocked_messages",
+    "random_messages",
+    "fixed_sender",
+    "frozen_actor"
+  ],
+  "created": "2026-10-27",
+  "limitations": [
+    "Every receiver has an engineered four-slot table; no XOR term is supplied.",
+    "Task is the external XOR gate, same at training and testing.",
+    "Fixed partner, noiseless one-bit channel, immediate local reward.",
+    "Cell learning uses own energy delta only; Python still batches actions.",
+    "No autonomous topology, growth, substrate independence, or AGI.",
+    "Synthetic energy proxy is NOT physical joules."
+  ],
+  "paired_contrasts": {
+    "blocked_messages": {
+      "mean_paired_difference": 0.486571875,
+      "pairs": 5,
+      "wins": 5
+    },
+    "fixed_sender": {
+      "mean_paired_difference": 0.496259375,
+      "pairs": 5,
+      "wins": 5
+    },
+    "frozen_actor": {
+      "mean_paired_difference": 0.72325,
+      "pairs": 5,
+      "wins": 5
+    },
+    "random_messages": {
+      "mean_paired_difference": 0.49574375000000004,
+      "pairs": 5,
+      "wins": 5
+    }
+  },
+  "rows": [
+    {
+      "biased_cue_success_fraction": 0.98375,
+      "condition": "learned_messages",
+      "cumulative_training_energy_proxy": 1599923.999999817,
+      "same_policy_knockouts": {
+        "block_received_bits": 0.249109375,
+        "replace_with_random_bits": 0.249828125
+      },
+      "seed": 1001,
+      "sender_symbol_separation": 0.9966204222061338,
+      "test_gate_count": 64000,
+      "test_success_fraction": 0.98109375,
+      "training_gates_opened": 861402,
+      "training_messages_attempted": 2048000,
+      "training_messages_received": 2048000
+    },
+    {
+      "biased_cue_success_fraction": null,
+      "condition": "blocked_messages",
+      "cumulative_training_energy_proxy": 796596.0000000844,
+      "same_policy_knockouts": null,
+      "seed": 1001,
+      "sender_symbol_separation": 0.04663240956062702,
+      "test_gate_count": 64000,
+      "test_success_fraction": 0.491875,
+      "training_gates_opened": 459738,
+      "training_messages_attempted": 2048000,
+      "training_messages_received": 0
+    },
+    {
+      "biased_cue_success_fraction": null,
+      "condition": "random_messages",
+      "cumulative_training_energy_proxy": 695920.0000000773,
+      "same_policy_knockouts": null,
+      "seed": 1001,
+      "sender_symbol_separation": 0.04663240956062702,
+      "test_gate_count": 64000,
+      "test_success_fraction": 0.4820625,
+      "training_gates_opened": 409400,
+      "training_messages_attempted": 2048000,
+      "training_messages_received": 2048000
+    },
+    {
+      "biased_cue_success_fraction": null,
+      "condition": "fixed_sender",
+      "cumulative_training_energy_proxy": 690952.0000000774,
+      "same_policy_knockouts": null,
+      "seed": 1001,
+      "sender_symbol_separation": 0.04663240956062702,
+      "test_gate_count": 64000,
+      "test_success_fraction": 0.483125,
+      "training_gates_opened": 406916,
+      "training_messages_attempted": 2048000,
+      "training_messages_received": 2048000
+    },
+    {
+      "biased_cue_success_fraction": null,
+      "condition": "frozen_actor",
+      "cumulative_training_energy_proxy": 400586.0000000732,
+      "same_policy_knockouts": null,
+      "seed": 1001,
+      "sender_symbol_separation": 0.5892703079198944,
+      "test_gate_count": 64000,
+      "test_success_fraction": 0.257421875,
+      "training_gates_opened": 261733,
+      "training_messages_attempted": 2048000,
+      "training_messages_received": 2048000
+    },
+    {
+      "biased_cue_success_fraction": 0.978703125,
+      "condition": "learned_messages",
+      "cumulative_training_energy_proxy": 1583643.999999823,
+      "same_policy_knockouts": {
+        "block_received_bits": 0.25025,
+        "replace_with_random_bits": 0.249640625
+      },
+      "seed": 1002,
+      "sender_symbol_separation": 0.9889799719716394,
+      "test_gate_count": 64000,
+      "test_success_fraction": 0.977453125,
+      "training_gates_opened": 853262,
+      "training_messages_attempted": 2048000,
+      "training_messages_received": 2048000
+    },
+    {
+      "biased_cue_success_fraction": null,
+      "condition": "blocked_messages",
+      "cumulative_training_energy_proxy": 796442.0000000845,
+      "same_policy_knockouts": null,
+      "seed": 1002,
+      "sender_symbol_separation": 0.04779860239680496,
+      "test_gate_count": 64000,
+      "test_success_fraction": 0.494859375,
+      "training_gates_opened": 459661,
+      "training_messages_attempted": 2048000,
+      "training_messages_received": 0
+    },
+    {
+      "biased_cue_success_fraction": null,
+      "condition": "random_messages",
+      "cumulative_training_energy_proxy": 694150.0000000771,
+      "same_policy_knockouts": null,
+      "seed": 1002,
+      "sender_symbol_separation": 0.04779860239680496,
+      "test_gate_count": 64000,
+      "test_success_fraction": 0.4834375,
+      "training_gates_opened": 408515,
+      "training_messages_attempted": 2048000,
+      "training_messages_received": 2048000
+    },
+    {
+      "biased_cue_success_fraction": null,
+      "condition": "fixed_sender",
+      "cumulative_training_energy_proxy": 690112.0000000771,
+      "same_policy_knockouts": null,
+      "seed": 1002,
+      "sender_symbol_separation": 0.04779860239680496,
+      "test_gate_count": 64000,
+      "test_success_fraction": 0.4826875,
+      "training_gates_opened": 406496,
+      "training_messages_attempted": 2048000,
+      "training_messages_received": 2048000
+    },
+    {
+      "biased_cue_success_fraction": null,
+      "condition": "frozen_actor",
+      "cumulative_training_energy_proxy": 399624.0000000731,
+      "same_policy_knockouts": null,
+      "seed": 1002,
+      "sender_symbol_separation": 0.5463167987284906,
+      "test_gate_count": 64000,
+      "test_success_fraction": 0.25609375,
+      "training_gates_opened": 261252,
+      "training_messages_attempted": 2048000,
+      "training_messages_received": 2048000
+    },
+    {
+      "biased_cue_success_fraction": 0.984171875,
+      "condition": "learned_messages",
+      "cumulative_training_energy_proxy": 1600495.999999817,
+      "same_policy_knockouts": {
+        "block_received_bits": 0.249703125,
+        "replace_with_random_bits": 0.249734375
+      },
+      "seed": 1003,
+      "sender_symbol_separation": 0.9968539960663785,
+      "test_gate_count": 64000,
+      "test_success_fraction": 0.984484375,
+      "training_gates_opened": 861688,
+      "training_messages_attempted": 2048000,
+      "training_messages_received": 2048000
+    },
+    {
+      "biased_cue_success_fraction": null,
+      "condition": "blocked_messages",
+      "cumulative_training_energy_proxy": 798632.0000000848,
+      "same_policy_knockouts": null,
+      "seed": 1003,
+      "sender_symbol_separation": 0.048980264151405585,
+      "test_gate_count": 64000,
+      "test_success_fraction": 0.490921875,
+      "training_gates_opened": 460756,
+      "training_messages_attempted": 2048000,
+      "training_messages_received": 0
+    },
+    {
+      "biased_cue_success_fraction": null,
+      "condition": "random_messages",
+      "cumulative_training_energy_proxy": 701806.0000000776,
+      "same_policy_knockouts": null,
+      "seed": 1003,
+      "sender_symbol_separation": 0.048980264151405585,
+      "test_gate_count": 64000,
+      "test_success_fraction": 0.4854375,
+      "training_gates_opened": 412343,
+      "training_messages_attempted": 2048000,
+      "training_messages_received": 2048000
+    },
+    {
+      "biased_cue_success_fraction": null,
+      "condition": "fixed_sender",
+      "cumulative_training_energy_proxy": 697838.0000000778,
+      "same_policy_knockouts": null,
+      "seed": 1003,
+      "sender_symbol_separation": 0.048980264151405585,
+      "test_gate_count": 64000,
+      "test_success_fraction": 0.483921875,
+      "training_gates_opened": 410359,
+      "training_messages_attempted": 2048000,
+      "training_messages_received": 2048000
+    },
+    {
+      "biased_cue_success_fraction": null,
+      "condition": "frozen_actor",
+      "cumulative_training_energy_proxy": 397802.000000073,
+      "same_policy_knockouts": null,
+      "seed": 1003,
+      "sender_symbol_separation": 0.5344262899323167,
+      "test_gate_count": 64000,
+      "test_success_fraction": 0.25471875,
+      "training_gates_opened": 260341,
+      "training_messages_attempted": 2048000,
+      "training_messages_received": 2048000
+    },
+    {
+      "biased_cue_success_fraction": 0.972890625,
+      "condition": "learned_messages",
+      "cumulative_training_energy_proxy": 1579877.999999825,
+      "same_policy_knockouts": {
+        "block_received_bits": 0.253171875,
+        "replace_with_random_bits": 0.25275
+      },
+      "seed": 1004,
+      "sender_symbol_separation": 0.9926646465060353,
+      "test_gate_count": 64000,
+      "test_success_fraction": 0.9774375,
+      "training_gates_opened": 851379,
+      "training_messages_attempted": 2048000,
+      "training_messages_received": 2048000
+    },
+    {
+      "biased_cue_success_fraction": null,
+      "condition": "blocked_messages",
+      "cumulative_training_energy_proxy": 791684.0000000839,
+      "same_policy_knockouts": null,
+      "seed": 1004,
+      "sender_symbol_separation": 0.043422662695492456,
+      "test_gate_count": 64000,
+      "test_success_fraction": 0.493578125,
+      "training_gates_opened": 457282,
+      "training_messages_attempted": 2048000,
+      "training_messages_received": 0
+    },
+    {
+      "biased_cue_success_fraction": null,
+      "condition": "random_messages",
+      "cumulative_training_energy_proxy": 686752.0000000768,
+      "same_policy_knockouts": null,
+      "seed": 1004,
+      "sender_symbol_separation": 0.043422662695492456,
+      "test_gate_count": 64000,
+      "test_success_fraction": 0.48340625,
+      "training_gates_opened": 404816,
+      "training_messages_attempted": 2048000,
+      "training_messages_received": 2048000
+    },
+    {
+      "biased_cue_success_fraction": null,
+      "condition": "fixed_sender",
+      "cumulative_training_energy_proxy": 682978.000000077,
+      "same_policy_knockouts": null,
+      "seed": 1004,
+      "sender_symbol_separation": 0.043422662695492456,
+      "test_gate_count": 64000,
+      "test_success_fraction": 0.483125,
+      "training_gates_opened": 402929,
+      "training_messages_attempted": 2048000,
+      "training_messages_received": 2048000
+    },
+    {
+      "biased_cue_success_fraction": null,
+      "condition": "frozen_actor",
+      "cumulative_training_energy_proxy": 399662.0000000731,
+      "same_policy_knockouts": null,
+      "seed": 1004,
+      "sender_symbol_separation": 0.5609910388417388,
+      "test_gate_count": 64000,
+      "test_success_fraction": 0.25890625,
+      "training_gates_opened": 261271,
+      "training_messages_attempted": 2048000,
+      "training_messages_received": 2048000
+    },
+    {
+      "biased_cue_success_fraction": 0.975859375,
+      "condition": "learned_messages",
+      "cumulative_training_energy_proxy": 1582613.999999823,
+      "same_policy_knockouts": {
+        "block_received_bits": 0.25621875,
+        "replace_with_random_bits": 0.252359375
+      },
+      "seed": 1005,
+      "sender_symbol_separation": 0.9887545475350358,
+      "test_gate_count": 64000,
+      "test_success_fraction": 0.975921875,
+      "training_gates_opened": 852747,
+      "training_messages_attempted": 2048000,
+      "training_messages_received": 2048000
+    },
+    {
+      "biased_cue_success_fraction": null,
+      "condition": "blocked_messages",
+      "cumulative_training_energy_proxy": 794046.0000000842,
+      "same_policy_knockouts": null,
+      "seed": 1005,
+      "sender_symbol_separation": 0.045998368856875554,
+      "test_gate_count": 64000,
+      "test_success_fraction": 0.492296875,
+      "training_gates_opened": 458463,
+      "training_messages_attempted": 2048000,
+      "training_messages_received": 0
+    },
+    {
+      "biased_cue_success_fraction": null,
+      "condition": "random_messages",
+      "cumulative_training_energy_proxy": 689274.0000000767,
+      "same_policy_knockouts": null,
+      "seed": 1005,
+      "sender_symbol_separation": 0.045998368856875554,
+      "test_gate_count": 64000,
+      "test_success_fraction": 0.483328125,
+      "training_gates_opened": 406077,
+      "training_messages_attempted": 2048000,
+      "training_messages_received": 2048000
+    },
+    {
+      "biased_cue_success_fraction": null,
+      "condition": "fixed_sender",
+      "cumulative_training_energy_proxy": 686928.0000000771,
+      "same_policy_knockouts": null,
+      "seed": 1005,
+      "sender_symbol_separation": 0.045998368856875554,
+      "test_gate_count": 64000,
+      "test_success_fraction": 0.482234375,
+      "training_gates_opened": 404904,
+      "training_messages_attempted": 2048000,
+      "training_messages_received": 2048000
+    },
+    {
+      "biased_cue_success_fraction": null,
+      "condition": "frozen_actor",
+      "cumulative_training_energy_proxy": 396958.00000007276,
+      "same_policy_knockouts": null,
+      "seed": 1005,
+      "sender_symbol_separation": 0.5333053440076456,
+      "test_gate_count": 64000,
+      "test_success_fraction": 0.253,
+      "training_gates_opened": 259919,
+      "training_messages_attempted": 2048000,
+      "training_messages_received": 2048000
+    }
+  ],
+  "schema": "learned-local-symbol-protocol-v1",
+  "seeds": [
+    1001,
+    1002,
+    1003,
+    1004,
+    1005
+  ],
+  "spec": {
+    "baseline_decay": 0.98,
+    "learning_rate": 0.1,
+    "max_abs_weight": 12.0,
+    "metabolism": 0.04,
+    "pairs": 128,
+    "receiver_initial_std": 0.12,
+    "resource_pulse": 1.0,
+    "sender_initial_std": 0.12,
+    "test_steps": 500,
+    "train_steps": 8000,
+    "transmission_cost": 0.02
+  },
+  "status": "exploratory, task rules and channel fixed; not AGI"
+}

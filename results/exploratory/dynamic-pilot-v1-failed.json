@@ -1,0 +1,474 @@
+{
+  "limitations": [
+    "Fixed pairs, binary noiseless messages, task functions and detector are authored.",
+    "Rule is unavailable to growing cells; oracle is explicitly privileged.",
+    "Memory growth is heuristic state allocation, not biological cell growth.",
+    "Synthetic costs are not measured joules; third-rule constant-zero baseline is 75%.",
+    "Probe success uses local reward and can be fooled by reward noise."
+  ],
+  "rows": [
+    {
+      "bank_count_mean": 2.9583333333333335,
+      "condition": "grow",
+      "energy_proxy": 170715.99999996086,
+      "false_switches": 0,
+      "growth_events": 94,
+      "reuse_events": 32,
+      "seed": 11,
+      "stages": [
+        {
+          "first50_success": 0.24583333333333335,
+          "local_detection_events": 104,
+          "max_allocated_banks": 3,
+          "mean_allocated_banks": 2.5833333333333335,
+          "newly_grown_cells": 48,
+          "rule_hidden_from_cells": "xor",
+          "stage": "A",
+          "tail_success": 0.7254166666666667,
+          "total_success": 0.5298571428571428
+        },
+        {
+          "first50_success": 0.026666666666666665,
+          "local_detection_events": 42,
+          "max_allocated_banks": 3,
+          "mean_allocated_banks": 2.9166666666666665,
+          "newly_grown_cells": 16,
+          "rule_hidden_from_cells": "xnor",
+          "stage": "B",
+          "tail_success": 0.17,
+          "total_success": 0.1687738095238095
+        },
+        {
+          "first50_success": 0.3108333333333333,
+          "local_detection_events": 34,
+          "max_allocated_banks": 3,
+          "mean_allocated_banks": 2.9166666666666665,
+          "newly_grown_cells": 0,
+          "rule_hidden_from_cells": "and",
+          "stage": "C",
+          "tail_success": 0.410625,
+          "total_success": 0.4027738095238096
+        },
+        {
+          "first50_success": 0.6925,
+          "local_detection_events": 14,
+          "max_allocated_banks": 3,
+          "mean_allocated_banks": 2.9583333333333335,
+          "newly_grown_cells": 2,
+          "rule_hidden_from_cells": "xor",
+          "stage": "returnA",
+          "tail_success": 0.5216666666666667,
+          "total_success": 0.5269444444444444
+        },
+        {
+          "first50_success": 0.385,
+          "local_detection_events": 16,
+          "max_allocated_banks": 3,
+          "mean_allocated_banks": 2.9583333333333335,
+          "newly_grown_cells": 0,
+          "rule_hidden_from_cells": "xnor",
+          "stage": "returnB",
+          "tail_success": 0.32875,
+          "total_success": 0.3738425925925926
+        }
+      ]
+    },
+    {
+      "bank_count_mean": 2.0,
+      "condition": "cap2",
+      "energy_proxy": 137603.99999996,
+      "false_switches": 0,
+      "growth_events": 48,
+      "reuse_events": 26,
+      "seed": 11,
+      "stages": [
+        {
+          "first50_success": 0.24583333333333335,
+          "local_detection_events": 108,
+          "max_allocated_banks": 2,
+          "mean_allocated_banks": 2.0,
+          "newly_grown_cells": 48,
+          "rule_hidden_from_cells": "xor",
+          "stage": "A",
+          "tail_success": 0.8458333333333334,
+          "total_success": 0.5628095238095238
+        },
+        {
+          "first50_success": 0.0075,
+          "local_detection_events": 24,
+          "max_allocated_banks": 2,
+          "mean_allocated_banks": 2.0,
+          "newly_grown_cells": 0,
+          "rule_hidden_from_cells": "xnor",
+          "stage": "B",
+          "tail_success": 0.024791666666666667,
+          "total_success": 0.022654761904761903
+        },
+        {
+          "first50_success": 0.26,
+          "local_detection_events": 4,
+          "max_allocated_banks": 2,
+          "mean_allocated_banks": 2.0,
+          "newly_grown_cells": 0,
+          "rule_hidden_from_cells": "and",
+          "stage": "C",
+          "tail_success": 0.38958333333333334,
+          "total_success": 0.3123095238095238
+        },
+        {
+          "first50_success": 0.7166666666666669,
+          "local_detection_events": 28,
+          "max_allocated_banks": 2,
+          "mean_allocated_banks": 2.0,
+          "newly_grown_cells": 0,
+          "rule_hidden_from_cells": "xor",
+          "stage": "returnA",
+          "tail_success": 0.694375,
+          "total_success": 0.6958796296296297
+        },
+        {
+          "first50_success": 0.1691666666666667,
+          "local_detection_events": 10,
+          "max_allocated_banks": 2,
+          "mean_allocated_banks": 2.0,
+          "newly_grown_cells": 0,
+          "rule_hidden_from_cells": "xnor",
+          "stage": "returnB",
+          "tail_success": 0.1679166666666667,
+          "total_success": 0.16384259259259257
+        }
+      ]
+    },
+    {
+      "bank_count_mean": 1.0,
+      "condition": "single",
+      "energy_proxy": 139317.99999995803,
+      "false_switches": 0,
+      "growth_events": 0,
+      "reuse_events": 0,
+      "seed": 11,
+      "stages": [
+        {
+          "first50_success": 0.24583333333333335,
+          "local_detection_events": 0,
+          "max_allocated_banks": 1,
+          "mean_allocated_banks": 1.0,
+          "newly_grown_cells": 0,
+          "rule_hidden_from_cells": "xor",
+          "stage": "A",
+          "tail_success": 0.9260416666666668,
+          "total_success": 0.6529761904761906
+        },
+        {
+          "first50_success": 0.0008333333333333333,
+          "local_detection_events": 0,
+          "max_allocated_banks": 1,
+          "mean_allocated_banks": 1.0,
+          "newly_grown_cells": 0,
+          "rule_hidden_from_cells": "xnor",
+          "stage": "B",
+          "tail_success": 0.001875,
+          "total_success": 0.0015119047619047618
+        },
+        {
+          "first50_success": 0.24666666666666667,
+          "local_detection_events": 0,
+          "max_allocated_banks": 1,
+          "mean_allocated_banks": 1.0,
+          "newly_grown_cells": 0,
+          "rule_hidden_from_cells": "and",
+          "stage": "C",
+          "tail_success": 0.23604166666666668,
+          "total_success": 0.23715476190476192
+        },
+        {
+          "first50_success": 0.9333333333333332,
+          "local_detection_events": 0,
+          "max_allocated_banks": 1,
+          "mean_allocated_banks": 1.0,
+          "newly_grown_cells": 0,
+          "rule_hidden_from_cells": "xor",
+          "stage": "returnA",
+          "tail_success": 0.9233333333333335,
+          "total_success": 0.9252777777777778
+        },
+        {
+          "first50_success": 0.0016666666666666666,
+          "local_detection_events": 0,
+          "max_allocated_banks": 1,
+          "mean_allocated_banks": 1.0,
+          "newly_grown_cells": 0,
+          "rule_hidden_from_cells": "xnor",
+          "stage": "returnB",
+          "tail_success": 0.0022916666666666667,
+          "total_success": 0.0016203703703703703
+        }
+      ]
+    },
+    {
+      "bank_count_mean": 3.0,
+      "condition": "oracle",
+      "energy_proxy": 394989.99999995803,
+      "false_switches": 0,
+      "growth_events": 0,
+      "reuse_events": 0,
+      "seed": 11,
+      "stages": [
+        {
+          "first50_success": 0.24583333333333335,
+          "local_detection_events": 0,
+          "max_allocated_banks": 3,
+          "mean_allocated_banks": 3.0,
+          "newly_grown_cells": 48,
+          "rule_hidden_from_cells": "xor",
+          "stage": "A",
+          "tail_success": 0.9260416666666668,
+          "total_success": 0.6529761904761906
+        },
+        {
+          "first50_success": 0.2758333333333333,
+          "local_detection_events": 0,
+          "max_allocated_banks": 3,
+          "mean_allocated_banks": 3.0,
+          "newly_grown_cells": 0,
+          "rule_hidden_from_cells": "xnor",
+          "stage": "B",
+          "tail_success": 0.9404166666666666,
+          "total_success": 0.8255595238095237
+        },
+        {
+          "first50_success": 0.2583333333333334,
+          "local_detection_events": 0,
+          "max_allocated_banks": 3,
+          "mean_allocated_banks": 3.0,
+          "newly_grown_cells": 0,
+          "rule_hidden_from_cells": "and",
+          "stage": "C",
+          "tail_success": 0.9427083333333333,
+          "total_success": 0.8295119047619048
+        },
+        {
+          "first50_success": 0.9308333333333333,
+          "local_detection_events": 0,
+          "max_allocated_banks": 3,
+          "mean_allocated_banks": 3.0,
+          "newly_grown_cells": 0,
+          "rule_hidden_from_cells": "xor",
+          "stage": "returnA",
+          "tail_success": 0.92375,
+          "total_success": 0.9272222222222222
+        },
+        {
+          "first50_success": 0.9325,
+          "local_detection_events": 0,
+          "max_allocated_banks": 3,
+          "mean_allocated_banks": 3.0,
+          "newly_grown_cells": 0,
+          "rule_hidden_from_cells": "xnor",
+          "stage": "returnB",
+          "tail_success": 0.9364583333333334,
+          "total_success": 0.9383796296296296
+        }
+      ]
+    },
+    {
+      "bank_count_mean": 3.0,
+      "condition": "fast_detector",
+      "energy_proxy": 173891.99999996147,
+      "false_switches": 0,
+      "growth_events": 96,
+      "reuse_events": 20,
+      "seed": 11,
+      "stages": [
+        {
+          "first50_success": 0.24583333333333335,
+          "local_detection_events": 112,
+          "max_allocated_banks": 3,
+          "mean_allocated_banks": 2.875,
+          "newly_grown_cells": 48,
+          "rule_hidden_from_cells": "xor",
+          "stage": "A",
+          "tail_success": 0.6922916666666667,
+          "total_success": 0.50975
+        },
+        {
+          "first50_success": 0.026666666666666665,
+          "local_detection_events": 32,
+          "max_allocated_banks": 3,
+          "mean_allocated_banks": 2.9583333333333335,
+          "newly_grown_cells": 4,
+          "rule_hidden_from_cells": "xnor",
+          "stage": "B",
+          "tail_success": 0.20354166666666665,
+          "total_success": 0.15320238095238092
+        },
+        {
+          "first50_success": 0.3391666666666667,
+          "local_detection_events": 60,
+          "max_allocated_banks": 3,
+          "mean_allocated_banks": 3.0,
+          "newly_grown_cells": 2,
+          "rule_hidden_from_cells": "and",
+          "stage": "C",
+          "tail_success": 0.5470833333333334,
+          "total_success": 0.47364285714285714
+        },
+        {
+          "first50_success": 0.485,
+          "local_detection_events": 8,
+          "max_allocated_banks": 3,
+          "mean_allocated_banks": 3.0,
+          "newly_grown_cells": 0,
+          "rule_hidden_from_cells": "xor",
+          "stage": "returnA",
+          "tail_success": 0.405625,
+          "total_success": 0.4062037037037037
+        },
+        {
+          "first50_success": 0.4733333333333334,
+          "local_detection_events": 6,
+          "max_allocated_banks": 3,
+          "mean_allocated_banks": 3.0,
+          "newly_grown_cells": 0,
+          "rule_hidden_from_cells": "xnor",
+          "stage": "returnB",
+          "tail_success": 0.45875,
+          "total_success": 0.4423148148148149
+        }
+      ]
+    }
+  ],
+  "schema": "dynamic-memory-third-rule-v1",
+  "seeds": [
+    11
+  ],
+  "spec": {
+    "cooldown": 140,
+    "dropout": 0.08,
+    "exploration": 0.03,
+    "learning_rate": 0.1,
+    "maturity": 0.74,
+    "maturity_steps": 450,
+    "max_banks": 3,
+    "pairs": 24,
+    "phase_steps": 3500,
+    "probe_accept": 0.78,
+    "probe_steps": 160,
+    "relative_trigger": 0.14,
+    "revisit_steps": 900,
+    "smoothing": 0.025,
+    "test_steps": 180
+  },
+  "summary": {
+    "cap2": {
+      "A": {
+        "avg_banks": 2.0,
+        "tail_success_mean": 0.8458333333333334
+      },
+      "B": {
+        "avg_banks": 2.0,
+        "tail_success_mean": 0.024791666666666667
+      },
+      "C": {
+        "avg_banks": 2.0,
+        "tail_success_mean": 0.38958333333333334
+      },
+      "returnA": {
+        "avg_banks": 2.0,
+        "tail_success_mean": 0.694375
+      },
+      "returnB": {
+        "avg_banks": 2.0,
+        "tail_success_mean": 0.1679166666666667
+      }
+    },
+    "fast_detector": {
+      "A": {
+        "avg_banks": 2.875,
+        "tail_success_mean": 0.6922916666666667
+      },
+      "B": {
+        "avg_banks": 2.9583333333333335,
+        "tail_success_mean": 0.20354166666666665
+      },
+      "C": {
+        "avg_banks": 3.0,
+        "tail_success_mean": 0.5470833333333334
+      },
+      "returnA": {
+        "avg_banks": 3.0,
+        "tail_success_mean": 0.405625
+      },
+      "returnB": {
+        "avg_banks": 3.0,
+        "tail_success_mean": 0.45875
+      }
+    },
+    "grow": {
+      "A": {
+        "avg_banks": 2.5833333333333335,
+        "tail_success_mean": 0.7254166666666667
+      },
+      "B": {
+        "avg_banks": 2.9166666666666665,
+        "tail_success_mean": 0.17
+      },
+      "C": {
+        "avg_banks": 2.9166666666666665,
+        "tail_success_mean": 0.410625
+      },
+      "returnA": {
+        "avg_banks": 2.9583333333333335,
+        "tail_success_mean": 0.5216666666666667
+      },
+      "returnB": {
+        "avg_banks": 2.9583333333333335,
+        "tail_success_mean": 0.32875
+      }
+    },
+    "oracle": {
+      "A": {
+        "avg_banks": 3.0,
+        "tail_success_mean": 0.9260416666666668
+      },
+      "B": {
+        "avg_banks": 3.0,
+        "tail_success_mean": 0.9404166666666666
+      },
+      "C": {
+        "avg_banks": 3.0,
+        "tail_success_mean": 0.9427083333333333
+      },
+      "returnA": {
+        "avg_banks": 3.0,
+        "tail_success_mean": 0.92375
+      },
+      "returnB": {
+        "avg_banks": 3.0,
+        "tail_success_mean": 0.9364583333333334
+      }
+    },
+    "single": {
+      "A": {
+        "avg_banks": 1.0,
+        "tail_success_mean": 0.9260416666666668
+      },
+      "B": {
+        "avg_banks": 1.0,
+        "tail_success_mean": 0.001875
+      },
+      "C": {
+        "avg_banks": 1.0,
+        "tail_success_mean": 0.23604166666666668
+      },
+      "returnA": {
+        "avg_banks": 1.0,
+        "tail_success_mean": 0.9233333333333335
+      },
+      "returnB": {
+        "avg_banks": 1.0,
+        "tail_success_mean": 0.0022916666666666667
+      }
+    }
+  }
+}

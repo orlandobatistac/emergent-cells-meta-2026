@@ -1,0 +1,1677 @@
+{
+  "aggregate": {
+    "blind_memory": {
+      "a_before": {
+        "mean": 0.9651406250000001,
+        "std_population": 0.002733437339230567
+      },
+      "a_retention_drop": {
+        "mean": 0.0008124999999999938,
+        "std_population": 0.00042676563386709944
+      },
+      "a_return_no_training": {
+        "mean": 0.964328125,
+        "std_population": 0.00294215057398495
+      },
+      "b_after": {
+        "mean": 0.0018906250000000004,
+        "std_population": 0.003079116274395951
+      },
+      "b_before": {
+        "mean": 0.0017656250000000003,
+        "std_population": 0.002829203868803024
+      }
+    },
+    "context_memory": {
+      "a_before": {
+        "mean": 0.9651406250000001,
+        "std_population": 0.002733437339230567
+      },
+      "a_retention_drop": {
+        "mean": 0.0,
+        "std_population": 0.0
+      },
+      "a_return_no_training": {
+        "mean": 0.9651406250000001,
+        "std_population": 0.002733437339230567
+      },
+      "b_after": {
+        "mean": 0.964046875,
+        "std_population": 0.0025813899780447696
+      },
+      "b_before": {
+        "mean": 0.24615625,
+        "std_population": 0.003528760184186515
+      }
+    },
+    "frozen_on_switch": {
+      "a_before": {
+        "mean": 0.9651406250000001,
+        "std_population": 0.002733437339230567
+      },
+      "a_retention_drop": {
+        "mean": 0.0,
+        "std_population": 0.0
+      },
+      "a_return_no_training": {
+        "mean": 0.9651406250000001,
+        "std_population": 0.002733437339230567
+      },
+      "b_after": {
+        "mean": 0.0017656250000000003,
+        "std_population": 0.002829203868803024
+      },
+      "b_before": {
+        "mean": 0.0017656250000000003,
+        "std_population": 0.002829203868803024
+      }
+    },
+    "no_messages": {
+      "a_before": {
+        "mean": 0.48790625,
+        "std_population": 0.0015510518104660488
+      },
+      "a_retention_drop": {
+        "mean": -0.006625000000000025,
+        "std_population": 0.0004457919568027213
+      },
+      "a_return_no_training": {
+        "mean": 0.4945312500000001,
+        "std_population": 0.001497882620150855
+      },
+      "b_after": {
+        "mean": 0.49128124999999995,
+        "std_population": 0.003832300019244317
+      },
+      "b_before": {
+        "mean": 0.4845,
+        "std_population": 0.004346053795542562
+      }
+    },
+    "reset_on_switch": {
+      "a_before": {
+        "mean": 0.9651406250000001,
+        "std_population": 0.002733437339230567
+      },
+      "a_retention_drop": {
+        "mean": 0.96325,
+        "std_population": 0.005774616126310887
+      },
+      "a_return_no_training": {
+        "mean": 0.0018906250000000004,
+        "std_population": 0.0031574100590911537
+      },
+      "b_after": {
+        "mean": 0.964046875,
+        "std_population": 0.0025813899780447696
+      },
+      "b_before": {
+        "mean": 0.0017656250000000003,
+        "std_population": 0.002829203868803024
+      }
+    },
+    "single_policy": {
+      "a_before": {
+        "mean": 0.9651406250000001,
+        "std_population": 0.002733437339230567
+      },
+      "a_retention_drop": {
+        "mean": 0.0008124999999999938,
+        "std_population": 0.00042676563386709944
+      },
+      "a_return_no_training": {
+        "mean": 0.964328125,
+        "std_population": 0.00294215057398495
+      },
+      "b_after": {
+        "mean": 0.0018906250000000004,
+        "std_population": 0.003079116274395951
+      },
+      "b_before": {
+        "mean": 0.0017656250000000003,
+        "std_population": 0.002829203868803024
+      }
+    }
+  },
+  "date": "2026-10-27",
+  "limitations": [
+    "Environment rule and visible season context are engineered by authors.",
+    "Only XOR->XNOR->XOR on fixed pair gates, not arbitrary task transfer.",
+    "The context memory arm has 8 used decoder slots versus 4 in single-policy.",
+    "Reset-on-switch is a deliberately external action, not autonomous change detection.",
+    "Senders freeze during phase B for all variants; protocol is retained by design.",
+    "No adaptive topology, growth, discovered task changes or measured joules."
+  ],
+  "results": [
+    {
+      "a_before": 0.96578125,
+      "a_decoder_weight_change_after_A": 0.0,
+      "a_retention_drop": 0.0,
+      "a_return_no_training": 0.96578125,
+      "b_after": 0.96515625,
+      "b_before": 0.248203125,
+      "b_training_history": [
+        {
+          "training_step": 437,
+          "window_success": 0.45437643020594964
+        },
+        {
+          "training_step": 874,
+          "window_success": 0.7695938215102975
+        },
+        {
+          "training_step": 1311,
+          "window_success": 0.8777889016018307
+        },
+        {
+          "training_step": 1748,
+          "window_success": 0.9208738558352403
+        },
+        {
+          "training_step": 2185,
+          "window_success": 0.9380005720823799
+        },
+        {
+          "training_step": 2622,
+          "window_success": 0.9486556064073226
+        },
+        {
+          "training_step": 3059,
+          "window_success": 0.9597397025171625
+        },
+        {
+          "training_step": 3496,
+          "window_success": 0.9610268878718535
+        }
+      ],
+      "condition": "context_memory",
+      "messages_received": 1126400,
+      "messages_sent": 1126400,
+      "parameter_count": 1280,
+      "private_sender_symbol_separation": 0.9929148455203408,
+      "seed": 1001,
+      "sender_weight_change_after_A": 0.0,
+      "simulated_energy_balance": 817563.9999999001
+    },
+    {
+      "a_before": 0.96578125,
+      "a_decoder_weight_change_after_A": 0.31509355122849625,
+      "a_retention_drop": 0.00031250000000004885,
+      "a_return_no_training": 0.96546875,
+      "b_after": 0.000234375,
+      "b_before": 0.000234375,
+      "b_training_history": [
+        {
+          "training_step": 437,
+          "window_success": 0.00017877574370709382
+        },
+        {
+          "training_step": 874,
+          "window_success": 0.00046481693363844396
+        },
+        {
+          "training_step": 1311,
+          "window_success": 0.0003933066361556064
+        },
+        {
+          "training_step": 1748,
+          "window_success": 0.00042906178489702515
+        },
+        {
+          "training_step": 2185,
+          "window_success": 0.0003933066361556064
+        },
+        {
+          "training_step": 2622,
+          "window_success": 0.0002860411899313501
+        },
+        {
+          "training_step": 3059,
+          "window_success": 0.00014302059496567506
+        },
+        {
+          "training_step": 3496,
+          "window_success": 0.00035755148741418763
+        }
+      ],
+      "condition": "single_policy",
+      "messages_received": 1126400,
+      "messages_sent": 1126400,
+      "parameter_count": 1280,
+      "private_sender_symbol_separation": 0.9929148455203408,
+      "seed": 1001,
+      "sender_weight_change_after_A": 0.0,
+      "simulated_energy_balance": 404108.0000000503
+    },
+    {
+      "a_before": 0.96578125,
+      "a_decoder_weight_change_after_A": 9.651832779358923,
+      "a_retention_drop": 0.96546875,
+      "a_return_no_training": 0.0003125,
+      "b_after": 0.96515625,
+      "b_before": 0.000234375,
+      "b_training_history": [
+        {
+          "training_step": 437,
+          "window_success": 0.45437643020594964
+        },
+        {
+          "training_step": 874,
+          "window_success": 0.7695938215102975
+        },
+        {
+          "training_step": 1311,
+          "window_success": 0.8777889016018307
+        },
+        {
+          "training_step": 1748,
+          "window_success": 0.9208738558352403
+        },
+        {
+          "training_step": 2185,
+          "window_success": 0.9380005720823799
+        },
+        {
+          "training_step": 2622,
+          "window_success": 0.9486556064073226
+        },
+        {
+          "training_step": 3059,
+          "window_success": 0.9597397025171625
+        },
+        {
+          "training_step": 3496,
+          "window_success": 0.9610268878718535
+        }
+      ],
+      "condition": "reset_on_switch",
+      "messages_received": 1126400,
+      "messages_sent": 1126400,
+      "parameter_count": 1280,
+      "private_sender_symbol_separation": 0.9929148455203408,
+      "seed": 1001,
+      "sender_weight_change_after_A": 0.0,
+      "simulated_energy_balance": 786499.9999999036
+    },
+    {
+      "a_before": 0.96578125,
+      "a_decoder_weight_change_after_A": 0.31509355122849625,
+      "a_retention_drop": 0.00031250000000004885,
+      "a_return_no_training": 0.96546875,
+      "b_after": 0.000234375,
+      "b_before": 0.000234375,
+      "b_training_history": [
+        {
+          "training_step": 437,
+          "window_success": 0.00017877574370709382
+        },
+        {
+          "training_step": 874,
+          "window_success": 0.00046481693363844396
+        },
+        {
+          "training_step": 1311,
+          "window_success": 0.0003933066361556064
+        },
+        {
+          "training_step": 1748,
+          "window_success": 0.00042906178489702515
+        },
+        {
+          "training_step": 2185,
+          "window_success": 0.0003933066361556064
+        },
+        {
+          "training_step": 2622,
+          "window_success": 0.0002860411899313501
+        },
+        {
+          "training_step": 3059,
+          "window_success": 0.00014302059496567506
+        },
+        {
+          "training_step": 3496,
+          "window_success": 0.00035755148741418763
+        }
+      ],
+      "condition": "blind_memory",
+      "messages_received": 1126400,
+      "messages_sent": 1126400,
+      "parameter_count": 1280,
+      "private_sender_symbol_separation": 0.9929148455203408,
+      "seed": 1001,
+      "sender_weight_change_after_A": 0.0,
+      "simulated_energy_balance": 404108.0000000503
+    },
+    {
+      "a_before": 0.96578125,
+      "a_decoder_weight_change_after_A": 0.0,
+      "a_retention_drop": 0.0,
+      "a_return_no_training": 0.96578125,
+      "b_after": 0.000234375,
+      "b_before": 0.000234375,
+      "b_training_history": [
+        {
+          "training_step": 437,
+          "window_success": 0.00017877574370709382
+        },
+        {
+          "training_step": 874,
+          "window_success": 0.00046481693363844396
+        },
+        {
+          "training_step": 1311,
+          "window_success": 0.0003933066361556064
+        },
+        {
+          "training_step": 1748,
+          "window_success": 0.00042906178489702515
+        },
+        {
+          "training_step": 2185,
+          "window_success": 0.0003933066361556064
+        },
+        {
+          "training_step": 2622,
+          "window_success": 0.0002860411899313501
+        },
+        {
+          "training_step": 3059,
+          "window_success": 0.00014302059496567506
+        },
+        {
+          "training_step": 3496,
+          "window_success": 0.00032179633867276887
+        }
+      ],
+      "condition": "frozen_on_switch",
+      "messages_received": 1126400,
+      "messages_sent": 1126400,
+      "parameter_count": 1280,
+      "private_sender_symbol_separation": 0.9929148455203408,
+      "seed": 1001,
+      "sender_weight_change_after_A": 0.0,
+      "simulated_energy_balance": 404114.0000000503
+    },
+    {
+      "a_before": 0.485859375,
+      "a_decoder_weight_change_after_A": 1.4811286830360202,
+      "a_retention_drop": -0.006484375000000042,
+      "a_return_no_training": 0.49234375,
+      "b_after": 0.48921875,
+      "b_before": 0.4821875,
+      "b_training_history": [
+        {
+          "training_step": 437,
+          "window_success": 0.4882008009153318
+        },
+        {
+          "training_step": 874,
+          "window_success": 0.485054347826087
+        },
+        {
+          "training_step": 1311,
+          "window_success": 0.4910254576659039
+        },
+        {
+          "training_step": 1748,
+          "window_success": 0.49377860411899316
+        },
+        {
+          "training_step": 2185,
+          "window_success": 0.49359982837528604
+        },
+        {
+          "training_step": 2622,
+          "window_success": 0.4914187643020595
+        },
+        {
+          "training_step": 3059,
+          "window_success": 0.49531607551487417
+        },
+        {
+          "training_step": 3496,
+          "window_success": 0.49116847826086957
+        }
+      ],
+      "condition": "no_messages",
+      "messages_received": 0,
+      "messages_sent": 1126400,
+      "parameter_count": 1280,
+      "private_sender_symbol_separation": 0.04478482085990829,
+      "seed": 1001,
+      "sender_weight_change_after_A": 0.0,
+      "simulated_energy_balance": 440892.0000000476
+    },
+    {
+      "a_before": 0.9684375,
+      "a_decoder_weight_change_after_A": 0.0,
+      "a_retention_drop": 0.0,
+      "a_return_no_training": 0.9684375,
+      "b_after": 0.964453125,
+      "b_before": 0.246796875,
+      "b_training_history": [
+        {
+          "training_step": 437,
+          "window_success": 0.453804347826087
+        },
+        {
+          "training_step": 874,
+          "window_success": 0.7707022311212814
+        },
+        {
+          "training_step": 1311,
+          "window_success": 0.8774671052631579
+        },
+        {
+          "training_step": 1748,
+          "window_success": 0.9177989130434783
+        },
+        {
+          "training_step": 2185,
+          "window_success": 0.9365346109839817
+        },
+        {
+          "training_step": 2622,
+          "window_success": 0.9494064645308925
+        },
+        {
+          "training_step": 3059,
+          "window_success": 0.9590245995423341
+        },
+        {
+          "training_step": 3496,
+          "window_success": 0.9640303203661327
+        }
+      ],
+      "condition": "context_memory",
+      "messages_received": 1126400,
+      "messages_sent": 1126400,
+      "parameter_count": 1280,
+      "private_sender_symbol_separation": 0.9928918505083337,
+      "seed": 1002,
+      "sender_weight_change_after_A": 0.0,
+      "simulated_energy_balance": 818547.9999998996
+    },
+    {
+      "a_before": 0.9684375,
+      "a_decoder_weight_change_after_A": 0.31670250326915106,
+      "a_retention_drop": 0.0007031249999999156,
+      "a_return_no_training": 0.967734375,
+      "b_after": 0.00046875,
+      "b_before": 0.00046875,
+      "b_training_history": [
+        {
+          "training_step": 437,
+          "window_success": 0.00025028604118993136
+        },
+        {
+          "training_step": 874,
+          "window_success": 0.00025028604118993136
+        },
+        {
+          "training_step": 1311,
+          "window_success": 0.00032179633867276887
+        },
+        {
+          "training_step": 1748,
+          "window_success": 0.0002860411899313501
+        },
+        {
+          "training_step": 2185,
+          "window_success": 0.0003933066361556064
+        },
+        {
+          "training_step": 2622,
+          "window_success": 0.00032179633867276887
+        },
+        {
+          "training_step": 3059,
+          "window_success": 0.00035755148741418763
+        },
+        {
+          "training_step": 3496,
+          "window_success": 0.0003933066361556064
+        }
+      ],
+      "condition": "single_policy",
+      "messages_received": 1126400,
+      "messages_sent": 1126400,
+      "parameter_count": 1280,
+      "private_sender_symbol_separation": 0.9928918505083337,
+      "seed": 1002,
+      "sender_weight_change_after_A": 0.0,
+      "simulated_energy_balance": 405218.0000000503
+    },
+    {
+      "a_before": 0.9684375,
+      "a_decoder_weight_change_after_A": 9.71664098759468,
+      "a_retention_drop": 0.96828125,
+      "a_return_no_training": 0.00015625,
+      "b_after": 0.964453125,
+      "b_before": 0.00046875,
+      "b_training_history": [
+        {
+          "training_step": 437,
+          "window_success": 0.453804347826087
+        },
+        {
+          "training_step": 874,
+          "window_success": 0.7707022311212814
+        },
+        {
+          "training_step": 1311,
+          "window_success": 0.8774671052631579
+        },
+        {
+          "training_step": 1748,
+          "window_success": 0.9177989130434783
+        },
+        {
+          "training_step": 2185,
+          "window_success": 0.9365346109839817
+        },
+        {
+          "training_step": 2622,
+          "window_success": 0.9494064645308925
+        },
+        {
+          "training_step": 3059,
+          "window_success": 0.9590245995423341
+        },
+        {
+          "training_step": 3496,
+          "window_success": 0.9640303203661327
+        }
+      ],
+      "condition": "reset_on_switch",
+      "messages_received": 1126400,
+      "messages_sent": 1126400,
+      "parameter_count": 1280,
+      "private_sender_symbol_separation": 0.9928918505083337,
+      "seed": 1002,
+      "sender_weight_change_after_A": 0.0,
+      "simulated_energy_balance": 787453.999999903
+    },
+    {
+      "a_before": 0.9684375,
+      "a_decoder_weight_change_after_A": 0.31670250326915106,
+      "a_retention_drop": 0.0007031249999999156,
+      "a_return_no_training": 0.967734375,
+      "b_after": 0.00046875,
+      "b_before": 0.00046875,
+      "b_training_history": [
+        {
+          "training_step": 437,
+          "window_success": 0.00025028604118993136
+        },
+        {
+          "training_step": 874,
+          "window_success": 0.00025028604118993136
+        },
+        {
+          "training_step": 1311,
+          "window_success": 0.00032179633867276887
+        },
+        {
+          "training_step": 1748,
+          "window_success": 0.0002860411899313501
+        },
+        {
+          "training_step": 2185,
+          "window_success": 0.0003933066361556064
+        },
+        {
+          "training_step": 2622,
+          "window_success": 0.00032179633867276887
+        },
+        {
+          "training_step": 3059,
+          "window_success": 0.00035755148741418763
+        },
+        {
+          "training_step": 3496,
+          "window_success": 0.0003933066361556064
+        }
+      ],
+      "condition": "blind_memory",
+      "messages_received": 1126400,
+      "messages_sent": 1126400,
+      "parameter_count": 1280,
+      "private_sender_symbol_separation": 0.9928918505083337,
+      "seed": 1002,
+      "sender_weight_change_after_A": 0.0,
+      "simulated_energy_balance": 405218.0000000503
+    },
+    {
+      "a_before": 0.9684375,
+      "a_decoder_weight_change_after_A": 0.0,
+      "a_retention_drop": 0.0,
+      "a_return_no_training": 0.9684375,
+      "b_after": 0.00046875,
+      "b_before": 0.00046875,
+      "b_training_history": [
+        {
+          "training_step": 437,
+          "window_success": 0.00025028604118993136
+        },
+        {
+          "training_step": 874,
+          "window_success": 0.00025028604118993136
+        },
+        {
+          "training_step": 1311,
+          "window_success": 0.00035755148741418763
+        },
+        {
+          "training_step": 1748,
+          "window_success": 0.0002860411899313501
+        },
+        {
+          "training_step": 2185,
+          "window_success": 0.0003933066361556064
+        },
+        {
+          "training_step": 2622,
+          "window_success": 0.0002860411899313501
+        },
+        {
+          "training_step": 3059,
+          "window_success": 0.00035755148741418763
+        },
+        {
+          "training_step": 3496,
+          "window_success": 0.0003933066361556064
+        }
+      ],
+      "condition": "frozen_on_switch",
+      "messages_received": 1126400,
+      "messages_sent": 1126400,
+      "parameter_count": 1280,
+      "private_sender_symbol_separation": 0.9928918505083337,
+      "seed": 1002,
+      "sender_weight_change_after_A": 0.0,
+      "simulated_energy_balance": 405236.0000000503
+    },
+    {
+      "a_before": 0.49,
+      "a_decoder_weight_change_after_A": 1.5461358297448413,
+      "a_retention_drop": -0.006250000000000033,
+      "a_return_no_training": 0.49625,
+      "b_after": 0.484921875,
+      "b_before": 0.477265625,
+      "b_training_history": [
+        {
+          "training_step": 437,
+          "window_success": 0.4856621853546911
+        },
+        {
+          "training_step": 874,
+          "window_success": 0.48902316933638446
+        },
+        {
+          "training_step": 1311,
+          "window_success": 0.48795051487414187
+        },
+        {
+          "training_step": 1748,
+          "window_success": 0.48941647597254007
+        },
+        {
+          "training_step": 2185,
+          "window_success": 0.49420766590389015
+        },
+        {
+          "training_step": 2622,
+          "window_success": 0.49002431350114417
+        },
+        {
+          "training_step": 3059,
+          "window_success": 0.4936355835240275
+        },
+        {
+          "training_step": 3496,
+          "window_success": 0.49306350114416475
+        }
+      ],
+      "condition": "no_messages",
+      "messages_received": 0,
+      "messages_sent": 1126400,
+      "parameter_count": 1280,
+      "private_sender_symbol_separation": 0.04691301310025124,
+      "seed": 1002,
+      "sender_weight_change_after_A": 0.0,
+      "simulated_energy_balance": 440466.0000000476
+    },
+    {
+      "a_before": 0.96015625,
+      "a_decoder_weight_change_after_A": 0.0,
+      "a_retention_drop": 0.0,
+      "a_return_no_training": 0.96015625,
+      "b_after": 0.95921875,
+      "b_before": 0.242109375,
+      "b_training_history": [
+        {
+          "training_step": 437,
+          "window_success": 0.45047911899313503
+        },
+        {
+          "training_step": 874,
+          "window_success": 0.7623712814645309
+        },
+        {
+          "training_step": 1311,
+          "window_success": 0.8685640732265446
+        },
+        {
+          "training_step": 1748,
+          "window_success": 0.9103260869565217
+        },
+        {
+          "training_step": 2185,
+          "window_success": 0.9325300343249427
+        },
+        {
+          "training_step": 2622,
+          "window_success": 0.9426844965675057
+        },
+        {
+          "training_step": 3059,
+          "window_success": 0.9498355263157895
+        },
+        {
+          "training_step": 3496,
+          "window_success": 0.9551272883295194
+        }
+      ],
+      "condition": "context_memory",
+      "messages_received": 1126400,
+      "messages_sent": 1126400,
+      "parameter_count": 1280,
+      "private_sender_symbol_separation": 0.9775111358418106,
+      "seed": 1003,
+      "sender_weight_change_after_A": 0.0,
+      "simulated_energy_balance": 812959.9999999014
+    },
+    {
+      "a_before": 0.96015625,
+      "a_decoder_weight_change_after_A": 1.0838426664831697,
+      "a_retention_drop": 0.0010937500000000044,
+      "a_return_no_training": 0.9590625,
+      "b_after": 0.008046875,
+      "b_before": 0.007421875,
+      "b_training_history": [
+        {
+          "training_step": 437,
+          "window_success": 0.007580091533180778
+        },
+        {
+          "training_step": 874,
+          "window_success": 0.007901887871853547
+        },
+        {
+          "training_step": 1311,
+          "window_success": 0.008581235697940504
+        },
+        {
+          "training_step": 1748,
+          "window_success": 0.007866132723112129
+        },
+        {
+          "training_step": 2185,
+          "window_success": 0.00808066361556064
+        },
+        {
+          "training_step": 2622,
+          "window_success": 0.007508581235697941
+        },
+        {
+          "training_step": 3059,
+          "window_success": 0.008760011441647597
+        },
+        {
+          "training_step": 3496,
+          "window_success": 0.007866132723112129
+        }
+      ],
+      "condition": "single_policy",
+      "messages_received": 1126400,
+      "messages_sent": 1126400,
+      "parameter_count": 1280,
+      "private_sender_symbol_separation": 0.9775111358418106,
+      "seed": 1003,
+      "sender_weight_change_after_A": 0.0,
+      "simulated_energy_balance": 406884.0000000504
+    },
+    {
+      "a_before": 0.96015625,
+      "a_decoder_weight_change_after_A": 9.597384178633277,
+      "a_retention_drop": 0.9519531250000001,
+      "a_return_no_training": 0.008203125,
+      "b_after": 0.95921875,
+      "b_before": 0.007421875,
+      "b_training_history": [
+        {
+          "training_step": 437,
+          "window_success": 0.45047911899313503
+        },
+        {
+          "training_step": 874,
+          "window_success": 0.7623712814645309
+        },
+        {
+          "training_step": 1311,
+          "window_success": 0.8685640732265446
+        },
+        {
+          "training_step": 1748,
+          "window_success": 0.9103260869565217
+        },
+        {
+          "training_step": 2185,
+          "window_success": 0.9325300343249427
+        },
+        {
+          "training_step": 2622,
+          "window_success": 0.9426844965675057
+        },
+        {
+          "training_step": 3059,
+          "window_success": 0.9498355263157895
+        },
+        {
+          "training_step": 3496,
+          "window_success": 0.9551272883295194
+        }
+      ],
+      "condition": "reset_on_switch",
+      "messages_received": 1126400,
+      "messages_sent": 1126400,
+      "parameter_count": 1280,
+      "private_sender_symbol_separation": 0.9775111358418106,
+      "seed": 1003,
+      "sender_weight_change_after_A": 0.0,
+      "simulated_energy_balance": 782581.9999999047
+    },
+    {
+      "a_before": 0.96015625,
+      "a_decoder_weight_change_after_A": 1.0838426664831697,
+      "a_retention_drop": 0.0010937500000000044,
+      "a_return_no_training": 0.9590625,
+      "b_after": 0.008046875,
+      "b_before": 0.007421875,
+      "b_training_history": [
+        {
+          "training_step": 437,
+          "window_success": 0.007580091533180778
+        },
+        {
+          "training_step": 874,
+          "window_success": 0.007901887871853547
+        },
+        {
+          "training_step": 1311,
+          "window_success": 0.008581235697940504
+        },
+        {
+          "training_step": 1748,
+          "window_success": 0.007866132723112129
+        },
+        {
+          "training_step": 2185,
+          "window_success": 0.00808066361556064
+        },
+        {
+          "training_step": 2622,
+          "window_success": 0.007508581235697941
+        },
+        {
+          "training_step": 3059,
+          "window_success": 0.008760011441647597
+        },
+        {
+          "training_step": 3496,
+          "window_success": 0.007866132723112129
+        }
+      ],
+      "condition": "blind_memory",
+      "messages_received": 1126400,
+      "messages_sent": 1126400,
+      "parameter_count": 1280,
+      "private_sender_symbol_separation": 0.9775111358418106,
+      "seed": 1003,
+      "sender_weight_change_after_A": 0.0,
+      "simulated_energy_balance": 406884.0000000504
+    },
+    {
+      "a_before": 0.96015625,
+      "a_decoder_weight_change_after_A": 0.0,
+      "a_retention_drop": 0.0,
+      "a_return_no_training": 0.96015625,
+      "b_after": 0.007421875,
+      "b_before": 0.007421875,
+      "b_training_history": [
+        {
+          "training_step": 437,
+          "window_success": 0.007544336384439359
+        },
+        {
+          "training_step": 874,
+          "window_success": 0.007794622425629291
+        },
+        {
+          "training_step": 1311,
+          "window_success": 0.008545480549199085
+        },
+        {
+          "training_step": 1748,
+          "window_success": 0.007794622425629291
+        },
+        {
+          "training_step": 2185,
+          "window_success": 0.007937643020594966
+        },
+        {
+          "training_step": 2622,
+          "window_success": 0.007294050343249428
+        },
+        {
+          "training_step": 3059,
+          "window_success": 0.008509725400457666
+        },
+        {
+          "training_step": 3496,
+          "window_success": 0.007651601830663615
+        }
+      ],
+      "condition": "frozen_on_switch",
+      "messages_received": 1126400,
+      "messages_sent": 1126400,
+      "parameter_count": 1280,
+      "private_sender_symbol_separation": 0.9775111358418106,
+      "seed": 1003,
+      "sender_weight_change_after_A": 0.0,
+      "simulated_energy_balance": 406834.0000000504
+    },
+    {
+      "a_before": 0.48890625,
+      "a_decoder_weight_change_after_A": 1.3674846636474651,
+      "a_retention_drop": -0.007187500000000013,
+      "a_return_no_training": 0.49609375,
+      "b_after": 0.492265625,
+      "b_before": 0.485625,
+      "b_training_history": [
+        {
+          "training_step": 437,
+          "window_success": 0.4845537757437071
+        },
+        {
+          "training_step": 874,
+          "window_success": 0.4892734553775744
+        },
+        {
+          "training_step": 1311,
+          "window_success": 0.4919550915331808
+        },
+        {
+          "training_step": 1748,
+          "window_success": 0.48977402745995424
+        },
+        {
+          "training_step": 2185,
+          "window_success": 0.4946367276887872
+        },
+        {
+          "training_step": 2622,
+          "window_success": 0.4874141876430206
+        },
+        {
+          "training_step": 3059,
+          "window_success": 0.49660326086956524
+        },
+        {
+          "training_step": 3496,
+          "window_success": 0.4946367276887872
+        }
+      ],
+      "condition": "no_messages",
+      "messages_received": 0,
+      "messages_sent": 1126400,
+      "parameter_count": 1280,
+      "private_sender_symbol_separation": 0.046501106043611296,
+      "seed": 1003,
+      "sender_weight_change_after_A": 0.0,
+      "simulated_energy_balance": 441378.00000004773
+    },
+    {
+      "a_before": 0.96625,
+      "a_decoder_weight_change_after_A": 0.0,
+      "a_retention_drop": 0.0,
+      "a_return_no_training": 0.96625,
+      "b_after": 0.964453125,
+      "b_before": 0.24234375,
+      "b_training_history": [
+        {
+          "training_step": 437,
+          "window_success": 0.4519808352402746
+        },
+        {
+          "training_step": 874,
+          "window_success": 0.7655892448512586
+        },
+        {
+          "training_step": 1311,
+          "window_success": 0.8783252288329519
+        },
+        {
+          "training_step": 1748,
+          "window_success": 0.9174771167048055
+        },
+        {
+          "training_step": 2185,
+          "window_success": 0.9402173913043478
+        },
+        {
+          "training_step": 2622,
+          "window_success": 0.950228832951945
+        },
+        {
+          "training_step": 3059,
+          "window_success": 0.9588100686498856
+        },
+        {
+          "training_step": 3496,
+          "window_success": 0.9646739130434783
+        }
+      ],
+      "condition": "context_memory",
+      "messages_received": 1126400,
+      "messages_sent": 1126400,
+      "parameter_count": 1280,
+      "private_sender_symbol_separation": 0.9930930299241604,
+      "seed": 1004,
+      "sender_weight_change_after_A": 0.0,
+      "simulated_energy_balance": 822921.9999998976
+    },
+    {
+      "a_before": 0.96625,
+      "a_decoder_weight_change_after_A": 0.22706261477652578,
+      "a_retention_drop": 0.00046875000000001776,
+      "a_return_no_training": 0.96578125,
+      "b_after": 0.000390625,
+      "b_before": 0.000390625,
+      "b_training_history": [
+        {
+          "training_step": 437,
+          "window_success": 0.0003933066361556064
+        },
+        {
+          "training_step": 874,
+          "window_success": 0.00025028604118993136
+        },
+        {
+          "training_step": 1311,
+          "window_success": 0.0003933066361556064
+        },
+        {
+          "training_step": 1748,
+          "window_success": 0.00035755148741418763
+        },
+        {
+          "training_step": 2185,
+          "window_success": 0.0002860411899313501
+        },
+        {
+          "training_step": 2622,
+          "window_success": 0.00025028604118993136
+        },
+        {
+          "training_step": 3059,
+          "window_success": 0.0002860411899313501
+        },
+        {
+          "training_step": 3496,
+          "window_success": 0.00032179633867276887
+        }
+      ],
+      "condition": "single_policy",
+      "messages_received": 1126400,
+      "messages_sent": 1126400,
+      "parameter_count": 1280,
+      "private_sender_symbol_separation": 0.9930930299241604,
+      "seed": 1004,
+      "sender_weight_change_after_A": 0.0,
+      "simulated_energy_balance": 409794.0000000506
+    },
+    {
+      "a_before": 0.96625,
+      "a_decoder_weight_change_after_A": 9.563081411743742,
+      "a_retention_drop": 0.9658593750000001,
+      "a_return_no_training": 0.000390625,
+      "b_after": 0.964453125,
+      "b_before": 0.000390625,
+      "b_training_history": [
+        {
+          "training_step": 437,
+          "window_success": 0.4519808352402746
+        },
+        {
+          "training_step": 874,
+          "window_success": 0.7655892448512586
+        },
+        {
+          "training_step": 1311,
+          "window_success": 0.8783252288329519
+        },
+        {
+          "training_step": 1748,
+          "window_success": 0.9174771167048055
+        },
+        {
+          "training_step": 2185,
+          "window_success": 0.9402173913043478
+        },
+        {
+          "training_step": 2622,
+          "window_success": 0.950228832951945
+        },
+        {
+          "training_step": 3059,
+          "window_success": 0.9588100686498856
+        },
+        {
+          "training_step": 3496,
+          "window_success": 0.9646739130434783
+        }
+      ],
+      "condition": "reset_on_switch",
+      "messages_received": 1126400,
+      "messages_sent": 1126400,
+      "parameter_count": 1280,
+      "private_sender_symbol_separation": 0.9930930299241604,
+      "seed": 1004,
+      "sender_weight_change_after_A": 0.0,
+      "simulated_energy_balance": 792001.9999999008
+    },
+    {
+      "a_before": 0.96625,
+      "a_decoder_weight_change_after_A": 0.22706261477652578,
+      "a_retention_drop": 0.00046875000000001776,
+      "a_return_no_training": 0.96578125,
+      "b_after": 0.000390625,
+      "b_before": 0.000390625,
+      "b_training_history": [
+        {
+          "training_step": 437,
+          "window_success": 0.0003933066361556064
+        },
+        {
+          "training_step": 874,
+          "window_success": 0.00025028604118993136
+        },
+        {
+          "training_step": 1311,
+          "window_success": 0.0003933066361556064
+        },
+        {
+          "training_step": 1748,
+          "window_success": 0.00035755148741418763
+        },
+        {
+          "training_step": 2185,
+          "window_success": 0.0002860411899313501
+        },
+        {
+          "training_step": 2622,
+          "window_success": 0.00025028604118993136
+        },
+        {
+          "training_step": 3059,
+          "window_success": 0.0002860411899313501
+        },
+        {
+          "training_step": 3496,
+          "window_success": 0.00032179633867276887
+        }
+      ],
+      "condition": "blind_memory",
+      "messages_received": 1126400,
+      "messages_sent": 1126400,
+      "parameter_count": 1280,
+      "private_sender_symbol_separation": 0.9930930299241604,
+      "seed": 1004,
+      "sender_weight_change_after_A": 0.0,
+      "simulated_energy_balance": 409794.0000000506
+    },
+    {
+      "a_before": 0.96625,
+      "a_decoder_weight_change_after_A": 0.0,
+      "a_retention_drop": 0.0,
+      "a_return_no_training": 0.96625,
+      "b_after": 0.000390625,
+      "b_before": 0.000390625,
+      "b_training_history": [
+        {
+          "training_step": 437,
+          "window_success": 0.0003933066361556064
+        },
+        {
+          "training_step": 874,
+          "window_success": 0.00021453089244851257
+        },
+        {
+          "training_step": 1311,
+          "window_success": 0.00035755148741418763
+        },
+        {
+          "training_step": 1748,
+          "window_success": 0.00035755148741418763
+        },
+        {
+          "training_step": 2185,
+          "window_success": 0.0002860411899313501
+        },
+        {
+          "training_step": 2622,
+          "window_success": 0.00021453089244851257
+        },
+        {
+          "training_step": 3059,
+          "window_success": 0.00025028604118993136
+        },
+        {
+          "training_step": 3496,
+          "window_success": 0.0002860411899313501
+        }
+      ],
+      "condition": "frozen_on_switch",
+      "messages_received": 1126400,
+      "messages_sent": 1126400,
+      "parameter_count": 1280,
+      "private_sender_symbol_separation": 0.9930930299241604,
+      "seed": 1004,
+      "sender_weight_change_after_A": 0.0,
+      "simulated_energy_balance": 409796.0000000506
+    },
+    {
+      "a_before": 0.48640625,
+      "a_decoder_weight_change_after_A": 1.244764932261531,
+      "a_retention_drop": -0.007109375000000029,
+      "a_return_no_training": 0.493515625,
+      "b_after": 0.494765625,
+      "b_before": 0.48859375,
+      "b_training_history": [
+        {
+          "training_step": 437,
+          "window_success": 0.4847325514874142
+        },
+        {
+          "training_step": 874,
+          "window_success": 0.4886656178489702
+        },
+        {
+          "training_step": 1311,
+          "window_success": 0.4895952517162471
+        },
+        {
+          "training_step": 1748,
+          "window_success": 0.4892019450800915
+        },
+        {
+          "training_step": 2185,
+          "window_success": 0.4943149313501144
+        },
+        {
+          "training_step": 2622,
+          "window_success": 0.4948870137299771
+        },
+        {
+          "training_step": 3059,
+          "window_success": 0.49113272311212813
+        },
+        {
+          "training_step": 3496,
+          "window_success": 0.49492276887871856
+        }
+      ],
+      "condition": "no_messages",
+      "messages_received": 0,
+      "messages_sent": 1126400,
+      "parameter_count": 1280,
+      "private_sender_symbol_separation": 0.04236886675896061,
+      "seed": 1004,
+      "sender_weight_change_after_A": 0.0,
+      "simulated_energy_balance": 440440.00000004756
+    },
+    {
+      "a_before": 0.965078125,
+      "a_decoder_weight_change_after_A": 0.0,
+      "a_retention_drop": 0.0,
+      "a_return_no_training": 0.965078125,
+      "b_after": 0.966953125,
+      "b_before": 0.251328125,
+      "b_training_history": [
+        {
+          "training_step": 437,
+          "window_success": 0.4506578947368421
+        },
+        {
+          "training_step": 874,
+          "window_success": 0.7693792906178489
+        },
+        {
+          "training_step": 1311,
+          "window_success": 0.8792548627002288
+        },
+        {
+          "training_step": 1748,
+          "window_success": 0.9175843821510298
+        },
+        {
+          "training_step": 2185,
+          "window_success": 0.9372854691075515
+        },
+        {
+          "training_step": 2622,
+          "window_success": 0.9494422196796338
+        },
+        {
+          "training_step": 3059,
+          "window_success": 0.9576301487414187
+        },
+        {
+          "training_step": 3496,
+          "window_success": 0.9598469679633868
+        }
+      ],
+      "condition": "context_memory",
+      "messages_received": 1126400,
+      "messages_sent": 1126400,
+      "parameter_count": 1280,
+      "private_sender_symbol_separation": 0.9925954104398772,
+      "seed": 1005,
+      "sender_weight_change_after_A": 0.0,
+      "simulated_energy_balance": 814103.9999999017
+    },
+    {
+      "a_before": 0.965078125,
+      "a_decoder_weight_change_after_A": 0.3634185872206306,
+      "a_retention_drop": 0.0014843749999999822,
+      "a_return_no_training": 0.96359375,
+      "b_after": 0.0003125,
+      "b_before": 0.0003125,
+      "b_training_history": [
+        {
+          "training_step": 437,
+          "window_success": 0.0005005720823798627
+        },
+        {
+          "training_step": 874,
+          "window_success": 0.0005363272311212815
+        },
+        {
+          "training_step": 1311,
+          "window_success": 0.00042906178489702515
+        },
+        {
+          "training_step": 1748,
+          "window_success": 0.0003933066361556064
+        },
+        {
+          "training_step": 2185,
+          "window_success": 0.0005005720823798627
+        },
+        {
+          "training_step": 2622,
+          "window_success": 0.0002860411899313501
+        },
+        {
+          "training_step": 3059,
+          "window_success": 0.00025028604118993136
+        },
+        {
+          "training_step": 3496,
+          "window_success": 0.00042906178489702515
+        }
+      ],
+      "condition": "single_policy",
+      "messages_received": 1126400,
+      "messages_sent": 1126400,
+      "parameter_count": 1280,
+      "private_sender_symbol_separation": 0.9925954104398772,
+      "seed": 1005,
+      "sender_weight_change_after_A": 0.0,
+      "simulated_energy_balance": 401034.0000000503
+    },
+    {
+      "a_before": 0.965078125,
+      "a_decoder_weight_change_after_A": 9.531052552687184,
+      "a_retention_drop": 0.9646875,
+      "a_return_no_training": 0.000390625,
+      "b_after": 0.966953125,
+      "b_before": 0.0003125,
+      "b_training_history": [
+        {
+          "training_step": 437,
+          "window_success": 0.4506578947368421
+        },
+        {
+          "training_step": 874,
+          "window_success": 0.7693792906178489
+        },
+        {
+          "training_step": 1311,
+          "window_success": 0.8792548627002288
+        },
+        {
+          "training_step": 1748,
+          "window_success": 0.9175843821510298
+        },
+        {
+          "training_step": 2185,
+          "window_success": 0.9372854691075515
+        },
+        {
+          "training_step": 2622,
+          "window_success": 0.9494422196796338
+        },
+        {
+          "training_step": 3059,
+          "window_success": 0.9576301487414187
+        },
+        {
+          "training_step": 3496,
+          "window_success": 0.9598469679633868
+        }
+      ],
+      "condition": "reset_on_switch",
+      "messages_received": 1126400,
+      "messages_sent": 1126400,
+      "parameter_count": 1280,
+      "private_sender_symbol_separation": 0.9925954104398772,
+      "seed": 1005,
+      "sender_weight_change_after_A": 0.0,
+      "simulated_energy_balance": 782981.9999999051
+    },
+    {
+      "a_before": 0.965078125,
+      "a_decoder_weight_change_after_A": 0.3634185872206306,
+      "a_retention_drop": 0.0014843749999999822,
+      "a_return_no_training": 0.96359375,
+      "b_after": 0.0003125,
+      "b_before": 0.0003125,
+      "b_training_history": [
+        {
+          "training_step": 437,
+          "window_success": 0.0005005720823798627
+        },
+        {
+          "training_step": 874,
+          "window_success": 0.0005363272311212815
+        },
+        {
+          "training_step": 1311,
+          "window_success": 0.00042906178489702515
+        },
+        {
+          "training_step": 1748,
+          "window_success": 0.0003933066361556064
+        },
+        {
+          "training_step": 2185,
+          "window_success": 0.0005005720823798627
+        },
+        {
+          "training_step": 2622,
+          "window_success": 0.0002860411899313501
+        },
+        {
+          "training_step": 3059,
+          "window_success": 0.00025028604118993136
+        },
+        {
+          "training_step": 3496,
+          "window_success": 0.00042906178489702515
+        }
+      ],
+      "condition": "blind_memory",
+      "messages_received": 1126400,
+      "messages_sent": 1126400,
+      "parameter_count": 1280,
+      "private_sender_symbol_separation": 0.9925954104398772,
+      "seed": 1005,
+      "sender_weight_change_after_A": 0.0,
+      "simulated_energy_balance": 401034.0000000503
+    },
+    {
+      "a_before": 0.965078125,
+      "a_decoder_weight_change_after_A": 0.0,
+      "a_retention_drop": 0.0,
+      "a_return_no_training": 0.965078125,
+      "b_after": 0.0003125,
+      "b_before": 0.0003125,
+      "b_training_history": [
+        {
+          "training_step": 437,
+          "window_success": 0.0005005720823798627
+        },
+        {
+          "training_step": 874,
+          "window_success": 0.0005363272311212815
+        },
+        {
+          "training_step": 1311,
+          "window_success": 0.00035755148741418763
+        },
+        {
+          "training_step": 1748,
+          "window_success": 0.00035755148741418763
+        },
+        {
+          "training_step": 2185,
+          "window_success": 0.0005005720823798627
+        },
+        {
+          "training_step": 2622,
+          "window_success": 0.00025028604118993136
+        },
+        {
+          "training_step": 3059,
+          "window_success": 0.00025028604118993136
+        },
+        {
+          "training_step": 3496,
+          "window_success": 0.00042906178489702515
+        }
+      ],
+      "condition": "frozen_on_switch",
+      "messages_received": 1126400,
+      "messages_sent": 1126400,
+      "parameter_count": 1280,
+      "private_sender_symbol_separation": 0.9925954104398772,
+      "seed": 1005,
+      "sender_weight_change_after_A": 0.0,
+      "simulated_energy_balance": 401064.0000000503
+    },
+    {
+      "a_before": 0.488359375,
+      "a_decoder_weight_change_after_A": 1.2099815547926864,
+      "a_retention_drop": -0.006093750000000009,
+      "a_return_no_training": 0.494453125,
+      "b_after": 0.495234375,
+      "b_before": 0.488828125,
+      "b_training_history": [
+        {
+          "training_step": 437,
+          "window_success": 0.48555491990846683
+        },
+        {
+          "training_step": 874,
+          "window_success": 0.49642448512585813
+        },
+        {
+          "training_step": 1311,
+          "window_success": 0.49170480549199086
+        },
+        {
+          "training_step": 1748,
+          "window_success": 0.4895952517162471
+        },
+        {
+          "training_step": 2185,
+          "window_success": 0.49299199084668194
+        },
+        {
+          "training_step": 2622,
+          "window_success": 0.4914902745995423
+        },
+        {
+          "training_step": 3059,
+          "window_success": 0.49553060640732266
+        },
+        {
+          "training_step": 3496,
+          "window_success": 0.49399313501144165
+        }
+      ],
+      "condition": "no_messages",
+      "messages_received": 0,
+      "messages_sent": 1126400,
+      "parameter_count": 1280,
+      "private_sender_symbol_separation": 0.04520456550852538,
+      "seed": 1005,
+      "sender_weight_change_after_A": 0.0,
+      "simulated_energy_balance": 443172.00000004785
+    }
+  ],
+  "schema": "contextual-A-B-A-memory-v1",
+  "seeds": [
+    1001,
+    1002,
+    1003,
+    1004,
+    1005
+  ],
+  "spec": {
+    "baseline_decay": 0.98,
+    "learning_rate": 0.1,
+    "message_cost": 0.02,
+    "metabolism": 0.04,
+    "pairs": 64,
+    "resource_pulse": 1.0,
+    "test_steps": 200,
+    "train_a": 4500,
+    "train_b": 3500
+  },
+  "status": "exploratory task-switching and memory benchmark",
+  "task_design": {
+    "A": "XOR shared gate",
+    "B": "XNOR shared gate",
+    "blind_memory": "two banks available but environment context ignored",
+    "context_memory": "season indicator 0/1 externally provided to a cell",
+    "frozen_on_switch": "decoder frozen after A; no adaptation",
+    "no_messages": "bit reception masked in both phases",
+    "reset_on_switch": "one decoder externally reset at change, then retrained B",
+    "single_policy": "one shared decoder trained sequentially"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "limitations": [
+    "The world resource process explicitly depends on the private cue combination.",
+    "The task rule remains XOR throughout.",
+    "No reward-only learner can generally determine whether identical observed failures arise from different causal worlds."
+  ],
+  "rows": [
+    {
+      "experiment": "same XOR rule, 11-pattern-specific resource dropout",
+      "extra_memory_cells": 44,
+      "late_gate_correctness": 0.2989583333333333,
+      "method": "relative_ema",
+      "novelty_without_task_change": 44,
+      "seed": 4001
+    },
+    {
+      "experiment": "same XOR rule, 11-pattern-specific resource dropout",
+      "extra_memory_cells": 44,
+      "late_gate_correctness": 0.2989583333333333,
+      "method": "conditional_signature",
+      "novelty_without_task_change": 44,
+      "seed": 4001
+    },
+    {
+      "experiment": "same XOR rule, 11-pattern-specific resource dropout",
+      "extra_memory_cells": 0,
+      "late_gate_correctness": 0.9197916666666667,
+      "method": "availability_sensor",
+      "novelty_without_task_change": 0,
+      "seed": 4001
+    },
+    {
+      "experiment": "same XOR rule, 11-pattern-specific resource dropout",
+      "extra_memory_cells": 46,
+      "late_gate_correctness": 0.2664583333333333,
+      "method": "relative_ema",
+      "novelty_without_task_change": 46,
+      "seed": 4002
+    },
+    {
+      "experiment": "same XOR rule, 11-pattern-specific resource dropout",
+      "extra_memory_cells": 46,
+      "late_gate_correctness": 0.2664583333333333,
+      "method": "conditional_signature",
+      "novelty_without_task_change": 46,
+      "seed": 4002
+    },
+    {
+      "experiment": "same XOR rule, 11-pattern-specific resource dropout",
+      "extra_memory_cells": 0,
+      "late_gate_correctness": 0.9225,
+      "method": "availability_sensor",
+      "novelty_without_task_change": 0,
+      "seed": 4002
+    },
+    {
+      "experiment": "same XOR rule, 11-pattern-specific resource dropout",
+      "extra_memory_cells": 46,
+      "late_gate_correctness": 0.27208333333333334,
+      "method": "relative_ema",
+      "novelty_without_task_change": 46,
+      "seed": 4003
+    },
+    {
+      "experiment": "same XOR rule, 11-pattern-specific resource dropout",
+      "extra_memory_cells": 46,
+      "late_gate_correctness": 0.27208333333333334,
+      "method": "conditional_signature",
+      "novelty_without_task_change": 46,
+      "seed": 4003
+    },
+    {
+      "experiment": "same XOR rule, 11-pattern-specific resource dropout",
+      "extra_memory_cells": 0,
+      "late_gate_correctness": 0.9183333333333333,
+      "method": "availability_sensor",
+      "novelty_without_task_change": 0,
+      "seed": 4003
+    }
+  ],
+  "schema": "conditional-dropout-identifiability-v1",
+  "seeds": [
+    4001,
+    4002,
+    4003
+  ]
+}

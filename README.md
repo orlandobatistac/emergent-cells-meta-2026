@@ -1,39 +1,44 @@
-# Emergent Cells — Adaptive Worlds
+# Emergent Cells Lab — Núcleo científico en Python
 
-**Meta Global AI Developer Hackathon 2026 · Indie Developer · Push the Frontier**
+Laboratorio experimental reproducible para aprendizaje celular descentralizado, comunicación local, memoria y energía **simulada**. Contiene algoritmos Python, tests científicos, resultados numéricos y reportes, sin frontend, HTTP, JavaScript, HTML ni Meta API.
 
-A public, **new-work** experiment exploring whether locally learning, energy-constrained cells can adapt collectively to environments proposed by Meta AI models **without an AI model directing individual cell decisions**.
+**Alcance:** las simulaciones demuestran capacidades limitadas en ambientes matemáticos diseñados; NO son evidencia de AGI, eficiencia energética física, independencia del sustrato ni crecimiento de células físicas. La energía del simulador es una recompensa, no joules.
 
-## Status
+## Ejecutar en la laptop
 
-- **Oct 26, 2026:** Public repository initialized for hackathon coordination and planning only.
-- **Oct 27–Nov 4, 2026:** Event's stated *building period*. Competition implementation will be committed separately during this window.
-- **Submission deadline:** Nov 4, 2026, 9:00 PM Eastern Time.
+Instalar dependencias: python -m pip install -e .
 
-**No functioning cellular simulator, Meta integration, measurements or demo are claimed in this initial commit.**
+- Ver experimentos: python run.py list
+- Simulación base: python run.py simulate --compare --seeds 1,2,3 --steps 240 --cells 256 --output results/runs/simulation.json
+- Memoria dinámica: python run.py dynamic-memory --seeds 11,12 --pairs 32 --phase-steps 4500 --dropout 0.08 --output results/runs/third-rule.json
+- Curiosidad aprendida: python run.py learned-curiosity --help
+- Todos los tests: python -m unittest discover -s tests -q
 
-## Architecture in brief
+Cada experimento incluye sus opciones --help. El argumento --output, cuando existe, guarda JSON para que ChatGPT analice directamente los resultados sin interfaz.
 
-1. **Meta world designer:** model proposes typed environment specifications, not cell actions.
-2. **World validator/compiler:** turns a validated scenario into local physical stimuli and resource fields.
-3. **Cellular system:** each cell has local signals, memory/plasticity and a bounded energy/resource budget; collective behavior emerges from interactions.
-4. **Independent evaluator:** reproducible trials, fixed/random/Meta-generated scenario controls, multiple seeds, reported failures and computational-cost proxies.
-5. **Demo:** visualization of the world, cells, changed conditions and transparent metrics.
+## Estructura
 
-## Scientific and provenance boundary
+- run.py: punto único de entrada Python.
+- src/emergent_cells/cells/: unidades de aprendizaje local.
+- src/emergent_cells/world/, simulation.py: mundos con recursos y controles.
+- src/emergent_cells/experiments/: hipótesis, algoritmos, variantes y evaluaciones reproducibles.
+- src/emergent_cells/evaluation/: mediciones y análisis.
+- tests/: tests Python de reproducibilidad y comportamiento.
+- results/audited/: datos de replicación y semillas independientes.
+- results/exploratory/: pilotos y resultados negativos conservados.
+- docs/: informes científicos, métodos y limitaciones.
 
-The long-term **Emergent Cells Lab** research predates this hackathon and is **not** being claimed as new. This project will independently implement a scoped competition prototype; any historical inspiration will be disclosed, with no copied private source code or historical results presented as hackathon output.
+## Línea científica hasta el 27 de octubre de 2026
 
-Physical substrate independence is a **design hypothesis**, not evidence of an implementation beyond this digital simulator. Simulated resource/energy units and activity counts are **not measured joules**.
+1. Ablación de conectividad local, incluyendo hallazgos negativos.
+2. Protocolo binario aprendido mediante recompensas privadas: alrededor del 98% de éxito en una tarea XOR diseñada con parejas fijas, frente a controles de ~50% sin mensajes informativos.
+3. Memoria de contextos A/B y detector de sorpresa por recompensa local: buena recuperación bajo un detector programado.
+4. Memoria dinámica: cinco semillas, éxito 93.7% XOR → 94.3% XNOR → 95.2% AND → 94.1% recuperación XOR → 94.5% recuperación XNOR, con pérdida aleatoria estable del 8% de recursos. El control de dos memorias logró 24.1% en AND.
+5. Límite negativo: aumentar la pérdida de recompensa del 8% al 20% sin cambiar la regla causó creación falsa de memorias.
+6. Estudios exploratorios posteriores sobre deriva contextual, exploración causal y curiosidad aprendida. Consultar sus informes originales y JSON antes de generalizar resultados.
 
-## Participation and links
+Síntesis científica en español: docs/REPORTE_CIENTIFICO_2026-10-27.md.
 
-- [Hackathon](https://cerebralvalley.ai/e/meta-ai-developer-hackathon)
-- [Submission page](https://cerebralvalley.ai/e/meta-ai-developer-hackathon/hackathon/submit)
-- [Meta AI developer documentation](https://ai.meta.com/resources/models-and-libraries/)
+## Política del repositorio
 
-## Contributions and rights
-
-Code will be published with explicit provenance and applicable licenses when selected; until a LICENSE is committed, **no open-source license is granted by this repository**. Do not submit secrets, personally identifying data, or rights-restricted assets.
-
-*This public repository is separate from the existing private research repository.*
+La antigua interfaz del hackathon permanece recuperable en el historial Git y las ramas anteriores, pero no forma parte del código actual. No se reescriben resultados históricos. Los nuevos estudios deben conservar controles equivalentes, semillas nuevas, resultados negativos, documentación de límites y verificaciones Python. Después de revisión se integran en main. No requiere mantenimiento de interfaz visual.

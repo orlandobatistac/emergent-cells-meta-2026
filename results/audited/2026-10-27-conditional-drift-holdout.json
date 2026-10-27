@@ -1,0 +1,977 @@
+{
+  "date": "2026-10-27",
+  "limitations": [
+    "Thresholds selected on development seeds. Evaluate independent seeds.",
+    "Beta normal-interval approximation is NOT BOCPD.",
+    "World task IDs are inaccessible to adaptive policy and detector.",
+    "The synthetic reward dropout value is NOT observed by the cells.",
+    "A pure reward stream cannot identify the cause of all changes.",
+    "Memory ceiling 3, fixed partners, binary actions and authored task rules.",
+    "Synthetic rewards are not actual measured energy joules."
+  ],
+  "methods": [
+    "relative_ema",
+    "conditional_signature"
+  ],
+  "noise_levels": [
+    0.08,
+    0.2,
+    0.35,
+    0.45
+  ],
+  "schema": "reward-noise-versus-task-drift-v1",
+  "seeds": [
+    3001,
+    3002,
+    3003,
+    3004,
+    3005
+  ],
+  "spec": {
+    "cooldown": 140,
+    "dropout": 0.08,
+    "exploration": 0.03,
+    "learning_rate": 0.1,
+    "maturity": 0.78,
+    "maturity_steps": 550,
+    "max_banks": 3,
+    "pairs": 24,
+    "phase_steps": 3500,
+    "probe_accept": 0.78,
+    "probe_steps": 160,
+    "relative_trigger": 0.1,
+    "revisit_steps": 900,
+    "smoothing": 0.005,
+    "test_steps": 180
+  },
+  "stationary_rows": [
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.915625,
+      "method": "relative_ema",
+      "seed": 3001,
+      "stress_dropout": 0.08,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 46,
+      "false_memory_cells": 46,
+      "late_success": 0.26625,
+      "method": "relative_ema",
+      "seed": 3001,
+      "stress_dropout": 0.2,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 46,
+      "false_memory_cells": 46,
+      "late_success": 0.26625,
+      "method": "relative_ema",
+      "seed": 3001,
+      "stress_dropout": 0.35,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 46,
+      "false_memory_cells": 46,
+      "late_success": 0.26625,
+      "method": "relative_ema",
+      "seed": 3001,
+      "stress_dropout": 0.45,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.915625,
+      "method": "conditional_signature",
+      "seed": 3001,
+      "stress_dropout": 0.08,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.915625,
+      "method": "conditional_signature",
+      "seed": 3001,
+      "stress_dropout": 0.2,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.915625,
+      "method": "conditional_signature",
+      "seed": 3001,
+      "stress_dropout": 0.35,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 2,
+      "false_memory_cells": 2,
+      "late_success": 0.8870833333333333,
+      "method": "conditional_signature",
+      "seed": 3001,
+      "stress_dropout": 0.45,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.9252083333333333,
+      "method": "relative_ema",
+      "seed": 3002,
+      "stress_dropout": 0.08,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 48,
+      "false_memory_cells": 48,
+      "late_success": 0.2520833333333333,
+      "method": "relative_ema",
+      "seed": 3002,
+      "stress_dropout": 0.2,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 48,
+      "false_memory_cells": 48,
+      "late_success": 0.2520833333333333,
+      "method": "relative_ema",
+      "seed": 3002,
+      "stress_dropout": 0.35,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 48,
+      "false_memory_cells": 48,
+      "late_success": 0.2520833333333333,
+      "method": "relative_ema",
+      "seed": 3002,
+      "stress_dropout": 0.45,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.9252083333333333,
+      "method": "conditional_signature",
+      "seed": 3002,
+      "stress_dropout": 0.08,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.9252083333333333,
+      "method": "conditional_signature",
+      "seed": 3002,
+      "stress_dropout": 0.2,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.9252083333333333,
+      "method": "conditional_signature",
+      "seed": 3002,
+      "stress_dropout": 0.35,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.9252083333333333,
+      "method": "conditional_signature",
+      "seed": 3002,
+      "stress_dropout": 0.45,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.923125,
+      "method": "relative_ema",
+      "seed": 3003,
+      "stress_dropout": 0.08,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 46,
+      "false_memory_cells": 46,
+      "late_success": 0.26791666666666664,
+      "method": "relative_ema",
+      "seed": 3003,
+      "stress_dropout": 0.2,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 46,
+      "false_memory_cells": 46,
+      "late_success": 0.26791666666666664,
+      "method": "relative_ema",
+      "seed": 3003,
+      "stress_dropout": 0.35,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 46,
+      "false_memory_cells": 46,
+      "late_success": 0.26791666666666664,
+      "method": "relative_ema",
+      "seed": 3003,
+      "stress_dropout": 0.45,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.923125,
+      "method": "conditional_signature",
+      "seed": 3003,
+      "stress_dropout": 0.08,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.923125,
+      "method": "conditional_signature",
+      "seed": 3003,
+      "stress_dropout": 0.2,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.923125,
+      "method": "conditional_signature",
+      "seed": 3003,
+      "stress_dropout": 0.35,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.923125,
+      "method": "conditional_signature",
+      "seed": 3003,
+      "stress_dropout": 0.45,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.92375,
+      "method": "relative_ema",
+      "seed": 3004,
+      "stress_dropout": 0.08,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 48,
+      "false_memory_cells": 48,
+      "late_success": 0.2710416666666666,
+      "method": "relative_ema",
+      "seed": 3004,
+      "stress_dropout": 0.2,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 48,
+      "false_memory_cells": 48,
+      "late_success": 0.24729166666666663,
+      "method": "relative_ema",
+      "seed": 3004,
+      "stress_dropout": 0.35,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 48,
+      "false_memory_cells": 48,
+      "late_success": 0.24729166666666663,
+      "method": "relative_ema",
+      "seed": 3004,
+      "stress_dropout": 0.45,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.92375,
+      "method": "conditional_signature",
+      "seed": 3004,
+      "stress_dropout": 0.08,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.92375,
+      "method": "conditional_signature",
+      "seed": 3004,
+      "stress_dropout": 0.2,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.92375,
+      "method": "conditional_signature",
+      "seed": 3004,
+      "stress_dropout": 0.35,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.92375,
+      "method": "conditional_signature",
+      "seed": 3004,
+      "stress_dropout": 0.45,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 2,
+      "false_memory_cells": 2,
+      "late_success": 0.92,
+      "method": "relative_ema",
+      "seed": 3005,
+      "stress_dropout": 0.08,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 48,
+      "false_memory_cells": 48,
+      "late_success": 0.24520833333333336,
+      "method": "relative_ema",
+      "seed": 3005,
+      "stress_dropout": 0.2,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 48,
+      "false_memory_cells": 48,
+      "late_success": 0.24520833333333336,
+      "method": "relative_ema",
+      "seed": 3005,
+      "stress_dropout": 0.35,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 48,
+      "false_memory_cells": 48,
+      "late_success": 0.24520833333333336,
+      "method": "relative_ema",
+      "seed": 3005,
+      "stress_dropout": 0.45,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.9320833333333334,
+      "method": "conditional_signature",
+      "seed": 3005,
+      "stress_dropout": 0.08,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.9320833333333334,
+      "method": "conditional_signature",
+      "seed": 3005,
+      "stress_dropout": 0.2,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.9320833333333334,
+      "method": "conditional_signature",
+      "seed": 3005,
+      "stress_dropout": 0.35,
+      "train_dropout": 0.08
+    },
+    {
+      "false_alarms": 0,
+      "false_memory_cells": 0,
+      "late_success": 0.9320833333333334,
+      "method": "conditional_signature",
+      "seed": 3005,
+      "stress_dropout": 0.45,
+      "train_dropout": 0.08
+    }
+  ],
+  "summary": {
+    "conditional_signature": {
+      "noise": {
+        "0.08": {
+          "false_alarms": 0.0,
+          "false_memory_cells": 0.0
+        },
+        "0.2": {
+          "false_alarms": 0.0,
+          "false_memory_cells": 0.0
+        },
+        "0.35": {
+          "false_alarms": 0.0,
+          "false_memory_cells": 0.0
+        },
+        "0.45": {
+          "false_alarms": 0.4,
+          "false_memory_cells": 0.4
+        }
+      },
+      "stages": {
+        "A": {
+          "banks": 1.0,
+          "late_success": 0.9209166666666666
+        },
+        "B": {
+          "banks": 1.9833333333333332,
+          "late_success": 0.9246666666666666
+        },
+        "C": {
+          "banks": 2.9666666666666663,
+          "late_success": 0.9313333333333335
+        },
+        "returnA": {
+          "banks": 2.9666666666666663,
+          "late_success": 0.9266249999999999
+        },
+        "returnB": {
+          "banks": 2.975,
+          "late_success": 0.9136666666666666
+        }
+      }
+    },
+    "relative_ema": {
+      "noise": {
+        "0.08": {
+          "false_alarms": 0.4,
+          "false_memory_cells": 0.4
+        },
+        "0.2": {
+          "false_alarms": 47.2,
+          "false_memory_cells": 47.2
+        },
+        "0.35": {
+          "false_alarms": 47.2,
+          "false_memory_cells": 47.2
+        },
+        "0.45": {
+          "false_alarms": 47.2,
+          "false_memory_cells": 47.2
+        }
+      },
+      "stages": {
+        "A": {
+          "banks": 1.0,
+          "late_success": 0.9209166666666666
+        },
+        "B": {
+          "banks": 1.9833333333333332,
+          "late_success": 0.9250833333333333
+        },
+        "C": {
+          "banks": 2.9666666666666663,
+          "late_success": 0.9320416666666667
+        },
+        "returnA": {
+          "banks": 2.9666666666666663,
+          "late_success": 0.9267083333333334
+        },
+        "returnB": {
+          "banks": 2.975,
+          "late_success": 0.9290833333333334
+        }
+      }
+    }
+  },
+  "task_rows": [
+    {
+      "allocations_total": 92,
+      "method": "relative_ema",
+      "reused_old_banks": 92,
+      "seed": 3001,
+      "stages": [
+        {
+          "allocated_average": 1.0,
+          "case_11_success": 0.8804979253112033,
+          "early_success": 0.26916666666666667,
+          "late_success": 0.9116666666666667,
+          "new_memory_cells": 0,
+          "stage": "A"
+        },
+        {
+          "allocated_average": 1.9583333333333333,
+          "case_11_success": 0.929225645295587,
+          "early_success": 0.14666666666666667,
+          "late_success": 0.91,
+          "new_memory_cells": 46,
+          "stage": "B"
+        },
+        {
+          "allocated_average": 2.9166666666666665,
+          "case_11_success": 0.9375,
+          "early_success": 0.6508333333333333,
+          "late_success": 0.9172916666666666,
+          "new_memory_cells": 46,
+          "stage": "C"
+        },
+        {
+          "allocated_average": 2.9166666666666665,
+          "case_11_success": 0.9004081632653061,
+          "early_success": 0.12749999999999997,
+          "late_success": 0.9135416666666666,
+          "new_memory_cells": 0,
+          "stage": "returnA"
+        },
+        {
+          "allocated_average": 2.9166666666666665,
+          "case_11_success": 0.9458333333333333,
+          "early_success": 0.4308333333333333,
+          "late_success": 0.9141666666666666,
+          "new_memory_cells": 0,
+          "stage": "returnB"
+        }
+      ]
+    },
+    {
+      "allocations_total": 92,
+      "method": "conditional_signature",
+      "reused_old_banks": 92,
+      "seed": 3001,
+      "stages": [
+        {
+          "allocated_average": 1.0,
+          "case_11_success": 0.8804979253112033,
+          "early_success": 0.26916666666666667,
+          "late_success": 0.9116666666666667,
+          "new_memory_cells": 0,
+          "stage": "A"
+        },
+        {
+          "allocated_average": 1.9583333333333333,
+          "case_11_success": 0.9283930058284763,
+          "early_success": 0.0025,
+          "late_success": 0.9097916666666667,
+          "new_memory_cells": 46,
+          "stage": "B"
+        },
+        {
+          "allocated_average": 2.9166666666666665,
+          "case_11_success": 0.9375,
+          "early_success": 0.6691666666666667,
+          "late_success": 0.916875,
+          "new_memory_cells": 46,
+          "stage": "C"
+        },
+        {
+          "allocated_average": 2.9166666666666665,
+          "case_11_success": 0.9012244897959184,
+          "early_success": 0.2466666666666667,
+          "late_success": 0.9135416666666667,
+          "new_memory_cells": 0,
+          "stage": "returnA"
+        },
+        {
+          "allocated_average": 2.9166666666666665,
+          "case_11_success": 0.9458333333333333,
+          "early_success": 0.012499999999999997,
+          "late_success": 0.9139583333333334,
+          "new_memory_cells": 0,
+          "stage": "returnB"
+        }
+      ]
+    },
+    {
+      "allocations_total": 96,
+      "method": "relative_ema",
+      "reused_old_banks": 96,
+      "seed": 3002,
+      "stages": [
+        {
+          "allocated_average": 1.0,
+          "case_11_success": 0.9270568278201866,
+          "early_success": 0.2525,
+          "late_success": 0.9295833333333333,
+          "new_memory_cells": 0,
+          "stage": "A"
+        },
+        {
+          "allocated_average": 2.0,
+          "case_11_success": 0.9397590361445783,
+          "early_success": 0.1725,
+          "late_success": 0.9385416666666667,
+          "new_memory_cells": 48,
+          "stage": "B"
+        },
+        {
+          "allocated_average": 3.0,
+          "case_11_success": 0.9294320137693631,
+          "early_success": 0.7083333333333335,
+          "late_success": 0.9425,
+          "new_memory_cells": 48,
+          "stage": "C"
+        },
+        {
+          "allocated_average": 3.0,
+          "case_11_success": 0.9110350727117195,
+          "early_success": 0.13166666666666668,
+          "late_success": 0.9220833333333335,
+          "new_memory_cells": 0,
+          "stage": "returnA"
+        },
+        {
+          "allocated_average": 3.0,
+          "case_11_success": 0.9333333333333333,
+          "early_success": 0.4566666666666667,
+          "late_success": 0.9347916666666667,
+          "new_memory_cells": 0,
+          "stage": "returnB"
+        }
+      ]
+    },
+    {
+      "allocations_total": 96,
+      "method": "conditional_signature",
+      "reused_old_banks": 96,
+      "seed": 3002,
+      "stages": [
+        {
+          "allocated_average": 1.0,
+          "case_11_success": 0.9270568278201866,
+          "early_success": 0.2525,
+          "late_success": 0.9295833333333333,
+          "new_memory_cells": 0,
+          "stage": "A"
+        },
+        {
+          "allocated_average": 2.0,
+          "case_11_success": 0.9388984509466437,
+          "early_success": 0.003333333333333333,
+          "late_success": 0.938125,
+          "new_memory_cells": 48,
+          "stage": "B"
+        },
+        {
+          "allocated_average": 3.0,
+          "case_11_success": 0.9294320137693631,
+          "early_success": 0.71,
+          "late_success": 0.9420833333333333,
+          "new_memory_cells": 48,
+          "stage": "C"
+        },
+        {
+          "allocated_average": 3.0,
+          "case_11_success": 0.9110350727117195,
+          "early_success": 0.2425,
+          "late_success": 0.9220833333333335,
+          "new_memory_cells": 0,
+          "stage": "returnA"
+        },
+        {
+          "allocated_average": 3.0,
+          "case_11_success": 0.932520325203252,
+          "early_success": 0.0,
+          "late_success": 0.9345833333333334,
+          "new_memory_cells": 0,
+          "stage": "returnB"
+        }
+      ]
+    },
+    {
+      "allocations_total": 94,
+      "method": "relative_ema",
+      "reused_old_banks": 92,
+      "seed": 3003,
+      "stages": [
+        {
+          "allocated_average": 1.0,
+          "case_11_success": 0.9229534510433387,
+          "early_success": 0.25416666666666665,
+          "late_success": 0.92125,
+          "new_memory_cells": 0,
+          "stage": "A"
+        },
+        {
+          "allocated_average": 1.9583333333333333,
+          "case_11_success": 0.8917710196779964,
+          "early_success": 0.13416666666666668,
+          "late_success": 0.9022916666666666,
+          "new_memory_cells": 46,
+          "stage": "B"
+        },
+        {
+          "allocated_average": 2.9166666666666665,
+          "case_11_success": 0.8848797250859106,
+          "early_success": 0.6616666666666667,
+          "late_success": 0.9097916666666666,
+          "new_memory_cells": 46,
+          "stage": "C"
+        },
+        {
+          "allocated_average": 2.9166666666666665,
+          "case_11_success": 0.9396479463537301,
+          "early_success": 0.1416666666666667,
+          "late_success": 0.9391666666666666,
+          "new_memory_cells": 0,
+          "stage": "returnA"
+        },
+        {
+          "allocated_average": 2.9583333333333335,
+          "case_11_success": 0.9218620116375728,
+          "early_success": 0.3924999999999999,
+          "late_success": 0.9127083333333335,
+          "new_memory_cells": 2,
+          "stage": "returnB"
+        }
+      ]
+    },
+    {
+      "allocations_total": 94,
+      "method": "conditional_signature",
+      "reused_old_banks": 88,
+      "seed": 3003,
+      "stages": [
+        {
+          "allocated_average": 1.0,
+          "case_11_success": 0.9229534510433387,
+          "early_success": 0.25416666666666665,
+          "late_success": 0.92125,
+          "new_memory_cells": 0,
+          "stage": "A"
+        },
+        {
+          "allocated_average": 1.9583333333333333,
+          "case_11_success": 0.8908765652951699,
+          "early_success": 0.003333333333333333,
+          "late_success": 0.9020833333333332,
+          "new_memory_cells": 46,
+          "stage": "B"
+        },
+        {
+          "allocated_average": 2.9166666666666665,
+          "case_11_success": 0.8831615120274914,
+          "early_success": 0.6866666666666668,
+          "late_success": 0.9091666666666666,
+          "new_memory_cells": 46,
+          "stage": "C"
+        },
+        {
+          "allocated_average": 2.9166666666666665,
+          "case_11_success": 0.9396479463537301,
+          "early_success": 0.255,
+          "late_success": 0.9385416666666667,
+          "new_memory_cells": 0,
+          "stage": "returnA"
+        },
+        {
+          "allocated_average": 2.9583333333333335,
+          "case_11_success": 0.8844555278470491,
+          "early_success": 0.003333333333333333,
+          "late_success": 0.873125,
+          "new_memory_cells": 2,
+          "stage": "returnB"
+        }
+      ]
+    },
+    {
+      "allocations_total": 96,
+      "method": "relative_ema",
+      "reused_old_banks": 96,
+      "seed": 3004,
+      "stages": [
+        {
+          "allocated_average": 1.0,
+          "case_11_success": 0.9179170344218888,
+          "early_success": 0.2658333333333333,
+          "late_success": 0.9191666666666667,
+          "new_memory_cells": 0,
+          "stage": "A"
+        },
+        {
+          "allocated_average": 2.0,
+          "case_11_success": 0.9337641357027464,
+          "early_success": 0.15166666666666667,
+          "late_success": 0.9416666666666665,
+          "new_memory_cells": 48,
+          "stage": "B"
+        },
+        {
+          "allocated_average": 3.0,
+          "case_11_success": 0.9287531806615776,
+          "early_success": 0.6975,
+          "late_success": 0.9425,
+          "new_memory_cells": 48,
+          "stage": "C"
+        },
+        {
+          "allocated_average": 3.0,
+          "case_11_success": 0.9256265157639451,
+          "early_success": 0.145,
+          "late_success": 0.9220833333333333,
+          "new_memory_cells": 0,
+          "stage": "returnA"
+        },
+        {
+          "allocated_average": 3.0,
+          "case_11_success": 0.9437551695616212,
+          "early_success": 0.45916666666666667,
+          "late_success": 0.9439583333333332,
+          "new_memory_cells": 0,
+          "stage": "returnB"
+        }
+      ]
+    },
+    {
+      "allocations_total": 96,
+      "method": "conditional_signature",
+      "reused_old_banks": 96,
+      "seed": 3004,
+      "stages": [
+        {
+          "allocated_average": 1.0,
+          "case_11_success": 0.9179170344218888,
+          "early_success": 0.2658333333333333,
+          "late_success": 0.9191666666666667,
+          "new_memory_cells": 0,
+          "stage": "A"
+        },
+        {
+          "allocated_average": 2.0,
+          "case_11_success": 0.932956381260097,
+          "early_success": 0.0025,
+          "late_success": 0.9408333333333334,
+          "new_memory_cells": 48,
+          "stage": "B"
+        },
+        {
+          "allocated_average": 3.0,
+          "case_11_success": 0.9279050042408821,
+          "early_success": 0.7075,
+          "late_success": 0.9416666666666668,
+          "new_memory_cells": 48,
+          "stage": "C"
+        },
+        {
+          "allocated_average": 3.0,
+          "case_11_success": 0.9256265157639451,
+          "early_success": 0.2525,
+          "late_success": 0.9220833333333333,
+          "new_memory_cells": 0,
+          "stage": "returnA"
+        },
+        {
+          "allocated_average": 3.0,
+          "case_11_success": 0.9437551695616212,
+          "early_success": 0.003333333333333333,
+          "late_success": 0.9441666666666667,
+          "new_memory_cells": 0,
+          "stage": "returnB"
+        }
+      ]
+    },
+    {
+      "allocations_total": 96,
+      "method": "relative_ema",
+      "reused_old_banks": 96,
+      "seed": 3005,
+      "stages": [
+        {
+          "allocated_average": 1.0,
+          "case_11_success": 0.9207119741100324,
+          "early_success": 0.2333333333333333,
+          "late_success": 0.9229166666666667,
+          "new_memory_cells": 0,
+          "stage": "A"
+        },
+        {
+          "allocated_average": 2.0,
+          "case_11_success": 0.9411276948590381,
+          "early_success": 0.14333333333333334,
+          "late_success": 0.9329166666666666,
+          "new_memory_cells": 48,
+          "stage": "B"
+        },
+        {
+          "allocated_average": 3.0,
+          "case_11_success": 0.9458128078817734,
+          "early_success": 0.7191666666666667,
+          "late_success": 0.948125,
+          "new_memory_cells": 48,
+          "stage": "C"
+        },
+        {
+          "allocated_average": 3.0,
+          "case_11_success": 0.9348561759729273,
+          "early_success": 0.1125,
+          "late_success": 0.9366666666666668,
+          "new_memory_cells": 0,
+          "stage": "returnA"
+        },
+        {
+          "allocated_average": 3.0,
+          "case_11_success": 0.9467811158798283,
+          "early_success": 0.41833333333333333,
+          "late_success": 0.9397916666666667,
+          "new_memory_cells": 0,
+          "stage": "returnB"
+        }
+      ]
+    },
+    {
+      "allocations_total": 96,
+      "method": "conditional_signature",
+      "reused_old_banks": 92,
+      "seed": 3005,
+      "stages": [
+        {
+          "allocated_average": 1.0,
+          "case_11_success": 0.9207119741100324,
+          "early_success": 0.2333333333333333,
+          "late_success": 0.9229166666666667,
+          "new_memory_cells": 0,
+          "stage": "A"
+        },
+        {
+          "allocated_average": 2.0,
+          "case_11_success": 0.9402985074626866,
+          "early_success": 0.0016666666666666666,
+          "late_success": 0.9325,
+          "new_memory_cells": 48,
+          "stage": "B"
+        },
+        {
+          "allocated_average": 3.0,
+          "case_11_success": 0.9458128078817734,
+          "early_success": 0.7366666666666667,
+          "late_success": 0.946875,
+          "new_memory_cells": 48,
+          "stage": "C"
+        },
+        {
+          "allocated_average": 3.0,
+          "case_11_success": 0.9365482233502538,
+          "early_success": 0.2275,
+          "late_success": 0.936875,
+          "new_memory_cells": 0,
+          "stage": "returnA"
+        },
+        {
+          "allocated_average": 3.0,
+          "case_11_success": 0.9098712446351931,
+          "early_success": 0.0,
+          "late_success": 0.9025,
+          "new_memory_cells": 0,
+          "stage": "returnB"
+        }
+      ]
+    }
+  ]
+}

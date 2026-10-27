@@ -1,0 +1,237 @@
+{
+  "date": "2026-10-26",
+  "design": {
+    "challenge_id": "3048aa0c0367edf9",
+    "limitations": "Deterministic keyword-based local template; NO Meta API request happened.",
+    "meta_response_id": null,
+    "model": null,
+    "prompt": "Crea un mundo dif\u00edcil con recursos escasos, peligros y cambios de entorno",
+    "proposal": {
+      "hazard_damage": 0.16,
+      "hazard_patches": 12,
+      "name": "Mundo de prueba local (sin Meta)",
+      "patch_radius": 3.0,
+      "rationale": "Plantilla de estr\u00e9s de recursos y se\u00f1ales locales. La cooperaci\u00f3n no est\u00e1 garantizada por este motor de forrajeo.",
+      "regeneration": 0.008,
+      "resource_patches": 5,
+      "shock_step": 35
+    },
+    "schema": "emergent-world-design-v1",
+    "source": "template",
+    "world": {
+      "harvest_limit": 0.12,
+      "hazard_damage": 0.16,
+      "hazard_patches": 12,
+      "height": 64,
+      "maximum_energy": 4.0,
+      "metabolism": 0.025,
+      "movement_cost": 0.007,
+      "patch_radius": 3.0,
+      "regeneration": 0.008,
+      "resource_patches": 5,
+      "shock_step": 35,
+      "starting_energy": 1.8,
+      "width": 64
+    }
+  },
+  "evaluation": {
+    "aggregate": {
+      "frozen": {
+        "energy_mean": 42.99515381900448,
+        "harvested_mean": 102.61837310421167,
+        "survival_mean": 0.3645833333333333
+      },
+      "greedy": {
+        "energy_mean": 164.21120428875454,
+        "harvested_mean": 259.6581497925519,
+        "survival_mean": 0.984375
+      },
+      "learned": {
+        "energy_mean": 93.15765892926106,
+        "harvested_mean": 182.49074139857296,
+        "survival_mean": 0.5260416666666666
+      },
+      "learned_no_messages": {
+        "energy_mean": 94.63389902449303,
+        "harvested_mean": 186.4118021124358,
+        "survival_mean": 0.5208333333333334
+      },
+      "random": {
+        "energy_mean": 48.1423250396144,
+        "harvested_mean": 109.88078527691056,
+        "survival_mean": 0.390625
+      }
+    },
+    "cells": 64,
+    "challenge_id": "3048aa0c0367edf9",
+    "designer_source": "template",
+    "limitations": [
+      "Exploratory development controls; no held-out preregistered tests.",
+      "Resource worlds do not guarantee cooperation is necessary.",
+      "Energy is simulated, not joules; no physical efficiency demonstrated.",
+      "Greedy is a local hand-coded baseline; it may outperform learning.",
+      "If source=template, NO real Meta model was invoked."
+    ],
+    "model": null,
+    "rows": [
+      {
+        "alive_cell_steps": 4323,
+        "harvested_total": 97.93560604498123,
+        "messages": 1224,
+        "remaining_energy": 38.832433578874415,
+        "seed": 101,
+        "steps_completed": 90,
+        "survival_fraction": 0.375,
+        "variant": "random"
+      },
+      {
+        "alive_cell_steps": 4262,
+        "harvested_total": 88.76679318996906,
+        "messages": 1252,
+        "remaining_energy": 32.27216729819666,
+        "seed": 101,
+        "steps_completed": 90,
+        "survival_fraction": 0.328125,
+        "variant": "frozen"
+      },
+      {
+        "alive_cell_steps": 5760,
+        "harvested_total": 246.19521293473753,
+        "messages": 6968,
+        "remaining_energy": 154.10311053830594,
+        "seed": 101,
+        "steps_completed": 90,
+        "survival_fraction": 1.0,
+        "variant": "greedy"
+      },
+      {
+        "alive_cell_steps": 4710,
+        "harvested_total": 151.06790496377704,
+        "messages": 2446,
+        "remaining_energy": 80.24758547813299,
+        "seed": 101,
+        "steps_completed": 90,
+        "survival_fraction": 0.515625,
+        "variant": "learned"
+      },
+      {
+        "alive_cell_steps": 4716,
+        "harvested_total": 152.18826439931073,
+        "messages": 0,
+        "remaining_energy": 80.82725012078548,
+        "seed": 101,
+        "steps_completed": 90,
+        "survival_fraction": 0.515625,
+        "variant": "learned_no_messages"
+      },
+      {
+        "alive_cell_steps": 4705,
+        "harvested_total": 134.03114129099316,
+        "messages": 1524,
+        "remaining_energy": 65.98193279721093,
+        "seed": 102,
+        "steps_completed": 90,
+        "survival_fraction": 0.5,
+        "variant": "random"
+      },
+      {
+        "alive_cell_steps": 4717,
+        "harvested_total": 132.13519733526917,
+        "messages": 1462,
+        "remaining_energy": 63.335771162952604,
+        "seed": 102,
+        "steps_completed": 90,
+        "survival_fraction": 0.5,
+        "variant": "frozen"
+      },
+      {
+        "alive_cell_steps": 5708,
+        "harvested_total": 258.94548178249175,
+        "messages": 8774,
+        "remaining_energy": 164.7050816024191,
+        "seed": 102,
+        "steps_completed": 90,
+        "survival_fraction": 0.953125,
+        "variant": "greedy"
+      },
+      {
+        "alive_cell_steps": 5148,
+        "harvested_total": 224.24448680755023,
+        "messages": 3238,
+        "remaining_energy": 119.23459467009025,
+        "seed": 102,
+        "steps_completed": 90,
+        "survival_fraction": 0.65625,
+        "variant": "learned"
+      },
+      {
+        "alive_cell_steps": 5156,
+        "harvested_total": 233.8652116969081,
+        "messages": 0,
+        "remaining_energy": 124.47099354413291,
+        "seed": 102,
+        "steps_completed": 90,
+        "survival_fraction": 0.65625,
+        "variant": "learned_no_messages"
+      },
+      {
+        "alive_cell_steps": 4471,
+        "harvested_total": 97.67560849475728,
+        "messages": 2118,
+        "remaining_energy": 39.61260874275785,
+        "seed": 103,
+        "steps_completed": 90,
+        "survival_fraction": 0.296875,
+        "variant": "random"
+      },
+      {
+        "alive_cell_steps": 4408,
+        "harvested_total": 86.95312878739676,
+        "messages": 2102,
+        "remaining_energy": 33.37752299586416,
+        "seed": 103,
+        "steps_completed": 90,
+        "survival_fraction": 0.265625,
+        "variant": "frozen"
+      },
+      {
+        "alive_cell_steps": 5760,
+        "harvested_total": 273.83375466042645,
+        "messages": 14358,
+        "remaining_energy": 173.82542072553858,
+        "seed": 103,
+        "steps_completed": 90,
+        "survival_fraction": 1.0,
+        "variant": "greedy"
+      },
+      {
+        "alive_cell_steps": 4763,
+        "harvested_total": 172.15983242439168,
+        "messages": 3208,
+        "remaining_energy": 79.99079663955992,
+        "seed": 103,
+        "steps_completed": 90,
+        "survival_fraction": 0.40625,
+        "variant": "learned"
+      },
+      {
+        "alive_cell_steps": 4763,
+        "harvested_total": 173.18193024108854,
+        "messages": 0,
+        "remaining_energy": 78.60345340856071,
+        "seed": 103,
+        "steps_completed": 90,
+        "survival_fraction": 0.390625,
+        "variant": "learned_no_messages"
+      }
+    ],
+    "schema": "emergent-world-evaluation-v1",
+    "seeds": [
+      101,
+      102,
+      103
+    ],
+    "steps": 90
+  },
+  "stage": "offline-template-dryrun-only"
+}
