@@ -64,7 +64,6 @@ python -m unittest discover -s tests -v
 python -m emergent_cells.experiments.learned_curiosity --seeds 2001,2002,2003,2004,2005 --pairs 48 --pretrain 3600 --meta-episodes 320 --meta-horizon 75 --eval-horizon 500 --output results/runs/reproduce-curiosity.json
 ```
 
-Use the local browser lab for a smaller two-seed demonstration. It **does not call Meta Model API**; no API key or paid model is required.
 
 ## Next stricter test
 

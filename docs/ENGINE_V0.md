@@ -47,5 +47,5 @@ python -m emergent_cells --compare --seeds 1,2,3 --steps 240 --cells 256 --shock
 2. Evaluate out-of-distribution world radii/patch densities.
 3. Distinguish learning gains from local gradients already visible to the sensor.
 4. Add truly local structural plasticity and material-constrained budding with explicit accounting.
-5. Formalize a WorldSpec validator and only then connect Meta API for adaptive scenarios.
+5. Formalize and test a WorldSpec validator for scientifically controlled environments.
 6. Compare against a reasonable classical chemotaxis baseline (not solely random motion).

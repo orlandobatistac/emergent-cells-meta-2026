@@ -1,31 +1,24 @@
-name: Cellular simulation tests
+name: Scientific Python tests
 
 on:
   push:
-    branches: [main, "feat/**"]
+    branches: [main, "refactor/**", "experiment/**", "feat/**"]
   pull_request:
 
 jobs:
-  unit-tests:
+  python-core:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Install package
+      - name: Install scientific package
         run: python -m pip install -e .
-      - name: Run deterministic tests
-        run: python -m unittest discover -s tests -v
-      - name: Verify command line
-        run: python -m emergent_cells --seed 7 --steps 16 --cells 12 --mode learned --output results/runs/ci-smoke.json
-      - name: Test browser controls against local HTTP (no Meta API)
+      - name: Test reproducibility and cellular invariants
+        run: python -m unittest discover -s tests -q
+      - name: Verify scientific commands (no browser, no HTTP)
         run: |
-          python -m emergent_cells.demo.server > /tmp/ec-server.log 2>&1 &
-          SERVER_PID=$!
-          trap 'kill $SERVER_PID' EXIT
-          for i in $(seq 1 30); do
-            if curl -fsS http://127.0.0.1:8765/api/state >/dev/null; then break; fi
-            sleep 1
-          done
-          node tests/browser_controls.cjs
+          python run.py list
+          python run.py simulate --seed 7 --steps 16 --cells 12 --mode learned --output results/runs/ci-simulation.json
+          python run.py dynamic-memory --seeds 7 --pairs 8 --phase-steps 350 --dropout 0.08 --output results/runs/ci-dynamic-memory.json

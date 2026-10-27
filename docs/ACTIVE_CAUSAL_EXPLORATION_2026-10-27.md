@@ -108,10 +108,8 @@ SHA-256: `ca5e120b768eedcf0448841c4196bed6918c1660098f211f280f597669a03351`
 python -m pip install -e .
 python -m unittest discover -s tests -q
 python -m emergent_cells.experiments.active_probes --seeds 1001,1002,1003,1004,1005 --pairs 48 --pretrain 4500 --horizon 550 --output results/runs/replicate-active-probes.json
-python -m emergent_cells.demo.server
 ```
 
-Visit localhost in the laptop browser for a **smaller live demo** with development seeds 11 and 12; do not confuse it with the held-out analysis.
 
 ## Next experiments that would be genuinely stronger
 

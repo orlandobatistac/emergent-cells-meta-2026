@@ -34,9 +34,9 @@ Do not blend all factors into a single experiment; factorial comparisons must ma
 
 ## Reproducibility gates
 
-- Same `WorldSpec` + seeds must yield identical results without Meta API availability.
+- Same WorldSpec and seeds must yield identical results without external service dependencies.
 - Consistent interfaces across controls and treatments.
-- Predefine held-out seeds and don't pass held-out outcomes back to Meta.
+- Predefine held-out seeds; never tune an algorithm against those outcomes.
 - Instrument no learning when plasticity is explicitly disabled.
 - Test zero-energy and no-resource behavior.
 - Verify limits: energy >= 0, finite weights/activity, bounded cells, conservation except documented sinks/sources.

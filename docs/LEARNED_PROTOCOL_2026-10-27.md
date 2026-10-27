@@ -56,7 +56,6 @@ These are *exploratory development outcomes*, not a preregistered confirmatory t
     python -m unittest discover -s tests -v
     python -m emergent_cells.experiments.learned_messages --seeds 101,102,103,104,105,106,107,108,109,110 --pairs 128 --train 8000 --test 500 --output results/runs/learned-10seeds.json
 
-The UI has a cheaper live demonstration (3 development seeds, 64 pairs, 3500 train/150 test) to avoid a very long browser request. UI outcomes should not be confused with the audited 10-seed study.
 
 ## What this supports — and what it DOES NOT
 
