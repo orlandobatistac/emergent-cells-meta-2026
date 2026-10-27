@@ -1,0 +1,1533 @@
+{
+  "conditions": {
+    "far": "Same learning, peer out of communication range.",
+    "frozen": "True local cue but cell policy never updates.",
+    "local": "Receives true adjacent peer cue; learning active.",
+    "none": "Private cue only; learning active.",
+    "scrambled": "Negative control: received cue replaced from different pair."
+  },
+  "limitations": [
+    "XOR-capable private*peer feature is engineered, not learned spontaneously.",
+    "Predefined fixed partners, not emergent topology or growth.",
+    "Gate's parity rule is external simulated physics; only the resulting own energy delta reaches learner.",
+    "Test uses independent cue sequences under the same rule, not held-out tasks.",
+    "Direct message knock-out holds trained weights fixed and replays the same held-out stimuli/actions.",
+    "Message channel is noiseless and predefined; scrambled condition intentionally violates locality for a negative control.",
+    "Finite synthetic metabolic energy is not measured physical joules.",
+    "Oct 26 work predates guide's Oct 27 stated competition build window."
+  ],
+  "parameters": {
+    "baseline_decay": 0.975,
+    "initial_energy": 2.0,
+    "learning_rate": 4.0,
+    "maximum_energy": 4.0,
+    "message_cost": 0.002,
+    "metabolism": 0.018,
+    "pairs": 128,
+    "radius": 1.5,
+    "resource_gain": 0.11,
+    "temperature": 1.0,
+    "test_episodes": 300,
+    "train_episodes": 1200,
+    "weight_limit": 9.0
+  },
+  "question": "Can cell-local messages enable a gate requiring two complementary private cues?",
+  "rows": [
+    {
+      "condition": "none",
+      "living_cells": 256,
+      "mean_abs_weights": 1.161327469516509,
+      "message_count": 0,
+      "remaining_energy": 1018.708,
+      "resource_received": 19099.739999999972,
+      "seed": 1,
+      "test_fraction": 0.483984375,
+      "test_given_active": 0.483984375,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.2265625
+        },
+        {
+          "episode": 601,
+          "fraction": 0.4921875
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.546875
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.44421875
+    },
+    {
+      "condition": "local",
+      "living_cells": 256,
+      "mean_abs_weights": 1.3015987784704475,
+      "message_count": 384000,
+      "remaining_energy": 1023.8,
+      "resource_received": 39845.30000000016,
+      "seed": 1,
+      "test_fraction": 0.9800260416666666,
+      "test_given_active": 0.9800260416666666,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.2265625
+        },
+        {
+          "episode": 601,
+          "fraction": 0.9765625
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.9921875
+        }
+      ],
+      "trained_local_without_messages": 0.25177083333333333,
+      "training_fraction": 0.9341276041666666
+    },
+    {
+      "condition": "scrambled",
+      "living_cells": 256,
+      "mean_abs_weights": 1.2870362102836013,
+      "message_count": 384000,
+      "remaining_energy": 1018.5999999999999,
+      "resource_received": 18762.70000000001,
+      "seed": 1,
+      "test_fraction": 0.4828645833333333,
+      "test_given_active": 0.4828645833333333,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.234375
+        },
+        {
+          "episode": 601,
+          "fraction": 0.421875
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.5078125
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.4345247395833333
+    },
+    {
+      "condition": "frozen",
+      "living_cells": 256,
+      "mean_abs_weights": 0.03996439267888072,
+      "message_count": 384000,
+      "remaining_energy": 992.9199999999998,
+      "resource_received": 10670.440000000004,
+      "seed": 1,
+      "test_fraction": 0.255,
+      "test_given_active": 0.255,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.2265625
+        },
+        {
+          "episode": 601,
+          "fraction": 0.2265625
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.2734375
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.25201822916666666
+    },
+    {
+      "condition": "far",
+      "living_cells": 256,
+      "mean_abs_weights": 1.161327469516509,
+      "message_count": 0,
+      "remaining_energy": 1018.708,
+      "resource_received": 19099.739999999972,
+      "seed": 1,
+      "test_fraction": 0.483984375,
+      "test_given_active": 0.483984375,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.2265625
+        },
+        {
+          "episode": 601,
+          "fraction": 0.4921875
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.546875
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.44421875
+    },
+    {
+      "condition": "none",
+      "living_cells": 256,
+      "mean_abs_weights": 1.164984873769742,
+      "message_count": 0,
+      "remaining_energy": 1018.936,
+      "resource_received": 19105.020000000008,
+      "seed": 2,
+      "test_fraction": 0.48375,
+      "test_given_active": 0.48375,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.2734375
+        },
+        {
+          "episode": 601,
+          "fraction": 0.5234375
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.4921875
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.44443359375
+    },
+    {
+      "condition": "local",
+      "living_cells": 256,
+      "mean_abs_weights": 1.2977617912768817,
+      "message_count": 384000,
+      "remaining_energy": 1023.88,
+      "resource_received": 39860.92000000018,
+      "seed": 2,
+      "test_fraction": 0.9801041666666667,
+      "test_given_active": 0.9801041666666667,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.28125
+        },
+        {
+          "episode": 601,
+          "fraction": 0.9765625
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.9609375
+        }
+      ],
+      "trained_local_without_messages": 0.24828125,
+      "training_fraction": 0.9345703125
+    },
+    {
+      "condition": "scrambled",
+      "living_cells": 256,
+      "mean_abs_weights": 1.2910869040473456,
+      "message_count": 384000,
+      "remaining_energy": 1018.8399999999999,
+      "resource_received": 18954.53999999999,
+      "seed": 2,
+      "test_fraction": 0.48473958333333333,
+      "test_given_active": 0.48473958333333333,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.28125
+        },
+        {
+          "episode": 601,
+          "fraction": 0.4765625
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.484375
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.4397330729166667
+    },
+    {
+      "condition": "frozen",
+      "living_cells": 256,
+      "mean_abs_weights": 0.03976267764564691,
+      "message_count": 384000,
+      "remaining_energy": 988.4399999999998,
+      "resource_received": 10630.839999999998,
+      "seed": 2,
+      "test_fraction": 0.24888020833333332,
+      "test_given_active": 0.24888020833333332,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.28125
+        },
+        {
+          "episode": 601,
+          "fraction": 0.265625
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.25
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.25237630208333334
+    },
+    {
+      "condition": "far",
+      "living_cells": 256,
+      "mean_abs_weights": 1.164984873769742,
+      "message_count": 0,
+      "remaining_energy": 1018.936,
+      "resource_received": 19105.020000000008,
+      "seed": 2,
+      "test_fraction": 0.48375,
+      "test_given_active": 0.48375,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.2734375
+        },
+        {
+          "episode": 601,
+          "fraction": 0.5234375
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.4921875
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.44443359375
+    },
+    {
+      "condition": "none",
+      "living_cells": 256,
+      "mean_abs_weights": 1.1774669711579664,
+      "message_count": 0,
+      "remaining_energy": 1019.312,
+      "resource_received": 19475.71999999999,
+      "seed": 3,
+      "test_fraction": 0.48796875,
+      "test_given_active": 0.48796875,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.234375
+        },
+        {
+          "episode": 601,
+          "fraction": 0.4296875
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.484375
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.45434895833333333
+    },
+    {
+      "condition": "local",
+      "living_cells": 256,
+      "mean_abs_weights": 1.3080729147572547,
+      "message_count": 384000,
+      "remaining_energy": 1023.92,
+      "resource_received": 39859.38000000019,
+      "seed": 3,
+      "test_fraction": 0.9797916666666666,
+      "test_given_active": 0.9797916666666666,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.25
+        },
+        {
+          "episode": 601,
+          "fraction": 0.96875
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.984375
+        }
+      ],
+      "trained_local_without_messages": 0.25002604166666664,
+      "training_fraction": 0.9346028645833333
+    },
+    {
+      "condition": "scrambled",
+      "living_cells": 256,
+      "mean_abs_weights": 1.3246442738790205,
+      "message_count": 384000,
+      "remaining_energy": 1017.9799999999999,
+      "resource_received": 18623.220000000005,
+      "seed": 3,
+      "test_fraction": 0.47877604166666665,
+      "test_given_active": 0.47877604166666665,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.2578125
+        },
+        {
+          "episode": 601,
+          "fraction": 0.46875
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.5078125
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.4314192708333333
+    },
+    {
+      "condition": "frozen",
+      "living_cells": 256,
+      "mean_abs_weights": 0.0368391313463743,
+      "message_count": 384000,
+      "remaining_energy": 989.0599999999998,
+      "resource_received": 10555.600000000026,
+      "seed": 3,
+      "test_fraction": 0.2501302083333333,
+      "test_given_active": 0.2501302083333333,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.25
+        },
+        {
+          "episode": 601,
+          "fraction": 0.2421875
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.234375
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.24983723958333334
+    },
+    {
+      "condition": "far",
+      "living_cells": 256,
+      "mean_abs_weights": 1.1774669711579664,
+      "message_count": 0,
+      "remaining_energy": 1019.312,
+      "resource_received": 19475.71999999999,
+      "seed": 3,
+      "test_fraction": 0.48796875,
+      "test_given_active": 0.48796875,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.234375
+        },
+        {
+          "episode": 601,
+          "fraction": 0.4296875
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.484375
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.45434895833333333
+    },
+    {
+      "condition": "none",
+      "living_cells": 256,
+      "mean_abs_weights": 1.1698680463064481,
+      "message_count": 0,
+      "remaining_energy": 1018.1759999999999,
+      "resource_received": 19375.180000000044,
+      "seed": 4,
+      "test_fraction": 0.4872916666666667,
+      "test_given_active": 0.4872916666666667,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.1953125
+        },
+        {
+          "episode": 601,
+          "fraction": 0.46875
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.4453125
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.45154296875
+    },
+    {
+      "condition": "local",
+      "living_cells": 256,
+      "mean_abs_weights": 1.302044816685939,
+      "message_count": 384000,
+      "remaining_energy": 1023.9200000000001,
+      "resource_received": 39832.54000000013,
+      "seed": 4,
+      "test_fraction": 0.979375,
+      "test_given_active": 0.979375,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.1953125
+        },
+        {
+          "episode": 601,
+          "fraction": 0.921875
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.96875
+        }
+      ],
+      "trained_local_without_messages": 0.24927083333333333,
+      "training_fraction": 0.9339127604166667
+    },
+    {
+      "condition": "scrambled",
+      "living_cells": 256,
+      "mean_abs_weights": 1.2800508863136488,
+      "message_count": 384000,
+      "remaining_energy": 1017.1399999999999,
+      "resource_received": 18960.039999999943,
+      "seed": 4,
+      "test_fraction": 0.48497395833333334,
+      "test_given_active": 0.48497395833333334,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.1875
+        },
+        {
+          "episode": 601,
+          "fraction": 0.5
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.4765625
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.4398372395833333
+    },
+    {
+      "condition": "frozen",
+      "living_cells": 256,
+      "mean_abs_weights": 0.03952000142679378,
+      "message_count": 384000,
+      "remaining_energy": 991.4199999999998,
+      "resource_received": 10441.200000000013,
+      "seed": 4,
+      "test_fraction": 0.24721354166666668,
+      "test_given_active": 0.24721354166666668,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.1953125
+        },
+        {
+          "episode": 601,
+          "fraction": 0.1875
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.2734375
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.24718098958333334
+    },
+    {
+      "condition": "far",
+      "living_cells": 256,
+      "mean_abs_weights": 1.1698680463064481,
+      "message_count": 0,
+      "remaining_energy": 1018.1759999999999,
+      "resource_received": 19375.180000000044,
+      "seed": 4,
+      "test_fraction": 0.4872916666666667,
+      "test_given_active": 0.4872916666666667,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.1953125
+        },
+        {
+          "episode": 601,
+          "fraction": 0.46875
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.4453125
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.45154296875
+    },
+    {
+      "condition": "none",
+      "living_cells": 256,
+      "mean_abs_weights": 1.175962000270529,
+      "message_count": 0,
+      "remaining_energy": 1017.7640000000001,
+      "resource_received": 19164.86000000003,
+      "seed": 5,
+      "test_fraction": 0.48325520833333335,
+      "test_given_active": 0.48325520833333335,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.28125
+        },
+        {
+          "episode": 601,
+          "fraction": 0.484375
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.4765625
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.446328125
+    },
+    {
+      "condition": "local",
+      "living_cells": 256,
+      "mean_abs_weights": 1.3078376439531665,
+      "message_count": 384000,
+      "remaining_energy": 1023.9200000000001,
+      "resource_received": 39860.040000000256,
+      "seed": 5,
+      "test_fraction": 0.9818489583333333,
+      "test_given_active": 0.9818489583333333,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.28125
+        },
+        {
+          "episode": 601,
+          "fraction": 0.9609375
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.96875
+        }
+      ],
+      "trained_local_without_messages": 0.251171875,
+      "training_fraction": 0.9341080729166666
+    },
+    {
+      "condition": "scrambled",
+      "living_cells": 256,
+      "mean_abs_weights": 1.3114591259664128,
+      "message_count": 384000,
+      "remaining_energy": 1016.68,
+      "resource_received": 18509.47999999999,
+      "seed": 5,
+      "test_fraction": 0.47408854166666664,
+      "test_given_active": 0.47408854166666664,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.28125
+        },
+        {
+          "episode": 601,
+          "fraction": 0.421875
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.484375
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.42922526041666664
+    },
+    {
+      "condition": "frozen",
+      "living_cells": 256,
+      "mean_abs_weights": 0.041184886887102326,
+      "message_count": 384000,
+      "remaining_energy": 996.06,
+      "resource_received": 10549.660000000013,
+      "seed": 5,
+      "test_fraction": 0.25143229166666664,
+      "test_given_active": 0.25143229166666664,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.28125
+        },
+        {
+          "episode": 601,
+          "fraction": 0.2265625
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.265625
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.2493359375
+    },
+    {
+      "condition": "far",
+      "living_cells": 256,
+      "mean_abs_weights": 1.175962000270529,
+      "message_count": 0,
+      "remaining_energy": 1017.7640000000001,
+      "resource_received": 19164.86000000003,
+      "seed": 5,
+      "test_fraction": 0.48325520833333335,
+      "test_given_active": 0.48325520833333335,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.28125
+        },
+        {
+          "episode": 601,
+          "fraction": 0.484375
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.4765625
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.446328125
+    },
+    {
+      "condition": "none",
+      "living_cells": 256,
+      "mean_abs_weights": 1.1782412417857362,
+      "message_count": 0,
+      "remaining_energy": 1018.612,
+      "resource_received": 19383.319999999992,
+      "seed": 6,
+      "test_fraction": 0.48859375,
+      "test_given_active": 0.48859375,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.25
+        },
+        {
+          "episode": 601,
+          "fraction": 0.3984375
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.5
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.45145833333333335
+    },
+    {
+      "condition": "local",
+      "living_cells": 256,
+      "mean_abs_weights": 1.3064557720767365,
+      "message_count": 384000,
+      "remaining_energy": 1023.96,
+      "resource_received": 39810.9800000002,
+      "seed": 6,
+      "test_fraction": 0.9803125,
+      "test_given_active": 0.9803125,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.25
+        },
+        {
+          "episode": 601,
+          "fraction": 0.9921875
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.9921875
+        }
+      ],
+      "trained_local_without_messages": 0.250625,
+      "training_fraction": 0.9330403645833333
+    },
+    {
+      "condition": "scrambled",
+      "living_cells": 256,
+      "mean_abs_weights": 1.3077841908514858,
+      "message_count": 384000,
+      "remaining_energy": 1017.9199999999998,
+      "resource_received": 18640.15999999995,
+      "seed": 6,
+      "test_fraction": 0.4783072916666667,
+      "test_given_active": 0.4783072916666667,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.2421875
+        },
+        {
+          "episode": 601,
+          "fraction": 0.40625
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.546875
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.4320377604166667
+    },
+    {
+      "condition": "frozen",
+      "living_cells": 256,
+      "mean_abs_weights": 0.03796660703418895,
+      "message_count": 384000,
+      "remaining_energy": 990.6399999999998,
+      "resource_received": 10450.220000000005,
+      "seed": 6,
+      "test_fraction": 0.24838541666666666,
+      "test_given_active": 0.24838541666666666,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.25
+        },
+        {
+          "episode": 601,
+          "fraction": 0.2578125
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.25
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.24715494791666667
+    },
+    {
+      "condition": "far",
+      "living_cells": 256,
+      "mean_abs_weights": 1.1782412417857362,
+      "message_count": 0,
+      "remaining_energy": 1018.612,
+      "resource_received": 19383.319999999992,
+      "seed": 6,
+      "test_fraction": 0.48859375,
+      "test_given_active": 0.48859375,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.25
+        },
+        {
+          "episode": 601,
+          "fraction": 0.3984375
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.5
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.45145833333333335
+    },
+    {
+      "condition": "none",
+      "living_cells": 256,
+      "mean_abs_weights": 1.168073630443999,
+      "message_count": 0,
+      "remaining_energy": 1018.904,
+      "resource_received": 19273.54,
+      "seed": 7,
+      "test_fraction": 0.48486979166666666,
+      "test_given_active": 0.48486979166666666,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.3203125
+        },
+        {
+          "episode": 601,
+          "fraction": 0.4453125
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.484375
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.449140625
+    },
+    {
+      "condition": "local",
+      "living_cells": 256,
+      "mean_abs_weights": 1.2980189993953601,
+      "message_count": 384000,
+      "remaining_energy": 1023.84,
+      "resource_received": 39846.40000000019,
+      "seed": 7,
+      "test_fraction": 0.9798958333333333,
+      "test_given_active": 0.9798958333333333,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.3203125
+        },
+        {
+          "episode": 601,
+          "fraction": 0.9453125
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.96875
+        }
+      ],
+      "trained_local_without_messages": 0.24994791666666666,
+      "training_fraction": 0.9341927083333333
+    },
+    {
+      "condition": "scrambled",
+      "living_cells": 256,
+      "mean_abs_weights": 1.2843445761751457,
+      "message_count": 384000,
+      "remaining_energy": 1018.3199999999999,
+      "resource_received": 18727.06,
+      "seed": 7,
+      "test_fraction": 0.481484375,
+      "test_given_active": 0.481484375,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.3125
+        },
+        {
+          "episode": 601,
+          "fraction": 0.40625
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.4609375
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.4338151041666667
+    },
+    {
+      "condition": "frozen",
+      "living_cells": 256,
+      "mean_abs_weights": 0.03997260399513872,
+      "message_count": 384000,
+      "remaining_energy": 988.9799999999998,
+      "resource_received": 10616.320000000014,
+      "seed": 7,
+      "test_fraction": 0.24984375,
+      "test_given_active": 0.24984375,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.3203125
+        },
+        {
+          "episode": 601,
+          "fraction": 0.3125
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.2421875
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.25170572916666667
+    },
+    {
+      "condition": "far",
+      "living_cells": 256,
+      "mean_abs_weights": 1.168073630443999,
+      "message_count": 0,
+      "remaining_energy": 1018.904,
+      "resource_received": 19273.54,
+      "seed": 7,
+      "test_fraction": 0.48486979166666666,
+      "test_given_active": 0.48486979166666666,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.3203125
+        },
+        {
+          "episode": 601,
+          "fraction": 0.4453125
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.484375
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.449140625
+    },
+    {
+      "condition": "none",
+      "living_cells": 256,
+      "mean_abs_weights": 1.1698399879600139,
+      "message_count": 0,
+      "remaining_energy": 1018.836,
+      "resource_received": 19354.50000000002,
+      "seed": 8,
+      "test_fraction": 0.48802083333333335,
+      "test_given_active": 0.48802083333333335,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.1796875
+        },
+        {
+          "episode": 601,
+          "fraction": 0.4609375
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.453125
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.45074869791666666
+    },
+    {
+      "condition": "local",
+      "living_cells": 256,
+      "mean_abs_weights": 1.297549203384996,
+      "message_count": 384000,
+      "remaining_energy": 1023.88,
+      "resource_received": 39846.62000000022,
+      "seed": 8,
+      "test_fraction": 0.980546875,
+      "test_given_active": 0.980546875,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.1796875
+        },
+        {
+          "episode": 601,
+          "fraction": 0.9765625
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.9921875
+        }
+      ],
+      "trained_local_without_messages": 0.252265625,
+      "training_fraction": 0.9340364583333334
+    },
+    {
+      "condition": "scrambled",
+      "living_cells": 256,
+      "mean_abs_weights": 1.299919989029078,
+      "message_count": 384000,
+      "remaining_energy": 1017.3199999999999,
+      "resource_received": 18802.520000000008,
+      "seed": 8,
+      "test_fraction": 0.48497395833333334,
+      "test_given_active": 0.48497395833333334,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.1796875
+        },
+        {
+          "episode": 601,
+          "fraction": 0.4921875
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.4453125
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.43517578125
+    },
+    {
+      "condition": "frozen",
+      "living_cells": 256,
+      "mean_abs_weights": 0.04069518090255907,
+      "message_count": 384000,
+      "remaining_energy": 994.7199999999998,
+      "resource_received": 10506.979999999992,
+      "seed": 8,
+      "test_fraction": 0.25083333333333335,
+      "test_given_active": 0.25083333333333335,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.1796875
+        },
+        {
+          "episode": 601,
+          "fraction": 0.1484375
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.2421875
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.24822265625
+    },
+    {
+      "condition": "far",
+      "living_cells": 256,
+      "mean_abs_weights": 1.1698399879600139,
+      "message_count": 0,
+      "remaining_energy": 1018.836,
+      "resource_received": 19354.50000000002,
+      "seed": 8,
+      "test_fraction": 0.48802083333333335,
+      "test_given_active": 0.48802083333333335,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.1796875
+        },
+        {
+          "episode": 601,
+          "fraction": 0.4609375
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.453125
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.45074869791666666
+    },
+    {
+      "condition": "none",
+      "living_cells": 256,
+      "mean_abs_weights": 1.1735437088738947,
+      "message_count": 0,
+      "remaining_energy": 1018.9639999999999,
+      "resource_received": 19333.159999999974,
+      "seed": 9,
+      "test_fraction": 0.49140625,
+      "test_given_active": 0.49140625,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.2109375
+        },
+        {
+          "episode": 601,
+          "fraction": 0.5390625
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.484375
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.44927083333333334
+    },
+    {
+      "condition": "local",
+      "living_cells": 256,
+      "mean_abs_weights": 1.2984427825862452,
+      "message_count": 384000,
+      "remaining_energy": 1023.8399999999999,
+      "resource_received": 39865.76000000022,
+      "seed": 9,
+      "test_fraction": 0.9805989583333333,
+      "test_given_active": 0.9805989583333333,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.2109375
+        },
+        {
+          "episode": 601,
+          "fraction": 0.9921875
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.9921875
+        }
+      ],
+      "trained_local_without_messages": 0.24611979166666667,
+      "training_fraction": 0.93458984375
+    },
+    {
+      "condition": "scrambled",
+      "living_cells": 256,
+      "mean_abs_weights": 1.3034181991957896,
+      "message_count": 384000,
+      "remaining_energy": 1017.8799999999999,
+      "resource_received": 18689.660000000003,
+      "seed": 9,
+      "test_fraction": 0.4764583333333333,
+      "test_given_active": 0.4764583333333333,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.21875
+        },
+        {
+          "episode": 601,
+          "fraction": 0.5234375
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.5078125
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.43396484375
+    },
+    {
+      "condition": "frozen",
+      "living_cells": 256,
+      "mean_abs_weights": 0.03855111133555549,
+      "message_count": 384000,
+      "remaining_energy": 990.1399999999999,
+      "resource_received": 10549.65999999999,
+      "seed": 9,
+      "test_fraction": 0.24653645833333335,
+      "test_given_active": 0.24653645833333335,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.2109375
+        },
+        {
+          "episode": 601,
+          "fraction": 0.2890625
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.2734375
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.2505598958333333
+    },
+    {
+      "condition": "far",
+      "living_cells": 256,
+      "mean_abs_weights": 1.1735437088738947,
+      "message_count": 0,
+      "remaining_energy": 1018.9639999999999,
+      "resource_received": 19333.159999999974,
+      "seed": 9,
+      "test_fraction": 0.49140625,
+      "test_given_active": 0.49140625,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.2109375
+        },
+        {
+          "episode": 601,
+          "fraction": 0.5390625
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.484375
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.44927083333333334
+    },
+    {
+      "condition": "none",
+      "living_cells": 256,
+      "mean_abs_weights": 1.1701527443073054,
+      "message_count": 0,
+      "remaining_energy": 1019.0360000000001,
+      "resource_received": 19441.179999999986,
+      "seed": 10,
+      "test_fraction": 0.48994791666666665,
+      "test_given_active": 0.48994791666666665,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.3046875
+        },
+        {
+          "episode": 601,
+          "fraction": 0.515625
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.5234375
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.45283203125
+    },
+    {
+      "condition": "local",
+      "living_cells": 256,
+      "mean_abs_weights": 1.3013499104333919,
+      "message_count": 384000,
+      "remaining_energy": 1023.9200000000001,
+      "resource_received": 39859.38000000023,
+      "seed": 10,
+      "test_fraction": 0.9811979166666667,
+      "test_given_active": 0.9811979166666667,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.296875
+        },
+        {
+          "episode": 601,
+          "fraction": 0.9453125
+        },
+        {
+          "episode": 1200,
+          "fraction": 1.0
+        }
+      ],
+      "trained_local_without_messages": 0.24875,
+      "training_fraction": 0.9342513020833333
+    },
+    {
+      "condition": "scrambled",
+      "living_cells": 256,
+      "mean_abs_weights": 1.2932233287117607,
+      "message_count": 384000,
+      "remaining_energy": 1018.6999999999999,
+      "resource_received": 18849.60000000001,
+      "seed": 10,
+      "test_fraction": 0.48703125,
+      "test_given_active": 0.48703125,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.296875
+        },
+        {
+          "episode": 601,
+          "fraction": 0.546875
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.578125
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.4360546875
+    },
+    {
+      "condition": "frozen",
+      "living_cells": 256,
+      "mean_abs_weights": 0.040531853320978216,
+      "message_count": 384000,
+      "remaining_energy": 988.6599999999997,
+      "resource_received": 10451.319999999994,
+      "seed": 10,
+      "test_fraction": 0.24859375,
+      "test_given_active": 0.24859375,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.296875
+        },
+        {
+          "episode": 601,
+          "fraction": 0.28125
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.2421875
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.24713541666666666
+    },
+    {
+      "condition": "far",
+      "living_cells": 256,
+      "mean_abs_weights": 1.1701527443073054,
+      "message_count": 0,
+      "remaining_energy": 1019.0360000000001,
+      "resource_received": 19441.179999999986,
+      "seed": 10,
+      "test_fraction": 0.48994791666666665,
+      "test_given_active": 0.48994791666666665,
+      "train_snapshots": [
+        {
+          "episode": 1,
+          "fraction": 0.3046875
+        },
+        {
+          "episode": 601,
+          "fraction": 0.515625
+        },
+        {
+          "episode": 1200,
+          "fraction": 0.5234375
+        }
+      ],
+      "trained_local_without_messages": null,
+      "training_fraction": 0.45283203125
+    }
+  ],
+  "schema": "dual-cue-local-cooperation-v1",
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "status": "Exploratory Oct 26 experiment; not qualifying hackathon evidence",
+  "summary": {
+    "far": {
+      "living_cells": {
+        "mean": 256.0,
+        "std_population": 0.0
+      },
+      "message_count": {
+        "mean": 0.0,
+        "std_population": 0.0
+      },
+      "remaining_energy": {
+        "mean": 1018.7248,
+        "std_population": 0.4272322085236418
+      },
+      "test_fraction": {
+        "mean": 0.4869088541666667,
+        "std_population": 0.0026616838313635806
+      },
+      "test_given_active": {
+        "mean": 0.4869088541666667,
+        "std_population": 0.0026616838313635806
+      },
+      "training_fraction": {
+        "mean": 0.44943229166666665,
+        "std_population": 0.003285415572652264
+      }
+    },
+    "frozen": {
+      "living_cells": {
+        "mean": 256.0,
+        "std_population": 0.0
+      },
+      "message_count": {
+        "mean": 384000.0,
+        "std_population": 0.0
+      },
+      "remaining_energy": {
+        "mean": 991.1039999999999,
+        "std_population": 2.528617013309876
+      },
+      "test_fraction": {
+        "mean": 0.24968489583333336,
+        "std_population": 0.002288955842225061
+      },
+      "test_given_active": {
+        "mean": 0.24968489583333336,
+        "std_population": 0.002288955842225061
+      },
+      "training_fraction": {
+        "mean": 0.249552734375,
+        "std_population": 0.001970177403792428
+      }
+    },
+    "local": {
+      "living_cells": {
+        "mean": 256.0,
+        "std_population": 0.0
+      },
+      "message_count": {
+        "mean": 384000.0,
+        "std_population": 0.0
+      },
+      "remaining_energy": {
+        "mean": 1023.8880000000001,
+        "std_population": 0.04664761515879407
+      },
+      "test_fraction": {
+        "mean": 0.9803697916666666,
+        "std_population": 0.0006854253735515905
+      },
+      "test_given_active": {
+        "mean": 0.9803697916666666,
+        "std_population": 0.0006854253735515905
+      },
+      "training_fraction": {
+        "mean": 0.9341432291666667,
+        "std_population": 0.0004346911163630665
+      }
+    },
+    "none": {
+      "living_cells": {
+        "mean": 256.0,
+        "std_population": 0.0
+      },
+      "message_count": {
+        "mean": 0.0,
+        "std_population": 0.0
+      },
+      "remaining_energy": {
+        "mean": 1018.7248,
+        "std_population": 0.4272322085236418
+      },
+      "test_fraction": {
+        "mean": 0.4869088541666667,
+        "std_population": 0.0026616838313635806
+      },
+      "test_given_active": {
+        "mean": 0.4869088541666667,
+        "std_population": 0.0026616838313635806
+      },
+      "training_fraction": {
+        "mean": 0.44943229166666665,
+        "std_population": 0.003285415572652264
+      }
+    },
+    "scrambled": {
+      "living_cells": {
+        "mean": 256.0,
+        "std_population": 0.0
+      },
+      "message_count": {
+        "mean": 384000.0,
+        "std_population": 0.0
+      },
+      "remaining_energy": {
+        "mean": 1017.9379999999999,
+        "std_population": 0.6771380952213513
+      },
+      "test_fraction": {
+        "mean": 0.48136979166666666,
+        "std_population": 0.004060549745553082
+      },
+      "test_given_active": {
+        "mean": 0.48136979166666666,
+        "std_population": 0.004060549745553082
+      },
+      "training_fraction": {
+        "mean": 0.4345787760416667,
+        "std_population": 0.0032064830514386684
+      }
+    }
+  }
+}
