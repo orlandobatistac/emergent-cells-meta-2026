@@ -123,3 +123,15 @@ With **five previously unused seeds**, 32 pairs and 8% missing resource pulses, 
 **Key negative result:** the final detector produces no false new memories in stationary 8% dropout, but mistakes a sudden resource-dropout increase to 20% for a task change, allocating 62–64 needless new memories in each stress seed. Thus robust context inference is **not** solved.
 
 See [the scientific report](docs/DYNAMIC_MEMORY_THIRD_RULE_2026-10-27.md), [complete holdout data](results/audited/2026-10-27-dynamic-third-rule-holdout.json), [noise stress](results/audited/2026-10-27-noise-stress.json), and [interactive demo](docs/DYNAMIC_MEMORY_UI_2026-10-27.md). **No Meta API call, measured joules, agentic AI or general intelligence is implied.**
+
+## Robust local task-change detection, October 27
+
+We tested **four** authored detectors for distinguishing changing Boolean gate rules from simply lower resource-pulse availability: prior relative reward EMA, absolute reward floor, aggregate binomial-confidence guard and a **new private conditional reward-signature detector**. The key discovery: XNOR and AND have 3/4 matching cue cases, so global reward may remain high despite a genuinely changed rule. Tracking each cell's own success in its four cue/message categories fixes that particular blind spot.
+
+Five unused seeds showed **93.1% final-third-rule gate correctness** with conditional detection, 92.7% recovered A and 91.4% recovered B; while stable-task resource withholding at 20% and 35% created **zero false memories** in the new detector versus ~47 of 48 cells on the old detector. **At 45% scarcity, two false allocations still occurred** across five tests. The new method also consumes additional byte-valued history and is NOT a universally reliable, physically energy-efficient context detector.
+
+Read [methods and all results](docs/ROBUST_DRIFT_2026-10-27.md), [raw independent-seed data](results/audited/2026-10-27-conditional-drift-holdout.json) and [local demo instructions](docs/ROBUST_DRIFT_UI_2026-10-27.md). No Meta API requests were made.
+
+### A deliberate adversarial scarcity control (separate study)
+
+If the XOR task is stationary but resource availability disappears selectively for input `11`, **reward-only** detectors still allocate needless banks (44–46 of 48 cells on independent seeds). An **explicit extra local resource-presence sensor** prevented these false allocations (0 of 48) and still learned the third rule (93.0% success, return A 91.3%, return B 92.1%). This is **unequal-information testing**, not a reward-only breakthrough. Physical availability sensing, extra compute/memory cost and transfer to other environmental rules remain unknown. [Full report and raw data](docs/ADVERSARIAL_SCARCITY_LOCAL_SENSOR_2026-10-27.md).

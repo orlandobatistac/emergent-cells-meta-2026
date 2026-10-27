@@ -169,6 +169,14 @@ class GrowingCells:
             self._switch_to(select, next_slot)
             self.failed_probes += len(stuck)
 
+    def _novelty_alarm(self, eligible, spec):
+        threshold = self.peak - (
+            .115 if self.condition == "fast_detector"
+            else spec.relative_trigger)
+        return (eligible & (self.age >= spec.maturity_steps)
+                & (self.peak >= spec.maturity)
+                & (self.score < threshold))
+
     def _detect(self, pulse):
         if self.condition in ("single", "oracle"):
             return
@@ -212,10 +220,7 @@ class GrowingCells:
             (1-s.smoothing)*self.score[eligible] + s.smoothing*pulse[eligible])
         self.peak[eligible] = np.maximum(self.peak[eligible], self.score[eligible])
         self.age[eligible] += 1
-        threshold = self.peak - (
-            .115 if self.condition == "fast_detector" else s.relative_trigger)
-        alarm = (eligible & (self.age >= s.maturity_steps) &
-                 (self.peak >= s.maturity) & (self.score < threshold))
+        alarm = self._novelty_alarm(eligible, s)
         if not alarm.any():
             return
         self.change_events += int(alarm.sum())
@@ -244,6 +249,8 @@ class GrowingCells:
         symbols = (um < pmsg).astype(int)
         received = symbols[self.peer]
         slot = bits * 2 + received
+        # Cell-private input class (own cue + received symbol), for conditional surprise.
+        self.last_slot = slot.copy()
         if self.condition == "oracle":
             # Research-only upper bound receives environment's rule ID.
             index = {"xor": 0, "xnor": 1, "and": 2}[rule]
@@ -258,6 +265,9 @@ class GrowingCells:
         goal = rule_targets(bits, rule)
         good = (actions[::2] == goal) & (actions[1::2] == goal)
         self.last_good = good.copy()
+        # Optional independent local availability measurement for diagnostics.
+        # Its presence is NOT visible in the legacy reward-only detector.
+        self.last_available = np.repeat(ur >= self.spec.dropout, 2)
         earned = good & (ur >= self.spec.dropout)
         own_reward = np.repeat(earned.astype(float), 2)
         net = own_reward - .04 - .02

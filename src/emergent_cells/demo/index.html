@@ -18,6 +18,14 @@ textarea{width:100%;font:inherit;padding:10px;border-radius:8px;border:1px solid
 <p class="note" id="challenge-state">Primero diseña un desafío. Si usas la plantilla, NO se realizará una llamada a Meta.</p>
 <pre id="challenge-result" style="white-space:pre-wrap;overflow-wrap:anywhere;font-size:11px;max-height:220px;overflow:auto;color:#a8dfbd"></pre>
 <p class="note">Meta propone parámetros del entorno. No dirige células ni crea automáticamente una tarea que necesite cooperación.</p></section>
+<section class="panel" id="robust-drift-lab">
+<h2>¿Nueva regla o simplemente menos recursos?</h2>
+<p class="note">Las células comparan su recompensa por clase de señal privada y mensaje recibido. Un cambio de regla puede producir fallos selectivos; una pérdida uniforme de recursos afecta todas las clases. Detectores locales, sin conocer la tarea.</p>
+<button class="primary" id="robust-drift-run" type="button">Comparar detección de cambios y ruido</button>
+<p class="note" id="robust-drift-state" role="status">Ensayo local: detector original vs. detector condicional, cinco etapas A→B→C→A→B y pérdidas 8%, 20% y 35% con la regla sin cambios.</p>
+<pre id="robust-drift-result" style="white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px;max-height:270px;overflow:auto;color:#a8dfbd"></pre>
+<p class="note">Esta es una prueba experimental con umbrales programados y memoria limitada. Con ruido extremo puede seguir fallando; no demuestra inteligencia general y no usa Meta.</p>
+</section>
 <section class="panel" id="dynamic-memory-lab">
 <h2>Crear una tercera memoria · A → B → C → A → B</h2>
 <p class="note">Tres reglas de un recurso compartido: XOR, XNOR y AND. Ninguna célula recibe el identificador de tarea. Un detector local programado prueba memorias antiguas y crea otra si fallan. La cantidad máxima de memorias (3) y los umbrales fueron definidos por nosotros.</p>
@@ -200,6 +208,27 @@ async function runDynamicMemory(){
   }catch(e){$('dynamic-memory-state').textContent=e.message;}
   finally{b.disabled=false;}
 }
+async function runRobustDrift(){
+  stop();
+  const b=$('robust-drift-run');b.disabled=true;
+  $('robust-drift-state').textContent='Comparando reglas nuevas contra escasez de recursos...';
+  try{
+    const data=await challengeCall('/api/robust-drift/run',{});
+    const x=data.robust_drift.summary;
+    const names=['relative_ema','conditional_signature'];
+    const fields=['A','B','C','returnA','returnB'];
+    $('robust-drift-result').textContent=names.map(name=>{
+      const s=x[name];
+      return name+'\n  A/B/C/retorno A/B: '+
+        fields.map(k=>(s.stages[k].late_success*100).toFixed(1)+'%').join(' / ')+
+        '\n  Nuevas memorias falsas por estrés 8%, 20%, 35%: '+
+        ['0.08','0.2','0.35'].map(k=>s.noise[k].false_memory_cells.toFixed(0)).join(' / ');
+    }).join('\n');
+    $('robust-drift-state').textContent='Ensayo terminado; los datos se adjuntaron al informe del laboratorio.';
+  }catch(e){$('robust-drift-state').textContent=e.message;}
+  finally{b.disabled=false;}
+}
+$('robust-drift-run').onclick=runRobustDrift;
 $('dynamic-memory-run').onclick=runDynamicMemory;
 $('reward-surprise-run').onclick=runRewardSurprise;
 $('context-switch-run').onclick=runContextSwitch;

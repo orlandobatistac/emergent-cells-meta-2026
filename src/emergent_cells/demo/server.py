@@ -18,6 +18,7 @@ from emergent_cells.experiments.reward_surprise import (
 from emergent_cells.experiments.dynamic_memory import (
     GrowthSpec, benchmark as benchmark_dynamic_memory,
 )
+from emergent_cells.experiments.robust_drift import benchmark as benchmark_robust_drift
 from emergent_cells.meta.world_designer import (
     DesignError, design_world, evaluate_world, validate_proposal,
 )
@@ -33,6 +34,7 @@ class LabServer(HTTPServer):
         self.context_switch_report = None
         self.reward_surprise_report = None
         self.dynamic_memory_report = None
+        self.robust_drift_report = None
         super().__init__(address, Handler)
 
 
@@ -79,7 +81,13 @@ class Handler(BaseHTTPRequestHandler):
             report["context_switch_evaluation"] = self.server.context_switch_report
             report["reward_surprise_evaluation"] = self.server.reward_surprise_report
             report["dynamic_memory_evaluation"] = self.server.dynamic_memory_report
+            report["robust_drift_evaluation"] = self.server.robust_drift_report
             self.respond(200, report)
+        elif self.path == '/api/robust-drift':
+            self.respond(200, {
+                'report': self.server.robust_drift_report,
+                'source': 'local-conditional-reward-surprise-no-meta',
+            })
         elif self.path == '/api/dynamic-memory':
             self.respond(200, {
                 'report': self.server.dynamic_memory_report,
@@ -122,7 +130,7 @@ class Handler(BaseHTTPRequestHandler):
                              '/api/challenge/evaluate', '/api/challenge/apply',
                              '/api/cooperation/run', '/api/protocol/run',
                              '/api/context-switch/run', '/api/reward-surprise/run',
-                             '/api/dynamic-memory/run'):
+                             '/api/dynamic-memory/run', '/api/robust-drift/run'):
             return self.respond(404, {'error': 'Not found'})
         if self.headers.get_content_type() != 'application/json':
             return self.respond(415, {'error': 'JSON required'})
@@ -133,6 +141,22 @@ class Handler(BaseHTTPRequestHandler):
             data = json.loads(self.rfile.read(length))
             if not isinstance(data, dict):
                 raise ValueError('Expected object')
+            if self.path == '/api/robust-drift/run':
+                if data:
+                    raise ValueError('Robust drift demo accepts empty JSON only')
+                outcome = benchmark_robust_drift(
+                    [11],
+                    GrowthSpec(pairs=16, phase_steps=3000),
+                    stress=(.08,.20,.35),
+                    stress_steps=850,
+                    methods=('relative_ema','conditional_signature'),
+                )
+                self.server.robust_drift_report = outcome
+                return self.respond(200, {
+                    'robust_drift': outcome,
+                    'source': 'local-conditional-surprise-not-meta',
+                    'caveat': 'The detector still uses authored thresholds and task repertoire',
+                })
             if self.path == '/api/dynamic-memory/run':
                 if data:
                     raise ValueError('Dynamic memory demo accepts empty JSON only')
