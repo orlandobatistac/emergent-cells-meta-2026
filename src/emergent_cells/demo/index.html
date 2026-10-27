@@ -18,6 +18,14 @@ textarea{width:100%;font:inherit;padding:10px;border-radius:8px;border:1px solid
 <p class="note" id="challenge-state">Primero diseña un desafío. Si usas la plantilla, NO se realizará una llamada a Meta.</p>
 <pre id="challenge-result" style="white-space:pre-wrap;overflow-wrap:anywhere;font-size:11px;max-height:220px;overflow:auto;color:#a8dfbd"></pre>
 <p class="note">Meta propone parámetros del entorno. No dirige células ni crea automáticamente una tarea que necesite cooperación.</p></section>
+<section class="panel" id="learned-curiosity-lab">
+<h2>Curiosidad aprendida — ¿cuándo investigar?</h2>
+<p class="note">Cada célula entrena su propia tabla de acción para solicitar una prueba o explotar lo aprendido a partir de recompensas y costos locales. No recibe la regla verdadera ni un sensor de recursos. Las características, hipótesis y acción de prueba siguen diseñadas por investigadores.</p>
+<button class="primary" id="learned-curiosity-run" type="button">Entrenar y comparar curiosidad local</button>
+<p class="note" id="learned-curiosity-state" role="status">2 semillas de demostración, 16 parejas y cuatro controles. Evalúa reglas cambiantes y escasez de recursos.</p>
+<pre id="learned-curiosity-result" style="white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px;max-height:260px;overflow:auto;color:#a8dfbd"></pre>
+<p class="note">Se informan aciertos y costos; no se garantiza que el método aprendido supere a los controles. No usa Meta.</p>
+</section>
 <section class="panel" id="exploration-lab"><h2>Exploracion cooperativa</h2><button class="primary" id="exploration-run">Comparar pruebas</button><p id="exploration-state" class="note">Exploracion local</p><pre id="exploration-result"></pre></section>
 <section class="panel" id="robust-drift-lab">
 <h2>¿Nueva regla o simplemente menos recursos?</h2>
@@ -247,6 +255,27 @@ async function runExploration(){
   }catch(e){$('exploration-state').textContent=e.message;}
   finally{button.disabled=false;}
 }
+async function runLearnedCuriosity(){
+  stop();
+  const button=$('learned-curiosity-run');button.disabled=true;
+  $('learned-curiosity-state').textContent='Entrenando decisiones de explorar usando recompensa local...';
+  try{
+    const result=await challengeCall('/api/learned-curiosity/run',{});
+    const a=result.learned_curiosity.aggregate;
+    const names=['locally_learned_probe','untrained_probe_policy','random','information_gain'];
+    $('learned-curiosity-result').textContent=
+      'Método | Cambio 11 | Escasez 11 | Solicitudes cambio 11\n'+
+      names.map(n=>{
+        if(!a.changed_11[n])return '';
+        return n+' | '+(a.changed_11[n].critical*100).toFixed(1)+'% | '+
+          (a.scarcity_11[n].critical*100).toFixed(1)+'% | '+
+          a.changed_11[n].requests.toFixed(0);
+      }).filter(Boolean).join('\n');
+    $('learned-curiosity-state').textContent='Ensayo completado; consulta el informe para los costos y cada semilla.';
+  }catch(e){$('learned-curiosity-state').textContent=e.message;}
+  finally{button.disabled=false;}
+}
+$('learned-curiosity-run').onclick=runLearnedCuriosity;
 $('exploration-run').onclick=runExploration;
 $('robust-drift-run').onclick=runRobustDrift;
 $('dynamic-memory-run').onclick=runDynamicMemory;
