@@ -18,6 +18,14 @@ textarea{width:100%;font:inherit;padding:10px;border-radius:8px;border:1px solid
 <p class="note" id="challenge-state">Primero diseña un desafío. Si usas la plantilla, NO se realizará una llamada a Meta.</p>
 <pre id="challenge-result" style="white-space:pre-wrap;overflow-wrap:anywhere;font-size:11px;max-height:220px;overflow:auto;color:#a8dfbd"></pre>
 <p class="note">Meta propone parámetros del entorno. No dirige células ni crea automáticamente una tarea que necesite cooperación.</p></section>
+<section class="panel" id="context-switch-lab">
+<h2>Aprendizaje continuo · A → B → A</h2>
+<p class="note">Prueba dos reglas opuestas de una compuerta compartida. Las células reciben un indicador de temporada (0/1) y aprenden cada regla con su energía local. La tarea y la señal de temporada están diseñadas, NO son detectadas espontáneamente.</p>
+<button class="primary" id="context-switch-run" type="button">Probar cambio y memoria</button>
+<p class="note" id="context-switch-state" role="status">3 semillas, 64 parejas, 4500 episodios de A, 3500 de B. Se evalúa el regreso inmediato a A sin entrenamiento.</p>
+<pre id="context-switch-result" style="white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px;max-height:280px;overflow:auto;color:#a8dfbd"></pre>
+<p class="note">Memoria contextual, política única, reinicio explícito, memoria sin señal de contexto, política congelada y comunicación bloqueada. Unidades de energía simuladas; sin Meta API.</p>
+</section>
 <section class="panel" id="learned-message-lab">
 <h2>Mensajes aprendidos · Sin fórmula XOR en las células</h2>
 <p class="note">Cada célula aprende qué bit enviar y cómo responder al de su compañera usando solo su energía local. Aquí no recibe la operación XOR preprogramada que utilizaba el prototipo anterior.</p>
@@ -116,6 +124,27 @@ async function runLearnedProtocol(){
   }catch(e){$('protocol-state').textContent=e.message;}
   finally{button.disabled=false;}
 }
+async function runContextSwitch(){
+  stop();
+  const button=$('context-switch-run');button.disabled=true;
+  $('context-switch-state').textContent='Ejecutando aprendizaje A, adaptación B y retorno a A...';
+  try{
+    const data=await challengeCall('/api/context-switch/run',{});
+    const summary=data.context_switch.aggregate;
+    const names=['context_memory','single_policy','reset_on_switch',
+                 'blind_memory','frozen_on_switch','no_messages'];
+    const fmt=value=>(100*value).toFixed(1)+'%';
+    $('context-switch-result').textContent='Condición | A inicial | B aprendida | A recordada\n'+
+      names.map(key=>{
+        const s=summary[key];
+        return key+' | '+fmt(s.a_before.mean)+' | '+
+               fmt(s.b_after.mean)+' | '+fmt(s.a_return_no_training.mean);
+      }).join('\n');
+    $('context-switch-state').textContent='Prueba ejecutada. La señal de temporada es externa; no se demostró detección autónoma.';
+  }catch(e){$('context-switch-state').textContent=e.message;}
+  finally{button.disabled=false;}
+}
+$('context-switch-run').onclick=runContextSwitch;
 $('protocol-run').onclick=runLearnedProtocol;
 $('cooperation-run').onclick=runCooperationDemo;
 $('challenge-design').onclick=designChallenge;

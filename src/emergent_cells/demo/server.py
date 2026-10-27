@@ -9,6 +9,9 @@ from emergent_cells.experiments.dual_cue import GateSpec, benchmark as benchmark
 from emergent_cells.experiments.learned_messages import (
     ProtocolSpec, benchmark as benchmark_learned_messages,
 )
+from emergent_cells.experiments.context_switch import (
+    SwitchSpec, benchmark as benchmark_context_switch,
+)
 from emergent_cells.meta.world_designer import (
     DesignError, design_world, evaluate_world, validate_proposal,
 )
@@ -21,6 +24,7 @@ class LabServer(HTTPServer):
         self.challenge_report = None
         self.cooperation_report = None
         self.learned_protocol_report = None
+        self.context_switch_report = None
         super().__init__(address, Handler)
 
 
@@ -64,7 +68,13 @@ class Handler(BaseHTTPRequestHandler):
             report["world_evaluation"] = self.server.challenge_report
             report["cooperation_evaluation"] = self.server.cooperation_report
             report["learned_protocol_evaluation"] = self.server.learned_protocol_report
+            report["context_switch_evaluation"] = self.server.context_switch_report
             self.respond(200, report)
+        elif self.path == '/api/context-switch':
+            self.respond(200, {
+                'report': self.server.context_switch_report,
+                'source': 'independent-local-context-memory-no-meta',
+            })
         elif self.path == '/api/protocol':
             self.respond(200, {
                 'report': self.server.learned_protocol_report,
@@ -90,7 +100,8 @@ class Handler(BaseHTTPRequestHandler):
             return self.respond(403, {'error': 'Local same-origin request required'})
         if self.path not in ('/api/action', '/api/challenge/design',
                              '/api/challenge/evaluate', '/api/challenge/apply',
-                             '/api/cooperation/run', '/api/protocol/run'):
+                             '/api/cooperation/run', '/api/protocol/run',
+                             '/api/context-switch/run'):
             return self.respond(404, {'error': 'Not found'})
         if self.headers.get_content_type() != 'application/json':
             return self.respond(415, {'error': 'JSON required'})
@@ -101,6 +112,20 @@ class Handler(BaseHTTPRequestHandler):
             data = json.loads(self.rfile.read(length))
             if not isinstance(data, dict):
                 raise ValueError('Expected object')
+            if self.path == '/api/context-switch/run':
+                if data:
+                    raise ValueError('Context-switch demo takes empty JSON only')
+                outcome = benchmark_context_switch(
+                    [11, 12, 13],
+                    SwitchSpec(pairs=64, train_a=4500, train_b=3500,
+                               test_steps=200)
+                )
+                self.server.context_switch_report = outcome
+                return self.respond(200, {
+                    'context_switch': outcome,
+                    'source': 'local-contextual-memory-not-meta',
+                    'caveat': 'Season indicator is GIVEN; no hidden-change detection',
+                })
             if self.path == '/api/protocol/run':
                 if data:
                     raise ValueError('Learned-message demo takes empty JSON only')

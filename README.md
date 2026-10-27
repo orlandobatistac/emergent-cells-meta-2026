@@ -97,3 +97,11 @@ A NEW local learning experiment removes the hard-coded XOR *policy feature* from
 The 10-seed exploratory run (128 fixed pairs, 8000 training and 500 new-input testing episodes per seed) obtained **98.23%** group-gate success for learned local symbols, versus **49.35%** with reception blocked and **48.36%** with random symbols. Blocking messages in the SAME trained policies gave **25.03%**. No unseen task-function transfer or general intelligence has been demonstrated.
 
 See [methodology, citations and limitations](docs/LEARNED_PROTOCOL_2026-10-27.md), [raw outcomes](results/audited/2026-10-27-learned-messages-10seeds.json), and [new browser workflow](docs/LEARNED_PROTOCOL_UI_2026-10-27.md). This is new October 27 work; Oct 26 background modules retain their original provenance.
+
+## Contextual memory under A -> B -> A reversal (October 27)
+
+A new local reward experiment learns XOR world A, adapts to inverted XNOR world B, and retests A **without retraining**. An externally supplied local season marker selects one of two private decoder banks; the cell never receives its correct gate action. Senders are **frozen after A** to preserve the already learned one-bit language.
+
+Untouched after-pilot seeds 1001..1005: context-memory cells reached **96.40% B** and immediately recovered **96.51% A**; explicit one-bank reset learned **96.40% B** but returned to only **0.19% A**; a saturated single-bank learner failed to learn B. These narrow results are expected under the supplied season marker and deliberately frozen protocol. They **do not** demonstrate autonomous change detection, general intelligence or a capacity/energy-matched improvement.
+
+See [experimental report](docs/CONTEXT_SWITCH_2026-10-27.md), [raw fresh-seed data](results/audited/2026-10-27-context-switch-heldout.json), and [live UI instructions](docs/CONTEXT_SWITCH_UI_2026-10-27.md).

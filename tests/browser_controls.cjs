@@ -3,7 +3,7 @@
 // Start the Python server first, then: node tests/browser_controls.cjs
 const fs=require('node:fs'), vm=require('node:vm'), assert=require('node:assert/strict');
 const base=process.env.EMERGENT_TEST_URL||'http://127.0.0.1:8765';
-const ids=Object.fromEntries(['world','step','alive','energy','time','mode','play','advance','shock','damage','reset','report','status','challenge-text','challenge-source','challenge-design','challenge-evaluate','challenge-apply','challenge-state','challenge-result','cooperation-run','cooperation-state','cooperation-result','protocol-run','protocol-state','protocol-result'].map(id=>[id,{textContent:'',value:'',disabled:false}]));
+const ids=Object.fromEntries(['world','step','alive','energy','time','mode','play','advance','shock','damage','reset','report','status','challenge-text','challenge-source','challenge-design','challenge-evaluate','challenge-apply','challenge-state','challenge-result','cooperation-run','cooperation-state','cooperation-result','protocol-run','protocol-state','protocol-result','context-switch-run','context-switch-state','context-switch-result'].map(id=>[id,{textContent:'',value:'',disabled:false}]));
 ids['challenge-text'].value='Crea un mundo peligroso con recursos escasos y cambios';ids['challenge-source'].value='template';
 ids.world.getContext=()=>({clearRect(){},fillRect(){},beginPath(){},arc(){},fill(){}});
 let downloaded=false;
@@ -24,4 +24,8 @@ await ids['protocol-run'].onclick();
 assert.match(ids['protocol-result'].textContent,/learned_messages/);
 assert.match(ids['protocol-result'].textContent,/Bloqueo del mismo modelo/);
 assert.match(ids['protocol-state'].textContent,/Prueba exploratoria completada/);
+await ids['context-switch-run'].onclick();
+assert.match(ids['context-switch-result'].textContent,/context_memory/);
+assert.match(ids['context-switch-result'].textContent,/reset_on_switch/);
+assert.match(ids['context-switch-state'].textContent,/Prueba ejecutada/);
 console.log('Real HTTP UI controls + template world design, 5-policy evaluation and apply: passed. Layout not tested.');})().catch(e=>{console.error(e);process.exit(1)});
