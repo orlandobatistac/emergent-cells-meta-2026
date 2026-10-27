@@ -1,0 +1,63 @@
+{
+  "limitations": [
+    "The world resource process explicitly depends on the private cue combination.",
+    "The task rule remains XOR throughout.",
+    "No reward-only learner can generally determine whether identical observed failures arise from different causal worlds."
+  ],
+  "rows": [
+    {
+      "experiment": "same XOR rule, 11-pattern-specific resource dropout",
+      "extra_memory_cells": 48,
+      "late_gate_correctness": 0.2554166666666667,
+      "method": "relative_ema",
+      "novelty_without_task_change": 48,
+      "seed": 11
+    },
+    {
+      "experiment": "same XOR rule, 11-pattern-specific resource dropout",
+      "extra_memory_cells": 48,
+      "late_gate_correctness": 0.2554166666666667,
+      "method": "conditional_signature",
+      "novelty_without_task_change": 48,
+      "seed": 11
+    },
+    {
+      "experiment": "same XOR rule, 11-pattern-specific resource dropout",
+      "extra_memory_cells": 48,
+      "late_gate_correctness": 0.25,
+      "method": "relative_ema",
+      "novelty_without_task_change": 48,
+      "seed": 12
+    },
+    {
+      "experiment": "same XOR rule, 11-pattern-specific resource dropout",
+      "extra_memory_cells": 48,
+      "late_gate_correctness": 0.25,
+      "method": "conditional_signature",
+      "novelty_without_task_change": 48,
+      "seed": 12
+    },
+    {
+      "experiment": "same XOR rule, 11-pattern-specific resource dropout",
+      "extra_memory_cells": 48,
+      "late_gate_correctness": 0.26416666666666666,
+      "method": "relative_ema",
+      "novelty_without_task_change": 48,
+      "seed": 13
+    },
+    {
+      "experiment": "same XOR rule, 11-pattern-specific resource dropout",
+      "extra_memory_cells": 48,
+      "late_gate_correctness": 0.26416666666666666,
+      "method": "conditional_signature",
+      "novelty_without_task_change": 48,
+      "seed": 13
+    }
+  ],
+  "schema": "conditional-dropout-identifiability-v1",
+  "seeds": [
+    11,
+    12,
+    13
+  ]
+}
