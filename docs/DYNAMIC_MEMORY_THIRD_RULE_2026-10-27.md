@@ -81,3 +81,13 @@ python -m emergent_cells.experiments.stationary_noise --seeds 11,12,13 --output 
 ```
 
 **Meta API was not called or charged.** This task runs locally and is separate from the Meta-based bounded world designer; do not present it as using the model.
+
+## Engineering audit: physical storage grows lazily
+
+The implementation now begins a non-oracle cell population with **one physical NumPy receiver policy bank**, `weights.shape == (2 * pairs, 1, 4)` and a matching per-bank baseline column. When the FIRST cell requests another bank, the scheduler appends a *new full-population NumPy column*; a third column is appended when some cell requires its third bank. Previously, all three columns were allocated up front.
+
+This is **actual lazy allocation of packed storage at population level**, not true per-cell ragged physical allocation. Every appended column reserves space for all cells even if one cell requested it, while `allocated[cell]` enforces independently permitted/used memory counts. The experiment does NOT grow the number of cells or discover an unbounded number of slots. The max capacity remains three by research design, and the task-aware oracle starts with all three.
+
+For 64 cells (32 pairs), policy logits plus baselines occupy **2,560 bytes per physical bank** (float64, excluding NumPy object/container overhead): initial one bank 2,560 B, then 5,120 B, then 7,680 B. The executable report now includes `allocated_tensor_columns` and `packed_policy_storage_bytes` for each stage. These are **resident array payload sizes, not measured RAM footprint, energy or resource efficiency across implementations**.
+
+A regression test checks that no second/third physical column exists initially, one cell's request causes the global column to be appended, other cells retain just one *logical* bank, and old logits are bitwise preserved through the extension. A fresh-seed run checks numerical outcome equivalence to the original five-seed data; see the separate regeneration file rather than retrospectively changing historic raw results. Physical RAM use remains a vectorized implementation choice, not per-cell adaptive matter growth.

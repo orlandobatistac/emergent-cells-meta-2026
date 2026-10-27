@@ -123,3 +123,9 @@ With **five previously unused seeds**, 32 pairs and 8% missing resource pulses, 
 **Key negative result:** the final detector produces no false new memories in stationary 8% dropout, but mistakes a sudden resource-dropout increase to 20% for a task change, allocating 62–64 needless new memories in each stress seed. Thus robust context inference is **not** solved.
 
 See [the scientific report](docs/DYNAMIC_MEMORY_THIRD_RULE_2026-10-27.md), [complete holdout data](results/audited/2026-10-27-dynamic-third-rule-holdout.json), [noise stress](results/audited/2026-10-27-noise-stress.json), and [interactive demo](docs/DYNAMIC_MEMORY_UI_2026-10-27.md). **No Meta API call, measured joules, agentic AI or general intelligence is implied.**
+
+## Latest review — Spanish scientific report and true lazy packed-memory storage
+
+[Read the consolidated research report (Spanish)](docs/REPORTE_CIENTIFICO_2026-10-27.md).
+
+**Physical allocation verified:** non-oracle populations start with one real NumPy policy bank and append columns only after local bank-creation requests. This is a lazily expanded *population-wide tensor*, NOT per-cell variable-sized physical storage. The storage payload for 64 cells starts at 2,560 bytes and can grow to 7,680 bytes, excluding other program state. All **25 matched trial/seed combinations across 5 held-out seeds reproduced identical end-of-stage accuracy** to the original research output. Original raw results remain unchanged; a new five-seed storage-regression dataset records the new storage columns and payload bytes. **92 Python tests** were passed locally, including new strict memory-allocation invariants.
