@@ -73,3 +73,15 @@ See [usage, evaluation and evidence gates](docs/VALIDATION_AND_INTERACTION.md)
 and [all-control results](results/audited/2026-10-26-SUMMARY.md).
 The simple fixed local rule outperformed the learner in this first evaluation.
 This Oct 26 milestone retains the existing event-eligibility caveat.
+
+## Adaptive Worlds designer (Oct 26 prep prototype)
+
+This branch extends the existing interactive lab with a **human challenge -> validated WorldSpec -> reproducible multi-policy evaluation -> live visual simulation** flow.
+
+- Pick `Plantilla local` for a clearly labeled, deterministic local template. It makes **zero** Meta API requests and lets you test the entire workflow offline.
+- Pick `Meta Muse Spark` for a real Meta Model API structured-JSON design; this mode **requires** private `MODEL_API_KEY` and the optional Python OpenAI SDK.
+- The design is restricted to resource/hazard fields, replenishment and shock timing; it can **not** instruct individual cell actions or invent cooperative physics.
+- Controls are random, frozen, a hand-coded greedy local baseline, learned, and learned with messages blocked (development seeds only).
+- Once a world is validated, use `Aplicar al mapa` to play it in the real engine.
+
+Detailed [implementation and limits](docs/META_WORLD_DESIGNER.md) and [activation instructions](docs/META_WORLD_SETUP.md). Real Meta requests have **not** been executed in this prototype; no credits or billing availability is assumed. This code was written **Oct 26** and remains pre-period research unless organizers confirm eligibility for an Oct 27 start.

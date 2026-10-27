@@ -5,11 +5,16 @@ import json
 from pathlib import Path
 from emergent_cells.interactive import Session
 from emergent_cells.simulation import RunSpec
+from emergent_cells.meta.world_designer import (
+    DesignError, design_world, evaluate_world, validate_proposal,
+)
 
 
 class LabServer(HTTPServer):
     def __init__(self, address, spec):
         self.session = Session(spec)
+        self.challenge = None
+        self.challenge_report = None
         super().__init__(address, Handler)
 
 
@@ -48,7 +53,15 @@ class Handler(BaseHTTPRequestHandler):
         elif self.path == '/api/state':
             self.respond(200, snapshot(self.server.session))
         elif self.path == '/api/report':
-            self.respond(200, self.server.session.report())
+            report = self.server.session.report()
+            report["world_design"] = self.server.challenge
+            report["world_evaluation"] = self.server.challenge_report
+            self.respond(200, report)
+        elif self.path == '/api/challenge':
+            self.respond(200, {
+                "challenge": self.server.challenge,
+                "evaluation": self.server.challenge_report,
+            })
         else:
             self.respond(404, {'error': 'Not found'})
 
@@ -56,7 +69,8 @@ class Handler(BaseHTTPRequestHandler):
         origin = self.headers.get('Origin')
         if not self.allowed_host() or (origin and origin != f'http://{self.headers.get("Host")}'):
             return self.respond(403, {'error': 'Local same-origin request required'})
-        if self.path != '/api/action':
+        if self.path not in ('/api/action', '/api/challenge/design',
+                             '/api/challenge/evaluate', '/api/challenge/apply'):
             return self.respond(404, {'error': 'Not found'})
         if self.headers.get_content_type() != 'application/json':
             return self.respond(415, {'error': 'JSON required'})
@@ -67,6 +81,34 @@ class Handler(BaseHTTPRequestHandler):
             data = json.loads(self.rfile.read(length))
             if not isinstance(data, dict):
                 raise ValueError('Expected object')
+            if self.path == '/api/challenge/design':
+                if set(data) != {'description', 'source'}:
+                    raise ValueError('Only description and source are allowed')
+                proposed = design_world(data['description'], data['source'])
+                self.server.challenge = proposed
+                self.server.challenge_report = None
+                return self.respond(200, {'challenge': proposed})
+            if self.path == '/api/challenge/evaluate':
+                if data:
+                    raise ValueError('Evaluation uses fixed development controls')
+                if self.server.challenge is None:
+                    raise ValueError('Design a world before evaluating')
+                outcome = evaluate_world(self.server.challenge)
+                self.server.challenge_report = outcome
+                return self.respond(200, {'evaluation': outcome})
+            if self.path == '/api/challenge/apply':
+                if data:
+                    raise ValueError('Apply takes an empty JSON object')
+                if self.server.challenge is None:
+                    raise ValueError('Design a world before applying')
+                _, world_spec = validate_proposal(self.server.challenge['proposal'])
+                old = self.server.session
+                self.server.session = Session(
+                    RunSpec(seed=old.spec.seed, mode=old.mode,
+                            world=world_spec, cells=old.spec.cells,
+                            steps=old.spec.steps)
+                )
+                return self.respond(200, snapshot(self.server.session))
             command = data.get('action')
             s = self.server.session
             if command == 'advance':
@@ -88,7 +130,7 @@ class Handler(BaseHTTPRequestHandler):
             else:
                 raise ValueError('Unknown action')
             self.respond(200, snapshot(self.server.session))
-        except (ValueError, TypeError) as error:
+        except (ValueError, TypeError, DesignError) as error:
             self.respond(400, {'error': str(error)})
 
 
@@ -99,7 +141,7 @@ def main():
     args = parser.parse_args()
     with LabServer(('127.0.0.1', args.port), RunSpec(seed=args.seed)) as server:
         print(f'Emergent Cells: http://127.0.0.1:{server.server_port}', flush=True)
-        print('Ctrl+C para detener. Procesamiento local; energía simulada ≠ joules.', flush=True)
+        print('Ctrl+C para detener. Procesamiento local; la energia simulada NO son joules.', flush=True)
         try:
             server.serve_forever()
         except KeyboardInterrupt:

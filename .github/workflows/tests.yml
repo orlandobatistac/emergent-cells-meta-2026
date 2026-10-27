@@ -19,3 +19,13 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Verify command line
         run: python -m emergent_cells --seed 7 --steps 16 --cells 12 --mode learned --output results/runs/ci-smoke.json
+      - name: Test browser controls against local HTTP (no Meta API)
+        run: |
+          python -m emergent_cells.demo.server > /tmp/ec-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill $SERVER_PID' EXIT
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:8765/api/state >/dev/null; then break; fi
+            sleep 1
+          done
+          node tests/browser_controls.cjs

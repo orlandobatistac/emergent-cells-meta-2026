@@ -12,6 +12,7 @@ dependencies = ["numpy>=1.26,<3"]
 
 [project.optional-dependencies]
 dev = ["pytest>=8,<10"]
+meta = ["openai>=1.30,<4"]
 
 [project.scripts]
 emergent-cells = "emergent_cells.cli:main"

@@ -1,6 +1,7 @@
 """Interactive access to the real engine; commands are explicit, not an LLM."""
 from dataclasses import asdict
 import json
+import os
 from pathlib import Path
 import shlex
 import time
@@ -91,7 +92,7 @@ def shell(spec):
     print(help_text)
     while True:
         try:
-            parts = shlex.split(input('cells> '))
+            parts = shlex.split(input('cells> '), posix=os.name != 'nt')
             if not parts:
                 continue
             command, *args = parts
@@ -115,7 +116,7 @@ def shell(spec):
                 session = Session(spec)
                 print('Misma semilla, estado inicial restaurado.')
             elif command == 'exportar':
-                target = Path(args[0])
+                target = Path(args[0].strip('"'))
                 if target.exists():
                     raise ValueError('El archivo existe; elige otra ruta.')
                 target.parent.mkdir(parents=True, exist_ok=True)
