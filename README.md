@@ -55,3 +55,9 @@ python -m emergent_cells --compare --seeds 1,2,3 --steps 240 --cells 256 --shock
 ```
 
 See [engineering limitations](docs/ENGINE_V0.md), [validation log](docs/ENGINE_TEST_LOG.md), and the [proposed evaluation protocol](docs/EXPERIMENT_PROTOCOL.md). Do not confuse resource/energy in the simulator with measured joules or demonstrated general intelligence.
+
+## Dual-cue local cooperation experiment (Oct 26, exploratory)
+
+The separate local-gate research module compares a deliberately cooperation-required XOR-style resource task across true local messages, no messages, corrupted messages, fixed policies and out-of-range partners. See [experiment design](docs/DUAL_CUE_COOPERATION.md) and [full exploratory report](docs/DUAL_CUE_RESULT_2026-10-26.md).
+
+This benchmark uses **engineered XOR-capable features and predefined partners**; its results demonstrate narrow, task-specific benefits of communicating private cues, **not general emergent intelligence**. This research was prepared October 26, before the guide's stated competition build period and is not being claimed as eligible event work.
