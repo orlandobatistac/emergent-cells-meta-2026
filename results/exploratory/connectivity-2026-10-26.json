@@ -1,0 +1,1811 @@
+{
+  "hypothesis": "locally modulated neighbor connections can change adaptation",
+  "limitations": [
+    "256 cells are simulated using centrally scheduled NumPy operations.",
+    "Weights receive cell-local reward-modulated updates, not physical energy.",
+    "Fixed/adaptive have equal maximum link slots; broadcast is uncapped.",
+    "This is an in-distribution diagnostic, not held-out generalization.",
+    "No independent neural general intelligence is demonstrated.",
+    "Created on Oct 26, while official guide lists Oct 27 start of building period."
+  ],
+  "parameters": {
+    "link_spec": {
+      "exclusion_steps": 8,
+      "max_links": 4,
+      "minimum_trust": 0.55,
+      "radius": 5.0,
+      "trust_learning_rate": 0.85
+    },
+    "seeds": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "shock_step": 90,
+    "steps": 180,
+    "world_width": 64
+  },
+  "rows": [
+    {
+      "alive_cell_steps": 44885,
+      "condition": "none",
+      "harvested_total": 4670.696360758288,
+      "history": [
+        {
+          "remaining_energy": 476.6865479896624,
+          "step": 1,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 658.9572420198972,
+          "step": 15,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 859.0171607940264,
+          "step": 30,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 901.8104840981795,
+          "step": 45,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 917.6377431825715,
+          "step": 60,
+          "survival_fraction": 0.99609375
+        },
+        {
+          "remaining_energy": 939.3940322396534,
+          "step": 75,
+          "survival_fraction": 0.96484375
+        },
+        {
+          "remaining_energy": 956.9513128999049,
+          "step": 90,
+          "survival_fraction": 0.9609375
+        },
+        {
+          "remaining_energy": 955.7820676216256,
+          "step": 105,
+          "survival_fraction": 0.9609375
+        },
+        {
+          "remaining_energy": 952.1653649089274,
+          "step": 120,
+          "survival_fraction": 0.9609375
+        },
+        {
+          "remaining_energy": 955.7659806303161,
+          "step": 135,
+          "survival_fraction": 0.95703125
+        },
+        {
+          "remaining_energy": 964.9712779190171,
+          "step": 150,
+          "survival_fraction": 0.95703125
+        },
+        {
+          "remaining_energy": 969.4753018184425,
+          "step": 165,
+          "survival_fraction": 0.95703125
+        },
+        {
+          "remaining_energy": 972.6391330310214,
+          "step": 180,
+          "survival_fraction": 0.95703125
+        }
+      ],
+      "links_created": 0,
+      "links_expired": 0,
+      "links_pruned": 0,
+      "neighbor_messages": 0,
+      "remaining_energy": 972.6391330310214,
+      "seed": 1,
+      "shock_applied": true,
+      "steps_completed": 180,
+      "survival_fraction": 0.95703125,
+      "trust_updates": 0
+    },
+    {
+      "alive_cell_steps": 44229,
+      "condition": "broadcast",
+      "harvested_total": 4469.1841421686595,
+      "history": [
+        {
+          "remaining_energy": 476.6865479896624,
+          "step": 1,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 655.0316859372829,
+          "step": 15,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 835.5390318692206,
+          "step": 30,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 883.8243871671633,
+          "step": 45,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 902.8634022834419,
+          "step": 60,
+          "survival_fraction": 0.9921875
+        },
+        {
+          "remaining_energy": 923.4127094787602,
+          "step": 75,
+          "survival_fraction": 0.94921875
+        },
+        {
+          "remaining_energy": 931.8685590118296,
+          "step": 90,
+          "survival_fraction": 0.9375
+        },
+        {
+          "remaining_energy": 934.9320103769737,
+          "step": 105,
+          "survival_fraction": 0.9375
+        },
+        {
+          "remaining_energy": 940.437172051144,
+          "step": 120,
+          "survival_fraction": 0.9375
+        },
+        {
+          "remaining_energy": 945.8060418938377,
+          "step": 135,
+          "survival_fraction": 0.9375
+        },
+        {
+          "remaining_energy": 950.5194170100027,
+          "step": 150,
+          "survival_fraction": 0.93359375
+        },
+        {
+          "remaining_energy": 952.1832361190448,
+          "step": 165,
+          "survival_fraction": 0.93359375
+        },
+        {
+          "remaining_energy": 951.7455882934918,
+          "step": 180,
+          "survival_fraction": 0.93359375
+        }
+      ],
+      "links_created": 0,
+      "links_expired": 0,
+      "links_pruned": 0,
+      "neighbor_messages": 333578,
+      "remaining_energy": 951.7455882934918,
+      "seed": 1,
+      "shock_applied": true,
+      "steps_completed": 180,
+      "survival_fraction": 0.93359375,
+      "trust_updates": 0
+    },
+    {
+      "alive_cell_steps": 44709,
+      "condition": "fixed",
+      "harvested_total": 4646.4905000877325,
+      "history": [
+        {
+          "remaining_energy": 476.6865479896624,
+          "step": 1,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 659.8710948687958,
+          "step": 15,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 856.8907310408199,
+          "step": 30,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 902.1642330958535,
+          "step": 45,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 914.3991535059297,
+          "step": 60,
+          "survival_fraction": 0.9921875
+        },
+        {
+          "remaining_energy": 931.3103370049846,
+          "step": 75,
+          "survival_fraction": 0.9609375
+        },
+        {
+          "remaining_energy": 948.5724033417362,
+          "step": 90,
+          "survival_fraction": 0.953125
+        },
+        {
+          "remaining_energy": 954.2461583262161,
+          "step": 105,
+          "survival_fraction": 0.953125
+        },
+        {
+          "remaining_energy": 956.6760070269861,
+          "step": 120,
+          "survival_fraction": 0.953125
+        },
+        {
+          "remaining_energy": 955.6305956892019,
+          "step": 135,
+          "survival_fraction": 0.953125
+        },
+        {
+          "remaining_energy": 959.2243955035698,
+          "step": 150,
+          "survival_fraction": 0.953125
+        },
+        {
+          "remaining_energy": 962.8660015484978,
+          "step": 165,
+          "survival_fraction": 0.953125
+        },
+        {
+          "remaining_energy": 965.4027170396328,
+          "step": 180,
+          "survival_fraction": 0.953125
+        }
+      ],
+      "links_created": 22624,
+      "links_expired": 21700,
+      "links_pruned": 0,
+      "neighbor_messages": 162883,
+      "remaining_energy": 965.4027170396328,
+      "seed": 1,
+      "shock_applied": true,
+      "steps_completed": 180,
+      "survival_fraction": 0.953125,
+      "trust_updates": 0
+    },
+    {
+      "alive_cell_steps": 44510,
+      "condition": "adaptive",
+      "harvested_total": 4648.459401048724,
+      "history": [
+        {
+          "remaining_energy": 476.6865479896624,
+          "step": 1,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 658.8815310957373,
+          "step": 15,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 855.1638923525217,
+          "step": 30,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 899.3100662779132,
+          "step": 45,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 914.6779752262216,
+          "step": 60,
+          "survival_fraction": 0.9921875
+        },
+        {
+          "remaining_energy": 931.701082591896,
+          "step": 75,
+          "survival_fraction": 0.9609375
+        },
+        {
+          "remaining_energy": 947.2738612614597,
+          "step": 90,
+          "survival_fraction": 0.94921875
+        },
+        {
+          "remaining_energy": 947.6803791200795,
+          "step": 105,
+          "survival_fraction": 0.94921875
+        },
+        {
+          "remaining_energy": 948.2813888023608,
+          "step": 120,
+          "survival_fraction": 0.94921875
+        },
+        {
+          "remaining_energy": 949.9200349405908,
+          "step": 135,
+          "survival_fraction": 0.9453125
+        },
+        {
+          "remaining_energy": 951.0348480938414,
+          "step": 150,
+          "survival_fraction": 0.94140625
+        },
+        {
+          "remaining_energy": 950.6146660426641,
+          "step": 165,
+          "survival_fraction": 0.9375
+        },
+        {
+          "remaining_energy": 950.4415214517624,
+          "step": 180,
+          "survival_fraction": 0.9375
+        }
+      ],
+      "links_created": 22996,
+      "links_expired": 21835,
+      "links_pruned": 222,
+      "neighbor_messages": 161753,
+      "remaining_energy": 950.4415214517624,
+      "seed": 1,
+      "shock_applied": true,
+      "steps_completed": 180,
+      "survival_fraction": 0.9375,
+      "trust_updates": 160832
+    },
+    {
+      "alive_cell_steps": 45422,
+      "condition": "none",
+      "harvested_total": 4862.887041334574,
+      "history": [
+        {
+          "remaining_energy": 476.88289880144964,
+          "step": 1,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 651.0537077024404,
+          "step": 15,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 847.7099140254588,
+          "step": 30,
+          "survival_fraction": 0.98828125
+        },
+        {
+          "remaining_energy": 923.3009850251086,
+          "step": 45,
+          "survival_fraction": 0.98828125
+        },
+        {
+          "remaining_energy": 962.5102146658026,
+          "step": 60,
+          "survival_fraction": 0.98828125
+        },
+        {
+          "remaining_energy": 977.851901178064,
+          "step": 75,
+          "survival_fraction": 0.98828125
+        },
+        {
+          "remaining_energy": 986.1027525584934,
+          "step": 90,
+          "survival_fraction": 0.98046875
+        },
+        {
+          "remaining_energy": 991.4018353103954,
+          "step": 105,
+          "survival_fraction": 0.98046875
+        },
+        {
+          "remaining_energy": 996.665597752364,
+          "step": 120,
+          "survival_fraction": 0.98046875
+        },
+        {
+          "remaining_energy": 999.5485922607982,
+          "step": 135,
+          "survival_fraction": 0.98046875
+        },
+        {
+          "remaining_energy": 1001.1556716055269,
+          "step": 150,
+          "survival_fraction": 0.98046875
+        },
+        {
+          "remaining_energy": 1002.0673543873635,
+          "step": 165,
+          "survival_fraction": 0.98046875
+        },
+        {
+          "remaining_energy": 1002.1458017459382,
+          "step": 180,
+          "survival_fraction": 0.98046875
+        }
+      ],
+      "links_created": 0,
+      "links_expired": 0,
+      "links_pruned": 0,
+      "neighbor_messages": 0,
+      "remaining_energy": 1002.1458017459382,
+      "seed": 2,
+      "shock_applied": true,
+      "steps_completed": 180,
+      "survival_fraction": 0.98046875,
+      "trust_updates": 0
+    },
+    {
+      "alive_cell_steps": 45027,
+      "condition": "broadcast",
+      "harvested_total": 4575.9720122722665,
+      "history": [
+        {
+          "remaining_energy": 476.88289880144964,
+          "step": 1,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 652.0851851034245,
+          "step": 15,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 842.7810603204357,
+          "step": 30,
+          "survival_fraction": 0.98046875
+        },
+        {
+          "remaining_energy": 907.1824608047253,
+          "step": 45,
+          "survival_fraction": 0.9765625
+        },
+        {
+          "remaining_energy": 937.3247158255526,
+          "step": 60,
+          "survival_fraction": 0.9765625
+        },
+        {
+          "remaining_energy": 952.9805735606963,
+          "step": 75,
+          "survival_fraction": 0.9765625
+        },
+        {
+          "remaining_energy": 966.9031866527191,
+          "step": 90,
+          "survival_fraction": 0.97265625
+        },
+        {
+          "remaining_energy": 974.8789839182419,
+          "step": 105,
+          "survival_fraction": 0.97265625
+        },
+        {
+          "remaining_energy": 980.145197701516,
+          "step": 120,
+          "survival_fraction": 0.97265625
+        },
+        {
+          "remaining_energy": 982.035786832549,
+          "step": 135,
+          "survival_fraction": 0.97265625
+        },
+        {
+          "remaining_energy": 982.3637746883132,
+          "step": 150,
+          "survival_fraction": 0.97265625
+        },
+        {
+          "remaining_energy": 981.6800387001847,
+          "step": 165,
+          "survival_fraction": 0.96875
+        },
+        {
+          "remaining_energy": 979.657738764507,
+          "step": 180,
+          "survival_fraction": 0.96875
+        }
+      ],
+      "links_created": 0,
+      "links_expired": 0,
+      "links_pruned": 0,
+      "neighbor_messages": 333018,
+      "remaining_energy": 979.657738764507,
+      "seed": 2,
+      "shock_applied": true,
+      "steps_completed": 180,
+      "survival_fraction": 0.96875,
+      "trust_updates": 0
+    },
+    {
+      "alive_cell_steps": 45591,
+      "condition": "fixed",
+      "harvested_total": 4870.958325131733,
+      "history": [
+        {
+          "remaining_energy": 476.88289880144964,
+          "step": 1,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 649.9136124854556,
+          "step": 15,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 841.3610628286315,
+          "step": 30,
+          "survival_fraction": 0.99609375
+        },
+        {
+          "remaining_energy": 914.6256827324316,
+          "step": 45,
+          "survival_fraction": 0.9921875
+        },
+        {
+          "remaining_energy": 955.4945289884142,
+          "step": 60,
+          "survival_fraction": 0.9921875
+        },
+        {
+          "remaining_energy": 978.2573552679436,
+          "step": 75,
+          "survival_fraction": 0.9921875
+        },
+        {
+          "remaining_energy": 987.7429249746895,
+          "step": 90,
+          "survival_fraction": 0.984375
+        },
+        {
+          "remaining_energy": 993.7603448898517,
+          "step": 105,
+          "survival_fraction": 0.984375
+        },
+        {
+          "remaining_energy": 1001.4588709112936,
+          "step": 120,
+          "survival_fraction": 0.984375
+        },
+        {
+          "remaining_energy": 1005.1830751081625,
+          "step": 135,
+          "survival_fraction": 0.984375
+        },
+        {
+          "remaining_energy": 1006.7616321599724,
+          "step": 150,
+          "survival_fraction": 0.984375
+        },
+        {
+          "remaining_energy": 1007.1614792868405,
+          "step": 165,
+          "survival_fraction": 0.984375
+        },
+        {
+          "remaining_energy": 1007.9575863119637,
+          "step": 180,
+          "survival_fraction": 0.984375
+        }
+      ],
+      "links_created": 23052,
+      "links_expired": 22115,
+      "links_pruned": 0,
+      "neighbor_messages": 166110,
+      "remaining_energy": 1007.9575863119637,
+      "seed": 2,
+      "shock_applied": true,
+      "steps_completed": 180,
+      "survival_fraction": 0.984375,
+      "trust_updates": 0
+    },
+    {
+      "alive_cell_steps": 45607,
+      "condition": "adaptive",
+      "harvested_total": 4884.748074649049,
+      "history": [
+        {
+          "remaining_energy": 476.88289880144964,
+          "step": 1,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 650.5958090452567,
+          "step": 15,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 844.094306748907,
+          "step": 30,
+          "survival_fraction": 0.99609375
+        },
+        {
+          "remaining_energy": 922.7874811123901,
+          "step": 45,
+          "survival_fraction": 0.99609375
+        },
+        {
+          "remaining_energy": 958.1269613186684,
+          "step": 60,
+          "survival_fraction": 0.9921875
+        },
+        {
+          "remaining_energy": 979.9977118808698,
+          "step": 75,
+          "survival_fraction": 0.9921875
+        },
+        {
+          "remaining_energy": 991.7358745493924,
+          "step": 90,
+          "survival_fraction": 0.984375
+        },
+        {
+          "remaining_energy": 999.6461065505521,
+          "step": 105,
+          "survival_fraction": 0.984375
+        },
+        {
+          "remaining_energy": 1002.4501173991284,
+          "step": 120,
+          "survival_fraction": 0.984375
+        },
+        {
+          "remaining_energy": 1005.5182287597677,
+          "step": 135,
+          "survival_fraction": 0.984375
+        },
+        {
+          "remaining_energy": 1007.9031553222821,
+          "step": 150,
+          "survival_fraction": 0.984375
+        },
+        {
+          "remaining_energy": 1007.9240092672981,
+          "step": 165,
+          "survival_fraction": 0.984375
+        },
+        {
+          "remaining_energy": 1007.8501563038225,
+          "step": 180,
+          "survival_fraction": 0.984375
+        }
+      ],
+      "links_created": 23667,
+      "links_expired": 22538,
+      "links_pruned": 205,
+      "neighbor_messages": 167129,
+      "remaining_energy": 1007.8501563038225,
+      "seed": 2,
+      "shock_applied": true,
+      "steps_completed": 180,
+      "survival_fraction": 0.984375,
+      "trust_updates": 166198
+    },
+    {
+      "alive_cell_steps": 43701,
+      "condition": "none",
+      "harvested_total": 4225.496250220796,
+      "history": [
+        {
+          "remaining_energy": 476.13995268779007,
+          "step": 1,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 637.0123768667651,
+          "step": 15,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 806.3098008401852,
+          "step": 30,
+          "survival_fraction": 0.9921875
+        },
+        {
+          "remaining_energy": 865.2536281030352,
+          "step": 45,
+          "survival_fraction": 0.984375
+        },
+        {
+          "remaining_energy": 887.3312922457551,
+          "step": 60,
+          "survival_fraction": 0.98046875
+        },
+        {
+          "remaining_energy": 904.7588434325587,
+          "step": 75,
+          "survival_fraction": 0.93359375
+        },
+        {
+          "remaining_energy": 920.9538220927161,
+          "step": 90,
+          "survival_fraction": 0.921875
+        },
+        {
+          "remaining_energy": 905.5899209946685,
+          "step": 105,
+          "survival_fraction": 0.921875
+        },
+        {
+          "remaining_energy": 892.3869077265265,
+          "step": 120,
+          "survival_fraction": 0.921875
+        },
+        {
+          "remaining_energy": 895.6772732072379,
+          "step": 135,
+          "survival_fraction": 0.921875
+        },
+        {
+          "remaining_energy": 901.6822490215011,
+          "step": 150,
+          "survival_fraction": 0.921875
+        },
+        {
+          "remaining_energy": 903.4737991332881,
+          "step": 165,
+          "survival_fraction": 0.921875
+        },
+        {
+          "remaining_energy": 906.4813245513915,
+          "step": 180,
+          "survival_fraction": 0.921875
+        }
+      ],
+      "links_created": 0,
+      "links_expired": 0,
+      "links_pruned": 0,
+      "neighbor_messages": 0,
+      "remaining_energy": 906.4813245513915,
+      "seed": 3,
+      "shock_applied": true,
+      "steps_completed": 180,
+      "survival_fraction": 0.921875,
+      "trust_updates": 0
+    },
+    {
+      "alive_cell_steps": 43250,
+      "condition": "broadcast",
+      "harvested_total": 4047.540700337554,
+      "history": [
+        {
+          "remaining_energy": 476.13995268779007,
+          "step": 1,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 638.6901373694004,
+          "step": 15,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 796.2021129111406,
+          "step": 30,
+          "survival_fraction": 0.984375
+        },
+        {
+          "remaining_energy": 836.548581645911,
+          "step": 45,
+          "survival_fraction": 0.9765625
+        },
+        {
+          "remaining_energy": 853.4627625546392,
+          "step": 60,
+          "survival_fraction": 0.9765625
+        },
+        {
+          "remaining_energy": 865.1117266879642,
+          "step": 75,
+          "survival_fraction": 0.93359375
+        },
+        {
+          "remaining_energy": 873.4431663547582,
+          "step": 90,
+          "survival_fraction": 0.91015625
+        },
+        {
+          "remaining_energy": 876.8430182356486,
+          "step": 105,
+          "survival_fraction": 0.91015625
+        },
+        {
+          "remaining_energy": 883.7658892665906,
+          "step": 120,
+          "survival_fraction": 0.91015625
+        },
+        {
+          "remaining_energy": 885.5086792030777,
+          "step": 135,
+          "survival_fraction": 0.90625
+        },
+        {
+          "remaining_energy": 882.354754367463,
+          "step": 150,
+          "survival_fraction": 0.90625
+        },
+        {
+          "remaining_energy": 883.9464992378211,
+          "step": 165,
+          "survival_fraction": 0.90625
+        },
+        {
+          "remaining_energy": 885.5785279402153,
+          "step": 180,
+          "survival_fraction": 0.90625
+        }
+      ],
+      "links_created": 0,
+      "links_expired": 0,
+      "links_pruned": 0,
+      "neighbor_messages": 327630,
+      "remaining_energy": 885.5785279402153,
+      "seed": 3,
+      "shock_applied": true,
+      "steps_completed": 180,
+      "survival_fraction": 0.90625,
+      "trust_updates": 0
+    },
+    {
+      "alive_cell_steps": 43490,
+      "condition": "fixed",
+      "harvested_total": 4164.597665728771,
+      "history": [
+        {
+          "remaining_energy": 476.13995268779007,
+          "step": 1,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 638.2393222558633,
+          "step": 15,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 800.7498906237179,
+          "step": 30,
+          "survival_fraction": 0.9765625
+        },
+        {
+          "remaining_energy": 858.8774276694473,
+          "step": 45,
+          "survival_fraction": 0.9765625
+        },
+        {
+          "remaining_energy": 881.595568275135,
+          "step": 60,
+          "survival_fraction": 0.9765625
+        },
+        {
+          "remaining_energy": 895.5679639696694,
+          "step": 75,
+          "survival_fraction": 0.9296875
+        },
+        {
+          "remaining_energy": 907.1521829507155,
+          "step": 90,
+          "survival_fraction": 0.91796875
+        },
+        {
+          "remaining_energy": 901.6182727068533,
+          "step": 105,
+          "survival_fraction": 0.91796875
+        },
+        {
+          "remaining_energy": 893.1825193088158,
+          "step": 120,
+          "survival_fraction": 0.91796875
+        },
+        {
+          "remaining_energy": 897.0695145673865,
+          "step": 135,
+          "survival_fraction": 0.91796875
+        },
+        {
+          "remaining_energy": 895.528750591129,
+          "step": 150,
+          "survival_fraction": 0.91796875
+        },
+        {
+          "remaining_energy": 898.126126921047,
+          "step": 165,
+          "survival_fraction": 0.91796875
+        },
+        {
+          "remaining_energy": 903.5350050659835,
+          "step": 180,
+          "survival_fraction": 0.91796875
+        }
+      ],
+      "links_created": 22013,
+      "links_expired": 21118,
+      "links_pruned": 0,
+      "neighbor_messages": 156327,
+      "remaining_energy": 903.5350050659835,
+      "seed": 3,
+      "shock_applied": true,
+      "steps_completed": 180,
+      "survival_fraction": 0.91796875,
+      "trust_updates": 0
+    },
+    {
+      "alive_cell_steps": 43476,
+      "condition": "adaptive",
+      "harvested_total": 4183.134136438012,
+      "history": [
+        {
+          "remaining_energy": 476.13995268779007,
+          "step": 1,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 637.5856920418428,
+          "step": 15,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 797.5520492722311,
+          "step": 30,
+          "survival_fraction": 0.9765625
+        },
+        {
+          "remaining_energy": 856.2383675388811,
+          "step": 45,
+          "survival_fraction": 0.9765625
+        },
+        {
+          "remaining_energy": 884.0492033283227,
+          "step": 60,
+          "survival_fraction": 0.9765625
+        },
+        {
+          "remaining_energy": 900.0327433531561,
+          "step": 75,
+          "survival_fraction": 0.9296875
+        },
+        {
+          "remaining_energy": 912.1089169775744,
+          "step": 90,
+          "survival_fraction": 0.91796875
+        },
+        {
+          "remaining_energy": 902.1664641025575,
+          "step": 105,
+          "survival_fraction": 0.91796875
+        },
+        {
+          "remaining_energy": 893.8862804806216,
+          "step": 120,
+          "survival_fraction": 0.91796875
+        },
+        {
+          "remaining_energy": 892.637337059637,
+          "step": 135,
+          "survival_fraction": 0.91796875
+        },
+        {
+          "remaining_energy": 894.304846849041,
+          "step": 150,
+          "survival_fraction": 0.91796875
+        },
+        {
+          "remaining_energy": 895.3666303532209,
+          "step": 165,
+          "survival_fraction": 0.91796875
+        },
+        {
+          "remaining_energy": 896.4293757179792,
+          "step": 180,
+          "survival_fraction": 0.91796875
+        }
+      ],
+      "links_created": 21706,
+      "links_expired": 20641,
+      "links_pruned": 193,
+      "neighbor_messages": 156617,
+      "remaining_energy": 896.4293757179792,
+      "seed": 3,
+      "shock_applied": true,
+      "steps_completed": 180,
+      "survival_fraction": 0.91796875,
+      "trust_updates": 155705
+    },
+    {
+      "alive_cell_steps": 45681,
+      "condition": "none",
+      "harvested_total": 4739.383162603134,
+      "history": [
+        {
+          "remaining_energy": 477.46725893392363,
+          "step": 1,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 658.8853342561051,
+          "step": 15,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 845.0891334034873,
+          "step": 30,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 928.6102540966115,
+          "step": 45,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 958.5812805355299,
+          "step": 60,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 975.1651462229108,
+          "step": 75,
+          "survival_fraction": 0.98828125
+        },
+        {
+          "remaining_energy": 986.4568249104059,
+          "step": 90,
+          "survival_fraction": 0.98828125
+        },
+        {
+          "remaining_energy": 984.8467529066767,
+          "step": 105,
+          "survival_fraction": 0.98828125
+        },
+        {
+          "remaining_energy": 988.4435614782462,
+          "step": 120,
+          "survival_fraction": 0.984375
+        },
+        {
+          "remaining_energy": 995.7864364382336,
+          "step": 135,
+          "survival_fraction": 0.984375
+        },
+        {
+          "remaining_energy": 999.3505370718688,
+          "step": 150,
+          "survival_fraction": 0.984375
+        },
+        {
+          "remaining_energy": 1003.4424098576102,
+          "step": 165,
+          "survival_fraction": 0.984375
+        },
+        {
+          "remaining_energy": 1005.5663188910355,
+          "step": 180,
+          "survival_fraction": 0.984375
+        }
+      ],
+      "links_created": 0,
+      "links_expired": 0,
+      "links_pruned": 0,
+      "neighbor_messages": 0,
+      "remaining_energy": 1005.5663188910355,
+      "seed": 4,
+      "shock_applied": true,
+      "steps_completed": 180,
+      "survival_fraction": 0.984375,
+      "trust_updates": 0
+    },
+    {
+      "alive_cell_steps": 45701,
+      "condition": "broadcast",
+      "harvested_total": 4530.45065381457,
+      "history": [
+        {
+          "remaining_energy": 477.46725893392363,
+          "step": 1,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 656.847734792043,
+          "step": 15,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 840.3805243607665,
+          "step": 30,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 912.0086221805669,
+          "step": 45,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 935.0650583920963,
+          "step": 60,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 950.1844235872499,
+          "step": 75,
+          "survival_fraction": 0.9921875
+        },
+        {
+          "remaining_energy": 961.5769330097012,
+          "step": 90,
+          "survival_fraction": 0.98828125
+        },
+        {
+          "remaining_energy": 976.2381888267682,
+          "step": 105,
+          "survival_fraction": 0.98828125
+        },
+        {
+          "remaining_energy": 986.2646082880267,
+          "step": 120,
+          "survival_fraction": 0.98828125
+        },
+        {
+          "remaining_energy": 985.4202116401557,
+          "step": 135,
+          "survival_fraction": 0.984375
+        },
+        {
+          "remaining_energy": 985.9627885164102,
+          "step": 150,
+          "survival_fraction": 0.984375
+        },
+        {
+          "remaining_energy": 986.3656277256034,
+          "step": 165,
+          "survival_fraction": 0.984375
+        },
+        {
+          "remaining_energy": 990.9976391134746,
+          "step": 180,
+          "survival_fraction": 0.984375
+        }
+      ],
+      "links_created": 0,
+      "links_expired": 0,
+      "links_pruned": 0,
+      "neighbor_messages": 316964,
+      "remaining_energy": 990.9976391134746,
+      "seed": 4,
+      "shock_applied": true,
+      "steps_completed": 180,
+      "survival_fraction": 0.984375,
+      "trust_updates": 0
+    },
+    {
+      "alive_cell_steps": 45861,
+      "condition": "fixed",
+      "harvested_total": 4750.610286142702,
+      "history": [
+        {
+          "remaining_energy": 477.46725893392363,
+          "step": 1,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 658.8590447634633,
+          "step": 15,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 844.2443774856854,
+          "step": 30,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 926.1443150443514,
+          "step": 45,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 954.9734400925336,
+          "step": 60,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 974.776619009258,
+          "step": 75,
+          "survival_fraction": 0.9921875
+        },
+        {
+          "remaining_energy": 986.9635107369419,
+          "step": 90,
+          "survival_fraction": 0.9921875
+        },
+        {
+          "remaining_energy": 983.0811940381941,
+          "step": 105,
+          "survival_fraction": 0.9921875
+        },
+        {
+          "remaining_energy": 989.1729425113709,
+          "step": 120,
+          "survival_fraction": 0.9921875
+        },
+        {
+          "remaining_energy": 997.8253120036478,
+          "step": 135,
+          "survival_fraction": 0.9921875
+        },
+        {
+          "remaining_energy": 1001.7622549109822,
+          "step": 150,
+          "survival_fraction": 0.9921875
+        },
+        {
+          "remaining_energy": 1005.9671710825987,
+          "step": 165,
+          "survival_fraction": 0.9921875
+        },
+        {
+          "remaining_energy": 1011.2892393272546,
+          "step": 180,
+          "survival_fraction": 0.9921875
+        }
+      ],
+      "links_created": 23522,
+      "links_expired": 22584,
+      "links_pruned": 0,
+      "neighbor_messages": 165993,
+      "remaining_energy": 1011.2892393272546,
+      "seed": 4,
+      "shock_applied": true,
+      "steps_completed": 180,
+      "survival_fraction": 0.9921875,
+      "trust_updates": 0
+    },
+    {
+      "alive_cell_steps": 45863,
+      "condition": "adaptive",
+      "harvested_total": 4753.058722746319,
+      "history": [
+        {
+          "remaining_energy": 477.46725893392363,
+          "step": 1,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 658.666486186695,
+          "step": 15,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 845.076120538109,
+          "step": 30,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 927.573908260566,
+          "step": 45,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 962.8701478962398,
+          "step": 60,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 979.2192952354956,
+          "step": 75,
+          "survival_fraction": 0.9921875
+        },
+        {
+          "remaining_energy": 987.8579208413112,
+          "step": 90,
+          "survival_fraction": 0.9921875
+        },
+        {
+          "remaining_energy": 989.4711241760053,
+          "step": 105,
+          "survival_fraction": 0.9921875
+        },
+        {
+          "remaining_energy": 994.0029899420553,
+          "step": 120,
+          "survival_fraction": 0.9921875
+        },
+        {
+          "remaining_energy": 1002.3251914506246,
+          "step": 135,
+          "survival_fraction": 0.9921875
+        },
+        {
+          "remaining_energy": 1004.1210826515662,
+          "step": 150,
+          "survival_fraction": 0.9921875
+        },
+        {
+          "remaining_energy": 1006.5975767979194,
+          "step": 165,
+          "survival_fraction": 0.9921875
+        },
+        {
+          "remaining_energy": 1009.9146297806788,
+          "step": 180,
+          "survival_fraction": 0.9921875
+        }
+      ],
+      "links_created": 23862,
+      "links_expired": 22759,
+      "links_pruned": 164,
+      "neighbor_messages": 166226,
+      "remaining_energy": 1009.9146297806788,
+      "seed": 4,
+      "shock_applied": true,
+      "steps_completed": 180,
+      "survival_fraction": 0.9921875,
+      "trust_updates": 165333
+    },
+    {
+      "alive_cell_steps": 42674,
+      "condition": "none",
+      "harvested_total": 3918.231244772379,
+      "history": [
+        {
+          "remaining_energy": 475.1926272462251,
+          "step": 1,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 639.8910734914707,
+          "step": 15,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 800.4086028498731,
+          "step": 30,
+          "survival_fraction": 0.99609375
+        },
+        {
+          "remaining_energy": 832.1873580102103,
+          "step": 45,
+          "survival_fraction": 0.984375
+        },
+        {
+          "remaining_energy": 850.5544486009601,
+          "step": 60,
+          "survival_fraction": 0.98046875
+        },
+        {
+          "remaining_energy": 864.0821723801765,
+          "step": 75,
+          "survival_fraction": 0.89453125
+        },
+        {
+          "remaining_energy": 873.6386428716567,
+          "step": 90,
+          "survival_fraction": 0.88671875
+        },
+        {
+          "remaining_energy": 857.5352874399374,
+          "step": 105,
+          "survival_fraction": 0.88671875
+        },
+        {
+          "remaining_energy": 844.6997326625906,
+          "step": 120,
+          "survival_fraction": 0.88671875
+        },
+        {
+          "remaining_energy": 837.207538452053,
+          "step": 135,
+          "survival_fraction": 0.88671875
+        },
+        {
+          "remaining_energy": 839.3839237242364,
+          "step": 150,
+          "survival_fraction": 0.88671875
+        },
+        {
+          "remaining_energy": 844.032415271494,
+          "step": 165,
+          "survival_fraction": 0.88671875
+        },
+        {
+          "remaining_energy": 851.0180634992051,
+          "step": 180,
+          "survival_fraction": 0.88671875
+        }
+      ],
+      "links_created": 0,
+      "links_expired": 0,
+      "links_pruned": 0,
+      "neighbor_messages": 0,
+      "remaining_energy": 851.0180634992051,
+      "seed": 5,
+      "shock_applied": true,
+      "steps_completed": 180,
+      "survival_fraction": 0.88671875,
+      "trust_updates": 0
+    },
+    {
+      "alive_cell_steps": 42894,
+      "condition": "broadcast",
+      "harvested_total": 3922.1735959590405,
+      "history": [
+        {
+          "remaining_energy": 475.1926272462251,
+          "step": 1,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 636.5404937285928,
+          "step": 15,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 794.8741781881932,
+          "step": 30,
+          "survival_fraction": 0.9921875
+        },
+        {
+          "remaining_energy": 827.3426392353109,
+          "step": 45,
+          "survival_fraction": 0.98828125
+        },
+        {
+          "remaining_energy": 838.2117185379818,
+          "step": 60,
+          "survival_fraction": 0.97265625
+        },
+        {
+          "remaining_energy": 850.8013856613379,
+          "step": 75,
+          "survival_fraction": 0.90625
+        },
+        {
+          "remaining_energy": 861.3761305094773,
+          "step": 90,
+          "survival_fraction": 0.8984375
+        },
+        {
+          "remaining_energy": 856.7795773293831,
+          "step": 105,
+          "survival_fraction": 0.8984375
+        },
+        {
+          "remaining_energy": 866.1788083427535,
+          "step": 120,
+          "survival_fraction": 0.89453125
+        },
+        {
+          "remaining_energy": 872.2062925169128,
+          "step": 135,
+          "survival_fraction": 0.89453125
+        },
+        {
+          "remaining_energy": 873.0164596952425,
+          "step": 150,
+          "survival_fraction": 0.89453125
+        },
+        {
+          "remaining_energy": 874.8991790030151,
+          "step": 165,
+          "survival_fraction": 0.89453125
+        },
+        {
+          "remaining_energy": 875.329539879428,
+          "step": 180,
+          "survival_fraction": 0.89453125
+        }
+      ],
+      "links_created": 0,
+      "links_expired": 0,
+      "links_pruned": 0,
+      "neighbor_messages": 301686,
+      "remaining_energy": 875.329539879428,
+      "seed": 5,
+      "shock_applied": true,
+      "steps_completed": 180,
+      "survival_fraction": 0.89453125,
+      "trust_updates": 0
+    },
+    {
+      "alive_cell_steps": 42396,
+      "condition": "fixed",
+      "harvested_total": 3980.8942727066055,
+      "history": [
+        {
+          "remaining_energy": 475.1926272462251,
+          "step": 1,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 644.406582815679,
+          "step": 15,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 803.9297740399705,
+          "step": 30,
+          "survival_fraction": 0.99609375
+        },
+        {
+          "remaining_energy": 836.250915712133,
+          "step": 45,
+          "survival_fraction": 0.984375
+        },
+        {
+          "remaining_energy": 850.1657677568285,
+          "step": 60,
+          "survival_fraction": 0.9609375
+        },
+        {
+          "remaining_energy": 864.1691000940737,
+          "step": 75,
+          "survival_fraction": 0.88671875
+        },
+        {
+          "remaining_energy": 878.2413955624527,
+          "step": 90,
+          "survival_fraction": 0.87890625
+        },
+        {
+          "remaining_energy": 860.8392884453507,
+          "step": 105,
+          "survival_fraction": 0.87890625
+        },
+        {
+          "remaining_energy": 846.7891494814999,
+          "step": 120,
+          "survival_fraction": 0.87890625
+        },
+        {
+          "remaining_energy": 843.7470326712053,
+          "step": 135,
+          "survival_fraction": 0.87890625
+        },
+        {
+          "remaining_energy": 844.1414881703832,
+          "step": 150,
+          "survival_fraction": 0.87890625
+        },
+        {
+          "remaining_energy": 842.0215701681414,
+          "step": 165,
+          "survival_fraction": 0.87890625
+        },
+        {
+          "remaining_energy": 846.8772179956169,
+          "step": 180,
+          "survival_fraction": 0.87890625
+        }
+      ],
+      "links_created": 21172,
+      "links_expired": 20322,
+      "links_pruned": 0,
+      "neighbor_messages": 152571,
+      "remaining_energy": 846.8772179956169,
+      "seed": 5,
+      "shock_applied": true,
+      "steps_completed": 180,
+      "survival_fraction": 0.87890625,
+      "trust_updates": 0
+    },
+    {
+      "alive_cell_steps": 42791,
+      "condition": "adaptive",
+      "harvested_total": 3948.3854220416783,
+      "history": [
+        {
+          "remaining_energy": 475.1926272462251,
+          "step": 1,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 643.4801242034456,
+          "step": 15,
+          "survival_fraction": 1.0
+        },
+        {
+          "remaining_energy": 805.1122202971434,
+          "step": 30,
+          "survival_fraction": 0.99609375
+        },
+        {
+          "remaining_energy": 844.2428381107813,
+          "step": 45,
+          "survival_fraction": 0.98828125
+        },
+        {
+          "remaining_energy": 862.4374603439137,
+          "step": 60,
+          "survival_fraction": 0.9765625
+        },
+        {
+          "remaining_energy": 877.7694114001913,
+          "step": 75,
+          "survival_fraction": 0.8984375
+        },
+        {
+          "remaining_energy": 889.6890082616703,
+          "step": 90,
+          "survival_fraction": 0.890625
+        },
+        {
+          "remaining_energy": 862.8813101843949,
+          "step": 105,
+          "survival_fraction": 0.890625
+        },
+        {
+          "remaining_energy": 849.4373795505439,
+          "step": 120,
+          "survival_fraction": 0.890625
+        },
+        {
+          "remaining_energy": 836.1948413760344,
+          "step": 135,
+          "survival_fraction": 0.890625
+        },
+        {
+          "remaining_energy": 831.3214547913352,
+          "step": 150,
+          "survival_fraction": 0.890625
+        },
+        {
+          "remaining_energy": 835.6892318576015,
+          "step": 165,
+          "survival_fraction": 0.890625
+        },
+        {
+          "remaining_energy": 837.9477611520946,
+          "step": 180,
+          "survival_fraction": 0.890625
+        }
+      ],
+      "links_created": 21682,
+      "links_expired": 20678,
+      "links_pruned": 163,
+      "neighbor_messages": 153161,
+      "remaining_energy": 837.9477611520946,
+      "seed": 5,
+      "shock_applied": true,
+      "steps_completed": 180,
+      "survival_fraction": 0.890625,
+      "trust_updates": 152259
+    }
+  ],
+  "scientific_status": "exploratory, not qualifying contest-period evidence",
+  "summary": {
+    "adaptive": {
+      "alive_cell_steps": {
+        "mean": 44449.4,
+        "std": 1186.5726442152625
+      },
+      "harvested_total": {
+        "mean": 4483.557151384757,
+        "std": 357.05483433724777
+      },
+      "links_created": {
+        "mean": 22782.6,
+        "std": 934.1515080542342
+      },
+      "links_pruned": {
+        "mean": 189.4,
+        "std": 23.07032726252491
+      },
+      "neighbor_messages": {
+        "mean": 160977.2,
+        "std": 5405.566331107222
+      },
+      "remaining_energy": {
+        "mean": 940.5166888812676,
+        "std": 66.20037530897383
+      },
+      "survival_fraction": {
+        "mean": 0.94453125,
+        "std": 0.03878023014372142
+      },
+      "trust_updates": {
+        "mean": 160065.4,
+        "std": 5401.79668628874
+      }
+    },
+    "broadcast": {
+      "alive_cell_steps": {
+        "mean": 44220.2,
+        "std": 1052.9830767870867
+      },
+      "harvested_total": {
+        "mean": 4309.064220910418,
+        "std": 269.80326848854986
+      },
+      "links_created": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "links_pruned": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "neighbor_messages": {
+        "mean": 322575.2,
+        "std": 12029.205499948863
+      },
+      "remaining_energy": {
+        "mean": 936.6618067982233,
+        "std": 47.74872071065522
+      },
+      "survival_fraction": {
+        "mean": 0.9375,
+        "std": 0.03467553284558148
+      },
+      "trust_updates": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "fixed": {
+      "alive_cell_steps": {
+        "mean": 44409.4,
+        "std": 1303.2388269231392
+      },
+      "harvested_total": {
+        "mean": 4482.710209959509,
+        "std": 347.0866920140249
+      },
+      "links_created": {
+        "mean": 22476.6,
+        "std": 820.070631104419
+      },
+      "links_pruned": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "neighbor_messages": {
+        "mean": 160776.8,
+        "std": 5426.301075318251
+      },
+      "remaining_energy": {
+        "mean": 947.0123531480904,
+        "std": 63.405630845546014
+      },
+      "survival_fraction": {
+        "mean": 0.9453125,
+        "std": 0.04228865188351362
+      },
+      "trust_updates": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "none": {
+      "alive_cell_steps": {
+        "mean": 44472.6,
+        "std": 1128.0064893430358
+      },
+      "harvested_total": {
+        "mean": 4483.338811937834,
+        "std": 355.1190696502479
+      },
+      "links_created": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "links_pruned": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "neighbor_messages": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "remaining_energy": {
+        "mean": 947.5701283437184,
+        "std": 59.96850550771118
+      },
+      "survival_fraction": {
+        "mean": 0.94609375,
+        "std": 0.03709086709521631
+      },
+      "trust_updates": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    }
+  }
+}
