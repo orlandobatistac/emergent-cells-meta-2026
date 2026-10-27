@@ -18,6 +18,14 @@ textarea{width:100%;font:inherit;padding:10px;border-radius:8px;border:1px solid
 <p class="note" id="challenge-state">Primero diseña un desafío. Si usas la plantilla, NO se realizará una llamada a Meta.</p>
 <pre id="challenge-result" style="white-space:pre-wrap;overflow-wrap:anywhere;font-size:11px;max-height:220px;overflow:auto;color:#a8dfbd"></pre>
 <p class="note">Meta propone parámetros del entorno. No dirige células ni crea automáticamente una tarea que necesite cooperación.</p></section>
+<section class="panel" id="reward-surprise-lab">
+<h2>Detectar un cambio sin aviso · A → B → A</h2>
+<p class="note">Cada célula observa exclusivamente si su propia recompensa cae durante varios pasos. Puede cambiar de memoria local sin recibir un marcador de temporada. El detector y las dos memorias están programados, no surgieron espontáneamente.</p>
+<button class="primary" id="reward-surprise-run" type="button">Probar detección local</button>
+<p class="note" id="reward-surprise-state" role="status">2 semillas de demostración, 48 parejas, 4200 pasos de A, 3200 de B y medición de recuperación.</p>
+<pre id="reward-surprise-result" style="white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px;max-height:240px;overflow:auto;color:#a8dfbd"></pre>
+<p class="note">Incluye controles con contexto proporcionado y sin cambios de memoria. No utiliza Meta, no es una prueba de AGI y la energía es simulada.</p>
+</section>
 <section class="panel" id="context-switch-lab">
 <h2>Aprendizaje continuo · A → B → A</h2>
 <p class="note">Prueba dos reglas opuestas de una compuerta compartida. Las células reciben un indicador de temporada (0/1) y aprenden cada regla con su energía local. La tarea y la señal de temporada están diseñadas, NO son detectadas espontáneamente.</p>
@@ -144,6 +152,28 @@ async function runContextSwitch(){
   }catch(e){$('context-switch-state').textContent=e.message;}
   finally{button.disabled=false;}
 }
+async function runRewardSurprise(){
+  stop();
+  const button=$('reward-surprise-run');button.disabled=true;
+  $('reward-surprise-state').textContent='Comprobando recuperación tras un cambio no anunciado...';
+  try{
+    const data=await challengeCall('/api/reward-surprise/run',{});
+    const values=data.reward_surprise.aggregate;
+    const m=values.reward_surprise;
+    const fmt=x=>(100*x).toFixed(2)+'%';
+    $('reward-surprise-result').textContent=
+      'Sin aviso — regla A inicial: '+fmt(m.a_before)+'\n'+
+      'Sin aviso — regla B aprendida: '+fmt(m.b_after)+'\n'+
+      'Sin aviso — regla A recuperada: '+fmt(m.a_after_detection_no_weight_training)+'\n'+
+      'Parejas que detectaron el regreso: '+fmt(m.a_return_pair_detection_fraction)+'\n'+
+      'Latencia media: '+m.a_return_detection_latency_mean.toFixed(1)+' pasos\n'+
+      'Con temporada conocida, B: '+fmt(values.provided_context.b_after)+'\n'+
+      'Sin detector ni temporada, B: '+fmt(values.blind_memory.b_after);
+    $('reward-surprise-state').textContent='Prueba completada; detector local programado, sin temporada ni Meta API.';
+  }catch(e){$('reward-surprise-state').textContent=e.message;}
+  finally{button.disabled=false;}
+}
+$('reward-surprise-run').onclick=runRewardSurprise;
 $('context-switch-run').onclick=runContextSwitch;
 $('protocol-run').onclick=runLearnedProtocol;
 $('cooperation-run').onclick=runCooperationDemo;

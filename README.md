@@ -105,3 +105,11 @@ A new local reward experiment learns XOR world A, adapts to inverted XNOR world 
 Untouched after-pilot seeds 1001..1005: context-memory cells reached **96.40% B** and immediately recovered **96.51% A**; explicit one-bank reset learned **96.40% B** but returned to only **0.19% A**; a saturated single-bank learner failed to learn B. These narrow results are expected under the supplied season marker and deliberately frozen protocol. They **do not** demonstrate autonomous change detection, general intelligence or a capacity/energy-matched improvement.
 
 See [experimental report](docs/CONTEXT_SWITCH_2026-10-27.md), [raw fresh-seed data](results/audited/2026-10-27-context-switch-heldout.json), and [live UI instructions](docs/CONTEXT_SWITCH_UI_2026-10-27.md).
+
+## Unannounced environmental reversal detection (October 27)
+
+A new **local energy-reward surprise detector** can switch among two private learned receiver-memory banks WITHOUT any externally supplied season identifier. Two-cell gates use an independently learned one-bit message; the external environment changes XOR to XNOR and back. The detector's exponential moving average, maturity threshold, two slots and switch cooldown are **explicitly designed** and are not emergent themselves.
+
+On five fresh seeds (2001..2005, 64 paired gates), the cells learned B with **96.29%** success; after a reward-only detector delay averaging **18.61 episodes**, they recovered A to **96.51%**, with **99.69%** of pairs detecting the return. This is recovery in task PERFORMANCE: some weights of old A change during the initial detection delay on B. An explicit seasonal-context oracle got 96.32% B; the model with no detector and no season cue got only 0.18% B.
+
+Reproduce the exact experiment and examine caveats in [reward-only detector study](docs/REWARD_SURPRISE_CHANGE_2026-10-27.md), [raw fresh-seed observations](results/audited/2026-10-27-unannounced-switch-fresh-seeds.json) and [browser panel guide](docs/REWARD_SURPRISE_UI_2026-10-27.md). No Meta Model API calls or measured physical joules are involved.

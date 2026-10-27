@@ -12,6 +12,9 @@ from emergent_cells.experiments.learned_messages import (
 from emergent_cells.experiments.context_switch import (
     SwitchSpec, benchmark as benchmark_context_switch,
 )
+from emergent_cells.experiments.reward_surprise import (
+    benchmark as benchmark_reward_surprise,
+)
 from emergent_cells.meta.world_designer import (
     DesignError, design_world, evaluate_world, validate_proposal,
 )
@@ -25,6 +28,7 @@ class LabServer(HTTPServer):
         self.cooperation_report = None
         self.learned_protocol_report = None
         self.context_switch_report = None
+        self.reward_surprise_report = None
         super().__init__(address, Handler)
 
 
@@ -69,7 +73,13 @@ class Handler(BaseHTTPRequestHandler):
             report["cooperation_evaluation"] = self.server.cooperation_report
             report["learned_protocol_evaluation"] = self.server.learned_protocol_report
             report["context_switch_evaluation"] = self.server.context_switch_report
+            report["reward_surprise_evaluation"] = self.server.reward_surprise_report
             self.respond(200, report)
+        elif self.path == '/api/reward-surprise':
+            self.respond(200, {
+                'report': self.server.reward_surprise_report,
+                'source': 'local-reward-based-context-inference-no-meta',
+            })
         elif self.path == '/api/context-switch':
             self.respond(200, {
                 'report': self.server.context_switch_report,
@@ -101,7 +111,7 @@ class Handler(BaseHTTPRequestHandler):
         if self.path not in ('/api/action', '/api/challenge/design',
                              '/api/challenge/evaluate', '/api/challenge/apply',
                              '/api/cooperation/run', '/api/protocol/run',
-                             '/api/context-switch/run'):
+                             '/api/context-switch/run', '/api/reward-surprise/run'):
             return self.respond(404, {'error': 'Not found'})
         if self.headers.get_content_type() != 'application/json':
             return self.respond(415, {'error': 'JSON required'})
@@ -112,6 +122,19 @@ class Handler(BaseHTTPRequestHandler):
             data = json.loads(self.rfile.read(length))
             if not isinstance(data, dict):
                 raise ValueError('Expected object')
+            if self.path == '/api/reward-surprise/run':
+                if data:
+                    raise ValueError('Reward-surprise demo takes empty JSON only')
+                outcome = benchmark_reward_surprise(
+                    [21, 22], SwitchSpec(pairs=48, train_a=4200,
+                                        train_b=3200, test_steps=150)
+                )
+                self.server.reward_surprise_report = outcome
+                return self.respond(200, {
+                    'reward_surprise': outcome,
+                    'source': 'local-reward-based-context-inference-not-meta',
+                    'caveat': 'Detector thresholds and two memory banks are engineered',
+                })
             if self.path == '/api/context-switch/run':
                 if data:
                     raise ValueError('Context-switch demo takes empty JSON only')
