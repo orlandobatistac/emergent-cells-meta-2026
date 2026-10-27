@@ -15,6 +15,9 @@ from emergent_cells.experiments.context_switch import (
 from emergent_cells.experiments.reward_surprise import (
     benchmark as benchmark_reward_surprise,
 )
+from emergent_cells.experiments.dynamic_memory import (
+    GrowthSpec, benchmark as benchmark_dynamic_memory,
+)
 from emergent_cells.meta.world_designer import (
     DesignError, design_world, evaluate_world, validate_proposal,
 )
@@ -29,6 +32,7 @@ class LabServer(HTTPServer):
         self.learned_protocol_report = None
         self.context_switch_report = None
         self.reward_surprise_report = None
+        self.dynamic_memory_report = None
         super().__init__(address, Handler)
 
 
@@ -74,7 +78,13 @@ class Handler(BaseHTTPRequestHandler):
             report["learned_protocol_evaluation"] = self.server.learned_protocol_report
             report["context_switch_evaluation"] = self.server.context_switch_report
             report["reward_surprise_evaluation"] = self.server.reward_surprise_report
+            report["dynamic_memory_evaluation"] = self.server.dynamic_memory_report
             self.respond(200, report)
+        elif self.path == '/api/dynamic-memory':
+            self.respond(200, {
+                'report': self.server.dynamic_memory_report,
+                'source': 'local-heuristic-bank-growth-no-meta',
+            })
         elif self.path == '/api/reward-surprise':
             self.respond(200, {
                 'report': self.server.reward_surprise_report,
@@ -111,7 +121,8 @@ class Handler(BaseHTTPRequestHandler):
         if self.path not in ('/api/action', '/api/challenge/design',
                              '/api/challenge/evaluate', '/api/challenge/apply',
                              '/api/cooperation/run', '/api/protocol/run',
-                             '/api/context-switch/run', '/api/reward-surprise/run'):
+                             '/api/context-switch/run', '/api/reward-surprise/run',
+                             '/api/dynamic-memory/run'):
             return self.respond(404, {'error': 'Not found'})
         if self.headers.get_content_type() != 'application/json':
             return self.respond(415, {'error': 'JSON required'})
@@ -122,6 +133,18 @@ class Handler(BaseHTTPRequestHandler):
             data = json.loads(self.rfile.read(length))
             if not isinstance(data, dict):
                 raise ValueError('Expected object')
+            if self.path == '/api/dynamic-memory/run':
+                if data:
+                    raise ValueError('Dynamic memory demo accepts empty JSON only')
+                outcome = benchmark_dynamic_memory(
+                    [11, 12], GrowthSpec(
+                        pairs=24, phase_steps=3500, dropout=.08))
+                self.server.dynamic_memory_report = outcome
+                return self.respond(200, {
+                    'dynamic_memory': outcome,
+                    'source': 'local-heuristic-bank-growth-no-meta',
+                    'caveat': 'Growth trigger and 3-bank limit were engineered',
+                })
             if self.path == '/api/reward-surprise/run':
                 if data:
                     raise ValueError('Reward-surprise demo takes empty JSON only')

@@ -18,6 +18,14 @@ textarea{width:100%;font:inherit;padding:10px;border-radius:8px;border:1px solid
 <p class="note" id="challenge-state">Primero diseña un desafío. Si usas la plantilla, NO se realizará una llamada a Meta.</p>
 <pre id="challenge-result" style="white-space:pre-wrap;overflow-wrap:anywhere;font-size:11px;max-height:220px;overflow:auto;color:#a8dfbd"></pre>
 <p class="note">Meta propone parámetros del entorno. No dirige células ni crea automáticamente una tarea que necesite cooperación.</p></section>
+<section class="panel" id="dynamic-memory-lab">
+<h2>Crear una tercera memoria · A → B → C → A → B</h2>
+<p class="note">Tres reglas de un recurso compartido: XOR, XNOR y AND. Ninguna célula recibe el identificador de tarea. Un detector local programado prueba memorias antiguas y crea otra si fallan. La cantidad máxima de memorias (3) y los umbrales fueron definidos por nosotros.</p>
+<button class="primary" id="dynamic-memory-run" type="button">Entrenar y comparar crecimiento</button>
+<p class="note" id="dynamic-memory-state" role="status">2 semillas piloto, 24 parejas, 8% de pérdida aleatoria de recompensa; compara crecer, límite 2, política única y control con regla conocida.</p>
+<pre id="dynamic-memory-result" style="white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px;max-height:280px;overflow:auto;color:#a8dfbd"></pre>
+<p class="note">El prototipo es local, utiliza compuertas y mensajes binarios diseñados, no genera inteligencia general y no llama a Meta.</p>
+</section>
 <section class="panel" id="reward-surprise-lab">
 <h2>Detectar un cambio sin aviso · A → B → A</h2>
 <p class="note">Cada célula observa exclusivamente si su propia recompensa cae durante varios pasos. Puede cambiar de memoria local sin recibir un marcador de temporada. El detector y las dos memorias están programados, no surgieron espontáneamente.</p>
@@ -173,6 +181,26 @@ async function runRewardSurprise(){
   }catch(e){$('reward-surprise-state').textContent=e.message;}
   finally{button.disabled=false;}
 }
+async function runDynamicMemory(){
+  stop();
+  const b=$('dynamic-memory-run');b.disabled=true;
+  $('dynamic-memory-state').textContent='Entrenando tres memorias y evaluando cambios repetidos...';
+  try{
+    const data=await challengeCall('/api/dynamic-memory/run',{});
+    const report=data.dynamic_memory;
+    const modes=['grow','cap2','single','oracle','fast_detector'];
+    const steps=['A','B','C','returnA','returnB'];
+    $('dynamic-memory-result').textContent=
+      'Condición | A | B | C | Recuerda A | Recuerda B\n'+
+      modes.map(m=>m+' | '+steps.map(k=>
+        (report.summary[m][k].tail_success_mean*100).toFixed(1)+'%').join(' | ')).join('\n')+
+      '\nMemorias creadas en C (crecimiento): '+
+      report.summary.grow.C.avg_banks.toFixed(2)+' por célula';
+    $('dynamic-memory-state').textContent='Ensayo terminado. No equivale a detección robusta de ruido ni inteligencia general.';
+  }catch(e){$('dynamic-memory-state').textContent=e.message;}
+  finally{b.disabled=false;}
+}
+$('dynamic-memory-run').onclick=runDynamicMemory;
 $('reward-surprise-run').onclick=runRewardSurprise;
 $('context-switch-run').onclick=runContextSwitch;
 $('protocol-run').onclick=runLearnedProtocol;

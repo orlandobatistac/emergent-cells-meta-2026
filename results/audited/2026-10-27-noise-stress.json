@@ -1,0 +1,115 @@
+{
+  "conditions": [
+    [
+      0.08,
+      0.08
+    ],
+    [
+      0.08,
+      0.2
+    ],
+    [
+      0.0,
+      0.0
+    ]
+  ],
+  "date": "2026-10-27",
+  "rows": [
+    {
+      "change_alarms_during_stress": 0,
+      "new_memory_before_stress": 0,
+      "new_memory_during_stress": 0,
+      "seed": 11,
+      "stationary_dropout": 0.08,
+      "steps": 1400,
+      "success_after_stress_last200": 0.93203125,
+      "training_dropout": 0.08
+    },
+    {
+      "change_alarms_during_stress": 62,
+      "new_memory_before_stress": 0,
+      "new_memory_during_stress": 62,
+      "seed": 11,
+      "stationary_dropout": 0.2,
+      "steps": 1400,
+      "success_after_stress_last200": 0.2709375,
+      "training_dropout": 0.08
+    },
+    {
+      "change_alarms_during_stress": 0,
+      "new_memory_before_stress": 0,
+      "new_memory_during_stress": 0,
+      "seed": 11,
+      "stationary_dropout": 0.0,
+      "steps": 1400,
+      "success_after_stress_last200": 0.9409375,
+      "training_dropout": 0.0
+    },
+    {
+      "change_alarms_during_stress": 0,
+      "new_memory_before_stress": 0,
+      "new_memory_during_stress": 0,
+      "seed": 12,
+      "stationary_dropout": 0.08,
+      "steps": 1400,
+      "success_after_stress_last200": 0.94296875,
+      "training_dropout": 0.08
+    },
+    {
+      "change_alarms_during_stress": 64,
+      "new_memory_before_stress": 0,
+      "new_memory_during_stress": 64,
+      "seed": 12,
+      "stationary_dropout": 0.2,
+      "steps": 1400,
+      "success_after_stress_last200": 0.2571875,
+      "training_dropout": 0.08
+    },
+    {
+      "change_alarms_during_stress": 0,
+      "new_memory_before_stress": 0,
+      "new_memory_during_stress": 0,
+      "seed": 12,
+      "stationary_dropout": 0.0,
+      "steps": 1400,
+      "success_after_stress_last200": 0.93546875,
+      "training_dropout": 0.0
+    },
+    {
+      "change_alarms_during_stress": 0,
+      "new_memory_before_stress": 0,
+      "new_memory_during_stress": 0,
+      "seed": 13,
+      "stationary_dropout": 0.08,
+      "steps": 1400,
+      "success_after_stress_last200": 0.9475,
+      "training_dropout": 0.08
+    },
+    {
+      "change_alarms_during_stress": 64,
+      "new_memory_before_stress": 0,
+      "new_memory_during_stress": 64,
+      "seed": 13,
+      "stationary_dropout": 0.2,
+      "steps": 1400,
+      "success_after_stress_last200": 0.24578125,
+      "training_dropout": 0.08
+    },
+    {
+      "change_alarms_during_stress": 0,
+      "new_memory_before_stress": 0,
+      "new_memory_during_stress": 0,
+      "seed": 13,
+      "stationary_dropout": 0.0,
+      "steps": 1400,
+      "success_after_stress_last200": 0.95359375,
+      "training_dropout": 0.0
+    }
+  ],
+  "schema": "stationary-noise-false-memory-v1",
+  "scientific_limitations": [
+    "Noise stress is reward dropout, not an actual task change.",
+    "A local reward-surprise detector cannot fully distinguish two causes of reward loss.",
+    "No independent biological substrate, no measured joules, and no dynamic cells."
+  ]
+}

@@ -113,3 +113,13 @@ A new **local energy-reward surprise detector** can switch among two private lea
 On five fresh seeds (2001..2005, 64 paired gates), the cells learned B with **96.29%** success; after a reward-only detector delay averaging **18.61 episodes**, they recovered A to **96.51%**, with **99.69%** of pairs detecting the return. This is recovery in task PERFORMANCE: some weights of old A change during the initial detection delay on B. An explicit seasonal-context oracle got 96.32% B; the model with no detector and no season cue got only 0.18% B.
 
 Reproduce the exact experiment and examine caveats in [reward-only detector study](docs/REWARD_SURPRISE_CHANGE_2026-10-27.md), [raw fresh-seed observations](results/audited/2026-10-27-unannounced-switch-fresh-seeds.json) and [browser panel guide](docs/REWARD_SURPRISE_UI_2026-10-27.md). No Meta Model API calls or measured physical joules are involved.
+
+## Dynamic, on-demand third memory (October 27)
+
+In a new **A XOR → B XNOR → C AND → A → B** experiment, individually rewarded fixed-pair cells learn one-bit messages and use an engineered local reward-surprise mechanism to **probe existing memory banks and allocate a new conditional-response bank only when old policies fail**. The world does not tell the adaptive learner the Boolean rule. The memory-allocation algorithm, noise sensitivity threshold, maximum three slots, fixed pairs and Boolean tasks are author designed.
+
+With **five previously unused seeds**, 32 pairs and 8% missing resource pulses, growth reached **93.7 / 94.3 / 95.2 / 94.1 / 94.5%** success across those stages. The two-bank control reached **24.1%** on C. The rare AND input `11` was handled at **92.2–95.4%**, excluding an always-zero shortcut. A first, faster detector **failed** due to false memory allocation and was preserved in the results.
+
+**Key negative result:** the final detector produces no false new memories in stationary 8% dropout, but mistakes a sudden resource-dropout increase to 20% for a task change, allocating 62–64 needless new memories in each stress seed. Thus robust context inference is **not** solved.
+
+See [the scientific report](docs/DYNAMIC_MEMORY_THIRD_RULE_2026-10-27.md), [complete holdout data](results/audited/2026-10-27-dynamic-third-rule-holdout.json), [noise stress](results/audited/2026-10-27-noise-stress.json), and [interactive demo](docs/DYNAMIC_MEMORY_UI_2026-10-27.md). **No Meta API call, measured joules, agentic AI or general intelligence is implied.**
