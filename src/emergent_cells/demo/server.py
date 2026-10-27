@@ -6,6 +6,9 @@ from pathlib import Path
 from emergent_cells.interactive import Session
 from emergent_cells.simulation import RunSpec
 from emergent_cells.experiments.dual_cue import GateSpec, benchmark as benchmark_cooperation
+from emergent_cells.experiments.learned_messages import (
+    ProtocolSpec, benchmark as benchmark_learned_messages,
+)
 from emergent_cells.meta.world_designer import (
     DesignError, design_world, evaluate_world, validate_proposal,
 )
@@ -17,6 +20,7 @@ class LabServer(HTTPServer):
         self.challenge = None
         self.challenge_report = None
         self.cooperation_report = None
+        self.learned_protocol_report = None
         super().__init__(address, Handler)
 
 
@@ -59,7 +63,13 @@ class Handler(BaseHTTPRequestHandler):
             report["world_design"] = self.server.challenge
             report["world_evaluation"] = self.server.challenge_report
             report["cooperation_evaluation"] = self.server.cooperation_report
+            report["learned_protocol_evaluation"] = self.server.learned_protocol_report
             self.respond(200, report)
+        elif self.path == '/api/protocol':
+            self.respond(200, {
+                'report': self.server.learned_protocol_report,
+                'source': 'independent-local-symbol-learning-no-meta',
+            })
         elif self.path == '/api/cooperation':
             self.respond(200, {
                 'report': self.server.cooperation_report,
@@ -80,7 +90,7 @@ class Handler(BaseHTTPRequestHandler):
             return self.respond(403, {'error': 'Local same-origin request required'})
         if self.path not in ('/api/action', '/api/challenge/design',
                              '/api/challenge/evaluate', '/api/challenge/apply',
-                             '/api/cooperation/run'):
+                             '/api/cooperation/run', '/api/protocol/run'):
             return self.respond(404, {'error': 'Not found'})
         if self.headers.get_content_type() != 'application/json':
             return self.respond(415, {'error': 'JSON required'})
@@ -91,6 +101,19 @@ class Handler(BaseHTTPRequestHandler):
             data = json.loads(self.rfile.read(length))
             if not isinstance(data, dict):
                 raise ValueError('Expected object')
+            if self.path == '/api/protocol/run':
+                if data:
+                    raise ValueError('Learned-message demo takes empty JSON only')
+                # Deliberately bounded live demo; raw 10-seed study is separate.
+                report = benchmark_learned_messages(
+                    [11, 12, 13],
+                    ProtocolSpec(pairs=64, train_steps=3500, test_steps=150)
+                )
+                self.server.learned_protocol_report = report
+                return self.respond(200, {
+                    'protocol': report,
+                    'source': 'local-independent-learning-not-meta',
+                })
             if self.path == '/api/cooperation/run':
                 if data:
                     raise ValueError('Cooperation demo takes an empty JSON object')

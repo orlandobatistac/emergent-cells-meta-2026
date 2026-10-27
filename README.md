@@ -89,3 +89,11 @@ Detailed [implementation and limits](docs/META_WORLD_DESIGNER.md) and [activatio
 ## Unified research lab: cooperative comparisons (October 27 integration)
 
 The new **cooperative gate panel** brings the pre-existing October 26 dual-cue experiments into the existing local browser lab. It runs fixed bounded development seeds, displays all five local-message ablations and the knockout of already-trained policies, and attaches results to the session report. The task is an engineered XOR gate with fixed pair assignments and does **not** run Meta, create a natural-language agent, or demonstrate general intelligence. The Oct 27 integration code is distinct from the Oct 26 scientific prototype; neither is silently represented as original contest-period research. See [integration notes](docs/UNIFIED_LAB_2026-10-27.md).
+
+## Learned one-bit messages — October 27 milestone
+
+A NEW local learning experiment removes the hard-coded XOR *policy feature* from the older dual-cue gate. Each cell independently trains a private stochastic sender encoder (one-bit symbol) and a generic four-slot local receiver table, using its own simulated energy delta. **The world still provides XOR gate physics, a predefined pair, a one-bit channel, and the four-slot receiver representation.**
+
+The 10-seed exploratory run (128 fixed pairs, 8000 training and 500 new-input testing episodes per seed) obtained **98.23%** group-gate success for learned local symbols, versus **49.35%** with reception blocked and **48.36%** with random symbols. Blocking messages in the SAME trained policies gave **25.03%**. No unseen task-function transfer or general intelligence has been demonstrated.
+
+See [methodology, citations and limitations](docs/LEARNED_PROTOCOL_2026-10-27.md), [raw outcomes](results/audited/2026-10-27-learned-messages-10seeds.json), and [new browser workflow](docs/LEARNED_PROTOCOL_UI_2026-10-27.md). This is new October 27 work; Oct 26 background modules retain their original provenance.

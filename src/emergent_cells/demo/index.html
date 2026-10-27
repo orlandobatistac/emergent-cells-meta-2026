@@ -18,6 +18,14 @@ textarea{width:100%;font:inherit;padding:10px;border-radius:8px;border:1px solid
 <p class="note" id="challenge-state">Primero diseña un desafío. Si usas la plantilla, NO se realizará una llamada a Meta.</p>
 <pre id="challenge-result" style="white-space:pre-wrap;overflow-wrap:anywhere;font-size:11px;max-height:220px;overflow:auto;color:#a8dfbd"></pre>
 <p class="note">Meta propone parámetros del entorno. No dirige células ni crea automáticamente una tarea que necesite cooperación.</p></section>
+<section class="panel" id="learned-message-lab">
+<h2>Mensajes aprendidos · Sin fórmula XOR en las células</h2>
+<p class="note">Cada célula aprende qué bit enviar y cómo responder al de su compañera usando solo su energía local. Aquí no recibe la operación XOR preprogramada que utilizaba el prototipo anterior.</p>
+<button class="primary" id="protocol-run" type="button">Entrenar y comparar mensajes aprendidos</button>
+<p class="note" id="protocol-state" role="status">3 semillas de desarrollo, 64 parejas, 3500 episodios de aprendizaje y 150 de evaluación.</p>
+<pre id="protocol-result" style="white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px;max-height:250px;overflow:auto;color:#a8dfbd"></pre>
+<p class="note">El entorno sigue usando una compuerta XOR externa, parejas fijas y una tabla genérica de cuatro observaciones. No equivale a inteligencia general ni usa Meta API.</p>
+</section>
 <section class="panel" id="cooperation-lab">
 <h2>Cooperación celular · Desafío de dos señales</h2>
 <p class="note">Dos células tienen información diferente. Una compuerta compartida entrega recursos solo si se coordinan. Comparamos comunicación verdadera, ausente, alterada y aprendizaje congelado.</p>
@@ -92,6 +100,23 @@ async function runCooperationDemo(){
     $('cooperation-state').textContent=e.message;
   }finally{b.disabled=false;}
 }
+async function runLearnedProtocol(){
+  stop();
+  const button=$('protocol-run');button.disabled=true;
+  $('protocol-state').textContent='Entrenando emisores y receptores locales; sin conexión a Meta...';
+  try{
+    const data=await challengeCall('/api/protocol/run',{});
+    const summary=data.protocol.aggregate;
+    const show=['learned_messages','blocked_messages','random_messages','fixed_sender','frozen_actor'];
+    $('protocol-result').textContent=show.map(key=>
+      key+': '+(100*summary[key].test_success_fraction.mean).toFixed(1)+'% de coordinación'
+    ).join('\n')+'\nBloqueo del mismo modelo entrenado: '+
+      (100*summary.same_policy_knockouts.mean_received_blocked).toFixed(1)+'%';
+    $('protocol-state').textContent='Prueba exploratoria completada. Los mensajes se aprenden; las parejas y la tarea son diseñadas.';
+  }catch(e){$('protocol-state').textContent=e.message;}
+  finally{button.disabled=false;}
+}
+$('protocol-run').onclick=runLearnedProtocol;
 $('cooperation-run').onclick=runCooperationDemo;
 $('challenge-design').onclick=designChallenge;
 $('challenge-evaluate').onclick=evaluateChallenge;
