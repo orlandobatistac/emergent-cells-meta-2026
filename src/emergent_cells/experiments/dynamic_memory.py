@@ -330,6 +330,7 @@ def run_trial(seed: int, condition="grow", spec: GrowthSpec = GrowthSpec()):
             "total_success": float(np.mean(history)),
             "mean_allocated_banks": float(pop.allocated.mean()),
             "allocated_tensor_columns": int(pop.weights.shape[1]),
+            "packed_policy_storage_bytes": int(pop.weights.nbytes + pop.baseline.nbytes),
             "max_allocated_banks": int(pop.allocated.max()),
             "case_accuracy_last200": {
                 format(k, "02b"): float(per_case_hits[k]/per_case_total[k])

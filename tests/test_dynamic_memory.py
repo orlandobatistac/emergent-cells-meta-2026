@@ -31,6 +31,32 @@ class DynamicMemoryTests(unittest.TestCase):
         self.assertTrue((cells.active == 0).all())
         self.assertEqual(cells.weights.shape, (cells.n, 1, 4))
 
+    def test_lazy_storage_expands_only_on_demand(self):
+        p = GrowingCells(self.spec, 31, "grow")
+        self.assertEqual(p.weights.shape, (p.n, 1, 4))
+        self.assertEqual(p.baseline.shape, (p.n, 1))
+        initial = p.weights[:, 0].copy()
+        # One cell asks for another logical bank. The vectorized array
+        # grows for the WHOLE population; other cells remain logically 1-bank.
+        select = np.zeros(p.n, dtype=bool)
+        select[0] = True
+        p._allocate(select)
+        self.assertEqual(p.weights.shape, (p.n, 2, 4))
+        self.assertEqual(p.baseline.shape, (p.n, 2))
+        self.assertEqual(p.allocated[0], 2)
+        self.assertTrue((p.allocated[1:] == 1).all())
+        np.testing.assert_array_equal(p.weights[:, 0], initial)
+        select[:] = False
+        select[1] = True
+        p._allocate(select)
+        self.assertEqual(p.weights.shape[1], 2)
+        select[:] = False
+        select[0] = True
+        p._allocate(select)
+        self.assertEqual(p.weights.shape[1], 3)
+        self.assertEqual(p.allocated[0], 3)
+        np.testing.assert_array_equal(p.weights[:, 0], initial)
+
     def test_private_policy_and_task_rule_no_direct_target_features(self):
         cells = GrowingCells(self.spec, 5, "grow")
         bits, send, action, noise = next(rng_stream(7, 1, cells.n, "A"))
