@@ -20,6 +20,11 @@ from .active_probes import ProbeSpec, pretrain, sigmoid, sample_world, evaluate 
 STATES = ("normal", "weak_uncertain", "strong_uncertain", "likely_scarce", "likely_flip", "recent_failed_probes")
 SCENARIOS = ("stable", "changed_11", "scarcity_11", "uniform_drought", "global_change",
              "changed_01", "scarcity_10")
+# True out-of-distribution evaluation cases: NEVER sampled by train_policy.
+HOLDOUT_SCENARIOS = ("changed_10", "scarcity_01", "changed_10_drought",
+                     "scarcity_01_partial", "mixed_change_10_scarcity_01",
+                     "global_change_drought")
+ALL_SCENARIOS = SCENARIOS + HOLDOUT_SCENARIOS
 
 
 @dataclass(frozen=True)
@@ -107,14 +112,19 @@ class LocalCuriosity:
         return greedy
 
     def run_episode(self, sender, decoder, scenarios, rng, *,
-                    steps, train, epsilon, diagnostic=False):
+                    steps, train, epsilon, diagnostic=False,
+                    stop_after_failed_probes=None):
         self.reset_environment()
-        if len(scenarios)!=self.spec.pairs or any(s not in SCENARIOS for s in scenarios):
+        if len(scenarios)!=self.spec.pairs or any(s not in ALL_SCENARIOS for s in scenarios):
             raise ValueError("invalid private environment assignment")
         scenario=np.asarray(scenarios)
-        critical=np.array([3 if s in ("changed_11","scarcity_11") else
-                           1 if s=="changed_01" else
-                           2 if s=="scarcity_10" else -1 for s in scenario])
+        critical=np.array([
+            3 if s in ("changed_11", "scarcity_11") else
+            1 if s in ("changed_01", "scarcity_01", "scarcity_01_partial") else
+            2 if s in ("scarcity_10", "changed_10", "changed_10_drought",
+                       "mixed_change_10_scarcity_01") else -1
+            for s in scenario
+        ])
         n=self.n
         earned=0.
         correct=0.
@@ -123,6 +133,8 @@ class LocalCuriosity:
         probes=0
         crit_hit=0
         crit_total=0
+        case_hits=np.zeros(4,dtype=int)
+        case_visits=np.zeros(4,dtype=int)
         for _ in range(steps):
             bits=rng.integers(0,2,n)
             pair_cues=bits[::2]*2+bits[1::2]
@@ -140,19 +152,37 @@ class LocalCuriosity:
             # No reason to explore once existing cell-local memory has fully
             # learned the flipped action, same rule in all methods.
             request&=~self.corrected[self.ids,slot]
+            # Optional, evaluation-only risk guard: prevent repeated costly
+            # probes in the SAME private slot after observed failures.
+            # This is authored local safety, NOT a learned curiosity mechanism.
+            if stop_after_failed_probes is not None:
+                if not isinstance(stop_after_failed_probes, int) or (
+                        stop_after_failed_probes < 1):
+                    raise ValueError("invalid probe-failure guard")
+                request &= failed < stop_after_failed_probes
             actual_probe=request[::2]|request[1::2]
             active=request|request[self.peer]
             inverted=self.corrected[self.ids,slot]^active
             act=learned_action ^ inverted.astype(int)
             target=bits[::2]^bits[1::2]
-            flipped=((scenario=="global_change") |
+            flipped=(np.isin(scenario, ["global_change", "global_change_drought"]) |
                      ((scenario=="changed_11") & (pair_cues==3)) |
-                     ((scenario=="changed_01") & (pair_cues==1)))
+                     ((scenario=="changed_01") & (pair_cues==1)) |
+                     (np.isin(scenario, ["changed_10", "changed_10_drought",
+                                         "mixed_change_10_scarcity_01"]) &
+                      (pair_cues==2)))
             target ^= flipped.astype(int)
-            available=np.where(scenario=="uniform_drought",.55,self.spec.pulse_rate)
+            available=np.where(
+                np.isin(scenario, ["uniform_drought", "changed_10_drought",
+                                    "global_change_drought"]),
+                .55, self.spec.pulse_rate)
             available=np.where(
                 ((scenario=="scarcity_11")&(pair_cues==3)) |
-                ((scenario=="scarcity_10")&(pair_cues==2)),0.,available)
+                ((scenario=="scarcity_10")&(pair_cues==2)) |
+                (np.isin(scenario, ["scarcity_01", "mixed_change_10_scarcity_01"]) &
+                 (pair_cues==1)),0.,available)
+            available=np.where((scenario=="scarcity_01_partial") &
+                               (pair_cues==1), .20, available)
             opened=(act[::2]==target)&(act[1::2]==target)
             reward=opened & (rng.random(self.spec.pairs)<available)
             own_reward=np.repeat(reward.astype(float),2)
@@ -183,6 +213,9 @@ class LocalCuriosity:
             probes+=int(actual_probe.sum())
             earned+=float(reward.sum())
             correct+=float(opened.sum())
+            case_visits+=np.bincount(pair_cues,minlength=4)
+            case_hits+=np.bincount(
+                pair_cues,weights=opened.astype(int),minlength=4).astype(int)
             cost+=float((self.spec.probe_cost*actual_probe.sum()+
                          self.spec.message_cost*request.sum()))
             if diagnostic:
@@ -197,6 +230,14 @@ class LocalCuriosity:
             "probe_cost":cost,
             "critical":crit_hit/max(1,crit_total),
             "false_corrections":int(self.corrected.sum()),
+            "by_case_correctness": {
+                format(i, "02b"): float(case_hits[i]/max(case_visits[i],1))
+                for i in range(4)
+            },
+            "by_case_counts": {
+                format(i, "02b"): int(case_visits[i])
+                for i in range(4)
+            },
         }
 
 
@@ -227,7 +268,7 @@ def train_policy(seed,spec):
 
 
 def evaluate_policy(seed, scenario, spec, trained=None, untrained=False):
-    if scenario not in SCENARIOS:
+    if scenario not in ALL_SCENARIOS:
         raise ValueError("unknown scenario")
     if trained is None:
         trained=train_policy(seed,spec)
@@ -235,7 +276,7 @@ def evaluate_policy(seed, scenario, spec, trained=None, untrained=False):
     eval_agent=LocalCuriosity(spec,seed+17)
     if not untrained:
         eval_agent.q=agent.q.copy()
-    rng=np.random.default_rng(seed+79813+SCENARIOS.index(scenario)*100003)
+    rng=np.random.default_rng(seed+79813+ALL_SCENARIOS.index(scenario)*100003)
     result=eval_agent.run_episode(
         send,recv,[scenario]*spec.pairs,rng,steps=spec.eval_horizon,
         train=False,epsilon=0,diagnostic=True)
