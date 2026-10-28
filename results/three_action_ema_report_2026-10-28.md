@@ -1,13 +1,15 @@
-# Informe científico: tres decisiones y EMA (2026-10-28)
+# Three-Action EMA Study — October 28, 2026
 
-## Hipótesis
-Una media móvil de recompensa privada debería ayudar a distinguir sequías de cambios reales y mejorar la política EXPLOIT/PROBE/REST.
+## Hypothesis
+A private exponential moving average (EMA) of recently observed reward could help cells distinguish resource drought from actual rule changes, improving EXPLOIT / PROBE / REST decisions.
 
-## Método
-Mismo preentrenamiento, condiciones y generadores de evaluación emparejados para 12 métodos. 12 parejas, 600 pasos de preentrenamiento, 45 episodios de 30 pasos, evaluación 130 pasos por escenario. Desarrollo: semillas 11,12,13. Validación sin ajustar parámetros: 41,42,43. Escenarios de evaluación pertenecen a la familia conocida de tareas; las semillas de validación son nuevas, no constituyen nuevas familias de tareas.
+## Experimental setup
+All 12 methods share the same evaluation setup and paired random streams: 12 cell pairs, 600 pretraining steps, 45 training episodes of 30 steps, and 130 evaluation steps per scenario. Development seeds: 11, 12, 13. Untouched validation seeds: 41, 42, 43. The evaluated scenarios are combinations within the same designed task family, not unfamiliar task families.
 
-## Resultados (media validación; recompensa neta simbólica, mayor mejor)
-| Escenario | Tres EMA | Dos EMA | Tres sin EMA | Guard dos |
+## Independent-seed validation results
+Mean **simulated net reward per opportunity** (higher is better):
+
+| Scenario | Three-action EMA | Two-action EMA | Three-action no EMA | Engineered guard, two actions |
 |---|---:|---:|---:|---:|
 | changed_10 | 0.476 | 0.523 | 0.552 | 0.566 |
 | scarcity_01 | 0.359 | 0.379 | 0.398 | 0.381 |
@@ -18,20 +20,24 @@ Mismo preentrenamiento, condiciones y generadores de evaluación emparejados par
 | severe_drought | -0.061 | -0.088 | -0.059 | -0.088 |
 | global_change_blackout | -0.072 | -0.114 | -0.069 | -0.114 |
 
-En validación, tres EMA descansó 37.5% en sequía extrema y 36.3% en apagón; precisión de compuerta 29.6% y 7.6%, respectivamente. En changed_10 descansó 18.6% con precisión 62.2%, frente a 69.7% en dos EMA. Resultados negativos: EMA no supera de forma consistente a tres acciones sin EMA ni a dos acciones fuera de sequías extremas.
+Under severe drought, three-action EMA rested 37.5% of the time and achieved 29.6% gate correctness. Under global-change blackout, it rested 36.3% of the time and achieved only 7.6% correctness. In changed_10, it rested 18.6% of the time, reaching 62.2% correctness versus 69.7% for two-action EMA.
 
-## Auditoría del mecanismo
-REST es acción real sin coste propio de actividad, mensajes ni recurso. Las acciones de pares pueden dejar costos activos en su compañero, conforme al diseño. EMA se alimenta de recompensas locales observadas solo cuando ambos participan; el valor inicial 0.75, umbrales 0.25/0.65, y las escalas 0.985/0.92 son parámetros diseñados. Q tiene 288 estados por célula con EMA, tres columnas; dos acciones enmascara REST. Los costos están separados en actividad, prueba y comunicación. Se informa desviación estándar entre semillas en JSON. Se preserva la comparación aleatoria emparejada, aunque distinta política consume distinto número de muestreos debido a acciones.
+## Mechanism audit
+REST truly avoids active-resource attempts and its own activity/message costs. A partner may still incur costs by attempting action. EMA changes only from private received rewards on active pair interactions. Its initial rate of 0.75, state thresholds of 0.25/0.65, and decay rates of 0.985/0.92 were designed by researchers rather than discovered by cells.
 
-## Interpretación
-Hipótesis de mejora global por EMA NO respaldada. El descanso evita pérdidas bajo escasez severa, pero inhibe oportunidades de explotación y reconocimiento de tareas. La EMA congelada durante descanso podría reforzar políticas de pasividad. El aprendizaje depende de creencias bayesianas, inversión de acciones, señal intrínseca y recompensas simbólicas diseñadas. No se demuestra inteligencia general, independencia física del sustrato, ni ahorro medido en joules. Tres semillas de validación implican incertidumbre considerable.
+EMA agents use 288 state rows and three Q columns per cell. Two-action variants mask REST. Activity, probe, and communication costs are separately reported; JSON summaries include inter-seed standard deviations. Matched evaluation random seeds are used, but policies can consume different random samples through different actions.
 
-## Próximo experimento
-Hipótesis nueva: introducir una prueba de vigilia con intervalo controlado y coste energético explícito, y comparar con dos acciones con igual presupuesto, ablando la EMA. Especificar antes de evaluar un escenario realmente novedoso, más semillas y criterio Pareto de recursos/precisión/coste. Reservar nuevas semillas sin optimizarlas. Nunca ajustar sobre 41,42,43.
+## Conclusion
+**The hypothesis of broadly improved task performance through EMA was not supported.** REST can reduce simulated losses in extreme scarcity, but the additional reward-history feature does not consistently outperform the non-EMA three-action policy. Resting also suppresses reward observations and may amplify passivity. Bayesian beliefs, action inversion, information bonuses, and key detectors remain engineered mechanisms.
 
-## Reproducción
+No claim is made of general intelligence, substrate independence, or physical energy savings. Three validation seeds limit precision.
+
+## Next experiment
+Move to **Closed-Loop Cellular Learning v1**, integrating input, communication, memory, action, and feedback. Revisit sleep/wake policies only after this loop is demonstrated. Do not tune against seeds 41–43.
+
+## Reproduction
+```powershell
 .\.venv\Scripts\python.exe run.py three-action --seeds 11,12,13 --pairs 12 --pretrain 600 --train-episodes 45 --train-steps 30 --eval-steps 130 --output results/three_action_ema_dev_11_12_13.json
-
 .\.venv\Scripts\python.exe run.py three-action --seeds 41,42,43 --pairs 12 --pretrain 600 --train-episodes 45 --train-steps 30 --eval-steps 130 --output results/three_action_ema_validation_41_42_43.json
-
 .\.venv\Scripts\python.exe -m unittest discover -s tests -p test_three_action_energy.py -q
+```

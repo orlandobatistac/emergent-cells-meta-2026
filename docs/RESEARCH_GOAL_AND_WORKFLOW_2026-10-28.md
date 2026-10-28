@@ -1,33 +1,35 @@
-# Objetivo y workflow científico — Emergent Cells Lab (28-oct-2026)
+# Research Goals and Scientific Workflow — October 28, 2026
 
-## Visión de largo plazo
-Investigar una arquitectura de IA útil, interactiva y modular formada por células con estados y actualizaciones locales, capaz de aprender mediante experiencia, intercambiar información, conservar y recuperar memoria, elegir acciones y gestionar agentes. Aspiramos a reducir coste computacional y energético y explorar posibles implementaciones agnósticas al sustrato; **nada de esto se considera demostrado**.
+## Long-term vision
+Investigate an interactive, modular AI architecture built from locally learning cells that exchange information, develop and retrieve memories, select actions, and eventually orchestrate agents. Lower computational and physical energy costs and substrate-independent implementations are **long-term hypotheses, not demonstrated outcomes**.
 
-## Prioridad actual: cerrar el ciclo funcional
-Entrada observable → procesamiento y comunicación entre células → aprendizaje y memoria local/distribuida → elección de acción → respuesta al entorno → recompensa/retroalimentación → actualización y siguiente interacción. No imponer etiquetas de tarea ni objetivos correctos dentro de las células. La infraestructura del simulador puede coordinar el mundo, pero no actuar como controlador de políticas celulares.
+## Current priority: close the functional intelligence loop
+Observation → local processing and communication → learning and distributed memory → action selection → environment response → feedback → updated cell state and subsequent interaction.
 
-REST y la optimización energética pasan a la **fase posterior**: preservar resultados y variantes existentes, sin hacer del descanso un requisito del siguiente prototipo. No eliminar ni reescribir los experimentos previos.
+Never expose privileged task labels or correct target actions to the cells. The simulation may coordinate environmental mechanics but must not act as a centralized learned policy controller.
 
-## Workflow por hitos (cada hito es falsable)
-1. **Closed-Loop Cellular Learning v1.** Entorno Python/NumPy con observaciones parciales, tareas secuenciales y acciones con consecuencias verificables. Ejecutar episodios continuos sin revelar tipo de tarea; medir acierto, recompensa y adaptación. Entregar baseline antes de escalar.
-2. **Comunicación y selección de participación.** Comparar células independientes, comunicantes y control centralizado pequeño. Aislar el aporte causal de los mensajes con ablaciones y costes de comunicación.
-3. **Memoria persistente y recuperación.** Tareas A→B→C→A/B con retención y pruebas de olvido; diferenciar memoria aprendida de índices, detectores y reglas codificados.
-4. **Transferencia real.** Separar combinaciones de la misma familia de tareas de familias y reglas genuinamente nuevas. Congelar parámetros antes de semillas retenidas; reportar fallos.
-5. **Interacción usable.** Ofrecer interfaz **de Python (CLI)** para introducir observaciones/instrucciones de prueba, recibir respuestas/acciones y realimentar el sistema, sin frontend web ni HTTP. La capacidad de usar herramientas o manejar agentes es un hito futuro, no una habilidad implícita.
-6. **Escalabilidad.** Variar población, conectividad y carga; medir si aumenta capacidad sin controlador central. Separar escala simulada de distribución física.
-7. **Optimización posterior.** Estudiar REST, cómputo selectivo, mensajes escasos, memoria, tiempo CPU, RAM y consumo eléctrico *medido*; comparar calidad igualada contra arquitecturas de referencia. Explorar independencia de sustrato solo como investigación posterior.
+REST and energy optimization are deferred until the integrated learning loop works. Preserve all prior results and code; do not erase negative findings.
 
-## Protocolo de cada experimento
-- Hipótesis y criterio de falsación predefinidos; métodos y controles con presupuestos comparables.
-- Semillas de desarrollo separadas de semillas de validación nunca usadas para ajustar.
-- Métricas: exactitud, recompensa, recursos obtenidos, transferencia, retención, comunicación, cómputo, variación entre semillas y resultados negativos. Energía simulada se etiqueta como simbólica.
-- Ejecutar unit tests y pilotos de desarrollo primero. Congelar diseño; luego validación retenida.
-- Guardar JSON, comando, configuración, versión Git y reporte científico en español.
-- Documentar qué es mecanismo diseñado y qué comportamiento es aprendido.
-- Trabajar en rama/PR; **no modificar main automáticamente**.
+## Roadmap: testable milestones
+1. **Closed-Loop Cellular Learning v1.** Build a Python/NumPy environment with partial observations, sequential tasks, and consequential actions. Measure task accuracy, reward, adaptation, and learning without task labels.
+2. **Communication and participation.** Compare isolated cells, communicating cells, and a compact centralized baseline under matched budgets. Perform causal message ablations.
+3. **Persistent memory and recall.** Evaluate A → B → C → A/B sequences, retention, interference, and recovery. Separate engineered memory indexing from actually learned representations.
+4. **Generalization.** Distinguish novel combinations from truly novel task families. Freeze hyperparameters before untouched validation seeds; report failures.
+5. **Practical interaction.** Provide a Python CLI for entering test observations or instructions, receiving predictions/actions, and supplying feedback. No web UI or HTTP service. Tool use and agent orchestration are future milestones, not current capabilities.
+6. **Scalability.** Vary cell count, connectivity, and workload. Determine whether capability scales without centralized policy control. Distinguish simulation scale from physical distribution.
+7. **Efficiency optimization.** Only after functional success, test REST, selective activation, sparse messaging, memory footprint, runtime, RAM, and measured physical power. Compare equivalent task quality against relevant baselines. Substrate independence remains exploratory.
 
-## Próximo experimento concreto
-Implementar Closed-Loop Cellular Learning v1 con 3 baselines: células sin comunicación, células comunicantes y agente centralizado pequeño. Primero tarea de decisión parcial y cambio de contexto, después memoria y transferencia. No añadir optimizaciones de descanso ni interfaces web durante esta fase.
+## Experiment workflow
+- Define a falsifiable hypothesis, evaluation criteria, and comparable baselines before implementation.
+- Use separate development seeds and previously untouched validation seeds.
+- Track task accuracy, reward, resource capture, transfer, memory retention, communication, computation, per-seed variability, and negative results.
+- Run unit tests and development pilots first; freeze the design before final evaluation.
+- Save configuration, reproducible command, version/commit, machine-readable JSON, and an **English** scientific report.
+- Clearly label engineered mechanisms vs. learned behaviors; symbolic energy is not joules.
+- Develop and publish through feature branches and pull requests. Never change `main` automatically.
 
-## Criterio de avance
-Pasar de fase solo al demostrar funcionamiento reproducible con comparación causal y límites explícitos. Si el sistema no supera los controles, registrar fracaso e investigar su causa antes de acumular nuevas funciones.
+## Immediate experiment
+**Closed-Loop Cellular Learning v1:** compare isolated cells, communicating cells, and a compact centralized agent on partial-observation decisions and contextual shifts. Then test persistent memory and task transfer. Do not introduce REST optimization or frontend development in this phase.
+
+## Advancement criteria
+Advance only when the target behavior reproduces under controlled comparisons with explicit limitations. If performance does not beat relevant baselines, record the failure and investigate before adding complexity.
