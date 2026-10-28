@@ -75,6 +75,7 @@ class ThreeActionCells:
                         "learned_three_no_history",
                         "learned_three_low_supply", "learned_two_low_supply",
                         "learned_three_ema", "learned_two_ema",
+                        "learned_three_fast_ema", "learned_two_fast_ema",
                         "manual_two",
                         "guard_two", "always_rest"):
             raise ValueError("unrecognized mode")
@@ -246,8 +247,9 @@ class ThreeActionCells:
             )
             self.corrected[ix,slot] |= posterior[:,2] > .96
             # A cell sees only its OWN received reward in active periods.
+            decay = (.92 if self.mode.endswith("fast_ema") else .985)
             self.global_reward_rate = np.where(
-                informed, .985*self.global_reward_rate + .015*reward,
+                informed, decay*self.global_reward_rate + (1-decay)*reward,
                 self.global_reward_rate
             )
             # REST supplies no reward evidence and does not alter
@@ -316,6 +318,7 @@ def benchmark(seeds, spec=ThreeActionSpec()):
                "learned_three_no_history",
                "learned_three_low_supply", "learned_two_low_supply",
                "learned_three_ema", "learned_two_ema",
+               "learned_three_fast_ema", "learned_two_fast_ema",
                "manual_two",
                "guard_two", "always_rest")
     result = []

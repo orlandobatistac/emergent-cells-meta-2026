@@ -88,13 +88,36 @@ class ThreeActionTests(unittest.TestCase):
         a=benchmark([2],self.spec)
         b=benchmark([2],self.spec)
         self.assertEqual(a,b)
-        self.assertEqual(len(a["rows"]),8*10)
+        self.assertEqual(len(a["rows"]),8*12)
         self.assertEqual(set(a["summary"]),set(TEST_SCENARIOS))
         for r in a["rows"]:
             self.assertLessEqual(r["rest_fraction"],1)
             self.assertGreaterEqual(r["rest_fraction"],0)
-            if r["method"] not in ("learned_three", "learned_three_no_history", "learned_three_low_supply", "learned_three_ema", "always_rest"):
+            if r["method"] not in ("learned_three", "learned_three_no_history", "learned_three_low_supply", "learned_three_ema", "learned_three_fast_ema", "always_rest"):
                 self.assertEqual(r["rest_fraction"],0)
+
+    def test_rest_has_no_information_leak_or_reward_history_update(self):
+        cell=ThreeActionCells(self.spec,7,mode="learned_three_fast_ema")
+        cell.q[:,:,:]=0.
+        cell.q[:,:,REST]=1.
+        samples=np.random.default_rng(27)
+        sender=np.zeros((cell.n,2))
+        decoder=np.zeros((cell.n,4))
+        outcomes=cell.run(sender,decoder,["severe_drought"]*self.spec.pairs,
+                          samples,steps=120,train=False,epsilon=0)
+        self.assertEqual(outcomes["rest_fraction"],1.)
+        self.assertEqual(outcomes["pulses"],0.)
+        self.assertEqual(outcomes["synthetic_cost"],0.)
+        np.testing.assert_array_equal(
+            cell.global_reward_rate,np.full(cell.n,.75))
+        self.assertTrue((cell.loss_streak==0).all())
+        self.assertFalse(cell.corrected.any())
+
+    def test_energy_not_confused_with_gate_success(self):
+        a=benchmark([2],self.spec)
+        for row in a["rows"]:
+            self.assertLessEqual(row["net_energy"],row["pulses"]+1e-12)
+            self.assertLessEqual(row["correct"],1-row["rest_fraction"]+1e-12)
 
     def test_world_labels_not_in_cell_action_update(self):
         sim=ThreeActionCells(self.spec,1)

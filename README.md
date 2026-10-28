@@ -56,3 +56,9 @@ New independent Python research: cells learn EXPLOIT, PROBE or REST from their o
 Scientific report: docs/TRES_ACCIONES_CELULARES_2026-10-27.md.
 Audited results: results/audited/2026-10-27-three-action-unseen-seeds.json.
 CLI: python run.py three-action --help. No frontend or Meta API.
+
+## Latest scientific finding: locally learned exploit / probe / rest
+
+Five fresh seeds (4001–4005) evaluated 12 algorithms on 8 previously unused task/resource configurations using ONLY local Python simulation and frozen Q policies. The private three-action controller with reward-history EMA reduced synthetic loss in severe drought (−0.0194 vs −0.0769 with the matched two-action controller) and combined global-change/blackout (−0.0229 vs −0.1175). However, it lost performance when resources remained usable: changed-rule-with-drought (0.2680 vs 0.3481) and localized scarcity (0.5179 vs 0.5464). These are symbolic net-energy units per pair/episode, NOT measured joules. The **general success criterion was not met**. A stop-or-rest decision can be learned but its task/resource calibration and two-cell coordination remain unsolved.
+
+Details: docs/TRES_ACCIONES_ENERGIA_2026-10-27.md. Complete new data: results/audited/2026-10-27-three-action-energy-fresh-seeds.json. Run: python run.py three-action --help. No frontend.
