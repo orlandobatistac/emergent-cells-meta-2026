@@ -24,6 +24,7 @@ EXPERIMENTS = {
     "active-probes": "active_probes",
     "learned-curiosity": "learned_curiosity",
     "curiosity-ablation": "curiosity_ablation",
+    "task-transfer": "transfer_stress",
 }
 
 

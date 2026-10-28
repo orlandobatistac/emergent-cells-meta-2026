@@ -42,3 +42,9 @@ Síntesis científica en español: docs/REPORTE_CIENTIFICO_2026-10-27.md.
 ## Política del repositorio
 
 La antigua interfaz del hackathon permanece recuperable en el historial Git y las ramas anteriores, pero no forma parte del código actual. No se reescriben resultados históricos. Los nuevos estudios deben conservar controles equivalentes, semillas nuevas, resultados negativos, documentación de límites y verificaciones Python. Después de revisión se integran en main. No requiere mantenimiento de interfaz visual.
+
+## Latest scientific investigation — curiosity transfer to unseen configurations
+
+A Python-only held-out task study tested previously **untrained combinations** of XOR rule flips and local reward scarcity with frozen cell-local curiosity Q policies. In five fresh seeds (3001–3005), adding an authored two-failed-probe stopping rule raised scarce-01 target accuracy from **86.3% to 96.0%** while reducing request bits from **405.4 to 98.2** per seed. It increased overall mixed-rule-plus-scarcity accuracy from **93.8% to 96.3%**, but **reduced global-change-with-drought accuracy from 65.4% to 64.1%**. A manually specified uncertainty controller remained more effective on several comparisons; no universal advantage was shown.
+
+This tests transfer within the same designed XOR/flip/scarcity family, NOT unfamiliar mathematics or spontaneously discovered curiosity. Read the full Spanish methods/results report at docs/TRANSFERENCIA_CURIOSIDAD_2026-10-27.md. Raw per-seed dataset is results/audited/2026-10-27-curiosity-ood-scenarios-fresh-seeds.json. Execute with: python run.py task-transfer --help.
