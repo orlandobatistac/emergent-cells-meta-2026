@@ -3,7 +3,7 @@
 // Start the Python server first, then: node tests/browser_controls.cjs
 const fs=require('node:fs'), vm=require('node:vm'), assert=require('node:assert/strict');
 const base=process.env.EMERGENT_TEST_URL||'http://127.0.0.1:8765';
-const ids=Object.fromEntries(['world','step','alive','energy','time','mode','play','advance','shock','damage','reset','report','status','challenge-text','challenge-source','challenge-design','challenge-evaluate','challenge-apply','challenge-state','challenge-result','cooperation-run','cooperation-state','cooperation-result','protocol-run','protocol-state','protocol-result','context-switch-run','context-switch-state','context-switch-result','reward-surprise-run','reward-surprise-state','reward-surprise-result','dynamic-memory-run','dynamic-memory-state','dynamic-memory-result','robust-drift-run','robust-drift-state','robust-drift-result','exploration-run','exploration-state','exploration-result','learned-curiosity-run','learned-curiosity-state','learned-curiosity-result'].map(id=>[id,{textContent:'',value:'',disabled:false}]));
+const ids=Object.fromEntries(['world','step','alive','energy','time','mode','play','advance','shock','damage','reset','report','status','challenge-text','challenge-source','challenge-design','challenge-evaluate','challenge-apply','challenge-state','challenge-result','cooperation-run','cooperation-state','cooperation-result','protocol-run','protocol-state','protocol-result','context-switch-run','context-switch-state','context-switch-result','reward-surprise-run','reward-surprise-state','reward-surprise-result','dynamic-memory-run','dynamic-memory-state','dynamic-memory-result','robust-drift-run','robust-drift-state','robust-drift-result','exploration-run','exploration-state','exploration-result','learned-curiosity-run','learned-curiosity-state','learned-curiosity-result','local-world-model-run','local-world-model-state','local-world-model-result'].map(id=>[id,{textContent:'',value:'',disabled:false}]));
 ids['challenge-text'].value='Crea un mundo peligroso con recursos escasos y cambios';ids['challenge-source'].value='template';
 ids.world.getContext=()=>({clearRect(){},fillRect(){},beginPath(){},arc(){},fill(){}});
 let downloaded=false;
@@ -47,4 +47,8 @@ await ids['learned-curiosity-run'].onclick();
 assert.match(ids['learned-curiosity-result'].textContent,/locally_learned_probe/);
 assert.match(ids['learned-curiosity-result'].textContent,/untrained_probe_policy/);
 assert.match(ids['learned-curiosity-state'].textContent,/Ensayo completado/);
+await ids['local-world-model-run'].onclick();
+assert.match(ids['local-world-model-result'].textContent,/predictive_progress/);
+assert.match(ids['local-world-model-result'].textContent,/random/);
+assert.match(ids['local-world-model-state'].textContent,/Experiment complete/);
 console.log('Real HTTP UI controls + template world design, 5-policy evaluation and apply: passed. Layout not tested.');})().catch(e=>{console.error(e);process.exit(1)});

@@ -18,6 +18,14 @@ textarea{width:100%;font:inherit;padding:10px;border-radius:8px;border:1px solid
 <p class="note" id="challenge-state">Primero diseña un desafío. Si usas la plantilla, NO se realizará una llamada a Meta.</p>
 <pre id="challenge-result" style="white-space:pre-wrap;overflow-wrap:anywhere;font-size:11px;max-height:220px;overflow:auto;color:#a8dfbd"></pre>
 <p class="note">Meta propone parámetros del entorno. No dirige células ni crea automáticamente una tarea que necesite cooperación.</p></section>
+<section class="panel" id="local-world-model-lab">
+<h2>Phase 8 · Learning Local Outcome Predictions</h2>
+<p class="note">Each cell learns reward probabilities for familiar and alternative actions. No predefined rule-change or scarcity hypotheses are supplied. The predictor representation and exploration heuristics remain engineered.</p>
+<button class="primary" id="local-world-model-run" type="button">Run predictive exploration benchmark</button>
+<p class="note" id="local-world-model-state" role="status">Demo: 2 seeds, 16 cell pairs, passive and random controls, plus three predictive strategies.</p>
+<pre id="local-world-model-result" style="white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px;max-height:270px;overflow:auto;color:#a8dfbd"></pre>
+<p class="note">Metrics include rule changes, resource scarcity, messaging and exploratory interventions; simulated units, not physical joules.</p>
+</section>
 <section class="panel" id="learned-curiosity-lab">
 <h2>Curiosidad aprendida — ¿cuándo investigar?</h2>
 <p class="note">Cada célula entrena su propia tabla de acción para solicitar una prueba o explotar lo aprendido a partir de recompensas y costos locales. No recibe la regla verdadera ni un sensor de recursos. Las características, hipótesis y acción de prueba siguen diseñadas por investigadores.</p>
@@ -275,6 +283,24 @@ async function runLearnedCuriosity(){
   }catch(e){$('learned-curiosity-state').textContent=e.message;}
   finally{button.disabled=false;}
 }
+async function runWorldModel(){
+  stop();
+  const button=$('local-world-model-run');button.disabled=true;
+  $('local-world-model-state').textContent='Training local predictors and comparing strategies...';
+  try{
+    const data=await challengeCall('/api/local-world-model/run',{});
+    const s=data.local_world_model.summary;
+    const names=['passive','random','predictive_greedy','predictive_ucb','predictive_progress'];
+    $('local-world-model-result').textContent=
+      'Method | Rule flips at 11 | Resources missing at 11 | Exploratory probes\n'+
+      names.map(n=>n+' | '+(100*s.changed_11[n].case11_correct).toFixed(1)+'% | '+
+      (100*s.scarcity_11[n].case11_correct).toFixed(1)+'% | '+
+      s.changed_11[n].experimental_probe_count.toFixed(0)).join('\n');
+    $('local-world-model-state').textContent='Experiment complete. This is not a general-purpose world model.';
+  }catch(e){$('local-world-model-state').textContent=e.message;}
+  finally{button.disabled=false;}
+}
+$('local-world-model-run').onclick=runWorldModel;
 $('learned-curiosity-run').onclick=runLearnedCuriosity;
 $('exploration-run').onclick=runExploration;
 $('robust-drift-run').onclick=runRobustDrift;
