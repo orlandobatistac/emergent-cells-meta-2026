@@ -4,6 +4,12 @@ Laboratorio experimental reproducible para aprendizaje celular descentralizado, 
 
 **Alcance:** las simulaciones demuestran capacidades limitadas en ambientes matemáticos diseñados; NO son evidencia de AGI, eficiencia energética física, independencia del sustrato ni crecimiento de células físicas. La energía del simulador es una recompensa, no joules.
 
+## Objetivo y plan científico vigente (28-oct-2026)
+
+**Prioridad:** cerrar un ciclo funcional de inteligencia celular — observación, comunicación, aprendizaje, memoria, acción y retroalimentación — antes de optimizar descanso, energía y otros recursos. La siguiente investigación es **Closed-Loop Cellular Learning v1**, con comparación frente a células aisladas y un agente centralizado pequeño. No se considera demostrado que el sistema posea inteligencia general, gestione agentes ni mejore en consumo real.
+
+**Documento rector:** [Objetivo y workflow científico](docs/RESEARCH_GOAL_AND_WORKFLOW_2026-10-28.md). Contiene hitos, criterios de avance, método de evaluación y disciplina de ramas/PR. Los estudios de REST y EMA se preservan como investigación anterior, no como prioridad actual.
+
 ## Ejecutar en la laptop
 
 Instalar dependencias: python -m pip install -e .
