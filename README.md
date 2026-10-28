@@ -48,3 +48,11 @@ La antigua interfaz del hackathon permanece recuperable en el historial Git y la
 A Python-only held-out task study tested previously **untrained combinations** of XOR rule flips and local reward scarcity with frozen cell-local curiosity Q policies. In five fresh seeds (3001–3005), adding an authored two-failed-probe stopping rule raised scarce-01 target accuracy from **86.3% to 96.0%** while reducing request bits from **405.4 to 98.2** per seed. It increased overall mixed-rule-plus-scarcity accuracy from **93.8% to 96.3%**, but **reduced global-change-with-drought accuracy from 65.4% to 64.1%**. A manually specified uncertainty controller remained more effective on several comparisons; no universal advantage was shown.
 
 This tests transfer within the same designed XOR/flip/scarcity family, NOT unfamiliar mathematics or spontaneously discovered curiosity. Read the full Spanish methods/results report at docs/TRANSFERENCIA_CURIOSIDAD_2026-10-27.md. Raw per-seed dataset is results/audited/2026-10-27-curiosity-ood-scenarios-fresh-seeds.json. Execute with: python run.py task-transfer --help.
+
+## Latest experiment — three local decisions, no GUI
+
+New independent Python research: cells learn EXPLOIT, PROBE or REST from their own synthetic net reward and local experience. Five fresh seeds (7001–7005) and eight held-out resource/rule worlds are recorded across 10 methods. Under severe 5% resource scarcity, a low-supply-trained three-action policy rested **89.7%** of the time and reduced simulated net energy loss **−0.0765 → −0.0101** relative to a same-capacity, same-curriculum two-action controller. However, when resources were usable in changed_10 its gate correctness deteriorated **95.0% → 82.7%** and net reward also dropped. This is a reproducible TRADE-OFF, not a generally superior learner. Every failed development iteration remains in exploratory results.
+
+Scientific report: docs/TRES_ACCIONES_CELULARES_2026-10-27.md.
+Audited results: results/audited/2026-10-27-three-action-unseen-seeds.json.
+CLI: python run.py three-action --help. No frontend or Meta API.
