@@ -1,0 +1,2116 @@
+{
+  "held_out": [
+    "changed_10",
+    "scarcity_01",
+    "changed_10_drought",
+    "scarcity_01_partial",
+    "mixed_change_10_scarcity_01",
+    "global_change_drought",
+    "severe_drought",
+    "global_change_blackout"
+  ],
+  "limitations": [
+    "REST action and its activity cost are engineered, not discovered.",
+    "Paired gate participation is observable; private resource availability is not.",
+    "Manual Bayesian state classes and action inversion remain engineered.",
+    "Non-stationary worlds drawn from the familiar XOR-flip-scarcity family.",
+    "3-action Q and 2-action Q have same parameter size; last action masked in 2.",
+    "Net costs are symbolic; physical joules and per-cell RAM not measured."
+  ],
+  "methods": [
+    "learned_three",
+    "learned_two",
+    "manual_two",
+    "guard_two",
+    "always_rest"
+  ],
+  "rows": [
+    {
+      "correct": 0.9444444444444444,
+      "method": "learned_three",
+      "net_energy": 0.7558406249999998,
+      "per_case": {
+        "00": 0.9985974754558204,
+        "01": 0.9972602739726028,
+        "10": 0.9300291545189504,
+        "11": 0.8548601864181092
+      },
+      "probes": 23,
+      "pulses": 0.8704861111111111,
+      "requests": 42,
+      "rest_fraction": 0.04652777777777778,
+      "scenario": "changed_10",
+      "seed": 11,
+      "synthetic_cost": 330.1790000000006
+    },
+    {
+      "correct": 0.9447916666666667,
+      "method": "learned_two",
+      "net_energy": 0.7502350694444445,
+      "per_case": {
+        "00": 0.9985974754558204,
+        "01": 0.9972602739726028,
+        "10": 0.9314868804664723,
+        "11": 0.8548601864181092
+      },
+      "probes": 25,
+      "pulses": 0.8704861111111111,
+      "requests": 49,
+      "rest_fraction": 0.0,
+      "scenario": "changed_10",
+      "seed": 11,
+      "synthetic_cost": 346.323
+    },
+    {
+      "correct": 0.8902777777777777,
+      "method": "manual_two",
+      "net_energy": 0.698345833333333,
+      "per_case": {
+        "00": 0.9340813464235624,
+        "01": 0.8726027397260274,
+        "10": 0.9752186588921283,
+        "11": 0.7882822902796272
+      },
+      "probes": 316,
+      "pulses": 0.8215277777777777,
+      "requests": 632,
+      "rest_fraction": 0.0,
+      "scenario": "changed_10",
+      "seed": 11,
+      "synthetic_cost": 354.7640000000008
+    },
+    {
+      "correct": 0.9538194444444444,
+      "method": "guard_two",
+      "net_energy": 0.7592017361111112,
+      "per_case": {
+        "00": 0.9971949509116409,
+        "01": 0.9945205479452055,
+        "10": 0.9752186588921283,
+        "11": 0.8535286284953395
+      },
+      "probes": 31,
+      "pulses": 0.8795138888888889,
+      "requests": 62,
+      "rest_fraction": 0.0,
+      "scenario": "changed_10",
+      "seed": 11,
+      "synthetic_cost": 346.499
+    },
+    {
+      "correct": 0.0,
+      "method": "always_rest",
+      "net_energy": 0.0,
+      "per_case": {
+        "00": 0.0,
+        "01": 0.0,
+        "10": 0.0,
+        "11": 0.0
+      },
+      "probes": 0,
+      "pulses": 0.0,
+      "requests": 0,
+      "rest_fraction": 1.0,
+      "scenario": "changed_10",
+      "seed": 11,
+      "synthetic_cost": 0.0
+    },
+    {
+      "correct": 0.7940972222222222,
+      "method": "learned_three",
+      "net_energy": 0.5249072916666665,
+      "per_case": {
+        "00": 0.998546511627907,
+        "01": 0.4355909694555113,
+        "10": 0.8953323903818954,
+        "11": 0.8729508196721312
+      },
+      "probes": 35,
+      "pulses": 0.6236111111111111,
+      "requests": 126,
+      "rest_fraction": 0.18072916666666666,
+      "scenario": "scarcity_01",
+      "seed": 11,
+      "synthetic_cost": 284.26700000000045
+    },
+    {
+      "correct": 0.9569444444444445,
+      "method": "learned_two",
+      "net_energy": 0.5251291666666666,
+      "per_case": {
+        "00": 0.998546511627907,
+        "01": 0.9641434262948207,
+        "10": 0.9957567185289957,
+        "11": 0.8729508196721312
+      },
+      "probes": 36,
+      "pulses": 0.6454861111111111,
+      "requests": 64,
+      "rest_fraction": 0.0,
+      "scenario": "scarcity_01",
+      "seed": 11,
+      "synthetic_cost": 346.628
+    },
+    {
+      "correct": 0.6614583333333334,
+      "method": "manual_two",
+      "net_energy": 0.4715913194444446,
+      "per_case": {
+        "00": 0.9593023255813954,
+        "01": 0.021248339973439574,
+        "10": 0.8939179632248939,
+        "11": 0.8155737704918032
+      },
+      "probes": 973,
+      "pulses": 0.6013888888888889,
+      "requests": 1946,
+      "rest_fraction": 0.0,
+      "scenario": "scarcity_01",
+      "seed": 11,
+      "synthetic_cost": 373.81699999999955
+    },
+    {
+      "correct": 0.9541666666666667,
+      "method": "guard_two",
+      "net_energy": 0.5246958333333334,
+      "per_case": {
+        "00": 0.997093023255814,
+        "01": 0.9575033200531209,
+        "10": 0.9943422913719944,
+        "11": 0.8715846994535519
+      },
+      "probes": 44,
+      "pulses": 0.6451388888888889,
+      "requests": 88,
+      "rest_fraction": 0.0,
+      "scenario": "scarcity_01",
+      "seed": 11,
+      "synthetic_cost": 346.876
+    },
+    {
+      "correct": 0.0,
+      "method": "always_rest",
+      "net_energy": 0.0,
+      "per_case": {
+        "00": 0.0,
+        "01": 0.0,
+        "10": 0.0,
+        "11": 0.0
+      },
+      "probes": 0,
+      "pulses": 0.0,
+      "requests": 0,
+      "rest_fraction": 1.0,
+      "scenario": "scarcity_01",
+      "seed": 11,
+      "synthetic_cost": 0.0
+    },
+    {
+      "correct": 0.7048611111111112,
+      "method": "learned_three",
+      "net_energy": 0.28474861111111094,
+      "per_case": {
+        "00": 0.8731241473396999,
+        "01": 0.8132780082987552,
+        "10": 0.5602165087956699,
+        "11": 0.5664233576642336
+      },
+      "probes": 64,
+      "pulses": 0.38333333333333336,
+      "requests": 192,
+      "rest_fraction": 0.1842013888888889,
+      "scenario": "changed_10_drought",
+      "seed": 11,
+      "synthetic_cost": 283.92400000000055
+    },
+    {
+      "correct": 0.8416666666666667,
+      "method": "learned_two",
+      "net_energy": 0.33732986111111113,
+      "per_case": {
+        "00": 0.9863574351978172,
+        "01": 0.9778699861687413,
+        "10": 0.5588633288227334,
+        "11": 0.8481751824817518
+      },
+      "probes": 66,
+      "pulses": 0.4579861111111111,
+      "requests": 120,
+      "rest_fraction": 0.0,
+      "scenario": "changed_10_drought",
+      "seed": 11,
+      "synthetic_cost": 347.48999999999995
+    },
+    {
+      "correct": 0.5590277777777778,
+      "method": "manual_two",
+      "net_energy": 0.16779548611111142,
+      "per_case": {
+        "00": 0.6371077762619373,
+        "01": 0.40110650069156295,
+        "10": 0.8985115020297699,
+        "11": 0.2759124087591241
+      },
+      "probes": 1281,
+      "pulses": 0.30069444444444443,
+      "requests": 2562,
+      "rest_fraction": 0.0,
+      "scenario": "changed_10_drought",
+      "seed": 11,
+      "synthetic_cost": 382.7489999999991
+    },
+    {
+      "correct": 0.8555555555555555,
+      "method": "guard_two",
+      "net_energy": 0.34405451388888886,
+      "per_case": {
+        "00": 0.9809004092769441,
+        "01": 0.9695712309820194,
+        "10": 0.631935047361299,
+        "11": 0.8423357664233576
+      },
+      "probes": 87,
+      "pulses": 0.46493055555555557,
+      "requests": 174,
+      "rest_fraction": 0.0,
+      "scenario": "changed_10_drought",
+      "seed": 11,
+      "synthetic_cost": 348.123
+    },
+    {
+      "correct": 0.0,
+      "method": "always_rest",
+      "net_energy": 0.0,
+      "per_case": {
+        "00": 0.0,
+        "01": 0.0,
+        "10": 0.0,
+        "11": 0.0
+      },
+      "probes": 0,
+      "pulses": 0.0,
+      "requests": 0,
+      "rest_fraction": 1.0,
+      "scenario": "changed_10_drought",
+      "seed": 11,
+      "synthetic_cost": 0.0
+    },
+    {
+      "correct": 0.8409722222222222,
+      "method": "learned_three",
+      "net_energy": 0.5731819444444444,
+      "per_case": {
+        "00": 1.0,
+        "01": 0.5242587601078167,
+        "10": 0.9985935302390999,
+        "11": 0.8585034013605443
+      },
+      "probes": 32,
+      "pulses": 0.6763888888888889,
+      "requests": 78,
+      "rest_fraction": 0.14270833333333333,
+      "scenario": "scarcity_01_partial",
+      "seed": 11,
+      "synthetic_cost": 297.2360000000004
+    },
+    {
+      "correct": 0.9479166666666666,
+      "method": "learned_two",
+      "net_energy": 0.5815753472222221,
+      "per_case": {
+        "00": 1.0,
+        "01": 0.9393530997304582,
+        "10": 0.9985935302390999,
+        "11": 0.8585034013605443
+      },
+      "probes": 51,
+      "pulses": 0.7020833333333333,
+      "requests": 94,
+      "rest_fraction": 0.0,
+      "scenario": "scarcity_01_partial",
+      "seed": 11,
+      "synthetic_cost": 347.06300000000016
+    },
+    {
+      "correct": 0.6885416666666667,
+      "method": "manual_two",
+      "net_energy": 0.4963350694444445,
+      "per_case": {
+        "00": 1.0,
+        "01": 0.0444743935309973,
+        "10": 0.9437412095639943,
+        "11": 0.7986394557823129
+      },
+      "probes": 895,
+      "pulses": 0.6253472222222223,
+      "requests": 1790,
+      "rest_fraction": 0.0,
+      "scenario": "scarcity_01_partial",
+      "seed": 11,
+      "synthetic_cost": 371.5549999999998
+    },
+    {
+      "correct": 0.9517361111111111,
+      "method": "guard_two",
+      "net_energy": 0.5802916666666667,
+      "per_case": {
+        "00": 1.0,
+        "01": 0.9568733153638814,
+        "10": 0.9971870604781997,
+        "11": 0.8571428571428571
+      },
+      "probes": 40,
+      "pulses": 0.7006944444444444,
+      "requests": 80,
+      "rest_fraction": 0.0,
+      "scenario": "scarcity_01_partial",
+      "seed": 11,
+      "synthetic_cost": 346.76
+    },
+    {
+      "correct": 0.0,
+      "method": "always_rest",
+      "net_energy": 0.0,
+      "per_case": {
+        "00": 0.0,
+        "01": 0.0,
+        "10": 0.0,
+        "11": 0.0
+      },
+      "probes": 0,
+      "pulses": 0.0,
+      "requests": 0,
+      "rest_fraction": 1.0,
+      "scenario": "scarcity_01_partial",
+      "seed": 11,
+      "synthetic_cost": 0.0
+    },
+    {
+      "correct": 0.7895833333333333,
+      "method": "learned_three",
+      "net_energy": 0.5212374999999999,
+      "per_case": {
+        "00": 0.9302325581395349,
+        "01": 0.4533508541392904,
+        "10": 0.9107391910739191,
+        "11": 0.8907563025210085
+      },
+      "probes": 50,
+      "pulses": 0.6194444444444445,
+      "requests": 123,
+      "rest_fraction": 0.1859375,
+      "scenario": "mixed_change_10_scarcity_01",
+      "seed": 11,
+      "synthetic_cost": 282.83600000000024
+    },
+    {
+      "correct": 0.940625,
+      "method": "learned_two",
+      "net_energy": 0.5141940972222222,
+      "per_case": {
+        "00": 0.9956395348837209,
+        "01": 0.9645203679369251,
+        "10": 0.9121338912133892,
+        "11": 0.8907563025210085
+      },
+      "probes": 53,
+      "pulses": 0.6347222222222222,
+      "requests": 98,
+      "rest_fraction": 0.0,
+      "scenario": "mixed_change_10_scarcity_01",
+      "seed": 11,
+      "synthetic_cost": 347.121
+    },
+    {
+      "correct": 0.6416666666666667,
+      "method": "manual_two",
+      "net_energy": 0.4584972222222224,
+      "per_case": {
+        "00": 0.8633720930232558,
+        "01": 0.02102496714848883,
+        "10": 0.9776847977684798,
+        "11": 0.7521008403361344
+      },
+      "probes": 1032,
+      "pulses": 0.5888888888888889,
+      "requests": 2064,
+      "rest_fraction": 0.0,
+      "scenario": "mixed_change_10_scarcity_01",
+      "seed": 11,
+      "synthetic_cost": 375.5279999999995
+    },
+    {
+      "correct": 0.9541666666666667,
+      "method": "guard_two",
+      "net_energy": 0.5279868055555555,
+      "per_case": {
+        "00": 0.9941860465116279,
+        "01": 0.9579500657030223,
+        "10": 0.9776847977684798,
+        "11": 0.8879551820728291
+      },
+      "probes": 62,
+      "pulses": 0.6486111111111111,
+      "requests": 124,
+      "rest_fraction": 0.0,
+      "scenario": "mixed_change_10_scarcity_01",
+      "seed": 11,
+      "synthetic_cost": 347.39799999999997
+    },
+    {
+      "correct": 0.0,
+      "method": "always_rest",
+      "net_energy": 0.0,
+      "per_case": {
+        "00": 0.0,
+        "01": 0.0,
+        "10": 0.0,
+        "11": 0.0
+      },
+      "probes": 0,
+      "pulses": 0.0,
+      "requests": 0,
+      "rest_fraction": 1.0,
+      "scenario": "mixed_change_10_scarcity_01",
+      "seed": 11,
+      "synthetic_cost": 0.0
+    },
+    {
+      "correct": 0.5190972222222222,
+      "method": "learned_three",
+      "net_energy": 0.19880416666666653,
+      "per_case": {
+        "00": 0.489159891598916,
+        "01": 0.5724331926863573,
+        "10": 0.6295774647887324,
+        "11": 0.3883495145631068
+      },
+      "probes": 86,
+      "pulses": 0.296875,
+      "requests": 197,
+      "rest_fraction": 0.19010416666666666,
+      "scenario": "global_change_drought",
+      "seed": 11,
+      "synthetic_cost": 282.44400000000036
+    },
+    {
+      "correct": 0.5177083333333333,
+      "method": "learned_two",
+      "net_energy": 0.1753545138888889,
+      "per_case": {
+        "00": 0.4878048780487805,
+        "01": 0.5738396624472574,
+        "10": 0.6267605633802817,
+        "11": 0.3855755894590846
+      },
+      "probes": 83,
+      "pulses": 0.29618055555555556,
+      "requests": 152,
+      "rest_fraction": 0.0,
+      "scenario": "global_change_drought",
+      "seed": 11,
+      "synthetic_cost": 347.979
+    },
+    {
+      "correct": 0.9097222222222222,
+      "method": "manual_two",
+      "net_energy": 0.38301770833333304,
+      "per_case": {
+        "00": 0.9200542005420054,
+        "01": 0.9142053445850914,
+        "10": 0.9732394366197183,
+        "11": 0.8321775312066574
+      },
+      "probes": 321,
+      "pulses": 0.50625,
+      "requests": 642,
+      "rest_fraction": 0.0,
+      "scenario": "global_change_drought",
+      "seed": 11,
+      "synthetic_cost": 354.90900000000084
+    },
+    {
+      "correct": 0.7125,
+      "method": "guard_two",
+      "net_energy": 0.2749420138888889,
+      "per_case": {
+        "00": 0.7005420054200542,
+        "01": 0.7974683544303798,
+        "10": 0.7464788732394366,
+        "11": 0.6074895977808599
+      },
+      "probes": 123,
+      "pulses": 0.39618055555555554,
+      "requests": 246,
+      "rest_fraction": 0.0,
+      "scenario": "global_change_drought",
+      "seed": 11,
+      "synthetic_cost": 349.167
+    },
+    {
+      "correct": 0.0,
+      "method": "always_rest",
+      "net_energy": 0.0,
+      "per_case": {
+        "00": 0.0,
+        "01": 0.0,
+        "10": 0.0,
+        "11": 0.0
+      },
+      "probes": 0,
+      "pulses": 0.0,
+      "requests": 0,
+      "rest_fraction": 1.0,
+      "scenario": "global_change_drought",
+      "seed": 11,
+      "synthetic_cost": 0.0
+    },
+    {
+      "correct": 0.4270833333333333,
+      "method": "learned_three",
+      "net_energy": -0.0347763888888888,
+      "per_case": {
+        "00": 0.36426592797783935,
+        "01": 0.4042857142857143,
+        "10": 0.48204419889502764,
+        "11": 0.4564032697547684
+      },
+      "probes": 108,
+      "pulses": 0.025694444444444443,
+      "requests": 348,
+      "rest_fraction": 0.5059027777777778,
+      "scenario": "severe_drought",
+      "seed": 11,
+      "synthetic_cost": 174.15599999999975
+    },
+    {
+      "correct": 0.9315972222222222,
+      "method": "learned_two",
+      "net_energy": -0.07073020833333335,
+      "per_case": {
+        "00": 0.961218836565097,
+        "01": 0.96,
+        "10": 0.962707182320442,
+        "11": 0.8446866485013624
+      },
+      "probes": 109,
+      "pulses": 0.050347222222222224,
+      "requests": 189,
+      "rest_fraction": 0.0,
+      "scenario": "severe_drought",
+      "seed": 11,
+      "synthetic_cost": 348.70300000000003
+    },
+    {
+      "correct": 0.027430555555555555,
+      "method": "manual_two",
+      "net_energy": -0.14610104166666676,
+      "per_case": {
+        "00": 0.02631578947368421,
+        "01": 0.027142857142857142,
+        "10": 0.022099447513812154,
+        "11": 0.0340599455040872
+      },
+      "probes": 2799,
+      "pulses": 0.0020833333333333333,
+      "requests": 5598,
+      "rest_fraction": 0.0,
+      "scenario": "severe_drought",
+      "seed": 11,
+      "synthetic_cost": 426.7710000000003
+    },
+    {
+      "correct": 0.925,
+      "method": "guard_two",
+      "net_energy": -0.07128888888888887,
+      "per_case": {
+        "00": 0.9556786703601108,
+        "01": 0.9542857142857143,
+        "10": 0.9558011049723757,
+        "11": 0.8365122615803815
+      },
+      "probes": 128,
+      "pulses": 0.05,
+      "requests": 256,
+      "rest_fraction": 0.0,
+      "scenario": "severe_drought",
+      "seed": 11,
+      "synthetic_cost": 349.31199999999995
+    },
+    {
+      "correct": 0.0,
+      "method": "always_rest",
+      "net_energy": 0.0,
+      "per_case": {
+        "00": 0.0,
+        "01": 0.0,
+        "10": 0.0,
+        "11": 0.0
+      },
+      "probes": 0,
+      "pulses": 0.0,
+      "requests": 0,
+      "rest_fraction": 1.0,
+      "scenario": "severe_drought",
+      "seed": 11,
+      "synthetic_cost": 0.0
+    },
+    {
+      "correct": 0.10868055555555556,
+      "method": "learned_three",
+      "net_energy": -0.06544270833333318,
+      "per_case": {
+        "00": 0.036935704514363885,
+        "01": 0.1023391812865497,
+        "10": 0.2085048010973937,
+        "11": 0.08695652173913043
+      },
+      "probes": 105,
+      "pulses": 0.004166666666666667,
+      "requests": 345,
+      "rest_fraction": 0.42951388888888886,
+      "scenario": "global_change_blackout",
+      "seed": 11,
+      "synthetic_cost": 200.47499999999957
+    },
+    {
+      "correct": 0.1076388888888889,
+      "method": "learned_two",
+      "net_energy": -0.11719826388888889,
+      "per_case": {
+        "00": 0.036935704514363885,
+        "01": 0.1023391812865497,
+        "10": 0.205761316872428,
+        "11": 0.08559782608695653
+      },
+      "probes": 103,
+      "pulses": 0.0038194444444444443,
+      "requests": 178,
+      "rest_fraction": 0.0,
+      "scenario": "global_change_blackout",
+      "seed": 11,
+      "synthetic_cost": 348.531
+    },
+    {
+      "correct": 0.9486111111111111,
+      "method": "manual_two",
+      "net_energy": -0.10005034722222245,
+      "per_case": {
+        "00": 0.9781121751025992,
+        "01": 0.9766081871345029,
+        "10": 0.9780521262002744,
+        "11": 0.8641304347826086
+      },
+      "probes": 2605,
+      "pulses": 0.04618055555555556,
+      "requests": 5210,
+      "rest_fraction": 0.0,
+      "scenario": "global_change_blackout",
+      "seed": 11,
+      "synthetic_cost": 421.14500000000066
+    },
+    {
+      "correct": 0.11805555555555555,
+      "method": "guard_two",
+      "net_energy": -0.11578368055555556,
+      "per_case": {
+        "00": 0.05198358413132695,
+        "01": 0.11257309941520467,
+        "10": 0.21262002743484226,
+        "11": 0.09510869565217392
+      },
+      "probes": 133,
+      "pulses": 0.005555555555555556,
+      "requests": 266,
+      "rest_fraction": 0.0,
+      "scenario": "global_change_blackout",
+      "seed": 11,
+      "synthetic_cost": 349.457
+    },
+    {
+      "correct": 0.0,
+      "method": "always_rest",
+      "net_energy": 0.0,
+      "per_case": {
+        "00": 0.0,
+        "01": 0.0,
+        "10": 0.0,
+        "11": 0.0
+      },
+      "probes": 0,
+      "pulses": 0.0,
+      "requests": 0,
+      "rest_fraction": 1.0,
+      "scenario": "global_change_blackout",
+      "seed": 11,
+      "synthetic_cost": 0.0
+    },
+    {
+      "correct": 0.8840277777777777,
+      "method": "learned_three",
+      "net_energy": 0.6947326388888886,
+      "per_case": {
+        "00": 0.9386084583901774,
+        "01": 0.8756906077348067,
+        "10": 0.7296195652173914,
+        "11": 1.0
+      },
+      "probes": 20,
+      "pulses": 0.8076388888888889,
+      "requests": 35,
+      "rest_fraction": 0.06076388888888889,
+      "scenario": "changed_10",
+      "seed": 12,
+      "synthetic_cost": 325.17000000000087
+    },
+    {
+      "correct": 0.8996527777777777,
+      "method": "learned_two",
+      "net_energy": 0.7019538194444445,
+      "per_case": {
+        "00": 0.9972714870395635,
+        "01": 0.8756906077348067,
+        "10": 0.7323369565217391,
+        "11": 1.0
+      },
+      "probes": 27,
+      "pulses": 0.8222222222222222,
+      "requests": 49,
+      "rest_fraction": 0.0,
+      "scenario": "changed_10",
+      "seed": 12,
+      "synthetic_cost": 346.373
+    },
+    {
+      "correct": 0.8711805555555555,
+      "method": "manual_two",
+      "net_energy": 0.6707680555555555,
+      "per_case": {
+        "00": 0.9386084583901774,
+        "01": 0.761049723756906,
+        "10": 0.8383152173913043,
+        "11": 0.950509461426492
+      },
+      "probes": 374,
+      "pulses": 0.7944444444444444,
+      "requests": 619,
+      "rest_fraction": 0.0,
+      "scenario": "changed_10",
+      "seed": 12,
+      "synthetic_cost": 356.1880000000001
+    },
+    {
+      "correct": 0.896875,
+      "method": "guard_two",
+      "net_energy": 0.6980552083333333,
+      "per_case": {
+        "00": 0.9386084583901774,
+        "01": 0.8729281767955801,
+        "10": 0.7853260869565217,
+        "11": 0.9970887918486172
+      },
+      "probes": 35,
+      "pulses": 0.8184027777777778,
+      "requests": 63,
+      "rest_fraction": 0.0,
+      "scenario": "changed_10",
+      "seed": 12,
+      "synthetic_cost": 346.601
+    },
+    {
+      "correct": 0.0,
+      "method": "always_rest",
+      "net_energy": 0.0,
+      "per_case": {
+        "00": 0.0,
+        "01": 0.0,
+        "10": 0.0,
+        "11": 0.0
+      },
+      "probes": 0,
+      "pulses": 0.0,
+      "requests": 0,
+      "rest_fraction": 1.0,
+      "scenario": "changed_10",
+      "seed": 12,
+      "synthetic_cost": 0.0
+    },
+    {
+      "correct": 0.7975694444444444,
+      "method": "learned_three",
+      "net_energy": 0.5603076388888888,
+      "per_case": {
+        "00": 0.9292649098474342,
+        "01": 0.3174825174825175,
+        "10": 0.9388888888888889,
+        "11": 1.0
+      },
+      "probes": 28,
+      "pulses": 0.6611111111111111,
+      "requests": 87,
+      "rest_fraction": 0.1625,
+      "scenario": "scarcity_01",
+      "seed": 12,
+      "synthetic_cost": 290.3140000000004
+    },
+    {
+      "correct": 0.9291666666666667,
+      "method": "learned_two",
+      "net_energy": 0.5407454861111111,
+      "per_case": {
+        "00": 0.9292649098474342,
+        "01": 0.8475524475524475,
+        "10": 0.9388888888888889,
+        "11": 1.0
+      },
+      "probes": 37,
+      "pulses": 0.6611111111111111,
+      "requests": 64,
+      "rest_fraction": 0.0,
+      "scenario": "scarcity_01",
+      "seed": 12,
+      "synthetic_cost": 346.653
+    },
+    {
+      "correct": 0.6934027777777778,
+      "method": "manual_two",
+      "net_energy": 0.5035031250000002,
+      "per_case": {
+        "00": 0.9292649098474342,
+        "01": 0.019580419580419582,
+        "10": 0.8180555555555555,
+        "11": 1.0
+      },
+      "probes": 879,
+      "pulses": 0.6322916666666667,
+      "requests": 1668,
+      "rest_fraction": 0.0,
+      "scenario": "scarcity_01",
+      "seed": 12,
+      "synthetic_cost": 370.9109999999997
+    },
+    {
+      "correct": 0.928125,
+      "method": "guard_two",
+      "net_energy": 0.5400166666666667,
+      "per_case": {
+        "00": 0.9292649098474342,
+        "01": 0.8461538461538461,
+        "10": 0.9361111111111111,
+        "11": 1.0
+      },
+      "probes": 40,
+      "pulses": 0.6604166666666667,
+      "requests": 76,
+      "rest_fraction": 0.0,
+      "scenario": "scarcity_01",
+      "seed": 12,
+      "synthetic_cost": 346.752
+    },
+    {
+      "correct": 0.0,
+      "method": "always_rest",
+      "net_energy": 0.0,
+      "per_case": {
+        "00": 0.0,
+        "01": 0.0,
+        "10": 0.0,
+        "11": 0.0
+      },
+      "probes": 0,
+      "pulses": 0.0,
+      "requests": 0,
+      "rest_fraction": 1.0,
+      "scenario": "scarcity_01",
+      "seed": 12,
+      "synthetic_cost": 0.0
+    },
+    {
+      "correct": 0.7743055555555556,
+      "method": "learned_three",
+      "net_energy": 0.3230114583333333,
+      "per_case": {
+        "00": 0.8068493150684931,
+        "01": 0.7915531335149864,
+        "10": 0.744413407821229,
+        "11": 0.7528571428571429
+      },
+      "probes": 57,
+      "pulses": 0.42777777777777776,
+      "requests": 301,
+      "rest_fraction": 0.1328125,
+      "scenario": "changed_10_drought",
+      "seed": 12,
+      "synthetic_cost": 301.72700000000015
+    },
+    {
+      "correct": 0.8722222222222222,
+      "method": "learned_two",
+      "net_energy": 0.3681864583333333,
+      "per_case": {
+        "00": 0.9164383561643835,
+        "01": 0.8542234332425068,
+        "10": 0.7458100558659218,
+        "11": 0.9742857142857143
+      },
+      "probes": 71,
+      "pulses": 0.4888888888888889,
+      "requests": 124,
+      "rest_fraction": 0.0,
+      "scenario": "changed_10_drought",
+      "seed": 12,
+      "synthetic_cost": 347.62300000000005
+    },
+    {
+      "correct": 0.44548611111111114,
+      "method": "manual_two",
+      "net_energy": 0.10590763888888904,
+      "per_case": {
+        "00": 0.39863013698630134,
+        "01": 0.2997275204359673,
+        "10": 0.8184357541899442,
+        "11": 0.26571428571428574
+      },
+      "probes": 1574,
+      "pulses": 0.24166666666666667,
+      "requests": 3018,
+      "rest_fraction": 0.0,
+      "scenario": "changed_10_drought",
+      "seed": 12,
+      "synthetic_cost": 390.98599999999954
+    },
+    {
+      "correct": 0.8677083333333333,
+      "method": "guard_two",
+      "net_energy": 0.3648545138888889,
+      "per_case": {
+        "00": 0.910958904109589,
+        "01": 0.8474114441416893,
+        "10": 0.75,
+        "11": 0.9642857142857143
+      },
+      "probes": 91,
+      "pulses": 0.4857638888888889,
+      "requests": 172,
+      "rest_fraction": 0.0,
+      "scenario": "changed_10_drought",
+      "seed": 12,
+      "synthetic_cost": 348.219
+    },
+    {
+      "correct": 0.0,
+      "method": "always_rest",
+      "net_energy": 0.0,
+      "per_case": {
+        "00": 0.0,
+        "01": 0.0,
+        "10": 0.0,
+        "11": 0.0
+      },
+      "probes": 0,
+      "pulses": 0.0,
+      "requests": 0,
+      "rest_fraction": 1.0,
+      "scenario": "changed_10_drought",
+      "seed": 12,
+      "synthetic_cost": 0.0
+    },
+    {
+      "correct": 0.8215277777777777,
+      "method": "learned_three",
+      "net_energy": 0.5740899305555554,
+      "per_case": {
+        "00": 0.935933147632312,
+        "01": 0.4207650273224044,
+        "10": 0.9442231075697212,
+        "11": 0.9970457902511078
+      },
+      "probes": 27,
+      "pulses": 0.6777777777777778,
+      "requests": 83,
+      "rest_fraction": 0.13836805555555556,
+      "scenario": "scarcity_01_partial",
+      "seed": 12,
+      "synthetic_cost": 298.62100000000044
+    },
+    {
+      "correct": 0.9232638888888889,
+      "method": "learned_two",
+      "net_energy": 0.579625,
+      "per_case": {
+        "00": 0.935933147632312,
+        "01": 0.8210382513661202,
+        "10": 0.9442231075697212,
+        "11": 0.9970457902511078
+      },
+      "probes": 38,
+      "pulses": 0.7,
+      "requests": 65,
+      "rest_fraction": 0.0,
+      "scenario": "scarcity_01_partial",
+      "seed": 12,
+      "synthetic_cost": 346.68
+    },
+    {
+      "correct": 0.6642361111111111,
+      "method": "manual_two",
+      "net_energy": 0.4759211805555558,
+      "per_case": {
+        "00": 0.8690807799442897,
+        "01": 0.03825136612021858,
+        "10": 0.8871181938911022,
+        "11": 0.8759231905465288
+      },
+      "probes": 963,
+      "pulses": 0.6055555555555555,
+      "requests": 1836,
+      "rest_fraction": 0.0,
+      "scenario": "scarcity_01_partial",
+      "seed": 12,
+      "synthetic_cost": 373.3469999999993
+    },
+    {
+      "correct": 0.921875,
+      "method": "guard_two",
+      "net_energy": 0.5792312500000001,
+      "per_case": {
+        "00": 0.9345403899721448,
+        "01": 0.819672131147541,
+        "10": 0.9442231075697212,
+        "11": 0.9940915805022157
+      },
+      "probes": 42,
+      "pulses": 0.6996527777777778,
+      "requests": 82,
+      "rest_fraction": 0.0,
+      "scenario": "scarcity_01_partial",
+      "seed": 12,
+      "synthetic_cost": 346.81399999999996
+    },
+    {
+      "correct": 0.0,
+      "method": "always_rest",
+      "net_energy": 0.0,
+      "per_case": {
+        "00": 0.0,
+        "01": 0.0,
+        "10": 0.0,
+        "11": 0.0
+      },
+      "probes": 0,
+      "pulses": 0.0,
+      "requests": 0,
+      "rest_fraction": 1.0,
+      "scenario": "scarcity_01_partial",
+      "seed": 12,
+      "synthetic_cost": 0.0
+    },
+    {
+      "correct": 0.7899305555555556,
+      "method": "learned_three",
+      "net_energy": 0.5432861111111109,
+      "per_case": {
+        "00": 0.8895348837209303,
+        "01": 0.36141304347826086,
+        "10": 0.9170182841068917,
+        "11": 1.0
+      },
+      "probes": 44,
+      "pulses": 0.64375,
+      "requests": 118,
+      "rest_fraction": 0.16666666666666666,
+      "scenario": "mixed_change_10_scarcity_01",
+      "seed": 12,
+      "synthetic_cost": 289.3360000000004
+    },
+    {
+      "correct": 0.9347222222222222,
+      "method": "learned_two",
+      "net_energy": 0.5461305555555556,
+      "per_case": {
+        "00": 0.9898255813953488,
+        "01": 0.8342391304347826,
+        "10": 0.9170182841068917,
+        "11": 1.0
+      },
+      "probes": 54,
+      "pulses": 0.6666666666666666,
+      "requests": 97,
+      "rest_fraction": 0.0,
+      "scenario": "mixed_change_10_scarcity_01",
+      "seed": 12,
+      "synthetic_cost": 347.144
+    },
+    {
+      "correct": 0.6440972222222222,
+      "method": "manual_two",
+      "net_energy": 0.45799791666666684,
+      "per_case": {
+        "00": 0.7834302325581395,
+        "01": 0.019021739130434784,
+        "10": 0.8551336146272855,
+        "11": 0.9315436241610738
+      },
+      "probes": 1022,
+      "pulses": 0.5881944444444445,
+      "requests": 1908,
+      "rest_fraction": 0.0,
+      "scenario": "mixed_change_10_scarcity_01",
+      "seed": 12,
+      "synthetic_cost": 374.9659999999993
+    },
+    {
+      "correct": 0.9048611111111111,
+      "method": "guard_two",
+      "net_energy": 0.5186454861111112,
+      "per_case": {
+        "00": 0.9316860465116279,
+        "01": 0.8328804347826086,
+        "10": 0.8551336146272855,
+        "11": 0.9986577181208054
+      },
+      "probes": 59,
+      "pulses": 0.6392361111111111,
+      "requests": 113,
+      "rest_fraction": 0.0,
+      "scenario": "mixed_change_10_scarcity_01",
+      "seed": 12,
+      "synthetic_cost": 347.301
+    },
+    {
+      "correct": 0.0,
+      "method": "always_rest",
+      "net_energy": 0.0,
+      "per_case": {
+        "00": 0.0,
+        "01": 0.0,
+        "10": 0.0,
+        "11": 0.0
+      },
+      "probes": 0,
+      "pulses": 0.0,
+      "requests": 0,
+      "rest_fraction": 1.0,
+      "scenario": "mixed_change_10_scarcity_01",
+      "seed": 12,
+      "synthetic_cost": 0.0
+    },
+    {
+      "correct": 0.5788194444444444,
+      "method": "learned_three",
+      "net_energy": 0.2181006944444443,
+      "per_case": {
+        "00": 0.49928469241773965,
+        "01": 0.5722145804676754,
+        "10": 0.5609103078982597,
+        "11": 0.6831683168316832
+      },
+      "probes": 70,
+      "pulses": 0.31875,
+      "requests": 330,
+      "rest_fraction": 0.16822916666666668,
+      "scenario": "global_change_drought",
+      "seed": 12,
+      "synthetic_cost": 289.87000000000046
+    },
+    {
+      "correct": 0.65,
+      "method": "learned_two",
+      "net_energy": 0.23708229166666667,
+      "per_case": {
+        "00": 0.5550786838340487,
+        "01": 0.6753782668500687,
+        "10": 0.5676037483266398,
+        "11": 0.8048090523338048
+      },
+      "probes": 91,
+      "pulses": 0.3579861111111111,
+      "requests": 164,
+      "rest_fraction": 0.0,
+      "scenario": "global_change_drought",
+      "seed": 12,
+      "synthetic_cost": 348.203
+    },
+    {
+      "correct": 0.8777777777777778,
+      "method": "manual_two",
+      "net_energy": 0.36109618055555537,
+      "per_case": {
+        "00": 0.9184549356223176,
+        "01": 0.8019257221458047,
+        "10": 0.8701472556894244,
+        "11": 0.9236209335219236
+      },
+      "probes": 401,
+      "pulses": 0.48506944444444444,
+      "requests": 709,
+      "rest_fraction": 0.0,
+      "scenario": "global_change_drought",
+      "seed": 12,
+      "synthetic_cost": 357.04300000000063
+    },
+    {
+      "correct": 0.7208333333333333,
+      "method": "guard_two",
+      "net_energy": 0.27481041666666667,
+      "per_case": {
+        "00": 0.65379113018598,
+        "01": 0.7359009628610729,
+        "10": 0.6813922356091031,
+        "11": 0.8132956152758133
+      },
+      "probes": 102,
+      "pulses": 0.3958333333333333,
+      "requests": 198,
+      "rest_fraction": 0.0,
+      "scenario": "global_change_drought",
+      "seed": 12,
+      "synthetic_cost": 348.546
+    },
+    {
+      "correct": 0.0,
+      "method": "always_rest",
+      "net_energy": 0.0,
+      "per_case": {
+        "00": 0.0,
+        "01": 0.0,
+        "10": 0.0,
+        "11": 0.0
+      },
+      "probes": 0,
+      "pulses": 0.0,
+      "requests": 0,
+      "rest_fraction": 1.0,
+      "scenario": "global_change_drought",
+      "seed": 12,
+      "synthetic_cost": 0.0
+    },
+    {
+      "correct": 0.33368055555555554,
+      "method": "learned_three",
+      "net_energy": -0.03929270833333338,
+      "per_case": {
+        "00": 0.31345353675450766,
+        "01": 0.3739130434782609,
+        "10": 0.31208499335989376,
+        "11": 0.33798882681564246
+      },
+      "probes": 99,
+      "pulses": 0.016666666666666666,
+      "requests": 504,
+      "rest_fraction": 0.54375,
+      "scenario": "severe_drought",
+      "seed": 12,
+      "synthetic_cost": 161.16300000000012
+    },
+    {
+      "correct": 0.9010416666666666,
+      "method": "learned_two",
+      "net_energy": -0.07779479166666665,
+      "per_case": {
+        "00": 0.8876560332871013,
+        "01": 0.8565217391304348,
+        "10": 0.900398406374502,
+        "11": 0.9581005586592178
+      },
+      "probes": 121,
+      "pulses": 0.043402777777777776,
+      "requests": 212,
+      "rest_fraction": 0.0,
+      "scenario": "severe_drought",
+      "seed": 12,
+      "synthetic_cost": 349.049
+    },
+    {
+      "correct": 0.025347222222222222,
+      "method": "manual_two",
+      "net_energy": -0.14642395833333352,
+      "per_case": {
+        "00": 0.033287101248266296,
+        "01": 0.02463768115942029,
+        "10": 0.01859229747675963,
+        "11": 0.025139664804469275
+      },
+      "probes": 2803,
+      "pulses": 0.001736111111111111,
+      "requests": 5513,
+      "rest_fraction": 0.0,
+      "scenario": "severe_drought",
+      "seed": 12,
+      "synthetic_cost": 426.70100000000053
+    },
+    {
+      "correct": 0.8986111111111111,
+      "method": "guard_two",
+      "net_energy": -0.07822916666666667,
+      "per_case": {
+        "00": 0.8862690707350902,
+        "01": 0.8521739130434782,
+        "10": 0.899070385126162,
+        "11": 0.9553072625698324
+      },
+      "probes": 128,
+      "pulses": 0.043055555555555555,
+      "requests": 250,
+      "rest_fraction": 0.0,
+      "scenario": "severe_drought",
+      "seed": 12,
+      "synthetic_cost": 349.3
+    },
+    {
+      "correct": 0.0,
+      "method": "always_rest",
+      "net_energy": 0.0,
+      "per_case": {
+        "00": 0.0,
+        "01": 0.0,
+        "10": 0.0,
+        "11": 0.0
+      },
+      "probes": 0,
+      "pulses": 0.0,
+      "requests": 0,
+      "rest_fraction": 1.0,
+      "scenario": "severe_drought",
+      "seed": 12,
+      "synthetic_cost": 0.0
+    },
+    {
+      "correct": 0.06145833333333333,
+      "method": "learned_three",
+      "net_energy": -0.055339236111111106,
+      "per_case": {
+        "00": 0.03314917127071823,
+        "01": 0.03467406380027739,
+        "10": 0.034578146611341634,
+        "11": 0.1446629213483146
+      },
+      "probes": 99,
+      "pulses": 0.003125,
+      "requests": 421,
+      "rest_fraction": 0.5223958333333333,
+      "scenario": "global_change_blackout",
+      "seed": 12,
+      "synthetic_cost": 168.37699999999998
+    },
+    {
+      "correct": 0.06875,
+      "method": "learned_two",
+      "net_energy": -0.1174170138888889,
+      "per_case": {
+        "00": 0.04005524861878453,
+        "01": 0.04022191400832178,
+        "10": 0.04426002766251729,
+        "11": 0.15168539325842698
+      },
+      "probes": 125,
+      "pulses": 0.0038194444444444443,
+      "requests": 218,
+      "rest_fraction": 0.0,
+      "scenario": "global_change_blackout",
+      "seed": 12,
+      "synthetic_cost": 349.161
+    },
+    {
+      "correct": 0.9274305555555555,
+      "method": "manual_two",
+      "net_energy": -0.10063680555555578,
+      "per_case": {
+        "00": 0.9033149171270718,
+        "01": 0.9015256588072122,
+        "10": 0.9280774550484094,
+        "11": 0.9775280898876404
+      },
+      "probes": 2738,
+      "pulses": 0.046875,
+      "requests": 5392,
+      "rest_fraction": 0.0,
+      "scenario": "global_change_blackout",
+      "seed": 12,
+      "synthetic_cost": 424.83400000000063
+    },
+    {
+      "correct": 0.07118055555555555,
+      "method": "guard_two",
+      "net_energy": -0.11750624999999998,
+      "per_case": {
+        "00": 0.04143646408839779,
+        "01": 0.044382801664355064,
+        "10": 0.04149377593360996,
+        "11": 0.15870786516853932
+      },
+      "probes": 132,
+      "pulses": 0.0038194444444444443,
+      "requests": 259,
+      "rest_fraction": 0.0,
+      "scenario": "global_change_blackout",
+      "seed": 12,
+      "synthetic_cost": 349.41799999999995
+    },
+    {
+      "correct": 0.0,
+      "method": "always_rest",
+      "net_energy": 0.0,
+      "per_case": {
+        "00": 0.0,
+        "01": 0.0,
+        "10": 0.0,
+        "11": 0.0
+      },
+      "probes": 0,
+      "pulses": 0.0,
+      "requests": 0,
+      "rest_fraction": 1.0,
+      "scenario": "global_change_blackout",
+      "seed": 12,
+      "synthetic_cost": 0.0
+    }
+  ],
+  "schema": "private-three-action-learning-v1",
+  "seeds": [
+    11,
+    12
+  ],
+  "spec": {
+    "active_cost": 0.12,
+    "alpha": 0.09,
+    "epsilon_end": 0.05,
+    "epsilon_start": 0.26,
+    "eval_steps": 180,
+    "intrinsic_weight": 0.2,
+    "message_cost": 0.004,
+    "pairs": 16,
+    "pretrain": 1600,
+    "probe_cost": 0.025,
+    "pulse_rate": 0.92,
+    "train_episodes": 90,
+    "train_steps": 40
+  },
+  "summary": {
+    "changed_10": {
+      "always_rest": {
+        "correct": 0.0,
+        "net_energy": 0.0,
+        "per_case": {
+          "00": 0.0,
+          "01": 0.0,
+          "10": 0.0,
+          "11": 0.0
+        },
+        "probes": 0.0,
+        "pulses": 0.0,
+        "requests": 0.0,
+        "rest_fraction": 1.0,
+        "synthetic_cost": 0.0
+      },
+      "guard_two": {
+        "correct": 0.9253472222222222,
+        "net_energy": 0.7286284722222223,
+        "per_case": {
+          "00": 0.9679017046509091,
+          "01": 0.9337243623703928,
+          "10": 0.880272372924325,
+          "11": 0.9253087101719784
+        },
+        "probes": 33.0,
+        "pulses": 0.8489583333333334,
+        "requests": 62.5,
+        "rest_fraction": 0.0,
+        "synthetic_cost": 346.55
+      },
+      "learned_three": {
+        "correct": 0.914236111111111,
+        "net_energy": 0.7252866319444442,
+        "per_case": {
+          "00": 0.968602966922999,
+          "01": 0.9364754408537047,
+          "10": 0.8298243598681709,
+          "11": 0.9274300932090547
+        },
+        "probes": 21.5,
+        "pulses": 0.8390625,
+        "requests": 38.5,
+        "rest_fraction": 0.05364583333333334,
+        "synthetic_cost": 327.67450000000076
+      },
+      "learned_two": {
+        "correct": 0.9222222222222223,
+        "net_energy": 0.7260944444444445,
+        "per_case": {
+          "00": 0.997934481247692,
+          "01": 0.9364754408537047,
+          "10": 0.8319119184941057,
+          "11": 0.9274300932090547
+        },
+        "probes": 26.0,
+        "pulses": 0.8463541666666666,
+        "requests": 49.0,
+        "rest_fraction": 0.0,
+        "synthetic_cost": 346.34799999999996
+      },
+      "manual_two": {
+        "correct": 0.8807291666666666,
+        "net_energy": 0.6845569444444443,
+        "per_case": {
+          "00": 0.93634490240687,
+          "01": 0.8168262317414667,
+          "10": 0.9067669381417163,
+          "11": 0.8693958758530596
+        },
+        "probes": 345.0,
+        "pulses": 0.8079861111111111,
+        "requests": 625.5,
+        "rest_fraction": 0.0,
+        "synthetic_cost": 355.47600000000045
+      }
+    },
+    "changed_10_drought": {
+      "always_rest": {
+        "correct": 0.0,
+        "net_energy": 0.0,
+        "per_case": {
+          "00": 0.0,
+          "01": 0.0,
+          "10": 0.0,
+          "11": 0.0
+        },
+        "probes": 0.0,
+        "pulses": 0.0,
+        "requests": 0.0,
+        "rest_fraction": 1.0,
+        "synthetic_cost": 0.0
+      },
+      "guard_two": {
+        "correct": 0.8616319444444445,
+        "net_energy": 0.3544545138888889,
+        "per_case": {
+          "00": 0.9459296566932666,
+          "01": 0.9084913375618544,
+          "10": 0.6909675236806495,
+          "11": 0.903310740354536
+        },
+        "probes": 89.0,
+        "pulses": 0.47534722222222225,
+        "requests": 173.0,
+        "rest_fraction": 0.0,
+        "synthetic_cost": 348.171
+      },
+      "learned_three": {
+        "correct": 0.7395833333333334,
+        "net_energy": 0.30388003472222214,
+        "per_case": {
+          "00": 0.8399867312040965,
+          "01": 0.8024155709068708,
+          "10": 0.6523149583084494,
+          "11": 0.6596402502606882
+        },
+        "probes": 60.5,
+        "pulses": 0.40555555555555556,
+        "requests": 246.5,
+        "rest_fraction": 0.15850694444444446,
+        "synthetic_cost": 292.8255000000004
+      },
+      "learned_two": {
+        "correct": 0.8569444444444445,
+        "net_energy": 0.35275815972222224,
+        "per_case": {
+          "00": 0.9513978956811003,
+          "01": 0.9160467097056241,
+          "10": 0.6523366923443276,
+          "11": 0.911230448383733
+        },
+        "probes": 68.5,
+        "pulses": 0.47343749999999996,
+        "requests": 122.0,
+        "rest_fraction": 0.0,
+        "synthetic_cost": 347.5565
+      },
+      "manual_two": {
+        "correct": 0.5022569444444445,
+        "net_energy": 0.13685156250000025,
+        "per_case": {
+          "00": 0.5178689566241192,
+          "01": 0.3504170105637651,
+          "10": 0.8584736281098571,
+          "11": 0.2708133472367049
+        },
+        "probes": 1427.5,
+        "pulses": 0.27118055555555554,
+        "requests": 2790.0,
+        "rest_fraction": 0.0,
+        "synthetic_cost": 386.8674999999993
+      }
+    },
+    "global_change_blackout": {
+      "always_rest": {
+        "correct": 0.0,
+        "net_energy": 0.0,
+        "per_case": {
+          "00": 0.0,
+          "01": 0.0,
+          "10": 0.0,
+          "11": 0.0
+        },
+        "probes": 0.0,
+        "pulses": 0.0,
+        "requests": 0.0,
+        "rest_fraction": 1.0,
+        "synthetic_cost": 0.0
+      },
+      "guard_two": {
+        "correct": 0.09461805555555555,
+        "net_energy": -0.11664496527777776,
+        "per_case": {
+          "00": 0.04671002410986237,
+          "01": 0.07847795053977986,
+          "10": 0.12705690168422612,
+          "11": 0.12690828041035662
+        },
+        "probes": 132.5,
+        "pulses": 0.0046875,
+        "requests": 262.5,
+        "rest_fraction": 0.0,
+        "synthetic_cost": 349.4375
+      },
+      "learned_three": {
+        "correct": 0.08506944444444445,
+        "net_energy": -0.060390972222222145,
+        "per_case": {
+          "00": 0.03504243789254106,
+          "01": 0.06850662254341355,
+          "10": 0.12154147385436767,
+          "11": 0.11580972154372252
+        },
+        "probes": 102.0,
+        "pulses": 0.0036458333333333334,
+        "requests": 383.0,
+        "rest_fraction": 0.47595486111111107,
+        "synthetic_cost": 184.42599999999976
+      },
+      "learned_two": {
+        "correct": 0.08819444444444445,
+        "net_energy": -0.1173076388888889,
+        "per_case": {
+          "00": 0.038495476566574205,
+          "01": 0.07128054764743574,
+          "10": 0.12501067226747264,
+          "11": 0.11864160967269174
+        },
+        "probes": 114.0,
+        "pulses": 0.0038194444444444443,
+        "requests": 198.0,
+        "rest_fraction": 0.0,
+        "synthetic_cost": 348.846
+      },
+      "manual_two": {
+        "correct": 0.9380208333333333,
+        "net_energy": -0.1003435763888891,
+        "per_case": {
+          "00": 0.9407135461148355,
+          "01": 0.9390669229708576,
+          "10": 0.9530647906243419,
+          "11": 0.9208292623351245
+        },
+        "probes": 2671.5,
+        "pulses": 0.04652777777777778,
+        "requests": 5301.0,
+        "rest_fraction": 0.0,
+        "synthetic_cost": 422.98950000000065
+      }
+    },
+    "global_change_drought": {
+      "always_rest": {
+        "correct": 0.0,
+        "net_energy": 0.0,
+        "per_case": {
+          "00": 0.0,
+          "01": 0.0,
+          "10": 0.0,
+          "11": 0.0
+        },
+        "probes": 0.0,
+        "pulses": 0.0,
+        "requests": 0.0,
+        "rest_fraction": 1.0,
+        "synthetic_cost": 0.0
+      },
+      "guard_two": {
+        "correct": 0.7166666666666667,
+        "net_energy": 0.2748762152777778,
+        "per_case": {
+          "00": 0.6771665678030171,
+          "01": 0.7666846586457263,
+          "10": 0.7139355544242698,
+          "11": 0.7103926065283366
+        },
+        "probes": 112.5,
+        "pulses": 0.3960069444444444,
+        "requests": 222.0,
+        "rest_fraction": 0.0,
+        "synthetic_cost": 348.8565
+      },
+      "learned_three": {
+        "correct": 0.5489583333333333,
+        "net_energy": 0.2084524305555554,
+        "per_case": {
+          "00": 0.4942222920083278,
+          "01": 0.5723238865770164,
+          "10": 0.5952438863434961,
+          "11": 0.535758915697395
+        },
+        "probes": 78.0,
+        "pulses": 0.3078125,
+        "requests": 263.5,
+        "rest_fraction": 0.17916666666666667,
+        "synthetic_cost": 286.1570000000004
+      },
+      "learned_two": {
+        "correct": 0.5838541666666667,
+        "net_energy": 0.20621840277777778,
+        "per_case": {
+          "00": 0.5214417809414146,
+          "01": 0.624608964648663,
+          "10": 0.5971821558534608,
+          "11": 0.5951923208964447
+        },
+        "probes": 87.0,
+        "pulses": 0.32708333333333334,
+        "requests": 158.0,
+        "rest_fraction": 0.0,
+        "synthetic_cost": 348.091
+      },
+      "manual_two": {
+        "correct": 0.89375,
+        "net_energy": 0.3720569444444442,
+        "per_case": {
+          "00": 0.9192545680821615,
+          "01": 0.8580655333654481,
+          "10": 0.9216933461545713,
+          "11": 0.8778992323642905
+        },
+        "probes": 361.0,
+        "pulses": 0.4956597222222222,
+        "requests": 675.5,
+        "rest_fraction": 0.0,
+        "synthetic_cost": 355.97600000000074
+      }
+    },
+    "mixed_change_10_scarcity_01": {
+      "always_rest": {
+        "correct": 0.0,
+        "net_energy": 0.0,
+        "per_case": {
+          "00": 0.0,
+          "01": 0.0,
+          "10": 0.0,
+          "11": 0.0
+        },
+        "probes": 0.0,
+        "pulses": 0.0,
+        "requests": 0.0,
+        "rest_fraction": 1.0,
+        "synthetic_cost": 0.0
+      },
+      "guard_two": {
+        "correct": 0.929513888888889,
+        "net_energy": 0.5233161458333333,
+        "per_case": {
+          "00": 0.9629360465116279,
+          "01": 0.8954152502428154,
+          "10": 0.9164092061978827,
+          "11": 0.9433064500968172
+        },
+        "probes": 60.5,
+        "pulses": 0.6439236111111111,
+        "requests": 118.5,
+        "rest_fraction": 0.0,
+        "synthetic_cost": 347.3495
+      },
+      "learned_three": {
+        "correct": 0.7897569444444444,
+        "net_energy": 0.5322618055555555,
+        "per_case": {
+          "00": 0.9098837209302326,
+          "01": 0.40738194880877565,
+          "10": 0.9138787375904054,
+          "11": 0.9453781512605042
+        },
+        "probes": 47.0,
+        "pulses": 0.6315972222222223,
+        "requests": 120.5,
+        "rest_fraction": 0.17630208333333333,
+        "synthetic_cost": 286.08600000000035
+      },
+      "learned_two": {
+        "correct": 0.9376736111111111,
+        "net_energy": 0.5301623263888888,
+        "per_case": {
+          "00": 0.9927325581395349,
+          "01": 0.8993797491858538,
+          "10": 0.9145760876601404,
+          "11": 0.9453781512605042
+        },
+        "probes": 53.5,
+        "pulses": 0.6506944444444445,
+        "requests": 97.5,
+        "rest_fraction": 0.0,
+        "synthetic_cost": 347.1325
+      },
+      "manual_two": {
+        "correct": 0.6428819444444445,
+        "net_energy": 0.4582475694444446,
+        "per_case": {
+          "00": 0.8234011627906976,
+          "01": 0.020023353139461807,
+          "10": 0.9164092061978827,
+          "11": 0.8418222322486042
+        },
+        "probes": 1027.0,
+        "pulses": 0.5885416666666667,
+        "requests": 1986.0,
+        "rest_fraction": 0.0,
+        "synthetic_cost": 375.2469999999994
+      }
+    },
+    "scarcity_01": {
+      "always_rest": {
+        "correct": 0.0,
+        "net_energy": 0.0,
+        "per_case": {
+          "00": 0.0,
+          "01": 0.0,
+          "10": 0.0,
+          "11": 0.0
+        },
+        "probes": 0.0,
+        "pulses": 0.0,
+        "requests": 0.0,
+        "rest_fraction": 1.0,
+        "synthetic_cost": 0.0
+      },
+      "guard_two": {
+        "correct": 0.9411458333333333,
+        "net_energy": 0.5323562500000001,
+        "per_case": {
+          "00": 0.963178966551624,
+          "01": 0.9018285831034836,
+          "10": 0.9652267012415527,
+          "11": 0.9357923497267759
+        },
+        "probes": 42.0,
+        "pulses": 0.6527777777777778,
+        "requests": 82.0,
+        "rest_fraction": 0.0,
+        "synthetic_cost": 346.81399999999996
+      },
+      "learned_three": {
+        "correct": 0.7958333333333334,
+        "net_energy": 0.5426074652777777,
+        "per_case": {
+          "00": 0.9639057107376705,
+          "01": 0.3765367434690144,
+          "10": 0.9171106396353921,
+          "11": 0.9364754098360656
+        },
+        "probes": 31.5,
+        "pulses": 0.6423611111111112,
+        "requests": 106.5,
+        "rest_fraction": 0.17161458333333335,
+        "synthetic_cost": 287.2905000000004
+      },
+      "learned_two": {
+        "correct": 0.9430555555555555,
+        "net_energy": 0.5329373263888888,
+        "per_case": {
+          "00": 0.9639057107376705,
+          "01": 0.9058479369236341,
+          "10": 0.9673228037089423,
+          "11": 0.9364754098360656
+        },
+        "probes": 36.5,
+        "pulses": 0.6532986111111111,
+        "requests": 64.0,
+        "rest_fraction": 0.0,
+        "synthetic_cost": 346.6405
+      },
+      "manual_two": {
+        "correct": 0.6774305555555555,
+        "net_energy": 0.48754722222222235,
+        "per_case": {
+          "00": 0.9442836177144147,
+          "01": 0.02041437977692958,
+          "10": 0.8559867593902247,
+          "11": 0.9077868852459017
+        },
+        "probes": 926.0,
+        "pulses": 0.6168402777777777,
+        "requests": 1807.0,
+        "rest_fraction": 0.0,
+        "synthetic_cost": 372.36399999999963
+      }
+    },
+    "scarcity_01_partial": {
+      "always_rest": {
+        "correct": 0.0,
+        "net_energy": 0.0,
+        "per_case": {
+          "00": 0.0,
+          "01": 0.0,
+          "10": 0.0,
+          "11": 0.0
+        },
+        "probes": 0.0,
+        "pulses": 0.0,
+        "requests": 0.0,
+        "rest_fraction": 1.0,
+        "synthetic_cost": 0.0
+      },
+      "guard_two": {
+        "correct": 0.9368055555555556,
+        "net_energy": 0.5797614583333334,
+        "per_case": {
+          "00": 0.9672701949860725,
+          "01": 0.8882727232557113,
+          "10": 0.9707050840239604,
+          "11": 0.9256172188225364
+        },
+        "probes": 41.0,
+        "pulses": 0.7001736111111111,
+        "requests": 81.0,
+        "rest_fraction": 0.0,
+        "synthetic_cost": 346.787
+      },
+      "learned_three": {
+        "correct": 0.83125,
+        "net_energy": 0.5736359374999999,
+        "per_case": {
+          "00": 0.967966573816156,
+          "01": 0.47251189371511054,
+          "10": 0.9714083189044105,
+          "11": 0.9277745958058261
+        },
+        "probes": 29.5,
+        "pulses": 0.6770833333333334,
+        "requests": 80.5,
+        "rest_fraction": 0.14053819444444443,
+        "synthetic_cost": 297.92850000000044
+      },
+      "learned_two": {
+        "correct": 0.9355902777777778,
+        "net_energy": 0.580600173611111,
+        "per_case": {
+          "00": 0.967966573816156,
+          "01": 0.8801956755482891,
+          "10": 0.9714083189044105,
+          "11": 0.9277745958058261
+        },
+        "probes": 44.5,
+        "pulses": 0.7010416666666666,
+        "requests": 79.5,
+        "rest_fraction": 0.0,
+        "synthetic_cost": 346.8715000000001
+      },
+      "manual_two": {
+        "correct": 0.6763888888888889,
+        "net_energy": 0.48612812500000013,
+        "per_case": {
+          "00": 0.9345403899721448,
+          "01": 0.04136287982560794,
+          "10": 0.9154297017275483,
+          "11": 0.8372813231644208
+        },
+        "probes": 929.0,
+        "pulses": 0.6154513888888888,
+        "requests": 1813.0,
+        "rest_fraction": 0.0,
+        "synthetic_cost": 372.45099999999957
+      }
+    },
+    "severe_drought": {
+      "always_rest": {
+        "correct": 0.0,
+        "net_energy": 0.0,
+        "per_case": {
+          "00": 0.0,
+          "01": 0.0,
+          "10": 0.0,
+          "11": 0.0
+        },
+        "probes": 0.0,
+        "pulses": 0.0,
+        "requests": 0.0,
+        "rest_fraction": 1.0,
+        "synthetic_cost": 0.0
+      },
+      "guard_two": {
+        "correct": 0.9118055555555555,
+        "net_energy": -0.07475902777777776,
+        "per_case": {
+          "00": 0.9209738705476005,
+          "01": 0.9032298136645962,
+          "10": 0.9274357450492688,
+          "11": 0.895909762075107
+        },
+        "probes": 128.0,
+        "pulses": 0.04652777777777778,
+        "requests": 253.0,
+        "rest_fraction": 0.0,
+        "synthetic_cost": 349.306
+      },
+      "learned_three": {
+        "correct": 0.3803819444444444,
+        "net_energy": -0.03703454861111109,
+        "per_case": {
+          "00": 0.3388597323661735,
+          "01": 0.3890993788819876,
+          "10": 0.3970645961274607,
+          "11": 0.39719604828520544
+        },
+        "probes": 103.5,
+        "pulses": 0.021180555555555557,
+        "requests": 426.0,
+        "rest_fraction": 0.5248263888888889,
+        "synthetic_cost": 167.65949999999992
+      },
+      "learned_two": {
+        "correct": 0.9163194444444445,
+        "net_energy": -0.07426250000000001,
+        "per_case": {
+          "00": 0.9244374349260991,
+          "01": 0.9082608695652175,
+          "10": 0.931552794347472,
+          "11": 0.9013936035802901
+        },
+        "probes": 115.0,
+        "pulses": 0.046875,
+        "requests": 200.5,
+        "rest_fraction": 0.0,
+        "synthetic_cost": 348.876
+      },
+      "manual_two": {
+        "correct": 0.02638888888888889,
+        "net_energy": -0.14626250000000013,
+        "per_case": {
+          "00": 0.029801445360975252,
+          "01": 0.025890269151138717,
+          "10": 0.02034587249528589,
+          "11": 0.029599805154278236
+        },
+        "probes": 2801.0,
+        "pulses": 0.0019097222222222222,
+        "requests": 5555.5,
+        "rest_fraction": 0.0,
+        "synthetic_cost": 426.73600000000044
+      }
+    }
+  },
+  "train_scenarios": [
+    "stable",
+    "changed_11",
+    "scarcity_11",
+    "uniform_drought",
+    "global_change",
+    "changed_01",
+    "scarcity_10"
+  ]
+}

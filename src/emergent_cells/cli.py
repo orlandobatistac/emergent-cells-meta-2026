@@ -25,6 +25,7 @@ EXPERIMENTS = {
     "learned-curiosity": "learned_curiosity",
     "curiosity-ablation": "curiosity_ablation",
     "task-transfer": "transfer_stress",
+    "three-action": "three_action_energy",
 }
 
 
