@@ -117,6 +117,11 @@ class ThreeActionTests(unittest.TestCase):
         a=benchmark([2],self.spec)
         for row in a["rows"]:
             self.assertLessEqual(row["net_energy"],row["pulses"]+1e-12)
+            self.assertAlmostEqual(row["synthetic_cost"],
+                row["activity_cost"]+row["probe_cost"]+row["communication_cost"])
+            self.assertGreaterEqual(row["activity_cost"],0)
+            self.assertGreaterEqual(row["probe_cost"],0)
+            self.assertGreaterEqual(row["communication_cost"],0)
             self.assertLessEqual(row["correct"],1-row["rest_fraction"]+1e-12)
 
     def test_world_labels_not_in_cell_action_update(self):

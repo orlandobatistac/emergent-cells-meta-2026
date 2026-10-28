@@ -171,6 +171,7 @@ class ThreeActionCells:
         scenarios = np.array(scenarios)
         ix, peer, spec = self.ids, self.peer, self.spec
         correct = harvested = cost = 0.
+        activity_cost = probe_cost = communication_cost = 0.
         rest_events = probes = messages = 0
         case_hit = np.zeros(4, dtype=int)
         case_seen = np.zeros(4, dtype=int)
@@ -262,9 +263,10 @@ class ThreeActionCells:
             )
             correct += float(opened.sum())
             harvested += float(payout.sum())
-            cost += float((spec.active_cost*active.sum()/2
-                           +spec.probe_cost*probe_pair.sum()
-                           +spec.message_cost*request.sum()/2))
+            activity_cost += float(spec.active_cost*active.sum()/2)
+            probe_cost += float(spec.probe_cost*probe_pair.sum())
+            communication_cost += float(spec.message_cost*request.sum()/2)
+            cost = activity_cost + probe_cost + communication_cost
             rest_events += int((intent == REST).sum())
             probes += int(probe_pair.sum())
             messages += int(request.sum())
@@ -280,6 +282,9 @@ class ThreeActionCells:
             "requests": messages,
             "probes": probes,
             "synthetic_cost": cost,
+            "activity_cost": activity_cost,
+            "probe_cost": probe_cost,
+            "communication_cost": communication_cost,
             "per_case": {
                 format(i,"02b"): float(case_hit[i]/max(1,case_seen[i]))
                 for i in range(4)
@@ -343,7 +348,8 @@ def benchmark(seeds, spec=ThreeActionSpec()):
                 result.append({
                     **row, "seed":seed, "scenario":scenario,"method":mode})
     fields = ("correct", "pulses", "net_energy", "rest_fraction",
-              "requests", "probes", "synthetic_cost")
+              "requests", "probes", "synthetic_cost",
+              "activity_cost", "probe_cost", "communication_cost")
     for scenario in TEST_SCENARIOS:
         summary[scenario] = {}
         for mode in methods:
@@ -352,6 +358,10 @@ def benchmark(seeds, spec=ThreeActionSpec()):
             summary[scenario][mode] = {
                 field:float(np.mean([r[field] for r in items]))
                 for field in fields
+            }
+            summary[scenario][mode]["std"] = {
+                field:float(np.std([r[field] for r in items], ddof=1))
+                if len(items)>1 else 0.0 for field in fields
             }
             summary[scenario][mode]["per_case"] = {
                 c:float(np.mean([r["per_case"][c] for r in items]))
