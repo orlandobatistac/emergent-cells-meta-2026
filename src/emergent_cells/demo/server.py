@@ -25,6 +25,9 @@ from emergent_cells.experiments.active_probes import (
 from emergent_cells.experiments.learned_curiosity import (
     CuriositySpec, benchmark as benchmark_learned_curiosity,
 )
+from emergent_cells.experiments.local_world_model import (
+    ModelSpec, benchmark as benchmark_local_world_model,
+)
 from emergent_cells.meta.world_designer import (
     DesignError, design_world, evaluate_world, validate_proposal,
 )
@@ -43,6 +46,7 @@ class LabServer(HTTPServer):
         self.robust_drift_report = None
         self.active_probes_report = None
         self.learned_curiosity_report = None
+        self.local_world_model_report = None
         super().__init__(address, Handler)
 
 
@@ -92,7 +96,13 @@ class Handler(BaseHTTPRequestHandler):
             report["robust_drift_evaluation"] = self.server.robust_drift_report
             report["active_probes_evaluation"] = self.server.active_probes_report
             report["learned_curiosity_evaluation"] = self.server.learned_curiosity_report
+            report["local_world_model_evaluation"] = self.server.local_world_model_report
             self.respond(200, report)
+        elif self.path == '/api/local-world-model':
+            self.respond(200, {
+                'report': self.server.local_world_model_report,
+                'source': 'cell-private-empirical-reward-predictions-no-meta',
+            })
         elif self.path == '/api/learned-curiosity':
             self.respond(200, {
                 'report': self.server.learned_curiosity_report,
@@ -151,7 +161,8 @@ class Handler(BaseHTTPRequestHandler):
                              '/api/cooperation/run', '/api/protocol/run',
                              '/api/context-switch/run', '/api/reward-surprise/run',
                              '/api/dynamic-memory/run', '/api/robust-drift/run',
-                             '/api/active-probes/run', '/api/learned-curiosity/run'):
+                             '/api/active-probes/run', '/api/learned-curiosity/run',
+                             '/api/local-world-model/run'):
             return self.respond(404, {'error': 'Not found'})
         if self.headers.get_content_type() != 'application/json':
             return self.respond(415, {'error': 'JSON required'})
@@ -162,6 +173,18 @@ class Handler(BaseHTTPRequestHandler):
             data = json.loads(self.rfile.read(length))
             if not isinstance(data, dict):
                 raise ValueError('Expected object')
+            if self.path == '/api/local-world-model/run':
+                if data:
+                    raise ValueError('Local world-model demo accepts empty JSON only')
+                outcome = benchmark_local_world_model(
+                    [11,12], ModelSpec(pairs=16, sender_training=2200, steps=260)
+                )
+                self.server.local_world_model_report = outcome
+                return self.respond(200, {
+                    'local_world_model': outcome,
+                    'source': 'cell-local-prediction-model-not-meta',
+                    'caveat': 'Conditional Bernoulli reward table and probe selection remain engineered',
+                })
             if self.path == '/api/learned-curiosity/run':
                 if data:
                     raise ValueError('Learned-curiosity demo accepts empty JSON only')
