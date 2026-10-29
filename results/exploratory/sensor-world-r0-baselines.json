@@ -1,0 +1,348 @@
+{
+  "sensor_fields": [
+    "walls",
+    "nearby_target",
+    "floor_signal",
+    "previous_reward"
+  ],
+  "summary": {
+    "stable_random": {
+      "complete_rate": 0.0,
+      "average_goals_reached": 0.4
+    },
+    "stable_reactive": {
+      "complete_rate": 0.2,
+      "average_goals_reached": 1.4
+    },
+    "changed_random": {
+      "complete_rate": 0.0,
+      "average_goals_reached": 0.6
+    },
+    "changed_reactive": {
+      "complete_rate": 0.0,
+      "average_goals_reached": 0.9
+    }
+  },
+  "records": [
+    {
+      "seed": 101,
+      "changed": false,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160
+    },
+    {
+      "seed": 101,
+      "changed": false,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 101,
+      "changed": true,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160
+    },
+    {
+      "seed": 101,
+      "changed": true,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160
+    },
+    {
+      "seed": 102,
+      "changed": false,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160
+    },
+    {
+      "seed": 102,
+      "changed": false,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 102,
+      "changed": true,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160
+    },
+    {
+      "seed": 102,
+      "changed": true,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 103,
+      "changed": false,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160
+    },
+    {
+      "seed": 103,
+      "changed": false,
+      "mode": "reactive",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 140
+    },
+    {
+      "seed": 103,
+      "changed": true,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 103,
+      "changed": true,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 104,
+      "changed": false,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 104,
+      "changed": false,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 104,
+      "changed": true,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 104,
+      "changed": true,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 105,
+      "changed": false,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160
+    },
+    {
+      "seed": 105,
+      "changed": false,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160
+    },
+    {
+      "seed": 105,
+      "changed": true,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160
+    },
+    {
+      "seed": 105,
+      "changed": true,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 106,
+      "changed": false,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160
+    },
+    {
+      "seed": 106,
+      "changed": false,
+      "mode": "reactive",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 154
+    },
+    {
+      "seed": 106,
+      "changed": true,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160
+    },
+    {
+      "seed": 106,
+      "changed": true,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 107,
+      "changed": false,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 107,
+      "changed": false,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160
+    },
+    {
+      "seed": 107,
+      "changed": true,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160
+    },
+    {
+      "seed": 107,
+      "changed": true,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 108,
+      "changed": false,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 108,
+      "changed": false,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160
+    },
+    {
+      "seed": 108,
+      "changed": true,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 108,
+      "changed": true,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160
+    },
+    {
+      "seed": 109,
+      "changed": false,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 109,
+      "changed": false,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160
+    },
+    {
+      "seed": 109,
+      "changed": true,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 109,
+      "changed": true,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160
+    },
+    {
+      "seed": 110,
+      "changed": false,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160
+    },
+    {
+      "seed": 110,
+      "changed": false,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 110,
+      "changed": true,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160
+    },
+    {
+      "seed": 110,
+      "changed": true,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    }
+  ]
+}
