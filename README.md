@@ -24,7 +24,7 @@ The environment may hold hidden truth **only for evaluation**. An agent must not
 | Sequential policy transfer | OR 92.04% and NAND 91.73% held-out accuracy using locally selected memory fragments, five seeds | Verified for related Boolean tasks |
 | Spatial world-model transfer | Reused transition tables complete 300/300 three-waypoint missions, reducing average excess actions from 20.63 to 1.04 | **Uses privileged coordinates and coded BFS; comparator only** |
 | **R0: sensor-only input** | Policy receives nearby obstacles, adjacent target signal, ambiguous floor cue, and past reward. Reactive baseline solves 2/10 stable missions and 0/10 changed missions | **Initial interface and negative baseline implemented; security isolation incomplete** |
-| **R1: predictive state** | Self-supervised variable-order predictive memory reached **86.89%** next-sensor accuracy vs **64.85%** for observation-only across ten holdout seeds; 84.55% vs 66.62% on modified maze | **First predictive-memory benchmark verified; learned latent embeddings and navigation still pending** |
+| **R1: predictive state** | A trained 48-unit recurrent state reached **93.56%** held-out next-sensor accuracy (vs **86.96%** history table); on unseen maze variants, **76.16%** (vs **72.85%** table). Erasing recurrent memory reduced stable accuracy to **58.33%** | **Trainable predictive state experimentally validated; goal-conditioned learning and cell integration still pending** |
 | R2-R5 | Communication, decentralized planning, generalization, and measured efficiency | Planned; no success claims |
 
 Tests verify a defined source-code observation contract, **not** a sandboxed security barrier against a malicious agent. Python world attributes remain available to the evaluation harness. We have not demonstrated a decentralized reasoning agent.
@@ -44,6 +44,9 @@ python run.py sensor-world --seeds 101,102,103,104,105,106,107,108,109,110 --goa
 # First R1 sensor-only predictive memory benchmark:
 python run.py predictive-context --seeds 2001,2002,2003,2004,2005,2006,2007,2008,2009,2010 --train-steps 24000 --test-steps 6000 --output results/runs/r1-context.json
 
+# R1 learned 48-dimensional recurrent state (no coordinate labels):
+python run.py recurrent-state --seeds 2001,2002,2003,2004,2005,2006,2007,2008,2009,2010 --train-steps 24000 --test-steps 4000 --epochs 30 --hidden 48 --output results/runs/r1-recurrent.json
+
 # Earlier privileged coordinate+BFS comparison (not the target architecture):
 python run.py multistep-world --seeds 2001,2002,2003,2004,2005,2006,2007,2008,2009,2010 --train-steps 7000 --missions 30 --output results/runs/multistep.json
 
@@ -58,6 +61,7 @@ For specific runner options, use `python run.py <experiment> --help`. Results wr
 - **[No-oracle roadmap](docs/RESEARCH_ROADMAP_NO_ORACLES_2026-10-28.md)**: six falsifiable stages and completion gates.
 - **[R0 sensor-only protocol](docs/SENSOR_ONLY_WORLD_R0_2026-10-28.md)**: information boundary, baseline failures, and tests.
 - **[R1 predictive memory experiment](docs/R1_PREDICTIVE_CONTEXT_2026-10-28.md)**: next-observation prediction from observation/action history, matched baselines and unseen-seed results.
+- **[R1 trainable recurrent state](docs/R1_TRAINABLE_RECURRENT_STATE_2026-10-28.md)**: learned 48-dimensional state, hidden-memory causal ablation, held-out maze variants and limitations.
 - **[Three-waypoint model study](docs/MULTISTEP_WORLD_TRANSFER_2026-10-28.md)**: positive transfer and explicit coordinate/BFS limitations.
 - **[Sequential transfer study](docs/SEQUENTIAL_TRANSFER_2026-10-28.md)**: local memory recombination and negative transfer controls.
 - **[Dynamic memory study](docs/DYNAMIC_MEMORY_THIRD_RULE_2026-10-27.md)** and **[learned curiosity](docs/LEARNED_CURIOSITY_2026-10-27.md)**: prior results and failures.

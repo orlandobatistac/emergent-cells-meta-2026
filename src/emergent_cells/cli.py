@@ -28,6 +28,7 @@ EXPERIMENTS = {
     "multistep-world": "multistep_world",
     "sensor-world": "sensor_world",
     "predictive-context": "predictive_context",
+    "recurrent-state": "recurrent_state",
 }
 
 
