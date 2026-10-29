@@ -58,9 +58,21 @@ The diffusion controller improves over the paired history baseline by **+47 perc
 
 Each diffusion episode produces about **101,313 neighbor-value updates stable**, **120,372 changed**, averaged over seeds. These are *simulator message-update operations*, not actual network packets or measured joules. The learned cell memory covers about 60 discovered local locations per episode. This cost may be excessive if run continuously with hundreds of cells or realistic sensors; true process RAM, laptop energy and hardware efficiency remain unverified.
 
+## Additional held-out procedural layout stress test
+
+To test whether the spatial controller was memorizing one fixed map, a separate **100-world synthetic test** used seeds 22001–22100. Each episode used the same 9x9 action/sensor framework but removed one existing obstacle and added three new obstacles, preserving goal and bridge cells. In the isolated reference harness, all 100 generated worlds were checked to be connected with all goal positions reachable (a harness-only graph search; the policy never receives its results).
+
+| Policy | Three-goal missions complete | Mean action count |
+|---|---:|---:|
+| Explicit-history novelty | 38/100 | 137.39 |
+| Relative-memory greedy | 88/100 | 102.01 |
+| **Relative memory + diffusion** | **95/100** | **95.11** |
+
+This is an additional **same-family topology generalization**, not proof of transfer to different action conventions, sensor types, grid sizes, or stochastic dynamics. Data: `results/audited/2026-10-29-local-value-procedural-sandbox.json`. The CLI supports `--procedural`, which applies the previously versioned `GeneratedMaze` test generator only inside the simulator harness.
+
 ## Data provenance, integrity and limitations
 
-The connected laptop was **offline** during this study. The experiment was run in an alternative local Python sandbox using a reference simulator reconstructed to match the versioned `SensorEpisode` and `Maze` from the GitHub repository. Five focused unit tests passed in that environment (sensor API, action-based relative integration against harness truth, reward-phase transition, memory ablation, deterministic seeded reproduction). Therefore **the new code has not yet passed the full repository suite or been executed on LANDITO-LAPTOP**. The GitHub branch carries six additional tests for execution against the actual repository modules.
+The connected laptop was **offline** during this study. The experiment was run in an alternative local Python sandbox using a reference simulator reconstructed to match the versioned `SensorEpisode` and `Maze` from the GitHub repository. Five focused unit tests passed in the alternative sandbox (sensor API, action-based relative integration against harness truth, reward-phase transition, memory ablation, deterministic seeded reproduction). GitHub Actions subsequently **passed the initial full repository scientific Python tests on the PR**, but later procedural-mode additions require a fresh CI run to verify their final commit. **The laptop itself remains offline and has not executed this study.**
 
 Raw 800 paired per-seed episode outcomes, step counts and cell/message counts were generated in the sandbox; a compact seed-indexed evidence summary can be retained alongside the full standalone JSON in the experiment conversation. Reproduce exact repository modules using `python run.py local-value-cells --seeds 13001,...,13100 --rounds 10 --decay 0.92 --frontier-reward 2.5 --output results/runs/r1-local-value.json`.
 
@@ -73,7 +85,7 @@ Raw 800 paired per-seed episode outcomes, step counts and cell/message counts we
 1. **Learn rather than assume relative motion.** Train a tiny recurrent motor-state update from action/observation consistency and loop closure. Test rotated, noisy and drifting motor codes. Compare with this privileged *internal motion-model* baseline and frozen memory.
 2. **Train local message weights** using goal and exploration outcomes, then ablate learned vs fixed diffusion and shuffled/zero messages. Compare at matched interaction and compute budget.
 3. **Replace the central synchronous scheduler** with asynchronous cell-local neighborhood updates and measure communication stability/cost.
-4. **Test generalization** to layout families with different wall topologies, sensory aliases, resets and dynamic mid-episode closures (these were not present here).
+4. **Extend generalization** beyond the additional 100 same-family procedural layouts to changed grid sizes, sensor aliases, action axes and dynamic mid-episode closures (none have been validated here).
 5. **Validate on laptop** once Desktop Commander reconnects, run the full regression suite, and measure CPU/RSS independently before reporting resource advantages.
 
 All project text, comments and tests are written in professional contemporary English.
