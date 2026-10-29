@@ -16,7 +16,8 @@ import random
 import time
 
 from .sensor_world import SensorEpisode
-from .latent_navigation import run_episode
+from .latent_navigation import run_episode, OnlineAgent
+from .recurrent_state import GeneratedMaze
 
 MOVES = ((0, -1), (0, 1), (-1, 0), (1, 0))
 REVERSE = (1, 0, 3, 2)
@@ -134,16 +135,31 @@ class LocalValueCells:
             self.local_edge_visits.clear()
 
 
-def run_benchmark(seeds, *, rounds=10, decay=.92, frontier_reward=2.5):
+def run_benchmark(seeds, *, rounds=10, decay=.92, frontier_reward=2.5,
+                  procedural=False):
     """Paired comparison on identical simulator seeds and goal sequences."""
     if not seeds or len(seeds) != len(set(seeds)):
         raise ValueError("provide nonempty distinct seeds")
     records = []
     start = time.process_time()
-    for changed in (False, True):
+    for changed in ((False,) if procedural else (False, True)):
         for seed in seeds:
-            baseline = run_episode(
-                "history_novelty", seed, None, None, changed=changed)
+            if procedural:
+                baseline_world = SensorEpisode(changed=False, limit=160)
+                baseline_world._maze = GeneratedMaze(seed)  # Harness only.
+                baseline_reading = baseline_world.reset(seed, goals=3)
+                baseline_agent = OnlineAgent(
+                    "history_novelty", seed + 19, model=None, prototypes=None)
+                while True:
+                    action = baseline_agent.act(baseline_reading)
+                    baseline_reading, _, finished = baseline_world.step(action)
+                    baseline_agent.observe(baseline_reading)
+                    if finished:
+                        break
+                baseline = baseline_world.metrics()
+            else:
+                baseline = run_episode(
+                    "history_novelty", seed, None, None, changed=changed)
             records.append({
                 "seed": seed, "changed": changed, "mode": "history_novelty",
                 "completed": baseline["completed"],
@@ -153,6 +169,8 @@ def run_benchmark(seeds, *, rounds=10, decay=.92, frontier_reward=2.5):
             for mode, freeze in (("greedy", False), ("diffusion", False),
                                  ("diffusion", True)):
                 env = SensorEpisode(changed=changed, limit=160)
+                if procedural:
+                    env._maze = GeneratedMaze(seed)  # Harness only.
                 reading = env.reset(seed, goals=3)
                 agent = LocalValueCells(
                     seed, mode=mode, rounds=rounds, decay=decay,
@@ -171,8 +189,8 @@ def run_benchmark(seeds, *, rounds=10, decay=.92, frontier_reward=2.5):
                     "messages": agent.local_message_updates,
                 })
     summary = {}
-    for changed in (False, True):
-        label = "changed" if changed else "stable"
+    for changed in ((False,) if procedural else (False, True)):
+        label = "procedural" if procedural else "changed" if changed else "stable"
         summary[label] = {}
         for mode in ("history_novelty", "greedy", "diffusion",
                      "frozen_odometry"):
@@ -188,6 +206,7 @@ def run_benchmark(seeds, *, rounds=10, decay=.92, frontier_reward=2.5):
     return {
         "protocol": {
             "seeds": list(seeds), "goals": 3, "action_limit": 160,
+            "procedural_test_only_layouts": procedural,
             "rounds": rounds, "decay": decay,
             "frontier_reward": frontier_reward,
             "relative_odometry": "programmed motor update",
@@ -207,12 +226,15 @@ def main():
     parser.add_argument("--rounds", type=int, default=10)
     parser.add_argument("--decay", type=float, default=.92)
     parser.add_argument("--frontier-reward", type=float, default=2.5)
+    parser.add_argument("--procedural", action="store_true",
+                        help="Use held-out procedurally modified maze layouts")
     parser.add_argument("--output", default="")
     options = parser.parse_args()
     result = run_benchmark(
         [int(s) for s in options.seeds.split(",")],
         rounds=options.rounds, decay=options.decay,
-        frontier_reward=options.frontier_reward)
+        frontier_reward=options.frontier_reward,
+        procedural=options.procedural)
     if options.output:
         output = Path(options.output)
         output.parent.mkdir(parents=True, exist_ok=True)
