@@ -1,44 +1,48 @@
-# Emergent Cells Lab — Núcleo científico en Python
+# Emergent Cells Lab — Python Scientific Core
 
-Laboratorio experimental reproducible para aprendizaje celular descentralizado, comunicación local, memoria y energía **simulada**. Contiene algoritmos Python, tests científicos, resultados numéricos y reportes, sin frontend, HTTP, JavaScript, HTML ni Meta API.
+**An experimental research laboratory for decentralized learning with local rewards, learned one-bit messages, context-dependent memory, and simulated resource constraints.**
 
-**Alcance:** las simulaciones demuestran capacidades limitadas en ambientes matemáticos diseñados; NO son evidencia de AGI, eficiencia energética física, independencia del sustrato ni crecimiento de células físicas. La energía del simulador es una recompensa, no joules.
+This repository contains reproducible Python/NumPy experiments, tests, numerical results, and research notes. It does **not** contain a browser UI or an API server. Source cells currently use fixed pairs, digital Boolean environments, authored experimental schedules, and synthetic reward/energy accounting.
 
-## Ejecutar en la laptop
+> **Scientific boundary:** High accuracy on these deliberately small simulations does not establish AGI, physical energy efficiency, autonomous growth of biological cells, hardware independence, or substrate-agnostic intelligence. The simulated "energy" variable is not measured in joules.
 
-Instalar dependencias: python -m pip install -e .
+## Run locally
 
-- Ver experimentos: python run.py list
-- Simulación base: python run.py simulate --compare --seeds 1,2,3 --steps 240 --cells 256 --output results/runs/simulation.json
-- Memoria dinámica: python run.py dynamic-memory --seeds 11,12 --pairs 32 --phase-steps 4500 --dropout 0.08 --output results/runs/third-rule.json
-- Curiosidad aprendida: python run.py learned-curiosity --help
-- Todos los tests: python -m unittest discover -s tests -q
+```powershell
+python -m pip install -e .
+python run.py list
+python run.py simulate --compare --seeds 1,2,3 --steps 240 --cells 256 --output results/runs/simulation.json
+python run.py dynamic-memory --seeds 1001,1002,1003,1004,1005 --pairs 32 --phase-steps 4500 --dropout 0.08 --output results/runs/third-rule.json
+python run.py sequential-transfer --seeds 2001,2002,2003,2004,2005 --pairs 24 --pre-steps 3800 --probe-steps 120 --adapt-steps 1100 --output results/runs/transfer.json
+python -m unittest discover -s tests -q
+```
 
-Cada experimento incluye sus opciones --help. El argumento --output, cuando existe, guarda JSON para que ChatGPT analice directamente los resultados sin interfaz.
+Individual experiment runners expose `--help` and optional JSON `--output` flags.
 
-## Estructura
+## Current research outcomes
 
-- run.py: punto único de entrada Python.
-- src/emergent_cells/cells/: unidades de aprendizaje local.
-- src/emergent_cells/world/, simulation.py: mundos con recursos y controles.
-- src/emergent_cells/experiments/: hipótesis, algoritmos, variantes y evaluaciones reproducibles.
-- src/emergent_cells/evaluation/: mediciones y análisis.
-- tests/: tests Python de reproducibilidad y comportamiento.
-- results/audited/: datos de replicación y semillas independientes.
-- results/exploratory/: pilotos y resultados negativos conservados.
-- docs/: informes científicos, métodos y limitaciones.
+- **Learned pairwise communication:** approximately 98% task accuracy on controlled XOR environments; no informative-message baselines are near chance.
+- **Locally triggered decoder memory expansion:** under the original five-seed protocol, approximately 93–95% late-phase accuracy across XOR, XNOR, AND and subsequent re-exposure. The same detector can falsely allocate memory after a large reward-availability drop.
+- **Locally trained exploratory actions:** realized information-progress reward improves several change-detection outcomes but increases intervention costs in some stable/noisy settings.
+- **Sequential transfer (October 28, 2026):** locally reward-selected pieces of old response tables improve first-200-step adaptation to unseen OR/NAND Boolean rules compared with cold-start and equal-interaction-budget controls. Mean held-out post-training accuracy was **92.04% for OR** and **91.73% for NAND** across five seeds. Source policies were frozen by experimental design; this is same-family transfer, not autonomous general learning.
 
-## Línea científica hasta el 27 de octubre de 2026
+Read [the sequential transfer report](docs/SEQUENTIAL_TRANSFER_2026-10-28.md), [the original dynamic-memory report](docs/DYNAMIC_MEMORY_THIRD_RULE_2026-10-27.md), [learned curiosity notes](docs/LEARNED_CURIOSITY_2026-10-27.md), and [the experimental protocol](docs/EXPERIMENT_PROTOCOL.md). Raw machine-readable study data are in `results/audited/`; developmental and negative results are retained in `results/exploratory/`.
 
-1. Ablación de conectividad local, incluyendo hallazgos negativos.
-2. Protocolo binario aprendido mediante recompensas privadas: alrededor del 98% de éxito en una tarea XOR diseñada con parejas fijas, frente a controles de ~50% sin mensajes informativos.
-3. Memoria de contextos A/B y detector de sorpresa por recompensa local: buena recuperación bajo un detector programado.
-4. Memoria dinámica: cinco semillas, éxito 93.7% XOR → 94.3% XNOR → 95.2% AND → 94.1% recuperación XOR → 94.5% recuperación XNOR, con pérdida aleatoria estable del 8% de recursos. El control de dos memorias logró 24.1% en AND.
-5. Límite negativo: aumentar la pérdida de recompensa del 8% al 20% sin cambiar la regla causó creación falsa de memorias.
-6. Estudios exploratorios posteriores sobre deriva contextual, exploración causal y curiosidad aprendida. Consultar sus informes originales y JSON antes de generalizar resultados.
+## Repository structure
 
-Síntesis científica en español: docs/REPORTE_CIENTIFICO_2026-10-27.md.
+- `run.py` and `src/emergent_cells/cli.py`: Python experiment dispatcher.
+- `src/emergent_cells/cells/`: private local learners.
+- `src/emergent_cells/experiments/`: scientific benchmarks and ablations.
+- `src/emergent_cells/evaluation/`: metrics.
+- `src/emergent_cells/world/`: simulated resource worlds.
+- `tests/`: deterministic regression and experimental integrity tests.
+- `docs/`: hypotheses, protocols, limits and study reports.
+- `results/`: immutable historical observations and new recorded runs.
 
-## Política del repositorio
+## Research and contribution policy
 
-La antigua interfaz del hackathon permanece recuperable en el historial Git y las ramas anteriores, pero no forma parte del código actual. No se reescriben resultados históricos. Los nuevos estudios deben conservar controles equivalentes, semillas nuevas, resultados negativos, documentación de límites y verificaciones Python. Después de revisión se integran en main. No requiere mantenimiento de interfaz visual.
+**All new code, comments, docstrings, README updates, research reports, issues, pull requests and developer-facing documentation must be written in clear, modern professional English, regardless of the human discussion language or AI agent/driver language.** Human conversations may occur in Spanish or any other language. Agents should translate their work artifacts into English before submission.
+
+Preserve experiment provenance: preregister test conditions and holdout seeds when practicable, report negative outcomes and limitations, compare against meaningful controls with matched observation budgets, and keep numerical datasets reproducible. Do not silently rewrite historical results. One legacy Spanish-language research synthesis remains in `docs/REPORTE_CIENTIFICO_2026-10-27.md` solely for historical provenance; new material must be in English.
+
+The historical hackathon UI is recoverable from previous Git history, but is not part of the current Python-only scientific core. No Meta Model API calls were required for these numerical experiments.
