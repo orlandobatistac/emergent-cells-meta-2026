@@ -40,7 +40,8 @@ Sources to investigate—not to claim as reproduced:
 ## Execution status
 
 - **R0: in progress.** The initial sensor-only environment, simple reactive/random controls and six contract tests are implemented. Its **negative baseline** (2/10 stable three-goal missions for reactive, 0/10 for random; zero complete missions after an alternate wall closure) is documented in [the R0 report](SENSOR_ONLY_WORLD_R0_2026-10-28.md). This is not evidence of state learning or distributed planning; more anti-leakage tests and agent isolation are pending.
-- **R1–R5: open research tasks.** Their completion is not asserted.
+- **R1: first subexperiment validated, full milestone open.** History-conditioned self-supervised sensor predictions improve accuracy on held-out action trajectories without training coordinates; see [R1 predictive-context report](R1_PREDICTIVE_CONTEXT_2026-10-28.md). Recurrent state learning, unseen-maze generalization and inter-cell integration remain unfinished.
+- **R2–R5: open research tasks.** Their completion is not asserted.
 
 ## Execution order and GitHub tickets
 
