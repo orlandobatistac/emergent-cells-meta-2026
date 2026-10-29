@@ -1,0 +1,94 @@
+{
+  "protocol": {
+    "executed_on": "isolated Python sandbox, NOT user laptop",
+    "seeds": "13001..13100",
+    "count": 100,
+    "goals": 3,
+    "step_limit": 160,
+    "rounds": 10,
+    "decay": 0.92,
+    "frontier_reward": 2.5,
+    "environment": "reference version matched to GitHub SensorEpisode and Maze",
+    "interpretation": "programmed relative odometry and value diffusion; not learned recurrent planning"
+  },
+  "summary": {
+    "stable": {
+      "history": {
+        "wins": 50,
+        "mean_waypoints": 2.02,
+        "mean_steps": 127.28
+      },
+      "greedy": {
+        "wins": 82,
+        "mean_waypoints": 2.77,
+        "mean_steps": 102.34
+      },
+      "diffusion": {
+        "wins": 97,
+        "mean_waypoints": 2.97,
+        "mean_steps": 90.39,
+        "mean_neighbor_updates": 101312.8
+      },
+      "frozen_odometry": {
+        "wins": 18,
+        "mean_waypoints": 1.13,
+        "mean_steps": 146.37
+      }
+    },
+    "changed": {
+      "history": {
+        "wins": 31,
+        "mean_waypoints": 1.69,
+        "mean_steps": 140.26
+      },
+      "greedy": {
+        "wins": 77,
+        "mean_waypoints": 2.7,
+        "mean_steps": 112.12
+      },
+      "diffusion": {
+        "wins": 88,
+        "mean_waypoints": 2.88,
+        "mean_steps": 101.12,
+        "mean_neighbor_updates": 120371.6
+      },
+      "frozen_odometry": {
+        "wins": 12,
+        "mean_waypoints": 0.89,
+        "mean_steps": 152.81
+      }
+    }
+  },
+  "paired_bootstrap": {
+    "stable_diffusion_minus_history_pp": {
+      "estimate": 47,
+      "interval95": [
+        36,
+        58
+      ]
+    },
+    "changed_diffusion_minus_history_pp": {
+      "estimate": 57,
+      "interval95": [
+        47,
+        67
+      ]
+    },
+    "resamples": 20000,
+    "seed": 20261029
+  },
+  "success_bits_seed_order_13001_to_13100": {
+    "stable": {
+      "history": "0110001000101001101100111100111011001001001100010100010001100110110100101010101110011111110001001101",
+      "greedy": "1001111110101111101111111111100111111111011101111110011111111110110111111111111111110101110111110110",
+      "diffusion": "1111111111111111111111111111111111111111111111111111111111111111110111111111111111110110111111111111",
+      "frozen_odometry": "0000010100001001001000000000000010000000000100010000010100000010000000010010010001000000010010100000"
+    },
+    "changed": {
+      "history": "0000100000000001101011010111010000010001000110010100011000000000010000010000110010100110110000101000",
+      "greedy": "0110111111101111111100111111111110111100001111010111011110101111011101011110101111111011111011101111",
+      "diffusion": "1110111110101111111011111111111101111111111111110111101111101111110111111010110111111111111111111111",
+      "frozen_odometry": "0000100000000000000000000001000010000000000100010000000100000000000000011000000000000000011010000100"
+    }
+  }
+}
