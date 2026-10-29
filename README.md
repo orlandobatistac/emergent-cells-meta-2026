@@ -25,6 +25,7 @@ The environment may hold hidden truth **only for evaluation**. An agent must not
 | Spatial world-model transfer | Reused transition tables complete 300/300 three-waypoint missions, reducing average excess actions from 20.63 to 1.04 | **Uses privileged coordinates and coded BFS; comparator only** |
 | **R0: sensor-only input** | Policy receives nearby obstacles, adjacent target signal, ambiguous floor cue, and past reward. Reactive baseline solves 2/10 stable missions and 0/10 changed missions | **Initial interface and negative baseline implemented; security isolation incomplete** |
 | **R1: predictive state** | A trained 48-unit recurrent state reached **93.56%** held-out next-sensor accuracy (vs **86.96%** history table); on unseen maze variants, **76.16%** (vs **72.85%** table). Erasing recurrent memory reduced stable accuracy to **58.33%** | **Trainable predictive state experimentally validated; goal-conditioned learning and cell integration still pending** |
+| **R1: closed-loop action experiments** | With **only sparse adjacent-goal sensing**, explicit history exploration completed 52/100 stable and 36/100 changed three-goal missions; recurrent-state novelty completed 37/100 and 33/100. In a **separate task with an engineered noisy goal-distance signal**, reward-progress training completed 100/100 and 50/100; erasing recurrent memory did not reduce performance in that task | **Learned action selection demonstrated in an informative-sensor setting; recurrent-memory causal advantage for navigation remains unproven** |
 | R2-R5 | Communication, decentralized planning, generalization, and measured efficiency | Planned; no success claims |
 
 Tests verify a defined source-code observation contract, **not** a sandboxed security barrier against a malicious agent. Python world attributes remain available to the evaluation harness. We have not demonstrated a decentralized reasoning agent.
@@ -47,6 +48,12 @@ python run.py predictive-context --seeds 2001,2002,2003,2004,2005,2006,2007,2008
 # R1 learned 48-dimensional recurrent state (no coordinate labels):
 python run.py recurrent-state --seeds 2001,2002,2003,2004,2005,2006,2007,2008,2009,2010 --train-steps 24000 --test-steps 4000 --epochs 30 --hidden 48 --output results/runs/r1-recurrent.json
 
+# R1 action selection with only sparse adjacent-goal sensing:
+python run.py latent-navigation --seeds 4001,4002,4003,4004,4005 --train-steps 16000 --epochs 20 --hidden 32 --centers 24 --output results/runs/strict-closed-loop.json
+
+# Separate R1 goal task with a noisy local target-proximity sensor:
+python run.py beacon-navigation --seeds 3001,3002,3003,3004,3005 --warm-episodes 300 --output results/runs/goal-informed-policy.json
+
 # Earlier privileged coordinate+BFS comparison (not the target architecture):
 python run.py multistep-world --seeds 2001,2002,2003,2004,2005,2006,2007,2008,2009,2010 --train-steps 7000 --missions 30 --output results/runs/multistep.json
 
@@ -62,6 +69,7 @@ For specific runner options, use `python run.py <experiment> --help`. Results wr
 - **[R0 sensor-only protocol](docs/SENSOR_ONLY_WORLD_R0_2026-10-28.md)**: information boundary, baseline failures, and tests.
 - **[R1 predictive memory experiment](docs/R1_PREDICTIVE_CONTEXT_2026-10-28.md)**: next-observation prediction from observation/action history, matched baselines and unseen-seed results.
 - **[R1 trainable recurrent state](docs/R1_TRAINABLE_RECURRENT_STATE_2026-10-28.md)**: learned 48-dimensional state, hidden-memory causal ablation, held-out maze variants and limitations.
+- **[R1 closed-loop goal learning](docs/R1_CLOSED_LOOP_GOAL_LEARNING_2026-10-28.md)**: strict sensor-only navigation, distinct noisy-proximity experiment, trained action values, causal controls and negative results.
 - **[Three-waypoint model study](docs/MULTISTEP_WORLD_TRANSFER_2026-10-28.md)**: positive transfer and explicit coordinate/BFS limitations.
 - **[Sequential transfer study](docs/SEQUENTIAL_TRANSFER_2026-10-28.md)**: local memory recombination and negative transfer controls.
 - **[Dynamic memory study](docs/DYNAMIC_MEMORY_THIRD_RULE_2026-10-27.md)** and **[learned curiosity](docs/LEARNED_CURIOSITY_2026-10-27.md)**: prior results and failures.
