@@ -1,0 +1,35 @@
+{
+  "protocol": {
+    "execution": "alternative Python sandbox; laptop offline",
+    "seeds": "22001..22100",
+    "layouts": "one removed, three added walls; original topology family, protected passage/goal cells, 9x9 fixed",
+    "condition": "all 100 checked accessible",
+    "goals": 3,
+    "action_limit": 160,
+    "design_changes": "generated only inside environment harness",
+    "controller": "hand-programmed relative odometry and neighbor diffusion, no oracle pose/map/route",
+    "note": "Source repository GeneratedMaze class uses this generator definition."
+  },
+  "summary": {
+    "diffusion": {
+      "complete": 95,
+      "mean_waypoints": 2.95,
+      "mean_steps": 95.11
+    },
+    "greedy": {
+      "complete": 88,
+      "mean_waypoints": 2.86,
+      "mean_steps": 102.01
+    },
+    "history": {
+      "complete": 38,
+      "mean_waypoints": 1.92,
+      "mean_steps": 137.39
+    }
+  },
+  "success_bits_ordered_by_seed_22001_to_22100": {
+    "diffusion": "1111111011111111001111111111111111111111101111111111111111111111111111111111111111111111111111111101",
+    "greedy": "1011111111111111111101111111111111111001111011110111111111111111111110111111110101011110111111111101",
+    "history": "1001101010101100001000000001100000110001101100010010100101010110101000101010000111100000010001100100"
+  }
+}
