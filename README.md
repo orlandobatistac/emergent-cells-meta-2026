@@ -62,6 +62,9 @@ python run.py policy-gradient --seeds 7101,7102,7103,7104,7105 --episodes 900 --
 # R1 delayed-cue memory-dependent policy (positive diagnostic):
 python run.py delayed-goal --seeds 6101,6102,6103,6104,6105 --batches 280 --batch 64 --length 8 --cases 1000 --output results/runs/delayed-cue.json
 
+# Oct 29: observed local memory and programmed neighbor-value propagation:
+python run.py local-value-cells --seeds 13001,13002,13003,13004,13005 --rounds 10 --decay 0.92 --frontier-reward 2.5 --output results/runs/r1-local-value.json
+
 # Earlier privileged coordinate+BFS comparison (not the target architecture):
 python run.py multistep-world --seeds 2001,2002,2003,2004,2005,2006,2007,2008,2009,2010 --train-steps 7000 --missions 30 --output results/runs/multistep.json
 
@@ -78,6 +81,7 @@ For specific runner options, use `python run.py <experiment> --help`. Results wr
 - **[R1 predictive memory experiment](docs/R1_PREDICTIVE_CONTEXT_2026-10-28.md)**: next-observation prediction from observation/action history, matched baselines and unseen-seed results.
 - **[R1 trainable recurrent state](docs/R1_TRAINABLE_RECURRENT_STATE_2026-10-28.md)**: learned 48-dimensional state, hidden-memory causal ablation, held-out maze variants and limitations.
 - **[R1 closed-loop goal learning](docs/R1_CLOSED_LOOP_GOAL_LEARNING_2026-10-28.md)**: strict sensor-only navigation, distinct noisy-proximity experiment, trained action values, causal controls and negative results.
+- **[R1 locally observed value cells](docs/R1_LOCAL_VALUE_CELLS_2026-10-29.md)**: 100-seed alternative-sandbox validation of internal odometry and neighbor-only value diffusion, including ablations and explicit engineering limitations.
 - **[R1 reward-trained recurrent policies](docs/R1_REWARD_TRAINED_POLICY_2026-10-28.md)**: delayed-cue memory-dependent success, failed sparse-maze REINFORCE, higher-resolution state controls and full raw evidence.
 - **[Three-waypoint model study](docs/MULTISTEP_WORLD_TRANSFER_2026-10-28.md)**: positive transfer and explicit coordinate/BFS limitations.
 - **[Sequential transfer study](docs/SEQUENTIAL_TRANSFER_2026-10-28.md)**: local memory recombination and negative transfer controls.
