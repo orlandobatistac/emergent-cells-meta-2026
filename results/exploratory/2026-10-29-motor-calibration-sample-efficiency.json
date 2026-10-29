@@ -1,0 +1,158 @@
+{
+  "protocol": {
+    "development_seeds": [
+      601,
+      602,
+      603,
+      604,
+      605,
+      606,
+      607,
+      608,
+      609,
+      610,
+      611,
+      612,
+      613,
+      614,
+      615,
+      616,
+      617,
+      618,
+      619,
+      620,
+      621,
+      622,
+      623,
+      624,
+      625,
+      626,
+      627,
+      628,
+      629,
+      630,
+      631,
+      632,
+      633,
+      634,
+      635,
+      636,
+      637,
+      638,
+      639,
+      640,
+      641,
+      642,
+      643,
+      644,
+      645,
+      646,
+      647,
+      648,
+      649,
+      650
+    ],
+    "test": "exact command-permutation recovery from local wall-contact pairs",
+    "motor_hypothesis_count": 24,
+    "independent_source_calibration_actions_per_seed": true,
+    "note": "dev-only; independent holdout uses 9101-9200 / 9301-9350"
+  },
+  "summary": {
+    "0.0": {
+      "12": {
+        "accuracy": 0.48,
+        "mean_confidence": 0.48107452453055005,
+        "count": 50
+      },
+      "24": {
+        "accuracy": 0.66,
+        "mean_confidence": 0.716513604955568,
+        "count": 50
+      },
+      "48": {
+        "accuracy": 0.96,
+        "mean_confidence": 0.958339685185307,
+        "count": 50
+      },
+      "72": {
+        "accuracy": 1.0,
+        "mean_confidence": 0.9999913226246049,
+        "count": 50
+      },
+      "100": {
+        "accuracy": 1.0,
+        "mean_confidence": 0.9999999999926825,
+        "count": 50
+      },
+      "140": {
+        "accuracy": 1.0,
+        "mean_confidence": 1.0,
+        "count": 50
+      }
+    },
+    "0.08": {
+      "12": {
+        "accuracy": 0.4,
+        "mean_confidence": 0.4162982312682077,
+        "count": 50
+      },
+      "24": {
+        "accuracy": 0.56,
+        "mean_confidence": 0.6748164585925664,
+        "count": 50
+      },
+      "48": {
+        "accuracy": 0.88,
+        "mean_confidence": 0.9155576946755103,
+        "count": 50
+      },
+      "72": {
+        "accuracy": 0.98,
+        "mean_confidence": 0.9963965049200223,
+        "count": 50
+      },
+      "100": {
+        "accuracy": 1.0,
+        "mean_confidence": 0.9982440662121721,
+        "count": 50
+      },
+      "140": {
+        "accuracy": 1.0,
+        "mean_confidence": 0.9999999999044745,
+        "count": 50
+      }
+    },
+    "0.2": {
+      "12": {
+        "accuracy": 0.28,
+        "mean_confidence": 0.27137399968700193,
+        "count": 50
+      },
+      "24": {
+        "accuracy": 0.44,
+        "mean_confidence": 0.5011454853471637,
+        "count": 50
+      },
+      "48": {
+        "accuracy": 0.8,
+        "mean_confidence": 0.8111897506738499,
+        "count": 50
+      },
+      "72": {
+        "accuracy": 0.92,
+        "mean_confidence": 0.9489183751533763,
+        "count": 50
+      },
+      "100": {
+        "accuracy": 0.94,
+        "mean_confidence": 0.966492408397269,
+        "count": 50
+      },
+      "140": {
+        "accuracy": 0.98,
+        "mean_confidence": 0.999503866463337,
+        "count": 50
+      }
+    }
+  }
+}

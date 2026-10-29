@@ -1,0 +1,3693 @@
+{
+  "protocol": {
+    "seeds": [
+      9301,
+      9302,
+      9303,
+      9304,
+      9305,
+      9306,
+      9307,
+      9308,
+      9309,
+      9310,
+      9311,
+      9312,
+      9313,
+      9314,
+      9315,
+      9316,
+      9317,
+      9318,
+      9319,
+      9320,
+      9321,
+      9322,
+      9323,
+      9324,
+      9325,
+      9326,
+      9327,
+      9328,
+      9329,
+      9330,
+      9331,
+      9332,
+      9333,
+      9334,
+      9335,
+      9336,
+      9337,
+      9338,
+      9339,
+      9340,
+      9341,
+      9342,
+      9343,
+      9344,
+      9345,
+      9346,
+      9347,
+      9348,
+      9349,
+      9350
+    ],
+    "calibration_steps_per_seed": 140,
+    "contact_noise_probability": 0.2,
+    "compass_aligned_wall_sensor": true,
+    "hypothesis_class": "all 24 known four-direction permutations",
+    "source_random_reset_privilege": true,
+    "policy_global_pose_or_map_input": false,
+    "value_diffusion_engineered": true,
+    "centralized_python_scheduler": true,
+    "separate_calibration_budget": true,
+    "test_procedural_maps": true,
+    "test_rounds": 10,
+    "cpu_process_seconds": 42.65625
+  },
+  "calibration": {
+    "exact_mapping_rate": 1.0,
+    "mean_posterior_confidence": 0.9953251756182313
+  },
+  "summary": {
+    "procedural": {
+      "learned_mapping": {
+        "success_rate": 0.94,
+        "mean_waypoints": 2.94,
+        "mean_steps": 92.04
+      },
+      "known_mapping": {
+        "success_rate": 0.94,
+        "mean_waypoints": 2.94,
+        "mean_steps": 92.04
+      },
+      "uncalibrated_identity": {
+        "success_rate": 0.0,
+        "mean_waypoints": 0.1,
+        "mean_steps": 160.0
+      }
+    }
+  },
+  "records": [
+    {
+      "seed": 9301,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "estimated_motor_mapping": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999990463265354,
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "cells": 67,
+      "message_updates": 233300
+    },
+    {
+      "seed": 9301,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "estimated_motor_mapping": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999990463265354,
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "cells": 67,
+      "message_updates": 233300
+    },
+    {
+      "seed": 9301,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "estimated_motor_mapping": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999990463265354,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 159,
+      "message_updates": 162410
+    },
+    {
+      "seed": 9302,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "estimated_motor_mapping": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9997559189323575,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 98,
+      "cells": 67,
+      "message_updates": 109360
+    },
+    {
+      "seed": 9302,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "estimated_motor_mapping": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9997559189323575,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 98,
+      "cells": 67,
+      "message_updates": 109360
+    },
+    {
+      "seed": 9302,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "estimated_motor_mapping": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9997559189323575,
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "cells": 156,
+      "message_updates": 289260
+    },
+    {
+      "seed": 9303,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "estimated_motor_mapping": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.999999969188735,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 156,
+      "cells": 67,
+      "message_updates": 220000
+    },
+    {
+      "seed": 9303,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "estimated_motor_mapping": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.999999969188735,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 156,
+      "cells": 67,
+      "message_updates": 220000
+    },
+    {
+      "seed": 9303,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "estimated_motor_mapping": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.999999969188735,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 159,
+      "message_updates": 276350
+    },
+    {
+      "seed": 9304,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "estimated_motor_mapping": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999961256536523,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 76,
+      "cells": 58,
+      "message_updates": 64160
+    },
+    {
+      "seed": 9304,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "estimated_motor_mapping": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999961256536523,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 76,
+      "cells": 58,
+      "message_updates": 64160
+    },
+    {
+      "seed": 9304,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "estimated_motor_mapping": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999961256536523,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 160,
+      "message_updates": 135050
+    },
+    {
+      "seed": 9305,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "estimated_motor_mapping": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999999840944653,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 105,
+      "cells": 67,
+      "message_updates": 121180
+    },
+    {
+      "seed": 9305,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "estimated_motor_mapping": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999999840944653,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 105,
+      "cells": 67,
+      "message_updates": 121180
+    },
+    {
+      "seed": 9305,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "estimated_motor_mapping": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999999840944653,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 160,
+      "message_updates": 252830
+    },
+    {
+      "seed": 9306,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "estimated_motor_mapping": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9990240876187757,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 54,
+      "cells": 46,
+      "message_updates": 34020
+    },
+    {
+      "seed": 9306,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "estimated_motor_mapping": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9990240876187757,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 54,
+      "cells": 46,
+      "message_updates": 34020
+    },
+    {
+      "seed": 9306,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "estimated_motor_mapping": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9990240876187757,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 160,
+      "message_updates": 254400
+    },
+    {
+      "seed": 9307,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "estimated_motor_mapping": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999997017092311,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 53,
+      "cells": 48,
+      "message_updates": 31380
+    },
+    {
+      "seed": 9307,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "estimated_motor_mapping": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999997017092311,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 53,
+      "cells": 48,
+      "message_updates": 31380
+    },
+    {
+      "seed": 9307,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "estimated_motor_mapping": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999997017092311,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 159,
+      "message_updates": 165630
+    },
+    {
+      "seed": 9308,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "estimated_motor_mapping": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "mapping_correct": true,
+      "confidence": 0.7999992364267672,
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "cells": 67,
+      "message_updates": 230200
+    },
+    {
+      "seed": 9308,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "estimated_motor_mapping": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "mapping_correct": true,
+      "confidence": 0.7999992364267672,
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "cells": 67,
+      "message_updates": 230200
+    },
+    {
+      "seed": 9308,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "estimated_motor_mapping": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "mapping_correct": true,
+      "confidence": 0.7999992364267672,
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "cells": 67,
+      "message_updates": 230200
+    },
+    {
+      "seed": 9309,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "estimated_motor_mapping": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9997559142947096,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 135,
+      "cells": 67,
+      "message_updates": 169100
+    },
+    {
+      "seed": 9309,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "estimated_motor_mapping": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9997559142947096,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 135,
+      "cells": 67,
+      "message_updates": 169100
+    },
+    {
+      "seed": 9309,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "estimated_motor_mapping": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9997559142947096,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 160,
+      "message_updates": 147380
+    },
+    {
+      "seed": 9310,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "estimated_motor_mapping": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999226838519042,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 118,
+      "cells": 67,
+      "message_updates": 142940
+    },
+    {
+      "seed": 9310,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "estimated_motor_mapping": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999226838519042,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 118,
+      "cells": 67,
+      "message_updates": 142940
+    },
+    {
+      "seed": 9310,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "estimated_motor_mapping": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999226838519042,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 160,
+      "message_updates": 252810
+    },
+    {
+      "seed": 9311,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "estimated_motor_mapping": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999389647261551,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 95,
+      "cells": 65,
+      "message_updates": 101300
+    },
+    {
+      "seed": 9311,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "estimated_motor_mapping": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999389647261551,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 95,
+      "cells": 65,
+      "message_updates": 101300
+    },
+    {
+      "seed": 9311,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "estimated_motor_mapping": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999389647261551,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 160,
+      "message_updates": 254400
+    },
+    {
+      "seed": 9312,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "estimated_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999389522558183,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 59,
+      "cells": 50,
+      "message_updates": 38120
+    },
+    {
+      "seed": 9312,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "estimated_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999389522558183,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 59,
+      "cells": 50,
+      "message_updates": 38120
+    },
+    {
+      "seed": 9312,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "estimated_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999389522558183,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 160,
+      "message_updates": 243020
+    },
+    {
+      "seed": 9313,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "estimated_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999999662358441,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 52,
+      "cells": 48,
+      "message_updates": 30760
+    },
+    {
+      "seed": 9313,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "estimated_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999999662358441,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 52,
+      "cells": 48,
+      "message_updates": 30760
+    },
+    {
+      "seed": 9313,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "estimated_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999999662358441,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 160,
+      "message_updates": 252850
+    },
+    {
+      "seed": 9314,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "estimated_motor_mapping": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9843732104524912,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 23,
+      "cells": 22,
+      "message_updates": 4560
+    },
+    {
+      "seed": 9314,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "estimated_motor_mapping": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9843732104524912,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 23,
+      "cells": 22,
+      "message_updates": 4560
+    },
+    {
+      "seed": 9314,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "estimated_motor_mapping": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9843732104524912,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 160,
+      "message_updates": 236650
+    },
+    {
+      "seed": 9315,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "estimated_motor_mapping": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999990419026423,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 52,
+      "cells": 48,
+      "message_updates": 28600
+    },
+    {
+      "seed": 9315,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "estimated_motor_mapping": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999990419026423,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 52,
+      "cells": 48,
+      "message_updates": 28600
+    },
+    {
+      "seed": 9315,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "estimated_motor_mapping": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999990419026423,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 156,
+      "message_updates": 137280
+    },
+    {
+      "seed": 9316,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "estimated_motor_mapping": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "mapping_correct": true,
+      "confidence": 0.999938964576327,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 137,
+      "cells": 67,
+      "message_updates": 178380
+    },
+    {
+      "seed": 9316,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "estimated_motor_mapping": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "mapping_correct": true,
+      "confidence": 0.999938964576327,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 137,
+      "cells": 67,
+      "message_updates": 178380
+    },
+    {
+      "seed": 9316,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "estimated_motor_mapping": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "mapping_correct": true,
+      "confidence": 0.999938964576327,
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "cells": 150,
+      "message_updates": 287160
+    },
+    {
+      "seed": 9317,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "estimated_motor_mapping": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999348972614062,
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "cells": 67,
+      "message_updates": 224040
+    },
+    {
+      "seed": 9317,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "estimated_motor_mapping": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999348972614062,
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "cells": 67,
+      "message_updates": 224040
+    },
+    {
+      "seed": 9317,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "estimated_motor_mapping": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999348972614062,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 147,
+      "message_updates": 193130
+    },
+    {
+      "seed": 9318,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "estimated_motor_mapping": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "mapping_correct": true,
+      "confidence": 0.999024355601638,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 44,
+      "cells": 40,
+      "message_updates": 19420
+    },
+    {
+      "seed": 9318,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "estimated_motor_mapping": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "mapping_correct": true,
+      "confidence": 0.999024355601638,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 44,
+      "cells": 40,
+      "message_updates": 19420
+    },
+    {
+      "seed": 9318,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "estimated_motor_mapping": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "mapping_correct": true,
+      "confidence": 0.999024355601638,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 160,
+      "message_updates": 152770
+    },
+    {
+      "seed": 9319,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "estimated_motor_mapping": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999809267459069,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 139,
+      "cells": 67,
+      "message_updates": 190160
+    },
+    {
+      "seed": 9319,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "estimated_motor_mapping": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999809267459069,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 139,
+      "cells": 67,
+      "message_updates": 190160
+    },
+    {
+      "seed": 9319,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "estimated_motor_mapping": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999809267459069,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 160,
+      "message_updates": 128790
+    },
+    {
+      "seed": 9320,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "estimated_motor_mapping": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999961831586583,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 76,
+      "cells": 62,
+      "message_updates": 63080
+    },
+    {
+      "seed": 9320,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "estimated_motor_mapping": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999961831586583,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 76,
+      "cells": 62,
+      "message_updates": 63080
+    },
+    {
+      "seed": 9320,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "estimated_motor_mapping": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999961831586583,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 159,
+      "message_updates": 256480
+    },
+    {
+      "seed": 9321,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "estimated_motor_mapping": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "mapping_correct": true,
+      "confidence": 0.999999983177915,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 83,
+      "cells": 61,
+      "message_updates": 72380
+    },
+    {
+      "seed": 9321,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "estimated_motor_mapping": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "mapping_correct": true,
+      "confidence": 0.999999983177915,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 83,
+      "cells": 61,
+      "message_updates": 72380
+    },
+    {
+      "seed": 9321,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "estimated_motor_mapping": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "mapping_correct": true,
+      "confidence": 0.999999983177915,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 154,
+      "message_updates": 238510
+    },
+    {
+      "seed": 9322,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "estimated_motor_mapping": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999389523269068,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 64,
+      "cells": 55,
+      "message_updates": 46820
+    },
+    {
+      "seed": 9322,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "estimated_motor_mapping": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999389523269068,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 64,
+      "cells": 55,
+      "message_updates": 46820
+    },
+    {
+      "seed": 9322,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "estimated_motor_mapping": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999389523269068,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 160,
+      "message_updates": 128790
+    },
+    {
+      "seed": 9323,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "estimated_motor_mapping": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.99993873017824,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 60,
+      "cells": 42,
+      "message_updates": 36800
+    },
+    {
+      "seed": 9323,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "estimated_motor_mapping": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.99993873017824,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 60,
+      "cells": 42,
+      "message_updates": 36800
+    },
+    {
+      "seed": 9323,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "estimated_motor_mapping": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.99993873017824,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 160,
+      "message_updates": 257510
+    },
+    {
+      "seed": 9324,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "estimated_motor_mapping": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999999841674407,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 151,
+      "cells": 67,
+      "message_updates": 209440
+    },
+    {
+      "seed": 9324,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "estimated_motor_mapping": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999999841674407,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 151,
+      "cells": 67,
+      "message_updates": 209440
+    },
+    {
+      "seed": 9324,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "estimated_motor_mapping": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999999841674407,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 160,
+      "message_updates": 130370
+    },
+    {
+      "seed": 9325,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "estimated_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999959421275206,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 95,
+      "cells": 67,
+      "message_updates": 101720
+    },
+    {
+      "seed": 9325,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "estimated_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999959421275206,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 95,
+      "cells": 67,
+      "message_updates": 101720
+    },
+    {
+      "seed": 9325,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "estimated_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999959421275206,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 159,
+      "message_updates": 144160
+    },
+    {
+      "seed": 9326,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "estimated_motor_mapping": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9997558095675756,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 57,
+      "cells": 49,
+      "message_updates": 31300
+    },
+    {
+      "seed": 9326,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "estimated_motor_mapping": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9997558095675756,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 57,
+      "cells": 49,
+      "message_updates": 31300
+    },
+    {
+      "seed": 9326,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "estimated_motor_mapping": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9997558095675756,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 159,
+      "message_updates": 225180
+    },
+    {
+      "seed": 9327,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "estimated_motor_mapping": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9997396997261253,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 121,
+      "cells": 67,
+      "message_updates": 153980
+    },
+    {
+      "seed": 9327,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "estimated_motor_mapping": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9997396997261253,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 121,
+      "cells": 67,
+      "message_updates": 153980
+    },
+    {
+      "seed": 9327,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "estimated_motor_mapping": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9997396997261253,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 159,
+      "message_updates": 261250
+    },
+    {
+      "seed": 9328,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "estimated_motor_mapping": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "mapping_correct": true,
+      "confidence": 0.999999046093246,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 54,
+      "cells": 44,
+      "message_updates": 32660
+    },
+    {
+      "seed": 9328,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "estimated_motor_mapping": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "mapping_correct": true,
+      "confidence": 0.999999046093246,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 54,
+      "cells": 44,
+      "message_updates": 32660
+    },
+    {
+      "seed": 9328,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "estimated_motor_mapping": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "mapping_correct": true,
+      "confidence": 0.999999046093246,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 154,
+      "message_updates": 312250
+    },
+    {
+      "seed": 9329,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "estimated_motor_mapping": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999989706521024,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 113,
+      "cells": 67,
+      "message_updates": 135200
+    },
+    {
+      "seed": 9329,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "estimated_motor_mapping": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999989706521024,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 113,
+      "cells": 67,
+      "message_updates": 135200
+    },
+    {
+      "seed": 9329,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "estimated_motor_mapping": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999989706521024,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 157,
+      "message_updates": 132280
+    },
+    {
+      "seed": 9330,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        3,
+        0,
+        2,
+        1
+      ],
+      "estimated_motor_mapping": [
+        3,
+        0,
+        2,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999847264702262,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 83,
+      "cells": 61,
+      "message_updates": 74820
+    },
+    {
+      "seed": 9330,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        3,
+        0,
+        2,
+        1
+      ],
+      "estimated_motor_mapping": [
+        3,
+        0,
+        2,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999847264702262,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 83,
+      "cells": 61,
+      "message_updates": 74820
+    },
+    {
+      "seed": 9330,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        3,
+        0,
+        2,
+        1
+      ],
+      "estimated_motor_mapping": [
+        3,
+        0,
+        2,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999847264702262,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 160,
+      "message_updates": 151540
+    },
+    {
+      "seed": 9331,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "estimated_motor_mapping": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "mapping_correct": true,
+      "confidence": 0.99877975943758,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 94,
+      "cells": 67,
+      "message_updates": 94820
+    },
+    {
+      "seed": 9331,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "estimated_motor_mapping": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "mapping_correct": true,
+      "confidence": 0.99877975943758,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 94,
+      "cells": 67,
+      "message_updates": 94820
+    },
+    {
+      "seed": 9331,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "estimated_motor_mapping": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "mapping_correct": true,
+      "confidence": 0.99877975943758,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 160,
+      "message_updates": 134910
+    },
+    {
+      "seed": 9332,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "estimated_motor_mapping": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999999832324803,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 47,
+      "cells": 43,
+      "message_updates": 22900
+    },
+    {
+      "seed": 9332,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "estimated_motor_mapping": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999999832324803,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 47,
+      "cells": 43,
+      "message_updates": 22900
+    },
+    {
+      "seed": 9332,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "estimated_motor_mapping": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999999832324803,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 160,
+      "message_updates": 165200
+    },
+    {
+      "seed": 9333,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        3,
+        0,
+        2,
+        1
+      ],
+      "estimated_motor_mapping": [
+        3,
+        0,
+        2,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999999999708629,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 106,
+      "cells": 67,
+      "message_updates": 118480
+    },
+    {
+      "seed": 9333,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        3,
+        0,
+        2,
+        1
+      ],
+      "estimated_motor_mapping": [
+        3,
+        0,
+        2,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999999999708629,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 106,
+      "cells": 67,
+      "message_updates": 118480
+    },
+    {
+      "seed": 9333,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        3,
+        0,
+        2,
+        1
+      ],
+      "estimated_motor_mapping": [
+        3,
+        0,
+        2,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999999999708629,
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "cells": 144,
+      "message_updates": 272840
+    },
+    {
+      "seed": 9334,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "estimated_motor_mapping": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9961089465104143,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 34,
+      "cells": 31,
+      "message_updates": 11480
+    },
+    {
+      "seed": 9334,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "estimated_motor_mapping": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9961089465104143,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 34,
+      "cells": 31,
+      "message_updates": 11480
+    },
+    {
+      "seed": 9334,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "estimated_motor_mapping": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9961089465104143,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 158,
+      "message_updates": 248290
+    },
+    {
+      "seed": 9335,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "estimated_motor_mapping": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999997466602564,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 124,
+      "cells": 67,
+      "message_updates": 154440
+    },
+    {
+      "seed": 9335,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "estimated_motor_mapping": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999997466602564,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 124,
+      "cells": 67,
+      "message_updates": 154440
+    },
+    {
+      "seed": 9335,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "estimated_motor_mapping": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999997466602564,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 159,
+      "message_updates": 261070
+    },
+    {
+      "seed": 9336,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "estimated_motor_mapping": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999989556198405,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 157,
+      "cells": 67,
+      "message_updates": 222560
+    },
+    {
+      "seed": 9336,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "estimated_motor_mapping": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999989556198405,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 157,
+      "cells": 67,
+      "message_updates": 222560
+    },
+    {
+      "seed": 9336,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "estimated_motor_mapping": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999989556198405,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 151,
+      "message_updates": 311120
+    },
+    {
+      "seed": 9337,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        2,
+        1,
+        3,
+        0
+      ],
+      "estimated_motor_mapping": [
+        2,
+        1,
+        3,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999999999408118,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 44,
+      "cells": 36,
+      "message_updates": 17700
+    },
+    {
+      "seed": 9337,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        2,
+        1,
+        3,
+        0
+      ],
+      "estimated_motor_mapping": [
+        2,
+        1,
+        3,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999999999408118,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 44,
+      "cells": 36,
+      "message_updates": 17700
+    },
+    {
+      "seed": 9337,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        2,
+        1,
+        3,
+        0
+      ],
+      "estimated_motor_mapping": [
+        2,
+        1,
+        3,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999999999408118,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 159,
+      "message_updates": 125650
+    },
+    {
+      "seed": 9338,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "estimated_motor_mapping": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9997559105860344,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 98,
+      "cells": 67,
+      "message_updates": 103040
+    },
+    {
+      "seed": 9338,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "estimated_motor_mapping": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9997559105860344,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 98,
+      "cells": 67,
+      "message_updates": 103040
+    },
+    {
+      "seed": 9338,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "estimated_motor_mapping": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9997559105860344,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 160,
+      "message_updates": 133450
+    },
+    {
+      "seed": 9339,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "estimated_motor_mapping": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999389525050045,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 53,
+      "cells": 42,
+      "message_updates": 31340
+    },
+    {
+      "seed": 9339,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "estimated_motor_mapping": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999389525050045,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 53,
+      "cells": 42,
+      "message_updates": 31340
+    },
+    {
+      "seed": 9339,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "estimated_motor_mapping": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999389525050045,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 160,
+      "message_updates": 222430
+    },
+    {
+      "seed": 9340,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "estimated_motor_mapping": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9989310109385684,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 90,
+      "cells": 66,
+      "message_updates": 82660
+    },
+    {
+      "seed": 9340,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "estimated_motor_mapping": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9989310109385684,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 90,
+      "cells": 66,
+      "message_updates": 82660
+    },
+    {
+      "seed": 9340,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "estimated_motor_mapping": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9989310109385684,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 160,
+      "message_updates": 139550
+    },
+    {
+      "seed": 9341,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "estimated_motor_mapping": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999996972610237,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 80,
+      "cells": 58,
+      "message_updates": 72880
+    },
+    {
+      "seed": 9341,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "estimated_motor_mapping": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999996972610237,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 80,
+      "cells": 58,
+      "message_updates": 72880
+    },
+    {
+      "seed": 9341,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "estimated_motor_mapping": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999996972610237,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 160,
+      "message_updates": 251420
+    },
+    {
+      "seed": 9342,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "estimated_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999379516823828,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 68,
+      "cells": 54,
+      "message_updates": 52120
+    },
+    {
+      "seed": 9342,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "estimated_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999379516823828,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 68,
+      "cells": 54,
+      "message_updates": 52120
+    },
+    {
+      "seed": 9342,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "estimated_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999379516823828,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 157,
+      "message_updates": 139840
+    },
+    {
+      "seed": 9343,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "estimated_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.999999996212791,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 135,
+      "cells": 67,
+      "message_updates": 174500
+    },
+    {
+      "seed": 9343,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "estimated_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.999999996212791,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 135,
+      "cells": 67,
+      "message_updates": 174500
+    },
+    {
+      "seed": 9343,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "estimated_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.999999996212791,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 160,
+      "message_updates": 252840
+    },
+    {
+      "seed": 9344,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "estimated_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9961051643003982,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 139,
+      "cells": 67,
+      "message_updates": 195160
+    },
+    {
+      "seed": 9344,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "estimated_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9961051643003982,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 139,
+      "cells": 67,
+      "message_updates": 195160
+    },
+    {
+      "seed": 9344,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "estimated_motor_mapping": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9961051643003982,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 157,
+      "message_updates": 256310
+    },
+    {
+      "seed": 9345,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "estimated_motor_mapping": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9997366014222995,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 117,
+      "cells": 67,
+      "message_updates": 133240
+    },
+    {
+      "seed": 9345,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "estimated_motor_mapping": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9997366014222995,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 117,
+      "cells": 67,
+      "message_updates": 133240
+    },
+    {
+      "seed": 9345,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "estimated_motor_mapping": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9997366014222995,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 160,
+      "message_updates": 209950
+    },
+    {
+      "seed": 9346,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "estimated_motor_mapping": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999997577358791,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 93,
+      "cells": 67,
+      "message_updates": 103540
+    },
+    {
+      "seed": 9346,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "estimated_motor_mapping": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999997577358791,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 93,
+      "cells": 67,
+      "message_updates": 103540
+    },
+    {
+      "seed": 9346,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "estimated_motor_mapping": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999997577358791,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 160,
+      "message_updates": 127200
+    },
+    {
+      "seed": 9347,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "estimated_motor_mapping": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999961806018549,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 64,
+      "cells": 55,
+      "message_updates": 46360
+    },
+    {
+      "seed": 9347,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "estimated_motor_mapping": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999961806018549,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 64,
+      "cells": 55,
+      "message_updates": 46360
+    },
+    {
+      "seed": 9347,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "estimated_motor_mapping": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999961806018549,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 111,
+      "message_updates": 175840
+    },
+    {
+      "seed": 9348,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        3,
+        2,
+        0,
+        1
+      ],
+      "estimated_motor_mapping": [
+        3,
+        2,
+        0,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9961050409230725,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 39,
+      "cells": 36,
+      "message_updates": 17340
+    },
+    {
+      "seed": 9348,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        3,
+        2,
+        0,
+        1
+      ],
+      "estimated_motor_mapping": [
+        3,
+        2,
+        0,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9961050409230725,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 39,
+      "cells": 36,
+      "message_updates": 17340
+    },
+    {
+      "seed": 9348,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        3,
+        2,
+        0,
+        1
+      ],
+      "estimated_motor_mapping": [
+        3,
+        2,
+        0,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9961050409230725,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 158,
+      "message_updates": 268810
+    },
+    {
+      "seed": 9349,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        3,
+        0,
+        2,
+        1
+      ],
+      "estimated_motor_mapping": [
+        3,
+        0,
+        2,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999961852578667,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 98,
+      "cells": 67,
+      "message_updates": 104620
+    },
+    {
+      "seed": 9349,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        3,
+        0,
+        2,
+        1
+      ],
+      "estimated_motor_mapping": [
+        3,
+        0,
+        2,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999961852578667,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 98,
+      "cells": 67,
+      "message_updates": 104620
+    },
+    {
+      "seed": 9349,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        3,
+        0,
+        2,
+        1
+      ],
+      "estimated_motor_mapping": [
+        3,
+        0,
+        2,
+        1
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999961852578667,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 160,
+      "message_updates": 135020
+    },
+    {
+      "seed": 9350,
+      "changed": false,
+      "mode": "learned_mapping",
+      "actual_motor_mapping": [
+        3,
+        1,
+        0,
+        2
+      ],
+      "estimated_motor_mapping": [
+        3,
+        1,
+        0,
+        2
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999389646108197,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 89,
+      "cells": 65,
+      "message_updates": 80600
+    },
+    {
+      "seed": 9350,
+      "changed": false,
+      "mode": "known_mapping",
+      "actual_motor_mapping": [
+        3,
+        1,
+        0,
+        2
+      ],
+      "estimated_motor_mapping": [
+        3,
+        1,
+        0,
+        2
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999389646108197,
+      "completed": true,
+      "waypoints": 3,
+      "steps": 89,
+      "cells": 65,
+      "message_updates": 80600
+    },
+    {
+      "seed": 9350,
+      "changed": false,
+      "mode": "uncalibrated_identity",
+      "actual_motor_mapping": [
+        3,
+        1,
+        0,
+        2
+      ],
+      "estimated_motor_mapping": [
+        3,
+        1,
+        0,
+        2
+      ],
+      "mapping_correct": true,
+      "confidence": 0.9999389646108197,
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "cells": 160,
+      "message_updates": 249800
+    }
+  ]
+}
