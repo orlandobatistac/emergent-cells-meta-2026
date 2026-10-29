@@ -1,0 +1,1524 @@
+{
+  "protocol": {
+    "seeds": [
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110
+    ],
+    "max_navigation_actions": 160,
+    "goals": 3,
+    "calibration_actions_extra": 120,
+    "motor_rates_hidden_per_seed": true,
+    "motor_rates_range": [
+      0.45,
+      0.9
+    ],
+    "motion_tick_flip_rate": 0.2,
+    "parity_bit_flip_rate": 0.15,
+    "motor_action_directions_known": true,
+    "relative_odometry_engineered": true,
+    "probability_fusion_model_engineered": true,
+    "learned_stochastic_dynamics": "per-command Bernoulli success rate",
+    "no_global_pose_or_map_input": true,
+    "procedural": false,
+    "cpu_seconds": 27.328125
+  },
+  "mean_rate_mae": 0.09926261123481271,
+  "summary": {
+    "stable": {
+      "always_move": {
+        "success_rate": 0.7,
+        "mean_waypoints": 2.3,
+        "mean_steps": 129.9,
+        "mean_movement_prediction_accuracy": 0.6895530943509763
+      },
+      "encoder_only": {
+        "success_rate": 0.3,
+        "mean_waypoints": 1.5,
+        "mean_steps": 137.4,
+        "mean_movement_prediction_accuracy": 0.8087244266622668
+      },
+      "floor_only": {
+        "success_rate": 0.3,
+        "mean_waypoints": 1.7,
+        "mean_steps": 142.1,
+        "mean_movement_prediction_accuracy": 0.7598611041781062
+      },
+      "learned_fusion": {
+        "success_rate": 0.6,
+        "mean_waypoints": 2.4,
+        "mean_steps": 137.7,
+        "mean_movement_prediction_accuracy": 0.8386733332476337
+      },
+      "oracle_probabilities": {
+        "success_rate": 0.7,
+        "mean_waypoints": 2.3,
+        "mean_steps": 117.7,
+        "mean_movement_prediction_accuracy": 0.8568812781878817
+      }
+    },
+    "changed": {
+      "always_move": {
+        "success_rate": 0.2,
+        "mean_waypoints": 1.1,
+        "mean_steps": 148.8,
+        "mean_movement_prediction_accuracy": 0.6793913572732806
+      },
+      "encoder_only": {
+        "success_rate": 0.2,
+        "mean_waypoints": 1.4,
+        "mean_steps": 150.1,
+        "mean_movement_prediction_accuracy": 0.8080569248826291
+      },
+      "floor_only": {
+        "success_rate": 0.3,
+        "mean_waypoints": 1.7,
+        "mean_steps": 133.9,
+        "mean_movement_prediction_accuracy": 0.7581007751937985
+      },
+      "learned_fusion": {
+        "success_rate": 0.2,
+        "mean_waypoints": 1.6,
+        "mean_steps": 143.0,
+        "mean_movement_prediction_accuracy": 0.8364285714285714
+      },
+      "oracle_probabilities": {
+        "success_rate": 0.2,
+        "mean_waypoints": 1.4,
+        "mean_steps": 142.0,
+        "mean_movement_prediction_accuracy": 0.8574999999999999
+      }
+    }
+  },
+  "calibrations": [
+    {
+      "seed": 101,
+      "rates": [
+        0.6,
+        0.75,
+        0.9,
+        0.75
+      ],
+      "learned_rates": [
+        0.5806451612903225,
+        0.9861111111111109,
+        0.8985507246376812,
+        0.719298245614035
+      ],
+      "mean_absolute_rate_error": 0.07190424489226807,
+      "training_samples": [
+        29,
+        22,
+        21,
+        17
+      ]
+    },
+    {
+      "seed": 102,
+      "rates": [
+        0.75,
+        0.75,
+        0.6,
+        0.9
+      ],
+      "learned_rates": [
+        0.7083333333333334,
+        0.8846153846153845,
+        0.8333333333333333,
+        0.8160919540229886
+      ],
+      "mean_absolute_rate_error": 0.12338085764809895,
+      "training_samples": [
+        22,
+        24,
+        28,
+        27
+      ]
+    },
+    {
+      "seed": 103,
+      "rates": [
+        0.6,
+        0.45,
+        0.75,
+        0.75
+      ],
+      "learned_rates": [
+        0.6666666666666666,
+        0.33333333333333337,
+        0.9166666666666667,
+        0.9333333333333335
+      ],
+      "mean_absolute_rate_error": 0.13333333333333336,
+      "training_samples": [
+        33,
+        23,
+        22,
+        23
+      ]
+    },
+    {
+      "seed": 104,
+      "rates": [
+        0.45,
+        0.6,
+        0.6,
+        0.6
+      ],
+      "learned_rates": [
+        0.5490196078431373,
+        0.7777777777777777,
+        0.5833333333333334,
+        0.7333333333333334
+      ],
+      "mean_absolute_rate_error": 0.10669934640522875,
+      "training_samples": [
+        32,
+        22,
+        18,
+        23
+      ]
+    },
+    {
+      "seed": 105,
+      "rates": [
+        0.9,
+        0.75,
+        0.9,
+        0.9
+      ],
+      "learned_rates": [
+        0.9861111111111109,
+        0.7777777777777777,
+        0.8205128205128205,
+        0.8787878787878789
+      ],
+      "mean_absolute_rate_error": 0.053647047397047315,
+      "training_samples": [
+        22,
+        25,
+        24,
+        20
+      ]
+    },
+    {
+      "seed": 106,
+      "rates": [
+        0.75,
+        0.75,
+        0.45,
+        0.9
+      ],
+      "learned_rates": [
+        0.7011494252873564,
+        0.8571428571428571,
+        0.4603174603174603,
+        0.9411764705882353
+      ],
+      "mean_absolute_rate_error": 0.05187184069029907,
+      "training_samples": [
+        27,
+        26,
+        19,
+        15
+      ]
+    },
+    {
+      "seed": 107,
+      "rates": [
+        0.45,
+        0.45,
+        0.75,
+        0.75
+      ],
+      "learned_rates": [
+        0.3913043478260869,
+        0.4691358024691358,
+        0.7272727272727273,
+        0.8070175438596492
+      ],
+      "mean_absolute_rate_error": 0.03939406780749269,
+      "training_samples": [
+        21,
+        25,
+        20,
+        17
+      ]
+    },
+    {
+      "seed": 108,
+      "rates": [
+        0.9,
+        0.45,
+        0.9,
+        0.9
+      ],
+      "learned_rates": [
+        0.9411764705882353,
+        0.4444444444444445,
+        0.8787878787878789,
+        0.5
+      ],
+      "mean_absolute_rate_error": 0.11698603683897799,
+      "training_samples": [
+        15,
+        28,
+        20,
+        22
+      ]
+    },
+    {
+      "seed": 109,
+      "rates": [
+        0.6,
+        0.75,
+        0.45,
+        0.6
+      ],
+      "learned_rates": [
+        0.7777777777777777,
+        0.8160919540229886,
+        0.43589743589743596,
+        0.8070175438596492
+      ],
+      "mean_absolute_rate_error": 0.1162474599407449,
+      "training_samples": [
+        25,
+        27,
+        11,
+        17
+      ]
+    },
+    {
+      "seed": 110,
+      "rates": [
+        0.75,
+        0.75,
+        0.9,
+        0.75
+      ],
+      "learned_rates": [
+        0.4074074074074074,
+        0.8160919540229886,
+        0.995,
+        0.9629629629629629
+      ],
+      "mean_absolute_rate_error": 0.17916187739463602,
+      "training_samples": [
+        25,
+        27,
+        16,
+        25
+      ]
+    }
+  ],
+  "records": [
+    {
+      "seed": 101,
+      "changed": false,
+      "method": "always_move",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.7375,
+      "relative_pose_error": 16,
+      "internal_cells": 140,
+      "message_updates": 304450
+    },
+    {
+      "seed": 101,
+      "changed": false,
+      "method": "encoder_only",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.80625,
+      "relative_pose_error": 3,
+      "internal_cells": 73,
+      "message_updates": 195560
+    },
+    {
+      "seed": 101,
+      "changed": false,
+      "method": "floor_only",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.7625,
+      "relative_pose_error": 4,
+      "internal_cells": 75,
+      "message_updates": 183270
+    },
+    {
+      "seed": 101,
+      "changed": false,
+      "method": "learned_fusion",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 154,
+      "movement_prediction_accuracy": 0.8506493506493507,
+      "relative_pose_error": 9,
+      "internal_cells": 95,
+      "message_updates": 234670
+    },
+    {
+      "seed": 101,
+      "changed": false,
+      "method": "oracle_probabilities",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 137,
+      "movement_prediction_accuracy": 0.8540145985401459,
+      "relative_pose_error": 2,
+      "internal_cells": 84,
+      "message_updates": 179530
+    },
+    {
+      "seed": 101,
+      "changed": true,
+      "method": "always_move",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.75625,
+      "relative_pose_error": 15,
+      "internal_cells": 141,
+      "message_updates": 304890
+    },
+    {
+      "seed": 101,
+      "changed": true,
+      "method": "encoder_only",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.80625,
+      "relative_pose_error": 1,
+      "internal_cells": 83,
+      "message_updates": 200920
+    },
+    {
+      "seed": 101,
+      "changed": true,
+      "method": "floor_only",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.7625,
+      "relative_pose_error": 8,
+      "internal_cells": 72,
+      "message_updates": 154450
+    },
+    {
+      "seed": 101,
+      "changed": true,
+      "method": "learned_fusion",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.83125,
+      "relative_pose_error": 9,
+      "internal_cells": 101,
+      "message_updates": 247880
+    },
+    {
+      "seed": 101,
+      "changed": true,
+      "method": "oracle_probabilities",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.86875,
+      "relative_pose_error": 7,
+      "internal_cells": 108,
+      "message_updates": 262440
+    },
+    {
+      "seed": 102,
+      "changed": false,
+      "method": "always_move",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 119,
+      "movement_prediction_accuracy": 0.7563025210084033,
+      "relative_pose_error": 13,
+      "internal_cells": 107,
+      "message_updates": 163730
+    },
+    {
+      "seed": 102,
+      "changed": false,
+      "method": "encoder_only",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.8,
+      "relative_pose_error": 6,
+      "internal_cells": 91,
+      "message_updates": 207930
+    },
+    {
+      "seed": 102,
+      "changed": false,
+      "method": "floor_only",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.825,
+      "relative_pose_error": 2,
+      "internal_cells": 82,
+      "message_updates": 182790
+    },
+    {
+      "seed": 102,
+      "changed": false,
+      "method": "learned_fusion",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 102,
+      "movement_prediction_accuracy": 0.8627450980392157,
+      "relative_pose_error": 10,
+      "internal_cells": 71,
+      "message_updates": 96970
+    },
+    {
+      "seed": 102,
+      "changed": false,
+      "method": "oracle_probabilities",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 102,
+      "movement_prediction_accuracy": 0.8627450980392157,
+      "relative_pose_error": 10,
+      "internal_cells": 71,
+      "message_updates": 96970
+    },
+    {
+      "seed": 102,
+      "changed": true,
+      "method": "always_move",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 53,
+      "movement_prediction_accuracy": 0.7358490566037735,
+      "relative_pose_error": 6,
+      "internal_cells": 52,
+      "message_updates": 31790
+    },
+    {
+      "seed": 102,
+      "changed": true,
+      "method": "encoder_only",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 150,
+      "movement_prediction_accuracy": 0.7933333333333333,
+      "relative_pose_error": 7,
+      "internal_cells": 72,
+      "message_updates": 143840
+    },
+    {
+      "seed": 102,
+      "changed": true,
+      "method": "floor_only",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 76,
+      "movement_prediction_accuracy": 0.8289473684210527,
+      "relative_pose_error": 3,
+      "internal_cells": 34,
+      "message_updates": 32620
+    },
+    {
+      "seed": 102,
+      "changed": true,
+      "method": "learned_fusion",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.88125,
+      "relative_pose_error": 7,
+      "internal_cells": 103,
+      "message_updates": 238530
+    },
+    {
+      "seed": 102,
+      "changed": true,
+      "method": "oracle_probabilities",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.88125,
+      "relative_pose_error": 7,
+      "internal_cells": 103,
+      "message_updates": 238530
+    },
+    {
+      "seed": 103,
+      "changed": false,
+      "method": "always_move",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.59375,
+      "relative_pose_error": 23,
+      "internal_cells": 136,
+      "message_updates": 268430
+    },
+    {
+      "seed": 103,
+      "changed": false,
+      "method": "encoder_only",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.8,
+      "relative_pose_error": 8,
+      "internal_cells": 80,
+      "message_updates": 151970
+    },
+    {
+      "seed": 103,
+      "changed": false,
+      "method": "floor_only",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.7625,
+      "relative_pose_error": 10,
+      "internal_cells": 63,
+      "message_updates": 148110
+    },
+    {
+      "seed": 103,
+      "changed": false,
+      "method": "learned_fusion",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.8375,
+      "relative_pose_error": 18,
+      "internal_cells": 88,
+      "message_updates": 167270
+    },
+    {
+      "seed": 103,
+      "changed": false,
+      "method": "oracle_probabilities",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.85625,
+      "relative_pose_error": 7,
+      "internal_cells": 84,
+      "message_updates": 185650
+    },
+    {
+      "seed": 103,
+      "changed": true,
+      "method": "always_move",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.5625,
+      "relative_pose_error": 14,
+      "internal_cells": 123,
+      "message_updates": 247830
+    },
+    {
+      "seed": 103,
+      "changed": true,
+      "method": "encoder_only",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.8,
+      "relative_pose_error": 10,
+      "internal_cells": 76,
+      "message_updates": 155080
+    },
+    {
+      "seed": 103,
+      "changed": true,
+      "method": "floor_only",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.7625,
+      "relative_pose_error": 12,
+      "internal_cells": 66,
+      "message_updates": 145710
+    },
+    {
+      "seed": 103,
+      "changed": true,
+      "method": "learned_fusion",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.8,
+      "relative_pose_error": 28,
+      "internal_cells": 93,
+      "message_updates": 161640
+    },
+    {
+      "seed": 103,
+      "changed": true,
+      "method": "oracle_probabilities",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.85,
+      "relative_pose_error": 6,
+      "internal_cells": 76,
+      "message_updates": 171600
+    },
+    {
+      "seed": 104,
+      "changed": false,
+      "method": "always_move",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.5375,
+      "relative_pose_error": 36,
+      "internal_cells": 145,
+      "message_updates": 301730
+    },
+    {
+      "seed": 104,
+      "changed": false,
+      "method": "encoder_only",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 87,
+      "movement_prediction_accuracy": 0.8160919540229885,
+      "relative_pose_error": 4,
+      "internal_cells": 46,
+      "message_updates": 46970
+    },
+    {
+      "seed": 104,
+      "changed": false,
+      "method": "floor_only",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.8,
+      "relative_pose_error": 4,
+      "internal_cells": 67,
+      "message_updates": 158910
+    },
+    {
+      "seed": 104,
+      "changed": false,
+      "method": "learned_fusion",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 95,
+      "movement_prediction_accuracy": 0.8631578947368421,
+      "relative_pose_error": 1,
+      "internal_cells": 51,
+      "message_updates": 56680
+    },
+    {
+      "seed": 104,
+      "changed": false,
+      "method": "oracle_probabilities",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 95,
+      "movement_prediction_accuracy": 0.8631578947368421,
+      "relative_pose_error": 1,
+      "internal_cells": 51,
+      "message_updates": 56680
+    },
+    {
+      "seed": 104,
+      "changed": true,
+      "method": "always_move",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.54375,
+      "relative_pose_error": 19,
+      "internal_cells": 148,
+      "message_updates": 295000
+    },
+    {
+      "seed": 104,
+      "changed": true,
+      "method": "encoder_only",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.80625,
+      "relative_pose_error": 3,
+      "internal_cells": 61,
+      "message_updates": 137680
+    },
+    {
+      "seed": 104,
+      "changed": true,
+      "method": "floor_only",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.8,
+      "relative_pose_error": 6,
+      "internal_cells": 65,
+      "message_updates": 147810
+    },
+    {
+      "seed": 104,
+      "changed": true,
+      "method": "learned_fusion",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.83125,
+      "relative_pose_error": 7,
+      "internal_cells": 81,
+      "message_updates": 178120
+    },
+    {
+      "seed": 104,
+      "changed": true,
+      "method": "oracle_probabilities",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.83125,
+      "relative_pose_error": 7,
+      "internal_cells": 81,
+      "message_updates": 178120
+    },
+    {
+      "seed": 105,
+      "changed": false,
+      "method": "always_move",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 120,
+      "movement_prediction_accuracy": 0.8666666666666667,
+      "relative_pose_error": 2,
+      "internal_cells": 106,
+      "message_updates": 165150
+    },
+    {
+      "seed": 105,
+      "changed": false,
+      "method": "encoder_only",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 57,
+      "movement_prediction_accuracy": 0.8245614035087719,
+      "relative_pose_error": 6,
+      "internal_cells": 37,
+      "message_updates": 22690
+    },
+    {
+      "seed": 105,
+      "changed": false,
+      "method": "floor_only",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 115,
+      "movement_prediction_accuracy": 0.6782608695652174,
+      "relative_pose_error": 1,
+      "internal_cells": 67,
+      "message_updates": 98730
+    },
+    {
+      "seed": 105,
+      "changed": false,
+      "method": "learned_fusion",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 132,
+      "movement_prediction_accuracy": 0.9090909090909091,
+      "relative_pose_error": 10,
+      "internal_cells": 107,
+      "message_updates": 199090
+    },
+    {
+      "seed": 105,
+      "changed": false,
+      "method": "oracle_probabilities",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 76,
+      "movement_prediction_accuracy": 0.8947368421052632,
+      "relative_pose_error": 2,
+      "internal_cells": 58,
+      "message_updates": 54520
+    },
+    {
+      "seed": 105,
+      "changed": true,
+      "method": "always_move",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 155,
+      "movement_prediction_accuracy": 0.8580645161290322,
+      "relative_pose_error": 2,
+      "internal_cells": 114,
+      "message_updates": 254810
+    },
+    {
+      "seed": 105,
+      "changed": true,
+      "method": "encoder_only",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 71,
+      "movement_prediction_accuracy": 0.8309859154929577,
+      "relative_pose_error": 4,
+      "internal_cells": 36,
+      "message_updates": 34890
+    },
+    {
+      "seed": 105,
+      "changed": true,
+      "method": "floor_only",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 86,
+      "movement_prediction_accuracy": 0.6976744186046512,
+      "relative_pose_error": 4,
+      "internal_cells": 49,
+      "message_updates": 57130
+    },
+    {
+      "seed": 105,
+      "changed": true,
+      "method": "learned_fusion",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 80,
+      "movement_prediction_accuracy": 0.8875,
+      "relative_pose_error": 3,
+      "internal_cells": 61,
+      "message_updates": 67710
+    },
+    {
+      "seed": 105,
+      "changed": true,
+      "method": "oracle_probabilities",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 70,
+      "movement_prediction_accuracy": 0.8857142857142857,
+      "relative_pose_error": 2,
+      "internal_cells": 44,
+      "message_updates": 46020
+    },
+    {
+      "seed": 106,
+      "changed": false,
+      "method": "always_move",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 78,
+      "movement_prediction_accuracy": 0.6923076923076923,
+      "relative_pose_error": 12,
+      "internal_cells": 73,
+      "message_updates": 66490
+    },
+    {
+      "seed": 106,
+      "changed": false,
+      "method": "encoder_only",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.79375,
+      "relative_pose_error": 7,
+      "internal_cells": 91,
+      "message_updates": 203580
+    },
+    {
+      "seed": 106,
+      "changed": false,
+      "method": "floor_only",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.7375,
+      "relative_pose_error": 12,
+      "internal_cells": 76,
+      "message_updates": 169840
+    },
+    {
+      "seed": 106,
+      "changed": false,
+      "method": "learned_fusion",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.84375,
+      "relative_pose_error": 5,
+      "internal_cells": 96,
+      "message_updates": 234810
+    },
+    {
+      "seed": 106,
+      "changed": false,
+      "method": "oracle_probabilities",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.84375,
+      "relative_pose_error": 5,
+      "internal_cells": 96,
+      "message_updates": 234810
+    },
+    {
+      "seed": 106,
+      "changed": true,
+      "method": "always_move",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.66875,
+      "relative_pose_error": 31,
+      "internal_cells": 139,
+      "message_updates": 320620
+    },
+    {
+      "seed": 106,
+      "changed": true,
+      "method": "encoder_only",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.79375,
+      "relative_pose_error": 5,
+      "internal_cells": 85,
+      "message_updates": 219860
+    },
+    {
+      "seed": 106,
+      "changed": true,
+      "method": "floor_only",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.7375,
+      "relative_pose_error": 14,
+      "internal_cells": 72,
+      "message_updates": 152620
+    },
+    {
+      "seed": 106,
+      "changed": true,
+      "method": "learned_fusion",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.8375,
+      "relative_pose_error": 4,
+      "internal_cells": 94,
+      "message_updates": 229040
+    },
+    {
+      "seed": 106,
+      "changed": true,
+      "method": "oracle_probabilities",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.8375,
+      "relative_pose_error": 4,
+      "internal_cells": 94,
+      "message_updates": 229040
+    },
+    {
+      "seed": 107,
+      "changed": false,
+      "method": "always_move",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 73,
+      "movement_prediction_accuracy": 0.684931506849315,
+      "relative_pose_error": 3,
+      "internal_cells": 63,
+      "message_updates": 59130
+    },
+    {
+      "seed": 107,
+      "changed": false,
+      "method": "encoder_only",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.825,
+      "relative_pose_error": 6,
+      "internal_cells": 61,
+      "message_updates": 156420
+    },
+    {
+      "seed": 107,
+      "changed": false,
+      "method": "floor_only",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.725,
+      "relative_pose_error": 2,
+      "internal_cells": 71,
+      "message_updates": 163490
+    },
+    {
+      "seed": 107,
+      "changed": false,
+      "method": "learned_fusion",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.8,
+      "relative_pose_error": 16,
+      "internal_cells": 76,
+      "message_updates": 146570
+    },
+    {
+      "seed": 107,
+      "changed": false,
+      "method": "oracle_probabilities",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.86875,
+      "relative_pose_error": 5,
+      "internal_cells": 79,
+      "message_updates": 196480
+    },
+    {
+      "seed": 107,
+      "changed": true,
+      "method": "always_move",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.55,
+      "relative_pose_error": 8,
+      "internal_cells": 144,
+      "message_updates": 320630
+    },
+    {
+      "seed": 107,
+      "changed": true,
+      "method": "encoder_only",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.825,
+      "relative_pose_error": 4,
+      "internal_cells": 72,
+      "message_updates": 179820
+    },
+    {
+      "seed": 107,
+      "changed": true,
+      "method": "floor_only",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.725,
+      "relative_pose_error": 8,
+      "internal_cells": 78,
+      "message_updates": 175810
+    },
+    {
+      "seed": 107,
+      "changed": true,
+      "method": "learned_fusion",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.84375,
+      "relative_pose_error": 5,
+      "internal_cells": 70,
+      "message_updates": 164150
+    },
+    {
+      "seed": 107,
+      "changed": true,
+      "method": "oracle_probabilities",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.85625,
+      "relative_pose_error": 7,
+      "internal_cells": 68,
+      "message_updates": 180720
+    },
+    {
+      "seed": 108,
+      "changed": false,
+      "method": "always_move",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 154,
+      "movement_prediction_accuracy": 0.6623376623376623,
+      "relative_pose_error": 36,
+      "internal_cells": 147,
+      "message_updates": 274140
+    },
+    {
+      "seed": 108,
+      "changed": false,
+      "method": "encoder_only",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 110,
+      "movement_prediction_accuracy": 0.8090909090909091,
+      "relative_pose_error": 11,
+      "internal_cells": 61,
+      "message_updates": 85720
+    },
+    {
+      "seed": 108,
+      "changed": false,
+      "method": "floor_only",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.7625,
+      "relative_pose_error": 14,
+      "internal_cells": 76,
+      "message_updates": 170410
+    },
+    {
+      "seed": 108,
+      "changed": false,
+      "method": "learned_fusion",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.85,
+      "relative_pose_error": 12,
+      "internal_cells": 105,
+      "message_updates": 213230
+    },
+    {
+      "seed": 108,
+      "changed": false,
+      "method": "oracle_probabilities",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 76,
+      "movement_prediction_accuracy": 0.8289473684210527,
+      "relative_pose_error": 3,
+      "internal_cells": 51,
+      "message_updates": 46200
+    },
+    {
+      "seed": 108,
+      "changed": true,
+      "method": "always_move",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.73125,
+      "relative_pose_error": 29,
+      "internal_cells": 128,
+      "message_updates": 306220
+    },
+    {
+      "seed": 108,
+      "changed": true,
+      "method": "encoder_only",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.8125,
+      "relative_pose_error": 6,
+      "internal_cells": 86,
+      "message_updates": 176820
+    },
+    {
+      "seed": 108,
+      "changed": true,
+      "method": "floor_only",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.7625,
+      "relative_pose_error": 8,
+      "internal_cells": 63,
+      "message_updates": 159150
+    },
+    {
+      "seed": 108,
+      "changed": true,
+      "method": "learned_fusion",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.84375,
+      "relative_pose_error": 9,
+      "internal_cells": 74,
+      "message_updates": 178320
+    },
+    {
+      "seed": 108,
+      "changed": true,
+      "method": "oracle_probabilities",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.8625,
+      "relative_pose_error": 2,
+      "internal_cells": 64,
+      "message_updates": 181780
+    },
+    {
+      "seed": 109,
+      "changed": false,
+      "method": "always_move",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 146,
+      "movement_prediction_accuracy": 0.589041095890411,
+      "relative_pose_error": 8,
+      "internal_cells": 135,
+      "message_updates": 242100
+    },
+    {
+      "seed": 109,
+      "changed": false,
+      "method": "encoder_only",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.75625,
+      "relative_pose_error": 21,
+      "internal_cells": 85,
+      "message_updates": 173920
+    },
+    {
+      "seed": 109,
+      "changed": false,
+      "method": "floor_only",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 52,
+      "movement_prediction_accuracy": 0.7692307692307693,
+      "relative_pose_error": 4,
+      "internal_cells": 28,
+      "message_updates": 18180
+    },
+    {
+      "seed": 109,
+      "changed": false,
+      "method": "learned_fusion",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 116,
+      "movement_prediction_accuracy": 0.8017241379310345,
+      "relative_pose_error": 3,
+      "internal_cells": 68,
+      "message_updates": 108190
+    },
+    {
+      "seed": 109,
+      "changed": false,
+      "method": "oracle_probabilities",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 116,
+      "movement_prediction_accuracy": 0.8017241379310345,
+      "relative_pose_error": 3,
+      "internal_cells": 68,
+      "message_updates": 108190
+    },
+    {
+      "seed": 109,
+      "changed": true,
+      "method": "always_move",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.6375,
+      "relative_pose_error": 6,
+      "internal_cells": 139,
+      "message_updates": 295760
+    },
+    {
+      "seed": 109,
+      "changed": true,
+      "method": "encoder_only",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.75625,
+      "relative_pose_error": 15,
+      "internal_cells": 80,
+      "message_updates": 160140
+    },
+    {
+      "seed": 109,
+      "changed": true,
+      "method": "floor_only",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 57,
+      "movement_prediction_accuracy": 0.7543859649122807,
+      "relative_pose_error": 4,
+      "internal_cells": 29,
+      "message_updates": 21920
+    },
+    {
+      "seed": 109,
+      "changed": true,
+      "method": "learned_fusion",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 70,
+      "movement_prediction_accuracy": 0.8142857142857143,
+      "relative_pose_error": 3,
+      "internal_cells": 40,
+      "message_updates": 32960
+    },
+    {
+      "seed": 109,
+      "changed": true,
+      "method": "oracle_probabilities",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 70,
+      "movement_prediction_accuracy": 0.8142857142857143,
+      "relative_pose_error": 3,
+      "internal_cells": 40,
+      "message_updates": 32960
+    },
+    {
+      "seed": 110,
+      "changed": false,
+      "method": "always_move",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 129,
+      "movement_prediction_accuracy": 0.7751937984496124,
+      "relative_pose_error": 13,
+      "internal_cells": 114,
+      "message_updates": 204930
+    },
+    {
+      "seed": 110,
+      "changed": false,
+      "method": "encoder_only",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.85625,
+      "relative_pose_error": 5,
+      "internal_cells": 71,
+      "message_updates": 173430
+    },
+    {
+      "seed": 110,
+      "changed": false,
+      "method": "floor_only",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 134,
+      "movement_prediction_accuracy": 0.7761194029850746,
+      "relative_pose_error": 4,
+      "internal_cells": 66,
+      "message_updates": 122510
+    },
+    {
+      "seed": 110,
+      "changed": false,
+      "method": "learned_fusion",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 138,
+      "movement_prediction_accuracy": 0.7681159420289855,
+      "relative_pose_error": 28,
+      "internal_cells": 99,
+      "message_updates": 160110
+    },
+    {
+      "seed": 110,
+      "changed": false,
+      "method": "oracle_probabilities",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 95,
+      "movement_prediction_accuracy": 0.8947368421052632,
+      "relative_pose_error": 4,
+      "internal_cells": 71,
+      "message_updates": 88300
+    },
+    {
+      "seed": 110,
+      "changed": true,
+      "method": "always_move",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.75,
+      "relative_pose_error": 20,
+      "internal_cells": 141,
+      "message_updates": 325720
+    },
+    {
+      "seed": 110,
+      "changed": true,
+      "method": "encoder_only",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.85625,
+      "relative_pose_error": 7,
+      "internal_cells": 99,
+      "message_updates": 222640
+    },
+    {
+      "seed": 110,
+      "changed": true,
+      "method": "floor_only",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.75,
+      "relative_pose_error": 12,
+      "internal_cells": 81,
+      "message_updates": 181550
+    },
+    {
+      "seed": 110,
+      "changed": true,
+      "method": "learned_fusion",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.79375,
+      "relative_pose_error": 21,
+      "internal_cells": 105,
+      "message_updates": 226020
+    },
+    {
+      "seed": 110,
+      "changed": true,
+      "method": "oracle_probabilities",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "movement_prediction_accuracy": 0.8875,
+      "relative_pose_error": 4,
+      "internal_cells": 87,
+      "message_updates": 219120
+    }
+  ]
+}

@@ -35,6 +35,8 @@ EXPERIMENTS = {
     "delayed-goal": "delayed_goal",
     "local-value-cells": "local_value_cells",
     "learned-motor-code": "learned_motor_code",
+    "stochastic-motor": "stochastic_motor",
+    "switching-motor": "switching_motor",
 }
 
 
