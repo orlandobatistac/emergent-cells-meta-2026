@@ -1,0 +1,185 @@
+{
+  "protocol": {
+    "inputs": "local walls, floor texture, past actions; no coordinates",
+    "target": "next local walls and floor texture (self-supervised)",
+    "history_pairs": 3,
+    "model_type": "engineered context keys; learned categorical predictive distributions",
+    "training_goal_labels": false,
+    "train_steps": 12000,
+    "test_steps_per_scenario": 3000,
+    "episode_length": 100,
+    "smoothing_alpha": 5.0,
+    "min_history_visits": 5,
+    "seeds": [
+      21,
+      22
+    ]
+  },
+  "summary": {
+    "stable_test": {
+      "observation_only": {
+        "accuracy": 0.6453774189854575,
+        "nll_nats": 0.7593139861134487,
+        "ambiguous_accuracy": 0.4553610928802353
+      },
+      "one_step_history": {
+        "accuracy": 0.8238706630024046,
+        "nll_nats": 0.39059234130363707,
+        "ambiguous_accuracy": 0.7294951262791998
+      },
+      "adaptive_predictive": {
+        "accuracy": 0.8341749112561548,
+        "nll_nats": 0.36624360293420066,
+        "ambiguous_accuracy": 0.7453158803082234
+      }
+    },
+    "changed_test": {
+      "observation_only": {
+        "accuracy": 0.6757536921458553,
+        "nll_nats": 0.8086771950523914,
+        "ambiguous_accuracy": 0.48237273233898353
+      },
+      "one_step_history": {
+        "accuracy": 0.8072591885145464,
+        "nll_nats": 0.5374141198573203,
+        "ambiguous_accuracy": 0.6923082692105775
+      },
+      "adaptive_predictive": {
+        "accuracy": 0.81115568958652,
+        "nll_nats": 0.525098651200318,
+        "ambiguous_accuracy": 0.698528724571563
+      }
+    }
+  },
+  "runs": [
+    {
+      "seed": 21,
+      "train_steps": 12000,
+      "state_context_counts": [
+        84,
+        612,
+        923,
+        74
+      ],
+      "train_cpu_seconds": 0.28125,
+      "peak_traced_allocation_bytes": 5249544,
+      "stable_test": {
+        "observation_only": {
+          "samples": 2911,
+          "accuracy": 0.6434215046375816,
+          "nll_nats": 0.7611416107838955,
+          "perplexity": 2.140718693600635,
+          "ambiguous_samples": 1890,
+          "ambiguous_accuracy": 0.4507936507936508
+        },
+        "one_step_history": {
+          "samples": 2911,
+          "accuracy": 0.8227413260048093,
+          "nll_nats": 0.3876276023371044,
+          "perplexity": 1.4734809612379873,
+          "ambiguous_samples": 1890,
+          "ambiguous_accuracy": 0.726984126984127
+        },
+        "adaptive_predictive": {
+          "samples": 2911,
+          "accuracy": 0.8320164891789763,
+          "nll_nats": 0.365132686900712,
+          "perplexity": 1.4407051581696622,
+          "ambiguous_samples": 1890,
+          "ambiguous_accuracy": 0.7412698412698413
+        }
+      },
+      "changed_test": {
+        "observation_only": {
+          "samples": 2998,
+          "accuracy": 0.6687791861240827,
+          "nll_nats": 0.8080937899051348,
+          "perplexity": 2.2436270832268965,
+          "ambiguous_samples": 1878,
+          "ambiguous_accuracy": 0.4712460063897764
+        },
+        "one_step_history": {
+          "samples": 2998,
+          "accuracy": 0.8042028018679119,
+          "nll_nats": 0.536802964493522,
+          "perplexity": 1.7105294876628776,
+          "ambiguous_samples": 1878,
+          "ambiguous_accuracy": 0.6874334398296059
+        },
+        "adaptive_predictive": {
+          "samples": 2998,
+          "accuracy": 0.804869913275517,
+          "nll_nats": 0.5326460971202766,
+          "perplexity": 1.7034338015751487,
+          "ambiguous_samples": 1878,
+          "ambiguous_accuracy": 0.6884984025559105
+        }
+      }
+    },
+    {
+      "seed": 22,
+      "train_steps": 11998,
+      "state_context_counts": [
+        84,
+        614,
+        919,
+        59
+      ],
+      "train_cpu_seconds": 0.3125,
+      "peak_traced_allocation_bytes": 5141304,
+      "stable_test": {
+        "observation_only": {
+          "samples": 3000,
+          "accuracy": 0.6473333333333333,
+          "nll_nats": 0.7574863614430019,
+          "perplexity": 2.1329081165065253,
+          "ambiguous_samples": 1959,
+          "ambiguous_accuracy": 0.4599285349668198
+        },
+        "one_step_history": {
+          "samples": 3000,
+          "accuracy": 0.825,
+          "nll_nats": 0.3935570802701698,
+          "perplexity": 1.4822438881990445,
+          "ambiguous_samples": 1959,
+          "ambiguous_accuracy": 0.7320061255742726
+        },
+        "adaptive_predictive": {
+          "samples": 3000,
+          "accuracy": 0.8363333333333334,
+          "nll_nats": 0.3673545189676893,
+          "perplexity": 1.4439097217719419,
+          "ambiguous_samples": 1959,
+          "ambiguous_accuracy": 0.7493619193466055
+        }
+      },
+      "changed_test": {
+        "observation_only": {
+          "samples": 2947,
+          "accuracy": 0.6827281981676281,
+          "nll_nats": 0.8092606001996481,
+          "perplexity": 2.246246498287701,
+          "ambiguous_samples": 1846,
+          "ambiguous_accuracy": 0.4934994582881907
+        },
+        "one_step_history": {
+          "samples": 2947,
+          "accuracy": 0.8103155751611809,
+          "nll_nats": 0.5380252752211186,
+          "perplexity": 1.7126215645290452,
+          "ambiguous_samples": 1846,
+          "ambiguous_accuracy": 0.6971830985915493
+        },
+        "adaptive_predictive": {
+          "samples": 2947,
+          "accuracy": 0.8174414658975229,
+          "nll_nats": 0.5175512052803595,
+          "perplexity": 1.6779137483777138,
+          "ambiguous_samples": 1846,
+          "ambiguous_accuracy": 0.7085590465872156
+        }
+      }
+    }
+  ],
+  "elapsed_wall_seconds": 1.9030860000057146
+}

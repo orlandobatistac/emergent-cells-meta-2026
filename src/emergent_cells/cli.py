@@ -27,6 +27,7 @@ EXPERIMENTS = {
     "sequential-transfer": "sequential_transfer",
     "multistep-world": "multistep_world",
     "sensor-world": "sensor_world",
+    "predictive-context": "predictive_context",
 }
 
 
