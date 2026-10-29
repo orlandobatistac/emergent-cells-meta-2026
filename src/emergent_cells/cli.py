@@ -29,6 +29,8 @@ EXPERIMENTS = {
     "sensor-world": "sensor_world",
     "predictive-context": "predictive_context",
     "recurrent-state": "recurrent_state",
+    "latent-navigation": "latent_navigation",
+    "beacon-navigation": "beacon_navigation",
 }
 
 

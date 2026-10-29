@@ -1,0 +1,1059 @@
+{
+  "protocol": {
+    "pretrained_state": "Self-supervised RNN from local observation/action history",
+    "target_information": "Noisy scalar proximity sensor, or masked no-signal control",
+    "global_state_inputs": false,
+    "central_planner": false,
+    "learning_algorithm": "Local per-context empirical reward-progress bandit",
+    "train_seed": 71,
+    "source_steps": 12000,
+    "recurrent_epochs": 12,
+    "hidden": 24,
+    "centers": 16,
+    "warm_episodes": 80,
+    "limit": 160,
+    "goals": 3,
+    "eval_seeds": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "pretraining_cpu_seconds": 1.5625
+  },
+  "summary": {
+    "stable": {
+      "signal_latent": {
+        "finish_rate": 1.0,
+        "mean_waypoints": 3.0,
+        "mean_steps": 42.7
+      },
+      "signal_history": {
+        "finish_rate": 1.0,
+        "mean_waypoints": 3.0,
+        "mean_steps": 60.3
+      },
+      "signal_observation": {
+        "finish_rate": 0.5,
+        "mean_waypoints": 2.1,
+        "mean_steps": 115.2
+      },
+      "no_signal_latent": {
+        "finish_rate": 0.5,
+        "mean_waypoints": 2.4,
+        "mean_steps": 125.0
+      },
+      "signal_memory_ablation": {
+        "finish_rate": 1.0,
+        "mean_waypoints": 3.0,
+        "mean_steps": 50.3
+      },
+      "signal_latent_cold": {
+        "finish_rate": 0.6,
+        "mean_waypoints": 2.3,
+        "mean_steps": 112.2
+      }
+    },
+    "changed": {
+      "signal_latent": {
+        "finish_rate": 0.4,
+        "mean_waypoints": 1.7,
+        "mean_steps": 116.6
+      },
+      "signal_history": {
+        "finish_rate": 0.3,
+        "mean_waypoints": 1.6,
+        "mean_steps": 125.5
+      },
+      "signal_observation": {
+        "finish_rate": 0.3,
+        "mean_waypoints": 1.5,
+        "mean_steps": 132.7
+      },
+      "no_signal_latent": {
+        "finish_rate": 0.3,
+        "mean_waypoints": 1.4,
+        "mean_steps": 133.2
+      },
+      "signal_memory_ablation": {
+        "finish_rate": 0.3,
+        "mean_waypoints": 1.7,
+        "mean_steps": 122.1
+      },
+      "signal_latent_cold": {
+        "finish_rate": 0.4,
+        "mean_waypoints": 1.6,
+        "mean_steps": 132.1
+      }
+    }
+  },
+  "rows": [
+    {
+      "seed": 11,
+      "changed": false,
+      "mode": "signal_latent",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 31
+    },
+    {
+      "seed": 11,
+      "changed": false,
+      "mode": "signal_history",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 79
+    },
+    {
+      "seed": 11,
+      "changed": false,
+      "mode": "signal_observation",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 11,
+      "changed": false,
+      "mode": "no_signal_latent",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160
+    },
+    {
+      "seed": 11,
+      "changed": false,
+      "mode": "signal_memory_ablation",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 27
+    },
+    {
+      "seed": 11,
+      "changed": false,
+      "mode": "signal_latent_cold",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160
+    },
+    {
+      "seed": 11,
+      "changed": true,
+      "mode": "signal_latent",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 11,
+      "changed": true,
+      "mode": "signal_history",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 11,
+      "changed": true,
+      "mode": "signal_observation",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 11,
+      "changed": true,
+      "mode": "no_signal_latent",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 76
+    },
+    {
+      "seed": 11,
+      "changed": true,
+      "mode": "signal_memory_ablation",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 11,
+      "changed": true,
+      "mode": "signal_latent_cold",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 136
+    },
+    {
+      "seed": 12,
+      "changed": false,
+      "mode": "signal_latent",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 46
+    },
+    {
+      "seed": 12,
+      "changed": false,
+      "mode": "signal_history",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 80
+    },
+    {
+      "seed": 12,
+      "changed": false,
+      "mode": "signal_observation",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160
+    },
+    {
+      "seed": 12,
+      "changed": false,
+      "mode": "no_signal_latent",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 66
+    },
+    {
+      "seed": 12,
+      "changed": false,
+      "mode": "signal_memory_ablation",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 44
+    },
+    {
+      "seed": 12,
+      "changed": false,
+      "mode": "signal_latent_cold",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 64
+    },
+    {
+      "seed": 12,
+      "changed": true,
+      "mode": "signal_latent",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 43
+    },
+    {
+      "seed": 12,
+      "changed": true,
+      "mode": "signal_history",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 49
+    },
+    {
+      "seed": 12,
+      "changed": true,
+      "mode": "signal_observation",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160
+    },
+    {
+      "seed": 12,
+      "changed": true,
+      "mode": "no_signal_latent",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160
+    },
+    {
+      "seed": 12,
+      "changed": true,
+      "mode": "signal_memory_ablation",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 53
+    },
+    {
+      "seed": 12,
+      "changed": true,
+      "mode": "signal_latent_cold",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 81
+    },
+    {
+      "seed": 13,
+      "changed": false,
+      "mode": "signal_latent",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 47
+    },
+    {
+      "seed": 13,
+      "changed": false,
+      "mode": "signal_history",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 59
+    },
+    {
+      "seed": 13,
+      "changed": false,
+      "mode": "signal_observation",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160
+    },
+    {
+      "seed": 13,
+      "changed": false,
+      "mode": "no_signal_latent",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 149
+    },
+    {
+      "seed": 13,
+      "changed": false,
+      "mode": "signal_memory_ablation",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 85
+    },
+    {
+      "seed": 13,
+      "changed": false,
+      "mode": "signal_latent_cold",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160
+    },
+    {
+      "seed": 13,
+      "changed": true,
+      "mode": "signal_latent",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 75
+    },
+    {
+      "seed": 13,
+      "changed": true,
+      "mode": "signal_history",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160
+    },
+    {
+      "seed": 13,
+      "changed": true,
+      "mode": "signal_observation",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 63
+    },
+    {
+      "seed": 13,
+      "changed": true,
+      "mode": "no_signal_latent",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 117
+    },
+    {
+      "seed": 13,
+      "changed": true,
+      "mode": "signal_memory_ablation",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160
+    },
+    {
+      "seed": 13,
+      "changed": true,
+      "mode": "signal_latent_cold",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 117
+    },
+    {
+      "seed": 14,
+      "changed": false,
+      "mode": "signal_latent",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 39
+    },
+    {
+      "seed": 14,
+      "changed": false,
+      "mode": "signal_history",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 135
+    },
+    {
+      "seed": 14,
+      "changed": false,
+      "mode": "signal_observation",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 51
+    },
+    {
+      "seed": 14,
+      "changed": false,
+      "mode": "no_signal_latent",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 14,
+      "changed": false,
+      "mode": "signal_memory_ablation",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 31
+    },
+    {
+      "seed": 14,
+      "changed": false,
+      "mode": "signal_latent_cold",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 14,
+      "changed": true,
+      "mode": "signal_latent",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160
+    },
+    {
+      "seed": 14,
+      "changed": true,
+      "mode": "signal_history",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 14,
+      "changed": true,
+      "mode": "signal_observation",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160
+    },
+    {
+      "seed": 14,
+      "changed": true,
+      "mode": "no_signal_latent",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160
+    },
+    {
+      "seed": 14,
+      "changed": true,
+      "mode": "signal_memory_ablation",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160
+    },
+    {
+      "seed": 14,
+      "changed": true,
+      "mode": "signal_latent_cold",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160
+    },
+    {
+      "seed": 15,
+      "changed": false,
+      "mode": "signal_latent",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 59
+    },
+    {
+      "seed": 15,
+      "changed": false,
+      "mode": "signal_history",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 53
+    },
+    {
+      "seed": 15,
+      "changed": false,
+      "mode": "signal_observation",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160
+    },
+    {
+      "seed": 15,
+      "changed": false,
+      "mode": "no_signal_latent",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160
+    },
+    {
+      "seed": 15,
+      "changed": false,
+      "mode": "signal_memory_ablation",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 105
+    },
+    {
+      "seed": 15,
+      "changed": false,
+      "mode": "signal_latent_cold",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 125
+    },
+    {
+      "seed": 15,
+      "changed": true,
+      "mode": "signal_latent",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160
+    },
+    {
+      "seed": 15,
+      "changed": true,
+      "mode": "signal_history",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160
+    },
+    {
+      "seed": 15,
+      "changed": true,
+      "mode": "signal_observation",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160
+    },
+    {
+      "seed": 15,
+      "changed": true,
+      "mode": "no_signal_latent",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 15,
+      "changed": true,
+      "mode": "signal_memory_ablation",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 15,
+      "changed": true,
+      "mode": "signal_latent_cold",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160
+    },
+    {
+      "seed": 16,
+      "changed": false,
+      "mode": "signal_latent",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 30
+    },
+    {
+      "seed": 16,
+      "changed": false,
+      "mode": "signal_history",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 42
+    },
+    {
+      "seed": 16,
+      "changed": false,
+      "mode": "signal_observation",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 16,
+      "changed": false,
+      "mode": "no_signal_latent",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160
+    },
+    {
+      "seed": 16,
+      "changed": false,
+      "mode": "signal_memory_ablation",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 34
+    },
+    {
+      "seed": 16,
+      "changed": false,
+      "mode": "signal_latent_cold",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160
+    },
+    {
+      "seed": 16,
+      "changed": true,
+      "mode": "signal_latent",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 16,
+      "changed": true,
+      "mode": "signal_history",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 16,
+      "changed": true,
+      "mode": "signal_observation",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 16,
+      "changed": true,
+      "mode": "no_signal_latent",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 16,
+      "changed": true,
+      "mode": "signal_memory_ablation",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 16,
+      "changed": true,
+      "mode": "signal_latent_cold",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160
+    },
+    {
+      "seed": 17,
+      "changed": false,
+      "mode": "signal_latent",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 52
+    },
+    {
+      "seed": 17,
+      "changed": false,
+      "mode": "signal_history",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 26
+    },
+    {
+      "seed": 17,
+      "changed": false,
+      "mode": "signal_observation",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 52
+    },
+    {
+      "seed": 17,
+      "changed": false,
+      "mode": "no_signal_latent",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 92
+    },
+    {
+      "seed": 17,
+      "changed": false,
+      "mode": "signal_memory_ablation",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 48
+    },
+    {
+      "seed": 17,
+      "changed": false,
+      "mode": "signal_latent_cold",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 76
+    },
+    {
+      "seed": 17,
+      "changed": true,
+      "mode": "signal_latent",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160
+    },
+    {
+      "seed": 17,
+      "changed": true,
+      "mode": "signal_history",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160
+    },
+    {
+      "seed": 17,
+      "changed": true,
+      "mode": "signal_observation",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160
+    },
+    {
+      "seed": 17,
+      "changed": true,
+      "mode": "no_signal_latent",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160
+    },
+    {
+      "seed": 17,
+      "changed": true,
+      "mode": "signal_memory_ablation",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160
+    },
+    {
+      "seed": 17,
+      "changed": true,
+      "mode": "signal_latent_cold",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160
+    },
+    {
+      "seed": 18,
+      "changed": false,
+      "mode": "signal_latent",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 46
+    },
+    {
+      "seed": 18,
+      "changed": false,
+      "mode": "signal_history",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 54
+    },
+    {
+      "seed": 18,
+      "changed": false,
+      "mode": "signal_observation",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 144
+    },
+    {
+      "seed": 18,
+      "changed": false,
+      "mode": "no_signal_latent",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160
+    },
+    {
+      "seed": 18,
+      "changed": false,
+      "mode": "signal_memory_ablation",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 54
+    },
+    {
+      "seed": 18,
+      "changed": false,
+      "mode": "signal_latent_cold",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 84
+    },
+    {
+      "seed": 18,
+      "changed": true,
+      "mode": "signal_latent",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 18,
+      "changed": true,
+      "mode": "signal_history",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160
+    },
+    {
+      "seed": 18,
+      "changed": true,
+      "mode": "signal_observation",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160
+    },
+    {
+      "seed": 18,
+      "changed": true,
+      "mode": "no_signal_latent",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 18,
+      "changed": true,
+      "mode": "signal_memory_ablation",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160
+    },
+    {
+      "seed": 18,
+      "changed": true,
+      "mode": "signal_latent_cold",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160
+    },
+    {
+      "seed": 19,
+      "changed": false,
+      "mode": "signal_latent",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 35
+    },
+    {
+      "seed": 19,
+      "changed": false,
+      "mode": "signal_history",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 47
+    },
+    {
+      "seed": 19,
+      "changed": false,
+      "mode": "signal_observation",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 43
+    },
+    {
+      "seed": 19,
+      "changed": false,
+      "mode": "no_signal_latent",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 113
+    },
+    {
+      "seed": 19,
+      "changed": false,
+      "mode": "signal_memory_ablation",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 53
+    },
+    {
+      "seed": 19,
+      "changed": false,
+      "mode": "signal_latent_cold",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 79
+    },
+    {
+      "seed": 19,
+      "changed": true,
+      "mode": "signal_latent",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 63
+    },
+    {
+      "seed": 19,
+      "changed": true,
+      "mode": "signal_history",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 47
+    },
+    {
+      "seed": 19,
+      "changed": true,
+      "mode": "signal_observation",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 97
+    },
+    {
+      "seed": 19,
+      "changed": true,
+      "mode": "no_signal_latent",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160
+    },
+    {
+      "seed": 19,
+      "changed": true,
+      "mode": "signal_memory_ablation",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 27
+    },
+    {
+      "seed": 19,
+      "changed": true,
+      "mode": "signal_latent_cold",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160
+    },
+    {
+      "seed": 20,
+      "changed": false,
+      "mode": "signal_latent",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 42
+    },
+    {
+      "seed": 20,
+      "changed": false,
+      "mode": "signal_history",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 28
+    },
+    {
+      "seed": 20,
+      "changed": false,
+      "mode": "signal_observation",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 62
+    },
+    {
+      "seed": 20,
+      "changed": false,
+      "mode": "no_signal_latent",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 30
+    },
+    {
+      "seed": 20,
+      "changed": false,
+      "mode": "signal_memory_ablation",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 22
+    },
+    {
+      "seed": 20,
+      "changed": false,
+      "mode": "signal_latent_cold",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 54
+    },
+    {
+      "seed": 20,
+      "changed": true,
+      "mode": "signal_latent",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 25
+    },
+    {
+      "seed": 20,
+      "changed": true,
+      "mode": "signal_history",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 39
+    },
+    {
+      "seed": 20,
+      "changed": true,
+      "mode": "signal_observation",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 47
+    },
+    {
+      "seed": 20,
+      "changed": true,
+      "mode": "no_signal_latent",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 19
+    },
+    {
+      "seed": 20,
+      "changed": true,
+      "mode": "signal_memory_ablation",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 21
+    },
+    {
+      "seed": 20,
+      "changed": true,
+      "mode": "signal_latent_cold",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 27
+    }
+  ],
+  "elapsed_wall_seconds": 7.144433600013144
+}
