@@ -1,0 +1,253 @@
+{
+  "protocol": {
+    "task": "short cue then blank corridor then final binary branch",
+    "oracle_observation": false,
+    "agent_input": "initial binary local cue followed by blank/noisy readings",
+    "training_signal": "terminal +1 correct or -1 incorrect, sampled action only",
+    "policy_train": "REINFORCE through trainable recurrent encoder",
+    "fixed_retention": 0.88,
+    "units": 12,
+    "training_length": 8,
+    "batches": 200,
+    "batch_size": 64,
+    "training_episodes_per_seed": 12800,
+    "eval_cases_per_condition": 500,
+    "seeds": [
+      11,
+      12,
+      13
+    ],
+    "parameter_bytes": 296,
+    "total_process_cpu_seconds": 0.515625
+  },
+  "summary": {
+    "8_memory": 1.0,
+    "8_erased": 0.516,
+    "8_inverted_cue": 0.0,
+    "8_noisy": 0.9006666666666666,
+    "12_memory": 1.0,
+    "12_erased": 0.476,
+    "12_inverted_cue": 0.0,
+    "12_noisy": 0.7593333333333333,
+    "16_memory": 1.0,
+    "16_erased": 0.49533333333333335,
+    "16_inverted_cue": 0.0,
+    "16_noisy": 0.666
+  },
+  "rows": [
+    {
+      "seed": 11,
+      "train": {
+        "initial_25_batches": 0.503125,
+        "final_25_batches": 0.95875,
+        "training_reward_updates": 200,
+        "train_episodes": 12800
+      },
+      "results": {
+        "8_memory": {
+          "accuracy": 1.0,
+          "n_cases": 500,
+          "length": 8
+        },
+        "8_erased": {
+          "accuracy": 0.496,
+          "n_cases": 500,
+          "length": 8
+        },
+        "8_inverted_cue": {
+          "accuracy": 0.0,
+          "n_cases": 500,
+          "length": 8
+        },
+        "8_noisy": {
+          "accuracy": 0.906,
+          "n_cases": 500,
+          "length": 8
+        },
+        "12_memory": {
+          "accuracy": 1.0,
+          "n_cases": 500,
+          "length": 12
+        },
+        "12_erased": {
+          "accuracy": 0.458,
+          "n_cases": 500,
+          "length": 12
+        },
+        "12_inverted_cue": {
+          "accuracy": 0.0,
+          "n_cases": 500,
+          "length": 12
+        },
+        "12_noisy": {
+          "accuracy": 0.742,
+          "n_cases": 500,
+          "length": 12
+        },
+        "16_memory": {
+          "accuracy": 1.0,
+          "n_cases": 500,
+          "length": 16
+        },
+        "16_erased": {
+          "accuracy": 0.498,
+          "n_cases": 500,
+          "length": 16
+        },
+        "16_inverted_cue": {
+          "accuracy": 0.0,
+          "n_cases": 500,
+          "length": 16
+        },
+        "16_noisy": {
+          "accuracy": 0.678,
+          "n_cases": 500,
+          "length": 16
+        }
+      }
+    },
+    {
+      "seed": 12,
+      "train": {
+        "initial_25_batches": 0.5125,
+        "final_25_batches": 0.9625,
+        "training_reward_updates": 200,
+        "train_episodes": 12800
+      },
+      "results": {
+        "8_memory": {
+          "accuracy": 1.0,
+          "n_cases": 500,
+          "length": 8
+        },
+        "8_erased": {
+          "accuracy": 0.554,
+          "n_cases": 500,
+          "length": 8
+        },
+        "8_inverted_cue": {
+          "accuracy": 0.0,
+          "n_cases": 500,
+          "length": 8
+        },
+        "8_noisy": {
+          "accuracy": 0.906,
+          "n_cases": 500,
+          "length": 8
+        },
+        "12_memory": {
+          "accuracy": 1.0,
+          "n_cases": 500,
+          "length": 12
+        },
+        "12_erased": {
+          "accuracy": 0.488,
+          "n_cases": 500,
+          "length": 12
+        },
+        "12_inverted_cue": {
+          "accuracy": 0.0,
+          "n_cases": 500,
+          "length": 12
+        },
+        "12_noisy": {
+          "accuracy": 0.742,
+          "n_cases": 500,
+          "length": 12
+        },
+        "16_memory": {
+          "accuracy": 1.0,
+          "n_cases": 500,
+          "length": 16
+        },
+        "16_erased": {
+          "accuracy": 0.48,
+          "n_cases": 500,
+          "length": 16
+        },
+        "16_inverted_cue": {
+          "accuracy": 0.0,
+          "n_cases": 500,
+          "length": 16
+        },
+        "16_noisy": {
+          "accuracy": 0.634,
+          "n_cases": 500,
+          "length": 16
+        }
+      }
+    },
+    {
+      "seed": 13,
+      "train": {
+        "initial_25_batches": 0.525625,
+        "final_25_batches": 0.961875,
+        "training_reward_updates": 200,
+        "train_episodes": 12800
+      },
+      "results": {
+        "8_memory": {
+          "accuracy": 1.0,
+          "n_cases": 500,
+          "length": 8
+        },
+        "8_erased": {
+          "accuracy": 0.498,
+          "n_cases": 500,
+          "length": 8
+        },
+        "8_inverted_cue": {
+          "accuracy": 0.0,
+          "n_cases": 500,
+          "length": 8
+        },
+        "8_noisy": {
+          "accuracy": 0.89,
+          "n_cases": 500,
+          "length": 8
+        },
+        "12_memory": {
+          "accuracy": 1.0,
+          "n_cases": 500,
+          "length": 12
+        },
+        "12_erased": {
+          "accuracy": 0.482,
+          "n_cases": 500,
+          "length": 12
+        },
+        "12_inverted_cue": {
+          "accuracy": 0.0,
+          "n_cases": 500,
+          "length": 12
+        },
+        "12_noisy": {
+          "accuracy": 0.794,
+          "n_cases": 500,
+          "length": 12
+        },
+        "16_memory": {
+          "accuracy": 1.0,
+          "n_cases": 500,
+          "length": 16
+        },
+        "16_erased": {
+          "accuracy": 0.508,
+          "n_cases": 500,
+          "length": 16
+        },
+        "16_inverted_cue": {
+          "accuracy": 0.0,
+          "n_cases": 500,
+          "length": 16
+        },
+        "16_noisy": {
+          "accuracy": 0.686,
+          "n_cases": 500,
+          "length": 16
+        }
+      }
+    }
+  ],
+  "wall_seconds": 0.5502738999784924
+}

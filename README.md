@@ -26,6 +26,7 @@ The environment may hold hidden truth **only for evaluation**. An agent must not
 | **R0: sensor-only input** | Policy receives nearby obstacles, adjacent target signal, ambiguous floor cue, and past reward. Reactive baseline solves 2/10 stable missions and 0/10 changed missions | **Initial interface and negative baseline implemented; security isolation incomplete** |
 | **R1: predictive state** | A trained 48-unit recurrent state reached **93.56%** held-out next-sensor accuracy (vs **86.96%** history table); on unseen maze variants, **76.16%** (vs **72.85%** table). Erasing recurrent memory reduced stable accuracy to **58.33%** | **Trainable predictive state experimentally validated; goal-conditioned learning and cell integration still pending** |
 | **R1: closed-loop action experiments** | With **only sparse adjacent-goal sensing**, explicit history exploration completed 52/100 stable and 36/100 changed three-goal missions; recurrent-state novelty completed 37/100 and 33/100. In a **separate task with an engineered noisy goal-distance signal**, reward-progress training completed 100/100 and 50/100; erasing recurrent memory did not reduce performance in that task | **Learned action selection demonstrated in an informative-sensor setting; recurrent-memory causal advantage for navigation remains unproven** |
+| **R1: reward-trained recurrent policy** | A 12-unit recurrent action policy learned to choose correctly after an initial cue: **100% at delays 8 and 12**, **85.19% at 16**, versus ~50% with memory erased (20 held-out seeds). However, on the original sparse-goal maze, a separate recurrent REINFORCE policy solved **18% stable / 11% changed**, worse than explicit-history exploration (**50% / 39%**) | **Causal reward-trained memory proven only in a delayed-cue diagnostic; general three-goal navigation remains unsolved** |
 | R2-R5 | Communication, decentralized planning, generalization, and measured efficiency | Planned; no success claims |
 
 Tests verify a defined source-code observation contract, **not** a sandboxed security barrier against a malicious agent. Python world attributes remain available to the evaluation harness. We have not demonstrated a decentralized reasoning agent.
@@ -54,6 +55,12 @@ python run.py latent-navigation --seeds 4001,4002,4003,4004,4005 --train-steps 1
 # Separate R1 goal task with a noisy local target-proximity sensor:
 python run.py beacon-navigation --seeds 3001,3002,3003,3004,3005 --warm-episodes 300 --output results/runs/goal-informed-policy.json
 
+# R1 reward-trained policy on original sparse-goal maze (negative outcome):
+python run.py policy-gradient --seeds 7101,7102,7103,7104,7105 --episodes 900 --source-steps 16000 --source-epochs 20 --intrinsic .08 --output results/runs/reward-policy.json
+
+# R1 delayed-cue memory-dependent policy (positive diagnostic):
+python run.py delayed-goal --seeds 6101,6102,6103,6104,6105 --batches 280 --batch 64 --length 8 --cases 1000 --output results/runs/delayed-cue.json
+
 # Earlier privileged coordinate+BFS comparison (not the target architecture):
 python run.py multistep-world --seeds 2001,2002,2003,2004,2005,2006,2007,2008,2009,2010 --train-steps 7000 --missions 30 --output results/runs/multistep.json
 
@@ -70,6 +77,7 @@ For specific runner options, use `python run.py <experiment> --help`. Results wr
 - **[R1 predictive memory experiment](docs/R1_PREDICTIVE_CONTEXT_2026-10-28.md)**: next-observation prediction from observation/action history, matched baselines and unseen-seed results.
 - **[R1 trainable recurrent state](docs/R1_TRAINABLE_RECURRENT_STATE_2026-10-28.md)**: learned 48-dimensional state, hidden-memory causal ablation, held-out maze variants and limitations.
 - **[R1 closed-loop goal learning](docs/R1_CLOSED_LOOP_GOAL_LEARNING_2026-10-28.md)**: strict sensor-only navigation, distinct noisy-proximity experiment, trained action values, causal controls and negative results.
+- **[R1 reward-trained recurrent policies](docs/R1_REWARD_TRAINED_POLICY_2026-10-28.md)**: delayed-cue memory-dependent success, failed sparse-maze REINFORCE, higher-resolution state controls and full raw evidence.
 - **[Three-waypoint model study](docs/MULTISTEP_WORLD_TRANSFER_2026-10-28.md)**: positive transfer and explicit coordinate/BFS limitations.
 - **[Sequential transfer study](docs/SEQUENTIAL_TRANSFER_2026-10-28.md)**: local memory recombination and negative transfer controls.
 - **[Dynamic memory study](docs/DYNAMIC_MEMORY_THIRD_RULE_2026-10-27.md)** and **[learned curiosity](docs/LEARNED_CURIOSITY_2026-10-27.md)**: prior results and failures.
