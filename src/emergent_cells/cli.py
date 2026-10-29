@@ -33,6 +33,7 @@ EXPERIMENTS = {
     "beacon-navigation": "beacon_navigation",
     "policy-gradient": "policy_gradient",
     "delayed-goal": "delayed_goal",
+    "local-value-cells": "local_value_cells",
 }
 
 
