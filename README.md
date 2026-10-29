@@ -29,6 +29,7 @@ The environment may hold hidden truth **only for evaluation**. An agent must not
 | **R1: reward-trained recurrent policy** | A 12-unit recurrent action policy learned to choose correctly after an initial cue: **100% at delays 8 and 12**, **85.19% at 16**, versus ~50% with memory erased (20 held-out seeds). However, on the original sparse-goal maze, a separate recurrent REINFORCE policy solved **18% stable / 11% changed**, worse than explicit-history exploration (**50% / 39%**) | **Causal reward-trained memory proven only in a delayed-cue diagnostic; general three-goal navigation remains unsolved** |
 | **R1: local-value spatial-memory baseline (Oct 29)** | Programmed relative odometry plus locally observed cell-memory/value diffusion completed **97/100** stable and **88/100** closed-passage three-goal missions (and **95/100** on separately generated new same-family maps) in an isolated sandbox **and reproduced identically on LANDITO-LAPTOP**, versus matched history **50/100** and **31/100**. The relative motor model and value-update policy are authored | **Strong engineered non-oracle baseline; learned recurrent motor-state/planning still unsolved** |
 | **R1: learned motor command calibration (Oct 29)** | A Bayesian 24-permutation motor-code learner identifies commands using locally observed compass-wall sensors and new bumper feedback. **100/100 mappings** recovered under 8% contact noise, with **93/100** three-goal completions in each stable/changed maze, matching the known-mapping control; at 20% training noise on 50 procedural layouts **47/50** completed, versus zero without calibration | **Motor-code mapping learned; relative coordinate basis, wall orientation, and value propagation still programmed** |
+| **R1: stochastic motor dynamics and hidden remapping (Oct 29)** | Local-noise calibration plus sensor fusion achieved **87.4%** movement-outcome prediction on original-world trials (versus **66.3%** assume-move); uncertain slip navigation remains challenging. Under unannounced motor remapping after 35 actions, online adaptation completed **66/100** matched missions across two world settings versus **4/100** frozen (50 seeds per setting) | **Online dynamics adaptation demonstrated; unknown geometry, robust localization and learned local messaging remain open** |
 | R2-R5 | Communication, decentralized planning, generalization, and measured efficiency | Planned; no success claims |
 
 Tests verify a defined source-code observation contract, **not** a sandboxed security barrier against a malicious agent. Python world attributes remain available to the evaluation harness. We have not demonstrated a decentralized reasoning agent.
@@ -72,6 +73,12 @@ python run.py local-value-cells --seeds 22001,22002,22003,22004,22005 --procedur
 # Learned motor-code calibration using local wall/contact observations:
 python run.py learned-motor-code --seeds 9101,9102,9103,9104,9105 --calibration-steps 100 --noise .08 --rounds 10 --output results/runs/motor-calibration.json
 
+# R1 stochastic motor slip with noisy local sensors and learned probabilities:
+python run.py stochastic-motor --seeds 32001,32002,32003,32004,32005 --calibration-actions 120 --tick-error .20 --floor-error .15 --output results/runs/stochastic-motor.json
+
+# R1 hidden command remapping with online recovery:
+python run.py switching-motor --seeds 31001,31002,31003,31004,31005 --switch-at 35 --window 28 --margin 4 --output results/runs/motor-switch.json
+
 # Earlier privileged coordinate+BFS comparison (not the target architecture):
 python run.py multistep-world --seeds 2001,2002,2003,2004,2005,2006,2007,2008,2009,2010 --train-steps 7000 --missions 30 --output results/runs/multistep.json
 
@@ -90,6 +97,7 @@ For specific runner options, use `python run.py <experiment> --help`. Results wr
 - **[R1 closed-loop goal learning](docs/R1_CLOSED_LOOP_GOAL_LEARNING_2026-10-28.md)**: strict sensor-only navigation, distinct noisy-proximity experiment, trained action values, causal controls and negative results.
 - **[R1 locally observed value cells](docs/R1_LOCAL_VALUE_CELLS_2026-10-29.md)**: 100-seed validation reproduced exactly on LANDITO-LAPTOP, with internal odometry, local diffusion and explicit engineering limitations.
 - **[R1 learned motor-code calibration](docs/R1_MOTOR_CALIBRATION_2026-10-29.md)**: Bayesian calibration from local wall/contact sensors, noise/sample-efficiency tests and 100-seed laptop validation.
+- **[R1 stochastic motor dynamics and switching](docs/R1_STOCHASTIC_SWITCHING_MOTOR_2026-10-29.md)**: noisy sensor fusion, online remapping, independent seeded validations and negative spatial-drift findings.
 - **[R1 reward-trained recurrent policies](docs/R1_REWARD_TRAINED_POLICY_2026-10-28.md)**: delayed-cue memory-dependent success, failed sparse-maze REINFORCE, higher-resolution state controls and full raw evidence.
 - **[Three-waypoint model study](docs/MULTISTEP_WORLD_TRANSFER_2026-10-28.md)**: positive transfer and explicit coordinate/BFS limitations.
 - **[Sequential transfer study](docs/SEQUENTIAL_TRANSFER_2026-10-28.md)**: local memory recombination and negative transfer controls.
