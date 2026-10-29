@@ -65,6 +65,9 @@ python run.py delayed-goal --seeds 6101,6102,6103,6104,6105 --batches 280 --batc
 # Oct 29: observed local memory and programmed neighbor-value propagation:
 python run.py local-value-cells --seeds 13001,13002,13003,13004,13005 --rounds 10 --decay 0.92 --frontier-reward 2.5 --output results/runs/r1-local-value.json
 
+# Test new same-family maps (held-out procedural layouts):
+python run.py local-value-cells --seeds 22001,22002,22003,22004,22005 --procedural --rounds 10 --output results/runs/r1-local-value-procedural.json
+
 # Earlier privileged coordinate+BFS comparison (not the target architecture):
 python run.py multistep-world --seeds 2001,2002,2003,2004,2005,2006,2007,2008,2009,2010 --train-steps 7000 --missions 30 --output results/runs/multistep.json
 
