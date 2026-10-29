@@ -1,0 +1,337 @@
+{
+  "aggregate": [
+    {
+      "control_test_mse": 0.25,
+      "global_mean_baseline_mse": 0.17690848958333333,
+      "phase": 0,
+      "relative_gain_vs_global_mean": 0.2637048818182402,
+      "relative_gain_vs_static": 0.478994030747541,
+      "rule": "xor",
+      "test_mse": 0.13025149231311475,
+      "train_first100_mse": 0.17991847014011145,
+      "train_last100_mse": 0.13043995569645256
+    },
+    {
+      "control_test_mse": 0.25,
+      "global_mean_baseline_mse": 0.17676844292534724,
+      "phase": 1,
+      "relative_gain_vs_global_mean": 0.2636428344507197,
+      "relative_gain_vs_static": 0.4794411889819964,
+      "rule": "xnor",
+      "test_mse": 0.1301397027545009,
+      "train_first100_mse": 0.217635438470157,
+      "train_last100_mse": 0.13053219526857923
+    },
+    {
+      "control_test_mse": 0.25,
+      "global_mean_baseline_mse": 0.1758361583719136,
+      "phase": 2,
+      "relative_gain_vs_global_mean": 0.26820087977015017,
+      "relative_gain_vs_static": 0.48531616845286624,
+      "rule": "and",
+      "test_mse": 0.12867095788678343,
+      "train_first100_mse": 0.15175573926214794,
+      "train_last100_mse": 0.12910063212586503
+    },
+    {
+      "control_test_mse": 0.25,
+      "global_mean_baseline_mse": 0.17674902099609374,
+      "phase": 3,
+      "relative_gain_vs_global_mean": 0.2687732424987829,
+      "relative_gain_vs_static": 0.48302430006230973,
+      "rule": "xor",
+      "test_mse": 0.12924392498442255,
+      "train_first100_mse": 0.1956298603209658,
+      "train_last100_mse": 0.12991431248602323
+    }
+  ],
+  "limitations": [
+    "WORLD ONLY knows XOR/XNOR/AND; cell model sees private cue, noiseless peer bit, own action, own reward.",
+    "Peer bit is a perfect preprogrammed cue channel: learned communication is NOT evaluated here.",
+    "Memory is overwritten on task changes; no automatic retention or context inference proven.",
+    "Fixed 8-slot tabular predictor per cell; not a learned general representation.",
+    "This measures forecast MSE vs frozen p=.5 baseline, not AGI or physical joules."
+  ],
+  "rows": [
+    {
+      "seed": 5001,
+      "stages": [
+        {
+          "control_test_mse": 0.25,
+          "global_mean_baseline_mse": 0.17422380642361113,
+          "phase": 0,
+          "relative_gain_vs_global_mean": 0.2605208876925603,
+          "relative_gain_vs_static": 0.4846605371321794,
+          "rule_world_only": "xor",
+          "test_mse": 0.12883486571695515,
+          "train_first100_mse": 0.18040248678835105,
+          "train_last100_mse": 0.13067112736589342,
+          "visited_cell_slots_fraction": 1.0
+        },
+        {
+          "control_test_mse": 0.25,
+          "global_mean_baseline_mse": 0.17763146701388888,
+          "phase": 1,
+          "relative_gain_vs_global_mean": 0.2642553344989761,
+          "relative_gain_vs_static": 0.47723438287764064,
+          "rule_world_only": "xnor",
+          "test_mse": 0.13069140428058984,
+          "train_first100_mse": 0.21674574305110955,
+          "train_last100_mse": 0.13251374524727944,
+          "visited_cell_slots_fraction": 1.0
+        },
+        {
+          "control_test_mse": 0.25,
+          "global_mean_baseline_mse": 0.17184367042824072,
+          "phase": 2,
+          "relative_gain_vs_global_mean": 0.26446940709129485,
+          "relative_gain_vs_static": 0.4944148928092319,
+          "rule_world_only": "and",
+          "test_mse": 0.12639627679769203,
+          "train_first100_mse": 0.15993727461415955,
+          "train_last100_mse": 0.12819401605291933,
+          "visited_cell_slots_fraction": 1.0
+        },
+        {
+          "control_test_mse": 0.25,
+          "global_mean_baseline_mse": 0.17419618462456596,
+          "phase": 3,
+          "relative_gain_vs_global_mean": 0.2656809901583802,
+          "relative_gain_vs_static": 0.4883377207532029,
+          "rule_world_only": "xor",
+          "test_mse": 0.12791556981169927,
+          "train_first100_mse": 0.19677263575862486,
+          "train_last100_mse": 0.13185741184006627,
+          "visited_cell_slots_fraction": 1.0
+        }
+      ]
+    },
+    {
+      "seed": 5002,
+      "stages": [
+        {
+          "control_test_mse": 0.25,
+          "global_mean_baseline_mse": 0.17917949218749998,
+          "phase": 0,
+          "relative_gain_vs_global_mean": 0.2696491071169266,
+          "relative_gain_vs_static": 0.4765443915780948,
+          "rule_world_only": "xor",
+          "test_mse": 0.1308639021054763,
+          "train_first100_mse": 0.17714184375894906,
+          "train_last100_mse": 0.13070172690802764,
+          "visited_cell_slots_fraction": 1.0
+        },
+        {
+          "control_test_mse": 0.25,
+          "global_mean_baseline_mse": 0.1777617133246528,
+          "phase": 1,
+          "relative_gain_vs_global_mean": 0.265878958295909,
+          "relative_gain_vs_static": 0.47800554335600764,
+          "rule_world_only": "xnor",
+          "test_mse": 0.1304986141609981,
+          "train_first100_mse": 0.2186707281402797,
+          "train_last100_mse": 0.129329211451503,
+          "visited_cell_slots_fraction": 1.0
+        },
+        {
+          "control_test_mse": 0.25,
+          "global_mean_baseline_mse": 0.1761604263117284,
+          "phase": 2,
+          "relative_gain_vs_global_mean": 0.27202375934255285,
+          "relative_gain_vs_static": 0.4870375804038989,
+          "rule_world_only": "and",
+          "test_mse": 0.12824060489902528,
+          "train_first100_mse": 0.15606148114249707,
+          "train_last100_mse": 0.12835004504956263,
+          "visited_cell_slots_fraction": 1.0
+        },
+        {
+          "control_test_mse": 0.25,
+          "global_mean_baseline_mse": 0.17692064344618058,
+          "phase": 3,
+          "relative_gain_vs_global_mean": 0.25919154838043823,
+          "relative_gain_vs_static": 0.4757427682763936,
+          "rule_world_only": "xor",
+          "test_mse": 0.1310643079309016,
+          "train_first100_mse": 0.19535082575419455,
+          "train_last100_mse": 0.12619826098804124,
+          "visited_cell_slots_fraction": 1.0
+        }
+      ]
+    },
+    {
+      "seed": 5003,
+      "stages": [
+        {
+          "control_test_mse": 0.25,
+          "global_mean_baseline_mse": 0.17486375868055556,
+          "phase": 0,
+          "relative_gain_vs_global_mean": 0.25611634291057095,
+          "relative_gain_vs_static": 0.47968683080121977,
+          "rule_world_only": "xor",
+          "test_mse": 0.13007829229969506,
+          "train_first100_mse": 0.1808903362596014,
+          "train_last100_mse": 0.12936131746782864,
+          "visited_cell_slots_fraction": 1.0
+        },
+        {
+          "control_test_mse": 0.25,
+          "global_mean_baseline_mse": 0.1806416069878472,
+          "phase": 1,
+          "relative_gain_vs_global_mean": 0.27647224971378814,
+          "relative_gain_vs_static": 0.47720313795198743,
+          "rule_world_only": "xnor",
+          "test_mse": 0.13069921551200314,
+          "train_first100_mse": 0.2149798776816481,
+          "train_last100_mse": 0.13130285541412426,
+          "visited_cell_slots_fraction": 1.0
+        },
+        {
+          "control_test_mse": 0.25,
+          "global_mean_baseline_mse": 0.17332224874614197,
+          "phase": 2,
+          "relative_gain_vs_global_mean": 0.2662679236712825,
+          "relative_gain_vs_static": 0.49131162621412316,
+          "rule_world_only": "and",
+          "test_mse": 0.1271720934464692,
+          "train_first100_mse": 0.14839650190746023,
+          "train_last100_mse": 0.1290886029236528,
+          "visited_cell_slots_fraction": 1.0
+        },
+        {
+          "control_test_mse": 0.25,
+          "global_mean_baseline_mse": 0.17794721001519098,
+          "phase": 3,
+          "relative_gain_vs_global_mean": 0.27382529399350164,
+          "relative_gain_vs_static": 0.48311694833016827,
+          "rule_world_only": "xor",
+          "test_mse": 0.12922076291745793,
+          "train_first100_mse": 0.19525273338092589,
+          "train_last100_mse": 0.13413322321141855,
+          "visited_cell_slots_fraction": 1.0
+        }
+      ]
+    },
+    {
+      "seed": 5004,
+      "stages": [
+        {
+          "control_test_mse": 0.25,
+          "global_mean_baseline_mse": 0.1765457248263889,
+          "phase": 0,
+          "relative_gain_vs_global_mean": 0.27135600779589375,
+          "relative_gain_vs_static": 0.4854440730237296,
+          "rule_world_only": "xor",
+          "test_mse": 0.1286389817440676,
+          "train_first100_mse": 0.17973928668569494,
+          "train_last100_mse": 0.1295850338761573,
+          "visited_cell_slots_fraction": 1.0
+        },
+        {
+          "control_test_mse": 0.25,
+          "global_mean_baseline_mse": 0.17614971788194447,
+          "phase": 1,
+          "relative_gain_vs_global_mean": 0.2619660332326954,
+          "relative_gain_vs_static": 0.4799820998665877,
+          "rule_world_only": "xnor",
+          "test_mse": 0.13000447503335308,
+          "train_first100_mse": 0.2136537795209047,
+          "train_last100_mse": 0.129729499273735,
+          "visited_cell_slots_fraction": 1.0
+        },
+        {
+          "control_test_mse": 0.25,
+          "global_mean_baseline_mse": 0.1793505328896605,
+          "phase": 2,
+          "relative_gain_vs_global_mean": 0.2717809957718609,
+          "relative_gain_vs_static": 0.4775741341252213,
+          "rule_world_only": "and",
+          "test_mse": 0.13060646646869467,
+          "train_first100_mse": 0.14471851422142298,
+          "train_last100_mse": 0.1338015490559006,
+          "visited_cell_slots_fraction": 1.0
+        },
+        {
+          "control_test_mse": 0.25,
+          "global_mean_baseline_mse": 0.17824470757378474,
+          "phase": 3,
+          "relative_gain_vs_global_mean": 0.26242647369872496,
+          "relative_gain_vs_static": 0.474125689961056,
+          "rule_world_only": "xor",
+          "test_mse": 0.131468577509736,
+          "train_first100_mse": 0.1954582511128546,
+          "train_last100_mse": 0.12796799794176075,
+          "visited_cell_slots_fraction": 1.0
+        }
+      ]
+    },
+    {
+      "seed": 5005,
+      "stages": [
+        {
+          "control_test_mse": 0.25,
+          "global_mean_baseline_mse": 0.1797296657986111,
+          "phase": 0,
+          "relative_gain_vs_global_mean": 0.26088206357524935,
+          "relative_gain_vs_static": 0.46863432120248194,
+          "rule_world_only": "xor",
+          "test_mse": 0.13284141969937951,
+          "train_first100_mse": 0.1814183972079607,
+          "train_last100_mse": 0.1318805728643559,
+          "visited_cell_slots_fraction": 1.0
+        },
+        {
+          "control_test_mse": 0.25,
+          "global_mean_baseline_mse": 0.1716577094184028,
+          "phase": 1,
+          "relative_gain_vs_global_mean": 0.2496415965122296,
+          "relative_gain_vs_static": 0.48478078085775866,
+          "rule_world_only": "xnor",
+          "test_mse": 0.12880480478556033,
+          "train_first100_mse": 0.22412706395684304,
+          "train_last100_mse": 0.12978566495625446,
+          "visited_cell_slots_fraction": 1.0
+        },
+        {
+          "control_test_mse": 0.25,
+          "global_mean_baseline_mse": 0.1785039134837963,
+          "phase": 2,
+          "relative_gain_vs_global_mean": 0.2664623129737598,
+          "relative_gain_vs_static": 0.47624260871185586,
+          "rule_world_only": "and",
+          "test_mse": 0.13093934782203603,
+          "train_first100_mse": 0.1496649244251999,
+          "train_last100_mse": 0.1260689475472898,
+          "visited_cell_slots_fraction": 1.0
+        },
+        {
+          "control_test_mse": 0.25,
+          "global_mean_baseline_mse": 0.17643635932074656,
+          "phase": 3,
+          "relative_gain_vs_global_mean": 0.28274190626286966,
+          "relative_gain_vs_static": 0.4937983729907278,
+          "rule_world_only": "xor",
+          "test_mse": 0.12655040675231805,
+          "train_first100_mse": 0.1953148555982292,
+          "train_last100_mse": 0.12941466844882943,
+          "visited_cell_slots_fraction": 1.0
+        }
+      ]
+    }
+  ],
+  "schema": "local-conditional-reward-predictor-v1",
+  "seeds": [
+    5001,
+    5002,
+    5003,
+    5004,
+    5005
+  ],
+  "spec": {
+    "lr": 0.09,
+    "pairs": 32,
+    "phase_steps": 1200,
+    "reward_dropout": 0.08,
+    "test_steps": 240
+  }
+}
