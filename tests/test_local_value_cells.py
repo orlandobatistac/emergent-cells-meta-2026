@@ -71,6 +71,17 @@ class LocalValueCellTests(unittest.TestCase):
                 self.assertGreaterEqual(scores["success_rate"], 0)
                 self.assertLessEqual(scores["success_rate"], 1)
 
+    def test_procedural_worlds_from_harness_only(self):
+        from emergent_cells.experiments.recurrent_state import GeneratedMaze
+        self.assertNotEqual(GeneratedMaze(22001).walls,
+                            GeneratedMaze(22002).walls)
+        result = run_benchmark([22001, 22002], rounds=3, procedural=True)
+        self.assertIn("procedural", result["summary"])
+        self.assertNotIn("changed", result["summary"])
+        self.assertEqual(result["protocol"]["procedural_test_only_layouts"],
+                         True)
+        self.assertEqual(len(result["episodes"]), 8)
+
     def test_invalid_parameters(self):
         with self.assertRaises(ValueError):
             LocalValueCells(1, rounds=-1)
