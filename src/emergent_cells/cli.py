@@ -31,6 +31,8 @@ EXPERIMENTS = {
     "recurrent-state": "recurrent_state",
     "latent-navigation": "latent_navigation",
     "beacon-navigation": "beacon_navigation",
+    "policy-gradient": "policy_gradient",
+    "delayed-goal": "delayed_goal",
 }
 
 

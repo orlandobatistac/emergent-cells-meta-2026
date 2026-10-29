@@ -1,0 +1,1916 @@
+{
+  "protocol": {
+    "policy": "Engineered intrinsic novelty over learned recurrent or history states",
+    "oracle_position_or_map_inputs": false,
+    "goal_signal": "Only adjacent goal detector; no distant bearing",
+    "pretraining_task": "Self-supervised next sensory signature",
+    "train_seed": 19,
+    "train_steps": 24000,
+    "epochs": 30,
+    "hidden": 48,
+    "centers": 96,
+    "limit": 160,
+    "goals": 3,
+    "eval_seeds": [
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "train_cpu_seconds": 8.03125,
+    "parameter_bytes": 22592,
+    "centroid_bytes": 18432
+  },
+  "summary": {
+    "stable": {
+      "random": {
+        "complete_rate": 0.13333333333333333,
+        "mean_waypoints": 0.7333333333333333,
+        "mean_steps": 157.4,
+        "mean_internal_states": 0.0
+      },
+      "reactive": {
+        "complete_rate": 0.0,
+        "mean_waypoints": 0.8666666666666667,
+        "mean_steps": 160.0,
+        "mean_internal_states": 0.0
+      },
+      "obs_novelty": {
+        "complete_rate": 0.06666666666666667,
+        "mean_waypoints": 0.9333333333333333,
+        "mean_steps": 158.8,
+        "mean_internal_states": 16.266666666666666
+      },
+      "history_novelty": {
+        "complete_rate": 0.3333333333333333,
+        "mean_waypoints": 1.9333333333333333,
+        "mean_steps": 141.6,
+        "mean_internal_states": 133.0
+      },
+      "recurrent_novelty": {
+        "complete_rate": 0.4,
+        "mean_waypoints": 1.8,
+        "mean_steps": 140.13333333333333,
+        "mean_internal_states": 87.6
+      },
+      "recurrent_no_memory": {
+        "complete_rate": 0.2,
+        "mean_waypoints": 1.5333333333333334,
+        "mean_steps": 144.4,
+        "mean_internal_states": 76.26666666666667
+      }
+    },
+    "changed": {
+      "random": {
+        "complete_rate": 0.13333333333333333,
+        "mean_waypoints": 0.6666666666666666,
+        "mean_steps": 157.06666666666666,
+        "mean_internal_states": 0.0
+      },
+      "reactive": {
+        "complete_rate": 0.0,
+        "mean_waypoints": 0.4,
+        "mean_steps": 160.0,
+        "mean_internal_states": 0.0
+      },
+      "obs_novelty": {
+        "complete_rate": 0.2,
+        "mean_waypoints": 1.2666666666666666,
+        "mean_steps": 147.86666666666667,
+        "mean_internal_states": 16.866666666666667
+      },
+      "history_novelty": {
+        "complete_rate": 0.2,
+        "mean_waypoints": 1.3333333333333333,
+        "mean_steps": 149.46666666666667,
+        "mean_internal_states": 138.06666666666666
+      },
+      "recurrent_novelty": {
+        "complete_rate": 0.2,
+        "mean_waypoints": 1.6666666666666667,
+        "mean_steps": 148.8,
+        "mean_internal_states": 92.33333333333333
+      },
+      "recurrent_no_memory": {
+        "complete_rate": 0.26666666666666666,
+        "mean_waypoints": 1.4,
+        "mean_steps": 141.93333333333334,
+        "mean_internal_states": 75.86666666666666
+      }
+    }
+  },
+  "rows": [
+    {
+      "seed": 31,
+      "changed": false,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 31,
+      "changed": false,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 31,
+      "changed": false,
+      "mode": "obs_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 17,
+      "internal_action_entries": 44
+    },
+    {
+      "seed": 31,
+      "changed": false,
+      "mode": "history_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 148,
+      "internal_action_entries": 160
+    },
+    {
+      "seed": 31,
+      "changed": false,
+      "mode": "recurrent_novelty",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 123,
+      "unique_internal_states": 81,
+      "internal_action_entries": 119
+    },
+    {
+      "seed": 31,
+      "changed": false,
+      "mode": "recurrent_no_memory",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 76,
+      "internal_action_entries": 143
+    },
+    {
+      "seed": 31,
+      "changed": true,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 31,
+      "changed": true,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 31,
+      "changed": true,
+      "mode": "obs_novelty",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "unique_internal_states": 20,
+      "internal_action_entries": 48
+    },
+    {
+      "seed": 31,
+      "changed": true,
+      "mode": "history_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 145,
+      "internal_action_entries": 160
+    },
+    {
+      "seed": 31,
+      "changed": true,
+      "mode": "recurrent_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 90,
+      "internal_action_entries": 150
+    },
+    {
+      "seed": 31,
+      "changed": true,
+      "mode": "recurrent_no_memory",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 89,
+      "internal_action_entries": 152
+    },
+    {
+      "seed": 32,
+      "changed": false,
+      "mode": "random",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 144,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 32,
+      "changed": false,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 32,
+      "changed": false,
+      "mode": "obs_novelty",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "unique_internal_states": 15,
+      "internal_action_entries": 40
+    },
+    {
+      "seed": 32,
+      "changed": false,
+      "mode": "history_novelty",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 66,
+      "unique_internal_states": 66,
+      "internal_action_entries": 66
+    },
+    {
+      "seed": 32,
+      "changed": false,
+      "mode": "recurrent_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 113,
+      "internal_action_entries": 158
+    },
+    {
+      "seed": 32,
+      "changed": false,
+      "mode": "recurrent_no_memory",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 73,
+      "internal_action_entries": 142
+    },
+    {
+      "seed": 32,
+      "changed": true,
+      "mode": "random",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 143,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 32,
+      "changed": true,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 32,
+      "changed": true,
+      "mode": "obs_novelty",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "unique_internal_states": 17,
+      "internal_action_entries": 45
+    },
+    {
+      "seed": 32,
+      "changed": true,
+      "mode": "history_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 153,
+      "internal_action_entries": 160
+    },
+    {
+      "seed": 32,
+      "changed": true,
+      "mode": "recurrent_novelty",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "unique_internal_states": 102,
+      "internal_action_entries": 155
+    },
+    {
+      "seed": 32,
+      "changed": true,
+      "mode": "recurrent_no_memory",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 92,
+      "internal_action_entries": 152
+    },
+    {
+      "seed": 33,
+      "changed": false,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 33,
+      "changed": false,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 33,
+      "changed": false,
+      "mode": "obs_novelty",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 17,
+      "internal_action_entries": 45
+    },
+    {
+      "seed": 33,
+      "changed": false,
+      "mode": "history_novelty",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "unique_internal_states": 151,
+      "internal_action_entries": 160
+    },
+    {
+      "seed": 33,
+      "changed": false,
+      "mode": "recurrent_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 78,
+      "internal_action_entries": 147
+    },
+    {
+      "seed": 33,
+      "changed": false,
+      "mode": "recurrent_no_memory",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "unique_internal_states": 82,
+      "internal_action_entries": 147
+    },
+    {
+      "seed": 33,
+      "changed": true,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 33,
+      "changed": true,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 33,
+      "changed": true,
+      "mode": "obs_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 18,
+      "internal_action_entries": 43
+    },
+    {
+      "seed": 33,
+      "changed": true,
+      "mode": "history_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 151,
+      "internal_action_entries": 160
+    },
+    {
+      "seed": 33,
+      "changed": true,
+      "mode": "recurrent_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 100,
+      "internal_action_entries": 154
+    },
+    {
+      "seed": 33,
+      "changed": true,
+      "mode": "recurrent_no_memory",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 88,
+      "internal_action_entries": 151
+    },
+    {
+      "seed": 34,
+      "changed": false,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 34,
+      "changed": false,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 34,
+      "changed": false,
+      "mode": "obs_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 17,
+      "internal_action_entries": 43
+    },
+    {
+      "seed": 34,
+      "changed": false,
+      "mode": "history_novelty",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "unique_internal_states": 150,
+      "internal_action_entries": 160
+    },
+    {
+      "seed": 34,
+      "changed": false,
+      "mode": "recurrent_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 88,
+      "internal_action_entries": 150
+    },
+    {
+      "seed": 34,
+      "changed": false,
+      "mode": "recurrent_no_memory",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "unique_internal_states": 89,
+      "internal_action_entries": 156
+    },
+    {
+      "seed": 34,
+      "changed": true,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 34,
+      "changed": true,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 34,
+      "changed": true,
+      "mode": "obs_novelty",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 16,
+      "internal_action_entries": 44
+    },
+    {
+      "seed": 34,
+      "changed": true,
+      "mode": "history_novelty",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 90,
+      "unique_internal_states": 82,
+      "internal_action_entries": 90
+    },
+    {
+      "seed": 34,
+      "changed": true,
+      "mode": "recurrent_novelty",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 142,
+      "unique_internal_states": 88,
+      "internal_action_entries": 137
+    },
+    {
+      "seed": 34,
+      "changed": true,
+      "mode": "recurrent_no_memory",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 128,
+      "unique_internal_states": 71,
+      "internal_action_entries": 122
+    },
+    {
+      "seed": 35,
+      "changed": false,
+      "mode": "random",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 137,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 35,
+      "changed": false,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 35,
+      "changed": false,
+      "mode": "obs_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 17,
+      "internal_action_entries": 41
+    },
+    {
+      "seed": 35,
+      "changed": false,
+      "mode": "history_novelty",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 137,
+      "unique_internal_states": 133,
+      "internal_action_entries": 137
+    },
+    {
+      "seed": 35,
+      "changed": false,
+      "mode": "recurrent_novelty",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 107,
+      "unique_internal_states": 75,
+      "internal_action_entries": 106
+    },
+    {
+      "seed": 35,
+      "changed": false,
+      "mode": "recurrent_no_memory",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 69,
+      "unique_internal_states": 54,
+      "internal_action_entries": 69
+    },
+    {
+      "seed": 35,
+      "changed": true,
+      "mode": "random",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 133,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 35,
+      "changed": true,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 35,
+      "changed": true,
+      "mode": "obs_novelty",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 95,
+      "unique_internal_states": 16,
+      "internal_action_entries": 40
+    },
+    {
+      "seed": 35,
+      "changed": true,
+      "mode": "history_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 156,
+      "internal_action_entries": 160
+    },
+    {
+      "seed": 35,
+      "changed": true,
+      "mode": "recurrent_novelty",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 68,
+      "internal_action_entries": 136
+    },
+    {
+      "seed": 35,
+      "changed": true,
+      "mode": "recurrent_no_memory",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 92,
+      "internal_action_entries": 153
+    },
+    {
+      "seed": 36,
+      "changed": false,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 36,
+      "changed": false,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 36,
+      "changed": false,
+      "mode": "obs_novelty",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 18,
+      "internal_action_entries": 42
+    },
+    {
+      "seed": 36,
+      "changed": false,
+      "mode": "history_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 153,
+      "internal_action_entries": 160
+    },
+    {
+      "seed": 36,
+      "changed": false,
+      "mode": "recurrent_novelty",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 88,
+      "internal_action_entries": 151
+    },
+    {
+      "seed": 36,
+      "changed": false,
+      "mode": "recurrent_no_memory",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 74,
+      "internal_action_entries": 140
+    },
+    {
+      "seed": 36,
+      "changed": true,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 36,
+      "changed": true,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 36,
+      "changed": true,
+      "mode": "obs_novelty",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 15,
+      "internal_action_entries": 39
+    },
+    {
+      "seed": 36,
+      "changed": true,
+      "mode": "history_novelty",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 147,
+      "unique_internal_states": 133,
+      "internal_action_entries": 147
+    },
+    {
+      "seed": 36,
+      "changed": true,
+      "mode": "recurrent_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 105,
+      "internal_action_entries": 155
+    },
+    {
+      "seed": 36,
+      "changed": true,
+      "mode": "recurrent_no_memory",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 65,
+      "internal_action_entries": 139
+    },
+    {
+      "seed": 37,
+      "changed": false,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 37,
+      "changed": false,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 37,
+      "changed": false,
+      "mode": "obs_novelty",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 17,
+      "internal_action_entries": 46
+    },
+    {
+      "seed": 37,
+      "changed": false,
+      "mode": "history_novelty",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 144,
+      "internal_action_entries": 160
+    },
+    {
+      "seed": 37,
+      "changed": false,
+      "mode": "recurrent_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 101,
+      "internal_action_entries": 153
+    },
+    {
+      "seed": 37,
+      "changed": false,
+      "mode": "recurrent_no_memory",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 78,
+      "internal_action_entries": 149
+    },
+    {
+      "seed": 37,
+      "changed": true,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 37,
+      "changed": true,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 37,
+      "changed": true,
+      "mode": "obs_novelty",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 110,
+      "unique_internal_states": 16,
+      "internal_action_entries": 41
+    },
+    {
+      "seed": 37,
+      "changed": true,
+      "mode": "history_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 137,
+      "internal_action_entries": 159
+    },
+    {
+      "seed": 37,
+      "changed": true,
+      "mode": "recurrent_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 82,
+      "internal_action_entries": 150
+    },
+    {
+      "seed": 37,
+      "changed": true,
+      "mode": "recurrent_no_memory",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 82,
+      "internal_action_entries": 145
+    },
+    {
+      "seed": 38,
+      "changed": false,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 38,
+      "changed": false,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 38,
+      "changed": false,
+      "mode": "obs_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 16,
+      "internal_action_entries": 41
+    },
+    {
+      "seed": 38,
+      "changed": false,
+      "mode": "history_novelty",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 135,
+      "unique_internal_states": 126,
+      "internal_action_entries": 134
+    },
+    {
+      "seed": 38,
+      "changed": false,
+      "mode": "recurrent_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 100,
+      "internal_action_entries": 152
+    },
+    {
+      "seed": 38,
+      "changed": false,
+      "mode": "recurrent_no_memory",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "unique_internal_states": 96,
+      "internal_action_entries": 154
+    },
+    {
+      "seed": 38,
+      "changed": true,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 38,
+      "changed": true,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 38,
+      "changed": true,
+      "mode": "obs_novelty",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "unique_internal_states": 18,
+      "internal_action_entries": 46
+    },
+    {
+      "seed": 38,
+      "changed": true,
+      "mode": "history_novelty",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "unique_internal_states": 150,
+      "internal_action_entries": 160
+    },
+    {
+      "seed": 38,
+      "changed": true,
+      "mode": "recurrent_novelty",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "unique_internal_states": 108,
+      "internal_action_entries": 159
+    },
+    {
+      "seed": 38,
+      "changed": true,
+      "mode": "recurrent_no_memory",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "unique_internal_states": 80,
+      "internal_action_entries": 146
+    },
+    {
+      "seed": 39,
+      "changed": false,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 39,
+      "changed": false,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 39,
+      "changed": false,
+      "mode": "obs_novelty",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 13,
+      "internal_action_entries": 35
+    },
+    {
+      "seed": 39,
+      "changed": false,
+      "mode": "history_novelty",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "unique_internal_states": 146,
+      "internal_action_entries": 160
+    },
+    {
+      "seed": 39,
+      "changed": false,
+      "mode": "recurrent_novelty",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 155,
+      "unique_internal_states": 102,
+      "internal_action_entries": 151
+    },
+    {
+      "seed": 39,
+      "changed": false,
+      "mode": "recurrent_no_memory",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 107,
+      "unique_internal_states": 69,
+      "internal_action_entries": 103
+    },
+    {
+      "seed": 39,
+      "changed": true,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 39,
+      "changed": true,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 39,
+      "changed": true,
+      "mode": "obs_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 20,
+      "internal_action_entries": 48
+    },
+    {
+      "seed": 39,
+      "changed": true,
+      "mode": "history_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 149,
+      "internal_action_entries": 160
+    },
+    {
+      "seed": 39,
+      "changed": true,
+      "mode": "recurrent_novelty",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "unique_internal_states": 106,
+      "internal_action_entries": 155
+    },
+    {
+      "seed": 39,
+      "changed": true,
+      "mode": "recurrent_no_memory",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 75,
+      "internal_action_entries": 142
+    },
+    {
+      "seed": 40,
+      "changed": false,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 40,
+      "changed": false,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 40,
+      "changed": false,
+      "mode": "obs_novelty",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 142,
+      "unique_internal_states": 19,
+      "internal_action_entries": 47
+    },
+    {
+      "seed": 40,
+      "changed": false,
+      "mode": "history_novelty",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "unique_internal_states": 152,
+      "internal_action_entries": 160
+    },
+    {
+      "seed": 40,
+      "changed": false,
+      "mode": "recurrent_novelty",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 82,
+      "unique_internal_states": 65,
+      "internal_action_entries": 82
+    },
+    {
+      "seed": 40,
+      "changed": false,
+      "mode": "recurrent_no_memory",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 76,
+      "internal_action_entries": 146
+    },
+    {
+      "seed": 40,
+      "changed": true,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 40,
+      "changed": true,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 40,
+      "changed": true,
+      "mode": "obs_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 17,
+      "internal_action_entries": 45
+    },
+    {
+      "seed": 40,
+      "changed": true,
+      "mode": "history_novelty",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 85,
+      "unique_internal_states": 81,
+      "internal_action_entries": 85
+    },
+    {
+      "seed": 40,
+      "changed": true,
+      "mode": "recurrent_novelty",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 81,
+      "unique_internal_states": 66,
+      "internal_action_entries": 80
+    },
+    {
+      "seed": 40,
+      "changed": true,
+      "mode": "recurrent_no_memory",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 97,
+      "unique_internal_states": 70,
+      "internal_action_entries": 96
+    },
+    {
+      "seed": 41,
+      "changed": false,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 41,
+      "changed": false,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 41,
+      "changed": false,
+      "mode": "obs_novelty",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "unique_internal_states": 16,
+      "internal_action_entries": 41
+    },
+    {
+      "seed": 41,
+      "changed": false,
+      "mode": "history_novelty",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 70,
+      "unique_internal_states": 68,
+      "internal_action_entries": 70
+    },
+    {
+      "seed": 41,
+      "changed": false,
+      "mode": "recurrent_novelty",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "unique_internal_states": 84,
+      "internal_action_entries": 146
+    },
+    {
+      "seed": 41,
+      "changed": false,
+      "mode": "recurrent_no_memory",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 70,
+      "unique_internal_states": 52,
+      "internal_action_entries": 69
+    },
+    {
+      "seed": 41,
+      "changed": true,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 41,
+      "changed": true,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 41,
+      "changed": true,
+      "mode": "obs_novelty",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 17,
+      "internal_action_entries": 46
+    },
+    {
+      "seed": 41,
+      "changed": true,
+      "mode": "history_novelty",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 148,
+      "internal_action_entries": 160
+    },
+    {
+      "seed": 41,
+      "changed": true,
+      "mode": "recurrent_novelty",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 74,
+      "internal_action_entries": 130
+    },
+    {
+      "seed": 41,
+      "changed": true,
+      "mode": "recurrent_no_memory",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 74,
+      "internal_action_entries": 138
+    },
+    {
+      "seed": 42,
+      "changed": false,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 42,
+      "changed": false,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 42,
+      "changed": false,
+      "mode": "obs_novelty",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 16,
+      "internal_action_entries": 43
+    },
+    {
+      "seed": 42,
+      "changed": false,
+      "mode": "history_novelty",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 116,
+      "unique_internal_states": 110,
+      "internal_action_entries": 116
+    },
+    {
+      "seed": 42,
+      "changed": false,
+      "mode": "recurrent_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 99,
+      "internal_action_entries": 153
+    },
+    {
+      "seed": 42,
+      "changed": false,
+      "mode": "recurrent_no_memory",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 81,
+      "internal_action_entries": 148
+    },
+    {
+      "seed": 42,
+      "changed": true,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 42,
+      "changed": true,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 42,
+      "changed": true,
+      "mode": "obs_novelty",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 93,
+      "unique_internal_states": 14,
+      "internal_action_entries": 38
+    },
+    {
+      "seed": 42,
+      "changed": true,
+      "mode": "history_novelty",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "unique_internal_states": 148,
+      "internal_action_entries": 160
+    },
+    {
+      "seed": 42,
+      "changed": true,
+      "mode": "recurrent_novelty",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 89,
+      "unique_internal_states": 75,
+      "internal_action_entries": 89
+    },
+    {
+      "seed": 42,
+      "changed": true,
+      "mode": "recurrent_no_memory",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 73,
+      "unique_internal_states": 55,
+      "internal_action_entries": 72
+    },
+    {
+      "seed": 43,
+      "changed": false,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 43,
+      "changed": false,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 43,
+      "changed": false,
+      "mode": "obs_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 16,
+      "internal_action_entries": 43
+    },
+    {
+      "seed": 43,
+      "changed": false,
+      "mode": "history_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 154,
+      "internal_action_entries": 160
+    },
+    {
+      "seed": 43,
+      "changed": false,
+      "mode": "recurrent_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 93,
+      "internal_action_entries": 149
+    },
+    {
+      "seed": 43,
+      "changed": false,
+      "mode": "recurrent_no_memory",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 88,
+      "internal_action_entries": 151
+    },
+    {
+      "seed": 43,
+      "changed": true,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 43,
+      "changed": true,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 43,
+      "changed": true,
+      "mode": "obs_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 16,
+      "internal_action_entries": 41
+    },
+    {
+      "seed": 43,
+      "changed": true,
+      "mode": "history_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 149,
+      "internal_action_entries": 160
+    },
+    {
+      "seed": 43,
+      "changed": true,
+      "mode": "recurrent_novelty",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "unique_internal_states": 116,
+      "internal_action_entries": 160
+    },
+    {
+      "seed": 43,
+      "changed": true,
+      "mode": "recurrent_no_memory",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "unique_internal_states": 83,
+      "internal_action_entries": 150
+    },
+    {
+      "seed": 44,
+      "changed": false,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 44,
+      "changed": false,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 44,
+      "changed": false,
+      "mode": "obs_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 13,
+      "internal_action_entries": 35
+    },
+    {
+      "seed": 44,
+      "changed": false,
+      "mode": "history_novelty",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "unique_internal_states": 147,
+      "internal_action_entries": 160
+    },
+    {
+      "seed": 44,
+      "changed": false,
+      "mode": "recurrent_novelty",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 72,
+      "unique_internal_states": 62,
+      "internal_action_entries": 72
+    },
+    {
+      "seed": 44,
+      "changed": false,
+      "mode": "recurrent_no_memory",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "unique_internal_states": 77,
+      "internal_action_entries": 146
+    },
+    {
+      "seed": 44,
+      "changed": true,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 44,
+      "changed": true,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 44,
+      "changed": true,
+      "mode": "obs_novelty",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 17,
+      "internal_action_entries": 46
+    },
+    {
+      "seed": 44,
+      "changed": true,
+      "mode": "history_novelty",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 146,
+      "internal_action_entries": 160
+    },
+    {
+      "seed": 44,
+      "changed": true,
+      "mode": "recurrent_novelty",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "unique_internal_states": 108,
+      "internal_action_entries": 157
+    },
+    {
+      "seed": 44,
+      "changed": true,
+      "mode": "recurrent_no_memory",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 74,
+      "internal_action_entries": 147
+    },
+    {
+      "seed": 45,
+      "changed": false,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 45,
+      "changed": false,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 45,
+      "changed": false,
+      "mode": "obs_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 17,
+      "internal_action_entries": 44
+    },
+    {
+      "seed": 45,
+      "changed": false,
+      "mode": "history_novelty",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 147,
+      "internal_action_entries": 160
+    },
+    {
+      "seed": 45,
+      "changed": false,
+      "mode": "recurrent_novelty",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 123,
+      "unique_internal_states": 85,
+      "internal_action_entries": 118
+    },
+    {
+      "seed": 45,
+      "changed": false,
+      "mode": "recurrent_no_memory",
+      "completed": false,
+      "waypoints": 1,
+      "steps": 160,
+      "unique_internal_states": 79,
+      "internal_action_entries": 150
+    },
+    {
+      "seed": 45,
+      "changed": true,
+      "mode": "random",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 45,
+      "changed": true,
+      "mode": "reactive",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 0,
+      "internal_action_entries": 0
+    },
+    {
+      "seed": 45,
+      "changed": true,
+      "mode": "obs_novelty",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 16,
+      "internal_action_entries": 44
+    },
+    {
+      "seed": 45,
+      "changed": true,
+      "mode": "history_novelty",
+      "completed": false,
+      "waypoints": 0,
+      "steps": 160,
+      "unique_internal_states": 143,
+      "internal_action_entries": 160
+    },
+    {
+      "seed": 45,
+      "changed": true,
+      "mode": "recurrent_novelty",
+      "completed": false,
+      "waypoints": 2,
+      "steps": 160,
+      "unique_internal_states": 97,
+      "internal_action_entries": 151
+    },
+    {
+      "seed": 45,
+      "changed": true,
+      "mode": "recurrent_no_memory",
+      "completed": true,
+      "waypoints": 3,
+      "steps": 71,
+      "unique_internal_states": 48,
+      "internal_action_entries": 68
+    }
+  ],
+  "elapsed_wall_seconds": 9.512494400027208
+}
