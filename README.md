@@ -153,3 +153,9 @@ In the new `experiment/learned-local-curiosity` branch, the one-bit communicatin
 We preserved **five pilots, including negative results, plus the initial underperforming seed cohort** in `results/exploratory` and the final 170-row selected study plus same-seed 50-row intrinsic-weight ablation in `results/audited`.
 
 Read the [experimental study](docs/LEARNED_CURIOSITY_2026-10-27.md), [raw confirmed outcomes](results/audited/2026-10-27-intrinsic-curiosity-fresh-seeds.json), [paired intrinsic-reward ablation](results/audited/2026-10-27-curiosity-intrinsic-ablation.json) and [interactive localhost instructions](docs/LEARNED_CURIOSITY_UI_2026-10-27.md). No Meta Model API calls or credits were used.
+
+## Fast local predictive world model — Oct 28, 2026
+
+The latest experimental branch tests 32 independently trained **cell-local reward predictors** over XOR→XNOR→AND→XOR world changes. Cells update a tiny 8-slot model using own cue, perfect preprogrammed neighbor cue bit, own random action and own reward, **never the rule label or correct gate target**. Five fresh seeds (5001–5005) yielded ~**0.129–0.130 held-out reward MSE**, or **26.4–26.9% lower error than a separately trained context-free, per-cell reward-rate baseline**, and 47.9–48.5% lower MSE than a weaker frozen p=0.5 baseline.
+
+This is a **first, bounded prediction proof** with intentionally perfect one-bit neighbor communication, not yet integration with the learned communication/curiosity policies, memory retention, general world modeling or actual joule efficiency. See [the complete reproducible protocol](docs/LOCAL_WORLD_MODEL_FAST_2026-10-28.md) and [all per-seed raw results](results/audited/2026-10-28-local-world-model-fresh-seeds.json). This local Python experiment does not require a Meta Model API call.
