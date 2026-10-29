@@ -25,6 +25,7 @@ EXPERIMENTS = {
     "learned-curiosity": "learned_curiosity",
     "curiosity-ablation": "curiosity_ablation",
     "sequential-transfer": "sequential_transfer",
+    "multistep-world": "multistep_world",
 }
 
 

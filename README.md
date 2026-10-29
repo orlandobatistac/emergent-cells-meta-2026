@@ -2,7 +2,7 @@
 
 **An experimental research laboratory for decentralized learning with local rewards, learned one-bit messages, context-dependent memory, and simulated resource constraints.**
 
-This repository contains reproducible Python/NumPy experiments, tests, numerical results, and research notes. It does **not** contain a browser UI or an API server. Source cells currently use fixed pairs, digital Boolean environments, authored experimental schedules, and synthetic reward/energy accounting.
+This repository contains reproducible Python/NumPy experiments, tests, numerical results, and research notes. It does **not** contain a browser UI or an API server. Most historical cell experiments use fixed pairs, digital Boolean environments, authored schedules, and synthetic reward/energy accounting. The newer multi-step world prototype adds tabular local transition memories and a programmed central planner.
 
 > **Scientific boundary:** High accuracy on these deliberately small simulations does not establish AGI, physical energy efficiency, autonomous growth of biological cells, hardware independence, or substrate-agnostic intelligence. The simulated "energy" variable is not measured in joules.
 
@@ -14,6 +14,7 @@ python run.py list
 python run.py simulate --compare --seeds 1,2,3 --steps 240 --cells 256 --output results/runs/simulation.json
 python run.py dynamic-memory --seeds 1001,1002,1003,1004,1005 --pairs 32 --phase-steps 4500 --dropout 0.08 --output results/runs/third-rule.json
 python run.py sequential-transfer --seeds 2001,2002,2003,2004,2005 --pairs 24 --pre-steps 3800 --probe-steps 120 --adapt-steps 1100 --output results/runs/transfer.json
+python run.py multistep-world --seeds 2001,2002,2003,2004,2005,2006,2007,2008,2009,2010 --train-steps 7000 --missions 30 --output results/runs/multistep.json
 python -m unittest discover -s tests -q
 ```
 
@@ -25,8 +26,9 @@ Individual experiment runners expose `--help` and optional JSON `--output` flags
 - **Locally triggered decoder memory expansion:** under the original five-seed protocol, approximately 93–95% late-phase accuracy across XOR, XNOR, AND and subsequent re-exposure. The same detector can falsely allocate memory after a large reward-availability drop.
 - **Locally trained exploratory actions:** realized information-progress reward improves several change-detection outcomes but increases intervention costs in some stable/noisy settings.
 - **Sequential transfer (October 28, 2026):** locally reward-selected pieces of old response tables improve first-200-step adaptation to unseen OR/NAND Boolean rules compared with cold-start and equal-interaction-budget controls. Mean held-out post-training accuracy was **92.04% for OR** and **91.73% for NAND** across five seeds. Source policies were frozen by experimental design; this is same-family transfer, not autonomous general learning.
+- **Three-waypoint world-model transfer (October 28, 2026):** a separate prototype of locally stored spatial transitions with an explicit BFS planner completed **300/300 unseen three-target missions** across ten holdout seeds. A cold version with the same planner also completed all 300, but required **19.59 additional primitive steps per mission** on average. Online correction handled a specific unannounced door closure in **10/10** tests; frozen memory failed **10/10**. Structured coordinates and central planning are supplied by the experimenter, not learned or decentralized.
 
-Read [the sequential transfer report](docs/SEQUENTIAL_TRANSFER_2026-10-28.md), [the original dynamic-memory report](docs/DYNAMIC_MEMORY_THIRD_RULE_2026-10-27.md), [learned curiosity notes](docs/LEARNED_CURIOSITY_2026-10-27.md), and [the experimental protocol](docs/EXPERIMENT_PROTOCOL.md). Raw machine-readable study data are in `results/audited/`; developmental and negative results are retained in `results/exploratory/`.
+Read [the multi-step world-model report](docs/MULTISTEP_WORLD_TRANSFER_2026-10-28.md), [the sequential transfer report](docs/SEQUENTIAL_TRANSFER_2026-10-28.md), [the original dynamic-memory report](docs/DYNAMIC_MEMORY_THIRD_RULE_2026-10-27.md), [learned curiosity notes](docs/LEARNED_CURIOSITY_2026-10-27.md), and [the experimental protocol](docs/EXPERIMENT_PROTOCOL.md). Raw machine-readable study data are in `results/audited/`; developmental and negative results are retained in `results/exploratory/`.
 
 ## Repository structure
 

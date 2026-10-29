@@ -1,0 +1,2483 @@
+{
+  "protocol": {
+    "description": "Tabular local transition cells plus authored central BFS search",
+    "goal_observation": "Exact (x,y) target coordinates, supplied by environment",
+    "position_observation": "Exact (x,y), supplied by environment",
+    "wall_map_visible_to_policy": false,
+    "source_exploration": "Two alternating visible goal cues, epsilon=0.35, periodic privileged random state resets",
+    "source_goal_cues": [
+      [
+        1,
+        1
+      ],
+      [
+        7,
+        7
+      ]
+    ],
+    "train_steps": 4500,
+    "eval_missions": 16,
+    "mission_waypoints": 3,
+    "step_limit": 160,
+    "seeds": [
+      11,
+      12,
+      13
+    ],
+    "heldout_goals": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        2
+      ],
+      [
+        7,
+        6
+      ]
+    ]
+  },
+  "summary": {
+    "reusable_model": {
+      "heldout_complete_rate": 1.0,
+      "heldout_mean_waypoints": 3.0,
+      "heldout_mean_extra_steps_if_complete": 1.6666666666666667,
+      "door_closure_success_rate": 1.0,
+      "door_closure_mean_revisions": 1.0,
+      "evaluation_cpu_seconds_per_seed": 0.036458333333333336
+    },
+    "frozen_model": {
+      "heldout_complete_rate": 1.0,
+      "heldout_mean_waypoints": 3.0,
+      "heldout_mean_extra_steps_if_complete": 1.6666666666666667,
+      "door_closure_success_rate": 0.0,
+      "door_closure_mean_revisions": 0.0,
+      "evaluation_cpu_seconds_per_seed": 0.03125
+    },
+    "cold_model": {
+      "heldout_complete_rate": 1.0,
+      "heldout_mean_waypoints": 3.0,
+      "heldout_mean_extra_steps_if_complete": 19.75,
+      "door_closure_success_rate": 1.0,
+      "door_closure_mean_revisions": 0.0,
+      "evaluation_cpu_seconds_per_seed": 0.03125
+    },
+    "greedy": {
+      "heldout_complete_rate": 0.08333333333333333,
+      "heldout_mean_waypoints": 0.7708333333333334,
+      "heldout_mean_extra_steps_if_complete": 0.0,
+      "door_closure_success_rate": 0.0,
+      "door_closure_mean_revisions": 0.0,
+      "evaluation_cpu_seconds_per_seed": 0.03125
+    },
+    "random": {
+      "heldout_complete_rate": 0.020833333333333332,
+      "heldout_mean_waypoints": 0.3541666666666667,
+      "heldout_mean_extra_steps_if_complete": 118.0,
+      "door_closure_success_rate": 0.0,
+      "door_closure_mean_revisions": 0.0,
+      "evaluation_cpu_seconds_per_seed": 0.015625
+    }
+  },
+  "trials": [
+    {
+      "seed": 11,
+      "training_actions": 4500,
+      "source_observed_edge_fraction": 0.8514492753623188,
+      "source_edge_count": 235,
+      "source_training_cpu_seconds": 0.875,
+      "source_peak_tracemalloc_bytes": 60944,
+      "shallow_source_memory_bytes": 83948,
+      "heldout": {
+        "reusable_model": {
+          "missions": 16,
+          "complete_rate": 1.0,
+          "mean_waypoints": 3.0,
+          "mean_steps": 23.5,
+          "mean_extra_steps_if_complete": 0.375,
+          "total_revisions": 0,
+          "eval_cpu_seconds": 0.03125,
+          "episodes": [
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 27,
+              "oracle_steps": 23,
+              "path_excess": 4,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 23,
+              "oracle_steps": 23,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 26,
+              "oracle_steps": 26,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 25,
+              "oracle_steps": 25,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 17,
+              "oracle_steps": 17,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 24,
+              "oracle_steps": 24,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 27,
+              "oracle_steps": 27,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 27,
+              "oracle_steps": 27,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 25,
+              "oracle_steps": 23,
+              "path_excess": 2,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 22,
+              "oracle_steps": 22,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 22,
+              "oracle_steps": 22,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 22,
+              "oracle_steps": 22,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 22,
+              "oracle_steps": 22,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 25,
+              "oracle_steps": 25,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 23,
+              "oracle_steps": 23,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 19,
+              "oracle_steps": 19,
+              "path_excess": 0,
+              "revisions": 0
+            }
+          ]
+        },
+        "frozen_model": {
+          "missions": 16,
+          "complete_rate": 1.0,
+          "mean_waypoints": 3.0,
+          "mean_steps": 23.5,
+          "mean_extra_steps_if_complete": 0.375,
+          "total_revisions": 0,
+          "eval_cpu_seconds": 0.015625,
+          "episodes": [
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 27,
+              "oracle_steps": 23,
+              "path_excess": 4,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 23,
+              "oracle_steps": 23,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 26,
+              "oracle_steps": 26,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 25,
+              "oracle_steps": 25,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 17,
+              "oracle_steps": 17,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 24,
+              "oracle_steps": 24,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 27,
+              "oracle_steps": 27,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 27,
+              "oracle_steps": 27,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 25,
+              "oracle_steps": 23,
+              "path_excess": 2,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 22,
+              "oracle_steps": 22,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 22,
+              "oracle_steps": 22,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 22,
+              "oracle_steps": 22,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 22,
+              "oracle_steps": 22,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 25,
+              "oracle_steps": 25,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 23,
+              "oracle_steps": 23,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 19,
+              "oracle_steps": 19,
+              "path_excess": 0,
+              "revisions": 0
+            }
+          ]
+        },
+        "cold_model": {
+          "missions": 16,
+          "complete_rate": 1.0,
+          "mean_waypoints": 3.0,
+          "mean_steps": 41.75,
+          "mean_extra_steps_if_complete": 18.625,
+          "total_revisions": 0,
+          "eval_cpu_seconds": 0.03125,
+          "episodes": [
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 42,
+              "oracle_steps": 23,
+              "path_excess": 19,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 34,
+              "oracle_steps": 23,
+              "path_excess": 11,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 35,
+              "oracle_steps": 26,
+              "path_excess": 9,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 51,
+              "oracle_steps": 25,
+              "path_excess": 26,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 17,
+              "oracle_steps": 17,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 26,
+              "oracle_steps": 24,
+              "path_excess": 2,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 72,
+              "oracle_steps": 27,
+              "path_excess": 45,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 41,
+              "oracle_steps": 27,
+              "path_excess": 14,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 46,
+              "oracle_steps": 23,
+              "path_excess": 23,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 27,
+              "oracle_steps": 22,
+              "path_excess": 5,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 27,
+              "oracle_steps": 22,
+              "path_excess": 5,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 93,
+              "oracle_steps": 22,
+              "path_excess": 71,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 29,
+              "oracle_steps": 22,
+              "path_excess": 7,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 66,
+              "oracle_steps": 25,
+              "path_excess": 41,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 30,
+              "oracle_steps": 23,
+              "path_excess": 7,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 32,
+              "oracle_steps": 19,
+              "path_excess": 13,
+              "revisions": 0
+            }
+          ]
+        },
+        "greedy": {
+          "missions": 16,
+          "complete_rate": 0.0625,
+          "mean_waypoints": 0.9375,
+          "mean_steps": 151.0625,
+          "mean_extra_steps_if_complete": 0.0,
+          "total_revisions": 0,
+          "eval_cpu_seconds": 0.015625,
+          "episodes": [
+            {
+              "complete": false,
+              "waypoints": 1,
+              "steps": 160,
+              "oracle_steps": 23,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 23,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 26,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 1,
+              "steps": 160,
+              "oracle_steps": 25,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 17,
+              "oracle_steps": 17,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 2,
+              "steps": 160,
+              "oracle_steps": 24,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 27,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 27,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 23,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 2,
+              "steps": 160,
+              "oracle_steps": 22,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 2,
+              "steps": 160,
+              "oracle_steps": 22,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 22,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 2,
+              "steps": 160,
+              "oracle_steps": 22,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 25,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 2,
+              "steps": 160,
+              "oracle_steps": 23,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 19,
+              "path_excess": null,
+              "revisions": 0
+            }
+          ]
+        },
+        "random": {
+          "missions": 16,
+          "complete_rate": 0.0,
+          "mean_waypoints": 0.1875,
+          "mean_steps": 160.0,
+          "mean_extra_steps_if_complete": null,
+          "total_revisions": 0,
+          "eval_cpu_seconds": 0.015625,
+          "episodes": [
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 23,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 23,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 26,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 25,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 17,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 24,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 27,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 27,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 1,
+              "steps": 160,
+              "oracle_steps": 23,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 22,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 22,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 2,
+              "steps": 160,
+              "oracle_steps": 22,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 22,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 25,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 23,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 19,
+              "path_excess": null,
+              "revisions": 0
+            }
+          ]
+        }
+      },
+      "door_closure": {
+        "reusable_model": {
+          "complete": true,
+          "waypoints": 2,
+          "steps": 25,
+          "oracle_steps": 24,
+          "path_excess": 1,
+          "revisions": 1
+        },
+        "frozen_model": {
+          "complete": false,
+          "waypoints": 0,
+          "steps": 160,
+          "oracle_steps": 24,
+          "path_excess": null,
+          "revisions": 0
+        },
+        "cold_model": {
+          "complete": true,
+          "waypoints": 2,
+          "steps": 132,
+          "oracle_steps": 24,
+          "path_excess": 108,
+          "revisions": 0
+        },
+        "greedy": {
+          "complete": false,
+          "waypoints": 0,
+          "steps": 160,
+          "oracle_steps": 24,
+          "path_excess": null,
+          "revisions": 0
+        },
+        "random": {
+          "complete": false,
+          "waypoints": 0,
+          "steps": 160,
+          "oracle_steps": 24,
+          "path_excess": null,
+          "revisions": 0
+        }
+      },
+      "training_world_source_goal_cues": [
+        [
+          1,
+          1
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "heldout_goal_pool": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          7,
+          6
+        ]
+      ]
+    },
+    {
+      "seed": 12,
+      "training_actions": 4500,
+      "source_observed_edge_fraction": 0.8804347826086957,
+      "source_edge_count": 243,
+      "source_training_cpu_seconds": 0.8125,
+      "source_peak_tracemalloc_bytes": 32848,
+      "shallow_source_memory_bytes": 86412,
+      "heldout": {
+        "reusable_model": {
+          "missions": 16,
+          "complete_rate": 1.0,
+          "mean_waypoints": 3.0,
+          "mean_steps": 26.8125,
+          "mean_extra_steps_if_complete": 3.125,
+          "total_revisions": 0,
+          "eval_cpu_seconds": 0.03125,
+          "episodes": [
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 26,
+              "oracle_steps": 26,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 32,
+              "oracle_steps": 24,
+              "path_excess": 8,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 31,
+              "oracle_steps": 23,
+              "path_excess": 8,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 24,
+              "oracle_steps": 24,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 20,
+              "oracle_steps": 20,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 34,
+              "oracle_steps": 26,
+              "path_excess": 8,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 26,
+              "oracle_steps": 26,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 23,
+              "oracle_steps": 21,
+              "path_excess": 2,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 29,
+              "oracle_steps": 19,
+              "path_excess": 10,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 22,
+              "oracle_steps": 22,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 27,
+              "oracle_steps": 25,
+              "path_excess": 2,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 31,
+              "oracle_steps": 23,
+              "path_excess": 8,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 25,
+              "oracle_steps": 23,
+              "path_excess": 2,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 26,
+              "oracle_steps": 26,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 25,
+              "oracle_steps": 25,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 28,
+              "oracle_steps": 26,
+              "path_excess": 2,
+              "revisions": 0
+            }
+          ]
+        },
+        "frozen_model": {
+          "missions": 16,
+          "complete_rate": 1.0,
+          "mean_waypoints": 3.0,
+          "mean_steps": 26.8125,
+          "mean_extra_steps_if_complete": 3.125,
+          "total_revisions": 0,
+          "eval_cpu_seconds": 0.03125,
+          "episodes": [
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 26,
+              "oracle_steps": 26,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 32,
+              "oracle_steps": 24,
+              "path_excess": 8,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 31,
+              "oracle_steps": 23,
+              "path_excess": 8,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 24,
+              "oracle_steps": 24,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 20,
+              "oracle_steps": 20,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 34,
+              "oracle_steps": 26,
+              "path_excess": 8,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 26,
+              "oracle_steps": 26,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 23,
+              "oracle_steps": 21,
+              "path_excess": 2,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 29,
+              "oracle_steps": 19,
+              "path_excess": 10,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 22,
+              "oracle_steps": 22,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 27,
+              "oracle_steps": 25,
+              "path_excess": 2,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 31,
+              "oracle_steps": 23,
+              "path_excess": 8,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 25,
+              "oracle_steps": 23,
+              "path_excess": 2,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 26,
+              "oracle_steps": 26,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 25,
+              "oracle_steps": 25,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 28,
+              "oracle_steps": 26,
+              "path_excess": 2,
+              "revisions": 0
+            }
+          ]
+        },
+        "cold_model": {
+          "missions": 16,
+          "complete_rate": 1.0,
+          "mean_waypoints": 3.0,
+          "mean_steps": 39.1875,
+          "mean_extra_steps_if_complete": 15.5,
+          "total_revisions": 0,
+          "eval_cpu_seconds": 0.015625,
+          "episodes": [
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 56,
+              "oracle_steps": 26,
+              "path_excess": 30,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 47,
+              "oracle_steps": 24,
+              "path_excess": 23,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 37,
+              "oracle_steps": 23,
+              "path_excess": 14,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 24,
+              "oracle_steps": 24,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 20,
+              "oracle_steps": 20,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 34,
+              "oracle_steps": 26,
+              "path_excess": 8,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 51,
+              "oracle_steps": 26,
+              "path_excess": 25,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 39,
+              "oracle_steps": 21,
+              "path_excess": 18,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 21,
+              "oracle_steps": 19,
+              "path_excess": 2,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 50,
+              "oracle_steps": 22,
+              "path_excess": 28,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 34,
+              "oracle_steps": 25,
+              "path_excess": 9,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 37,
+              "oracle_steps": 23,
+              "path_excess": 14,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 30,
+              "oracle_steps": 23,
+              "path_excess": 7,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 47,
+              "oracle_steps": 26,
+              "path_excess": 21,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 67,
+              "oracle_steps": 25,
+              "path_excess": 42,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 33,
+              "oracle_steps": 26,
+              "path_excess": 7,
+              "revisions": 0
+            }
+          ]
+        },
+        "greedy": {
+          "missions": 16,
+          "complete_rate": 0.125,
+          "mean_waypoints": 0.8125,
+          "mean_steps": 142.75,
+          "mean_extra_steps_if_complete": 0.0,
+          "total_revisions": 0,
+          "eval_cpu_seconds": 0.03125,
+          "episodes": [
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 26,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 24,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 23,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 24,
+              "oracle_steps": 24,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 20,
+              "oracle_steps": 20,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 1,
+              "steps": 160,
+              "oracle_steps": 26,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 26,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 2,
+              "steps": 160,
+              "oracle_steps": 21,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 19,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 22,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 2,
+              "steps": 160,
+              "oracle_steps": 25,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 1,
+              "steps": 160,
+              "oracle_steps": 23,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 23,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 1,
+              "steps": 160,
+              "oracle_steps": 26,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 25,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 26,
+              "path_excess": null,
+              "revisions": 0
+            }
+          ]
+        },
+        "random": {
+          "missions": 16,
+          "complete_rate": 0.0,
+          "mean_waypoints": 0.4375,
+          "mean_steps": 160.0,
+          "mean_extra_steps_if_complete": null,
+          "total_revisions": 0,
+          "eval_cpu_seconds": 0.015625,
+          "episodes": [
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 26,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 24,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 1,
+              "steps": 160,
+              "oracle_steps": 23,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 24,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 20,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 1,
+              "steps": 160,
+              "oracle_steps": 26,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 1,
+              "steps": 160,
+              "oracle_steps": 26,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 1,
+              "steps": 160,
+              "oracle_steps": 21,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 19,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 22,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 1,
+              "steps": 160,
+              "oracle_steps": 25,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 23,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 1,
+              "steps": 160,
+              "oracle_steps": 23,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 26,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 1,
+              "steps": 160,
+              "oracle_steps": 25,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 26,
+              "path_excess": null,
+              "revisions": 0
+            }
+          ]
+        }
+      },
+      "door_closure": {
+        "reusable_model": {
+          "complete": true,
+          "waypoints": 2,
+          "steps": 31,
+          "oracle_steps": 24,
+          "path_excess": 7,
+          "revisions": 1
+        },
+        "frozen_model": {
+          "complete": false,
+          "waypoints": 0,
+          "steps": 160,
+          "oracle_steps": 24,
+          "path_excess": null,
+          "revisions": 0
+        },
+        "cold_model": {
+          "complete": true,
+          "waypoints": 2,
+          "steps": 132,
+          "oracle_steps": 24,
+          "path_excess": 108,
+          "revisions": 0
+        },
+        "greedy": {
+          "complete": false,
+          "waypoints": 0,
+          "steps": 160,
+          "oracle_steps": 24,
+          "path_excess": null,
+          "revisions": 0
+        },
+        "random": {
+          "complete": false,
+          "waypoints": 0,
+          "steps": 160,
+          "oracle_steps": 24,
+          "path_excess": null,
+          "revisions": 0
+        }
+      },
+      "training_world_source_goal_cues": [
+        [
+          1,
+          1
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "heldout_goal_pool": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          7,
+          6
+        ]
+      ]
+    },
+    {
+      "seed": 13,
+      "training_actions": 4500,
+      "source_observed_edge_fraction": 0.8405797101449275,
+      "source_edge_count": 232,
+      "source_training_cpu_seconds": 0.609375,
+      "source_peak_tracemalloc_bytes": 32336,
+      "shallow_source_memory_bytes": 83024,
+      "heldout": {
+        "reusable_model": {
+          "missions": 16,
+          "complete_rate": 1.0,
+          "mean_waypoints": 3.0,
+          "mean_steps": 25.625,
+          "mean_extra_steps_if_complete": 1.5,
+          "total_revisions": 0,
+          "eval_cpu_seconds": 0.046875,
+          "episodes": [
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 36,
+              "oracle_steps": 30,
+              "path_excess": 6,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 27,
+              "oracle_steps": 27,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 17,
+              "oracle_steps": 17,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 29,
+              "oracle_steps": 27,
+              "path_excess": 2,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 24,
+              "oracle_steps": 24,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 22,
+              "oracle_steps": 20,
+              "path_excess": 2,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 25,
+              "oracle_steps": 25,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 27,
+              "oracle_steps": 27,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 23,
+              "oracle_steps": 21,
+              "path_excess": 2,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 28,
+              "oracle_steps": 28,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 21,
+              "oracle_steps": 21,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 22,
+              "oracle_steps": 22,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 31,
+              "oracle_steps": 25,
+              "path_excess": 6,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 22,
+              "oracle_steps": 22,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 24,
+              "oracle_steps": 24,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 32,
+              "oracle_steps": 26,
+              "path_excess": 6,
+              "revisions": 0
+            }
+          ]
+        },
+        "frozen_model": {
+          "missions": 16,
+          "complete_rate": 1.0,
+          "mean_waypoints": 3.0,
+          "mean_steps": 25.625,
+          "mean_extra_steps_if_complete": 1.5,
+          "total_revisions": 0,
+          "eval_cpu_seconds": 0.046875,
+          "episodes": [
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 36,
+              "oracle_steps": 30,
+              "path_excess": 6,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 27,
+              "oracle_steps": 27,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 17,
+              "oracle_steps": 17,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 29,
+              "oracle_steps": 27,
+              "path_excess": 2,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 24,
+              "oracle_steps": 24,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 22,
+              "oracle_steps": 20,
+              "path_excess": 2,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 25,
+              "oracle_steps": 25,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 27,
+              "oracle_steps": 27,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 23,
+              "oracle_steps": 21,
+              "path_excess": 2,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 28,
+              "oracle_steps": 28,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 21,
+              "oracle_steps": 21,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 22,
+              "oracle_steps": 22,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 31,
+              "oracle_steps": 25,
+              "path_excess": 6,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 22,
+              "oracle_steps": 22,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 24,
+              "oracle_steps": 24,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 32,
+              "oracle_steps": 26,
+              "path_excess": 6,
+              "revisions": 0
+            }
+          ]
+        },
+        "cold_model": {
+          "missions": 16,
+          "complete_rate": 1.0,
+          "mean_waypoints": 3.0,
+          "mean_steps": 49.25,
+          "mean_extra_steps_if_complete": 25.125,
+          "total_revisions": 0,
+          "eval_cpu_seconds": 0.046875,
+          "episodes": [
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 65,
+              "oracle_steps": 30,
+              "path_excess": 35,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 78,
+              "oracle_steps": 27,
+              "path_excess": 51,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 34,
+              "oracle_steps": 17,
+              "path_excess": 17,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 65,
+              "oracle_steps": 27,
+              "path_excess": 38,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 33,
+              "oracle_steps": 24,
+              "path_excess": 9,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 43,
+              "oracle_steps": 20,
+              "path_excess": 23,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 50,
+              "oracle_steps": 25,
+              "path_excess": 25,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 73,
+              "oracle_steps": 27,
+              "path_excess": 46,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 21,
+              "oracle_steps": 21,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 60,
+              "oracle_steps": 28,
+              "path_excess": 32,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 69,
+              "oracle_steps": 21,
+              "path_excess": 48,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 48,
+              "oracle_steps": 22,
+              "path_excess": 26,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 39,
+              "oracle_steps": 25,
+              "path_excess": 14,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 33,
+              "oracle_steps": 22,
+              "path_excess": 11,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 32,
+              "oracle_steps": 24,
+              "path_excess": 8,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 45,
+              "oracle_steps": 26,
+              "path_excess": 19,
+              "revisions": 0
+            }
+          ]
+        },
+        "greedy": {
+          "missions": 16,
+          "complete_rate": 0.0625,
+          "mean_waypoints": 0.5625,
+          "mean_steps": 151.3125,
+          "mean_extra_steps_if_complete": 0.0,
+          "total_revisions": 0,
+          "eval_cpu_seconds": 0.046875,
+          "episodes": [
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 30,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 27,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 1,
+              "steps": 160,
+              "oracle_steps": 17,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 27,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 24,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 1,
+              "steps": 160,
+              "oracle_steps": 20,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 1,
+              "steps": 160,
+              "oracle_steps": 25,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 27,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 21,
+              "oracle_steps": 21,
+              "path_excess": 0,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 28,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 21,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 1,
+              "steps": 160,
+              "oracle_steps": 22,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 25,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 22,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 2,
+              "steps": 160,
+              "oracle_steps": 24,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 26,
+              "path_excess": null,
+              "revisions": 0
+            }
+          ]
+        },
+        "random": {
+          "missions": 16,
+          "complete_rate": 0.0625,
+          "mean_waypoints": 0.4375,
+          "mean_steps": 159.0625,
+          "mean_extra_steps_if_complete": 118.0,
+          "total_revisions": 0,
+          "eval_cpu_seconds": 0.015625,
+          "episodes": [
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 30,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": true,
+              "waypoints": 3,
+              "steps": 145,
+              "oracle_steps": 27,
+              "path_excess": 118,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 17,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 27,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 24,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 1,
+              "steps": 160,
+              "oracle_steps": 20,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 1,
+              "steps": 160,
+              "oracle_steps": 25,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 27,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 21,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 28,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 21,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 22,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 1,
+              "steps": 160,
+              "oracle_steps": 25,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 22,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 0,
+              "steps": 160,
+              "oracle_steps": 24,
+              "path_excess": null,
+              "revisions": 0
+            },
+            {
+              "complete": false,
+              "waypoints": 1,
+              "steps": 160,
+              "oracle_steps": 26,
+              "path_excess": null,
+              "revisions": 0
+            }
+          ]
+        }
+      },
+      "door_closure": {
+        "reusable_model": {
+          "complete": true,
+          "waypoints": 2,
+          "steps": 33,
+          "oracle_steps": 24,
+          "path_excess": 9,
+          "revisions": 1
+        },
+        "frozen_model": {
+          "complete": false,
+          "waypoints": 1,
+          "steps": 160,
+          "oracle_steps": 24,
+          "path_excess": null,
+          "revisions": 0
+        },
+        "cold_model": {
+          "complete": true,
+          "waypoints": 2,
+          "steps": 132,
+          "oracle_steps": 24,
+          "path_excess": 108,
+          "revisions": 0
+        },
+        "greedy": {
+          "complete": false,
+          "waypoints": 0,
+          "steps": 160,
+          "oracle_steps": 24,
+          "path_excess": null,
+          "revisions": 0
+        },
+        "random": {
+          "complete": false,
+          "waypoints": 0,
+          "steps": 160,
+          "oracle_steps": 24,
+          "path_excess": null,
+          "revisions": 0
+        }
+      },
+      "training_world_source_goal_cues": [
+        [
+          1,
+          1
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "heldout_goal_pool": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          7,
+          6
+        ]
+      ]
+    }
+  ],
+  "elapsed_wall_seconds": 2.8348470000200905
+}
