@@ -1,0 +1,170 @@
+{
+  "protocol": {
+    "seeds": [
+      12
+    ],
+    "train_steps": 24000,
+    "test_steps": 3000,
+    "epochs": 12,
+    "hidden_units": 24,
+    "episode_length": 100,
+    "novel_layouts": "per-episode procedural, held-out",
+    "world_state_labels_in_training": false,
+    "sensor_channels": "current wall bits, texture, action",
+    "comparison": "identical trajectories, outcome and inputs"
+  },
+  "summary": {
+    "stable": {
+      "observation_only": {
+        "accuracy": 0.6533333333333333,
+        "nll_nats": 0.7340929624881257,
+        "ambiguous_accuracy": 0.46502057613168724
+      },
+      "history_table": {
+        "accuracy": 0.8596666666666667,
+        "nll_nats": 0.28418976311496535,
+        "ambiguous_accuracy": 0.7834362139917695
+      },
+      "trainable_recurrent": {
+        "accuracy": 0.7116666666666667,
+        "nll_nats": 0.916424292560659,
+        "ambiguous_accuracy": 0.6152263374485597
+      }
+    },
+    "changed": {
+      "observation_only": {
+        "accuracy": 0.6576666666666666,
+        "nll_nats": 0.810406837287439,
+        "ambiguous_accuracy": 0.4760204081632653
+      },
+      "history_table": {
+        "accuracy": 0.8596666666666667,
+        "nll_nats": 0.43840832602718893,
+        "ambiguous_accuracy": 0.7852040816326531
+      },
+      "trainable_recurrent": {
+        "accuracy": 0.729,
+        "nll_nats": 0.930708145915978,
+        "ambiguous_accuracy": 0.636734693877551
+      }
+    },
+    "novel": {
+      "observation_only": {
+        "accuracy": 0.5810626702997275,
+        "nll_nats": 1.4489921291700423,
+        "ambiguous_accuracy": 0.37860780984719866
+      },
+      "history_table": {
+        "accuracy": 0.7309264305177112,
+        "nll_nats": 1.3351753097056178,
+        "ambiguous_accuracy": 0.6276174306734579
+      },
+      "trainable_recurrent": {
+        "accuracy": 0.622275204359673,
+        "nll_nats": 1.3046209084399265,
+        "ambiguous_accuracy": 0.5019807583474816
+      }
+    }
+  },
+  "rows": [
+    {
+      "seed": 12,
+      "training_loss_per_epoch": [
+        3.0135401440801837,
+        2.3900831903189603,
+        2.009802676870171,
+        1.7171357966335612,
+        1.5212080765328095,
+        1.3741136711408959,
+        1.2618303644256368,
+        1.1750190306317212,
+        1.1040350954824858,
+        1.0391651930204635,
+        0.9831906809142696,
+        0.9280632995618213
+      ],
+      "train_cpu_seconds": 5.765625,
+      "peak_traced_allocation_bytes": 1246994,
+      "recurrent_parameter_bytes": 9056,
+      "tabular_context_count": 3564,
+      "results": {
+        "stable": {
+          "observation_only": {
+            "samples": 3000,
+            "accuracy": 0.6533333333333333,
+            "nll_nats": 0.7340929624881257,
+            "perplexity": 2.083591239728964,
+            "ambiguous_samples": 1944,
+            "ambiguous_accuracy": 0.46502057613168724
+          },
+          "history_table": {
+            "samples": 3000,
+            "accuracy": 0.8596666666666667,
+            "nll_nats": 0.28418976311496535,
+            "perplexity": 1.3286850422437313,
+            "ambiguous_samples": 1944,
+            "ambiguous_accuracy": 0.7834362139917695
+          },
+          "trainable_recurrent": {
+            "samples": 3000,
+            "accuracy": 0.7116666666666667,
+            "nll_nats": 0.916424292560659,
+            "ambiguous_accuracy": 0.6152263374485597,
+            "ambiguous_samples": 1944
+          }
+        },
+        "changed": {
+          "observation_only": {
+            "samples": 3000,
+            "accuracy": 0.6576666666666666,
+            "nll_nats": 0.810406837287439,
+            "perplexity": 2.2488227055224335,
+            "ambiguous_samples": 1960,
+            "ambiguous_accuracy": 0.4760204081632653
+          },
+          "history_table": {
+            "samples": 3000,
+            "accuracy": 0.8596666666666667,
+            "nll_nats": 0.43840832602718893,
+            "perplexity": 1.5502377806355776,
+            "ambiguous_samples": 1960,
+            "ambiguous_accuracy": 0.7852040816326531
+          },
+          "trainable_recurrent": {
+            "samples": 3000,
+            "accuracy": 0.729,
+            "nll_nats": 0.930708145915978,
+            "ambiguous_accuracy": 0.636734693877551,
+            "ambiguous_samples": 1960
+          }
+        },
+        "novel": {
+          "observation_only": {
+            "samples": 2936,
+            "accuracy": 0.5810626702997275,
+            "nll_nats": 1.4489921291700423,
+            "perplexity": 4.2588200109205205,
+            "ambiguous_samples": 1767,
+            "ambiguous_accuracy": 0.37860780984719866
+          },
+          "history_table": {
+            "samples": 2936,
+            "accuracy": 0.7309264305177112,
+            "nll_nats": 1.3351753097056178,
+            "perplexity": 3.800662180986972,
+            "ambiguous_samples": 1767,
+            "ambiguous_accuracy": 0.6276174306734579
+          },
+          "trainable_recurrent": {
+            "samples": 2936,
+            "accuracy": 0.622275204359673,
+            "nll_nats": 1.3046209084399265,
+            "ambiguous_accuracy": 0.5019807583474816,
+            "ambiguous_samples": 1767
+          }
+        }
+      }
+    }
+  ],
+  "elapsed_wall_seconds": 7.14115340000717
+}
