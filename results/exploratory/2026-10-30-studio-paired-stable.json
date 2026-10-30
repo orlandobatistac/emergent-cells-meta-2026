@@ -1,0 +1,355 @@
+{
+  "protocol": {
+    "seed_start": 56001,
+    "trials": 12,
+    "changed": false,
+    "goals": 3,
+    "max_actions": 160,
+    "event_message_budget": 80,
+    "paired_seeds": true,
+    "exploratory_not_preregistered": true,
+    "authored_policy_and_messages": true,
+    "zero_budget_still_has_direct_neighbor_handshake": true,
+    "no_physical_node_failures": true,
+    "process_cpu_seconds": 1.6875
+  },
+  "summary": {
+    "event": {
+      "completed": 12,
+      "completion_rate": 1,
+      "mean_steps": 95.5,
+      "mean_waypoints": 3,
+      "mean_messages": 2490.8333333333335
+    },
+    "no_messages": {
+      "completed": 9,
+      "completion_rate": 0.75,
+      "mean_steps": 112.83333333333333,
+      "mean_waypoints": 2.6666666666666665,
+      "mean_messages": 0
+    },
+    "synchronous": {
+      "completed": 12,
+      "completion_rate": 1,
+      "mean_steps": 90,
+      "mean_waypoints": 3,
+      "mean_messages": 98913.33333333333
+    }
+  },
+  "paired_event_only_successes": 3,
+  "paired_no_message_only_successes": 0,
+  "records": [
+    {
+      "seed": 56001,
+      "outcomes": {
+        "event": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 48,
+          "messages": 312,
+          "discovered_cells": 44
+        },
+        "no_messages": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 48,
+          "messages": 0,
+          "discovered_cells": 44
+        },
+        "synchronous": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 48,
+          "messages": 24200,
+          "discovered_cells": 43
+        }
+      }
+    },
+    {
+      "seed": 56002,
+      "outcomes": {
+        "event": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 86,
+          "messages": 1780,
+          "discovered_cells": 66
+        },
+        "no_messages": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 68,
+          "messages": 0,
+          "discovered_cells": 58
+        },
+        "synchronous": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 86,
+          "messages": 88080,
+          "discovered_cells": 66
+        }
+      }
+    },
+    {
+      "seed": 56003,
+      "outcomes": {
+        "event": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 79,
+          "messages": 1714,
+          "discovered_cells": 63
+        },
+        "no_messages": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 81,
+          "messages": 0,
+          "discovered_cells": 62
+        },
+        "synchronous": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 79,
+          "messages": 74220,
+          "discovered_cells": 62
+        }
+      }
+    },
+    {
+      "seed": 56004,
+      "outcomes": {
+        "event": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 38,
+          "messages": 568,
+          "discovered_cells": 37
+        },
+        "no_messages": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 38,
+          "messages": 0,
+          "discovered_cells": 37
+        },
+        "synchronous": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 38,
+          "messages": 17320,
+          "discovered_cells": 37
+        }
+      }
+    },
+    {
+      "seed": 56005,
+      "outcomes": {
+        "event": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 89,
+          "messages": 1848,
+          "discovered_cells": 68
+        },
+        "no_messages": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 129,
+          "messages": 0,
+          "discovered_cells": 68
+        },
+        "synchronous": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 93,
+          "messages": 97620,
+          "discovered_cells": 68
+        }
+      }
+    },
+    {
+      "seed": 56006,
+      "outcomes": {
+        "event": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 71,
+          "messages": 2012,
+          "discovered_cells": 61
+        },
+        "no_messages": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 79,
+          "messages": 0,
+          "discovered_cells": 64
+        },
+        "synchronous": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 71,
+          "messages": 57440,
+          "discovered_cells": 60
+        }
+      }
+    },
+    {
+      "seed": 56007,
+      "outcomes": {
+        "event": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 152,
+          "messages": 4776,
+          "discovered_cells": 69
+        },
+        "no_messages": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 142,
+          "messages": 0,
+          "discovered_cells": 59
+        },
+        "synchronous": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 160,
+          "messages": 239140,
+          "discovered_cells": 69
+        }
+      }
+    },
+    {
+      "seed": 56008,
+      "outcomes": {
+        "event": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 117,
+          "messages": 3128,
+          "discovered_cells": 69
+        },
+        "no_messages": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 153,
+          "messages": 0,
+          "discovered_cells": 65
+        },
+        "synchronous": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 97,
+          "messages": 109380,
+          "discovered_cells": 69
+        }
+      }
+    },
+    {
+      "seed": 56009,
+      "outcomes": {
+        "event": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 137,
+          "messages": 4441,
+          "discovered_cells": 69
+        },
+        "no_messages": {
+          "completed": false,
+          "waypoints": 2,
+          "steps": 160,
+          "messages": 0,
+          "discovered_cells": 69
+        },
+        "synchronous": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 91,
+          "messages": 96880,
+          "discovered_cells": 69
+        }
+      }
+    },
+    {
+      "seed": 56010,
+      "outcomes": {
+        "event": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 97,
+          "messages": 3145,
+          "discovered_cells": 69
+        },
+        "no_messages": {
+          "completed": false,
+          "waypoints": 2,
+          "steps": 160,
+          "messages": 0,
+          "discovered_cells": 69
+        },
+        "synchronous": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 101,
+          "messages": 119500,
+          "discovered_cells": 69
+        }
+      }
+    },
+    {
+      "seed": 56011,
+      "outcomes": {
+        "event": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 144,
+          "messages": 4261,
+          "discovered_cells": 69
+        },
+        "no_messages": {
+          "completed": false,
+          "waypoints": 1,
+          "steps": 160,
+          "messages": 0,
+          "discovered_cells": 69
+        },
+        "synchronous": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 130,
+          "messages": 176600,
+          "discovered_cells": 69
+        }
+      }
+    },
+    {
+      "seed": 56012,
+      "outcomes": {
+        "event": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 88,
+          "messages": 1905,
+          "discovered_cells": 65
+        },
+        "no_messages": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 136,
+          "messages": 0,
+          "discovered_cells": 65
+        },
+        "synchronous": {
+          "completed": true,
+          "waypoints": 3,
+          "steps": 86,
+          "messages": 86580,
+          "discovered_cells": 65
+        }
+      }
+    }
+  ]
+}

@@ -42,6 +42,15 @@ small.kicker{display:block;color:var(--teal);text-transform:uppercase;font-size:
 .chatbar{display:flex;gap:7px;margin-top:12px}.chatbar input{flex:1;min-width:0}.chatbar button{min-width:60px}
 .suggestions{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}.suggestions button{padding:6px 9px;font-size:10px;border-radius:99px}
 .disclaimer{max-width:1500px;margin:0 auto 25px;padding:0 28px;color:#8294a9;font-size:11px;line-height:1.7}
+.evidence{margin-top:22px;border-top:1px solid var(--edge);padding-top:5px}
+.evidence p{font-size:11px;line-height:1.5;color:var(--muted)}
+.evidence select{max-width:170px}
+.evidence table{border-collapse:collapse;width:100%;font-size:11px;margin:12px 0}
+.evidence th,.evidence td{padding:9px 7px;border-bottom:1px solid #2a394c;text-align:left}
+.evidence th{color:#a8bcd0;font-weight:600}
+.evidence td{font-variant-numeric:tabular-nums}
+#evidence-result{min-height:42px;overflow:auto}
+
 #notice{font-size:11px;color:var(--teal);margin:12px 0 0;min-height:17px}
 @media(max-width:1250px){main{grid-template-columns:240px minmax(340px,1fr)}.chat{grid-column:1/-1;min-height:360px}#messages{max-height:270px;min-height:220px}}
 @media(max-width:720px){header{padding:18px}main{padding:12px;grid-template-columns:1fr}.chat{grid-column:auto}.metrics{grid-template-columns:repeat(2,1fr)}.panel{padding:16px}#gridwrap{min-height:300px}}
@@ -63,7 +72,7 @@ small.kicker{display:block;color:var(--teal);text-transform:uppercase;font-size:
  <option value="stochastic">Stochastic motors · belief memory</option>
  <option value="both">Stochastic motors + closed passage</option>
  </select></div>
- <div class="field"><label for="controller">Navigation network</label><select id="controller"><option value="event">Event-driven local cells</option><option value="local">Synchronous diffusion</option></select></div>
+ <div class="field"><label for="controller">Navigation network</label><select id="controller"><option value="event">Event-driven local cells</option><option value="no_messages">Event cells · queued messages off</option><option value="local">Synchronous diffusion</option></select></div>
  <div class="controls"><button id="reset" class="wide primary">Start new mission</button><button id="step">Advance 1</button><button id="run20">Advance 20</button><button id="finish" class="wide">Autopilot · up to 160 steps</button><button id="fault" class="wide">Simulate loss of one cell</button></div>
  <p id="notice"></p>
  <h3>Scientific boundaries</h3>
@@ -80,10 +89,22 @@ small.kicker{display:block;color:var(--teal);text-transform:uppercase;font-size:
    <div class="metric"><strong id="hypotheses">1</strong><span>Pose hypotheses</span></div>
  </div>
  <h3>Messages and recent actions</h3><p class="sub">Messages: <b id="messages-delivered">0</b></p><div id="actions"></div>
+ <div class="evidence">
+  <h3>Counterfactual evidence · paired seeds</h3>
+  <p>Run the same hidden maze seeds with bounded queued messages, disabled queued messages (neighbor handshakes remain), and synchronous diffusion. The active mission is preserved. These are exploratory tests of authored policies.</p>
+  <div class="controls">
+   <select id="trials" aria-label="Number of paired seeds"><option value="4">4 paired seeds</option><option value="8" selected>8 paired seeds</option><option value="12">12 paired seeds</option></select>
+   <button id="compare" class="primary">Compare controls</button>
+   <button id="download-evidence" class="wide" disabled>Export evidence JSON</button>
+  </div>
+  <div id="evidence-result" aria-live="polite"><p>No paired experiment has run in this session.</p></div>
+ </div>
 </section>
 <section class="panel chat">
   <small class="kicker">03 / Local interaction</small><h2>Research assistant</h2>
-  <p class="sub">Built-in agent commands work offline. Open-ended explanations use an optional separate local Qwen language model.</p>
+  <p class="sub">Built-in agent commands work offline. Explanations use local Ollama or optional Meta Muse Spark through Model API. These models are distinct from the experimental cells.</p>
+  <div class="field"><label for="provider">Explanation model</label><select id="provider"><option value="local">Local Ollama · Qwen 7B (offline)</option><option value="meta">Meta Muse Spark 1.3 · API key required</option></select></div>
+  <p class="sub" id="meta-state">Meta Model API availability is checked locally.</p>
   <div id="messages"><div class="msg ai">Welcome to Emergent Cells Studio. Start a mission, explore the local world or ask about its internal state.<small>LOCAL ENGINE</small></div></div>
   <div class="suggestions">
     <button data-q="status">Show status</button>
@@ -96,7 +117,7 @@ small.kicker{display:block;color:var(--teal);text-transform:uppercase;font-size:
 <p class="disclaimer">Research prototype. Agent input is limited to local sensor readings; the on-screen telemetry is for human inspection. The local language model is a pre-existing foundation model, not a model trained from cellular interactions. No external account, cloud API or privileged robot hardware is required.</p>
 <script>
 "use strict";
-let state=null,busy=false;
+let state=null,busy=false,evidence=null;
 const el=id=>document.getElementById(id);
 const api=async(path,data)=>{let o=await fetch(path,{method:data?'POST':'GET',headers:{'Content-Type':'application/json'},body:data?JSON.stringify(data):undefined});if(!o.ok){const e=await o.text();throw new Error(e.slice(0,190))}return await o.json()};
 const notice=t=>el('notice').textContent=t;
@@ -127,15 +148,15 @@ function draw(s){
  const [ox,oy]=cpos(0,0);ctx.font='bold 10px Segoe UI';ctx.fillStyle='#f3b96c';ctx.fillText('START',ox,oy-6);
 }
 function render(s){
- state=s;el('goals').textContent=s.waypoints+'/3';el('steps').textContent=s.steps;el('cells').textContent=s.discovered_cells;el('hypotheses').textContent=s.hypotheses;
+ state=s;el('meta-state').textContent=s.meta_configured?'Meta Model API configured on this server.':'Meta Model API not configured; offline Qwen remains available.';el('goals').textContent=s.waypoints+'/3';el('steps').textContent=s.steps;el('cells').textContent=s.discovered_cells;el('hypotheses').textContent=s.hypotheses;
  el('mission').textContent=s.completed?'COMPLETED':s.done?'BUDGET EXHAUSTED':'EXPLORING';el('mission').style.color=s.completed?'#4fe0bc':'#b4bacd';
  el('messages-delivered').textContent=(s.messages||0).toLocaleString();
  el('actions').innerHTML=(s.latest_actions||[]).map(x=>'<span>#'+x.step+' '+x.direction+' '+(x.reward>0?'✦':'')+'</span>').join('');
  draw(s);
 }
 async function handle(fn){
- if(busy)return;busy=true;['reset','step','run20','finish','fault','send'].forEach(x=>el(x).disabled=true);
- try{await fn()}catch(e){notice('Request failed: '+e.message)}finally{busy=false;['reset','step','run20','finish','fault','send'].forEach(x=>el(x).disabled=false)}
+ if(busy)return;busy=true;['reset','step','run20','finish','fault','send','compare'].forEach(x=>el(x).disabled=true);
+ try{await fn()}catch(e){notice('Request failed: '+e.message)}finally{busy=false;['reset','step','run20','finish','fault','send','compare'].forEach(x=>el(x).disabled=false)}
 }
 el('reset').onclick=()=>handle(async()=>{
  const m=el('mode').value,v=parseInt(el('seed').value,10);
@@ -146,6 +167,38 @@ el('step').onclick=()=>handle(async()=>{render(await api('/api/step',{count:1}))
 el('run20').onclick=()=>handle(async()=>{render(await api('/api/step',{count:20}));notice('Agent advanced with local observations.')});
 el('finish').onclick=()=>handle(async()=>{render(await api('/api/step',{count:160}));notice('Agent reached a terminal state or exhausted 160 actions.')});
 el('fault').onclick=()=>handle(async()=>{render(await api('/api/fault',{}));notice('Simulated local cell-memory failure. Other cells continue operating.')});
+function showEvidence(result){
+ evidence=result;
+ const summary=result.summary, total=result.protocol.trials;
+ const labels=[['event','Local messages'],['no_messages','No queued messages'],['synchronous','Synchronous']];
+ const rows=labels.map(([key,label])=>{
+   const x=summary[key];
+   return '<tr><td>'+label+'</td><td>'+x.completed+'/'+total+'</td><td>'+x.mean_steps.toFixed(1)+'</td><td>'+x.mean_messages.toFixed(0)+'</td></tr>';
+ }).join('');
+ el('evidence-result').innerHTML='<table><thead><tr><th>Controller</th><th>Missions</th><th>Actions avg.</th><th>Delivery/update ops avg.</th></tr></thead><tbody>'+rows+'</tbody></table>'+
+ '<p>Paired event-only wins: '+result.paired_event_only_successes+
+ '; no-message-only wins: '+result.paired_no_message_only_successes+
+ '. CPU time: '+result.protocol.process_cpu_seconds.toFixed(2)+' s. Event counts are queued deliveries; synchronous counts are local value updates, not network packets. Exploratory, not preregistered; no energy measurement.</p>';
+ el('download-evidence').disabled=false;
+}
+el('compare').onclick=()=>handle(async()=>{
+ const seed=Number(el('seed').value),trials=Number(el('trials').value);
+ const m=el('mode').value,changed=m==='changed';
+ if(m==='stochastic'||m==='both'){
+  notice('Paired comparison currently supports deterministic original/closed-passage worlds only.');
+  return;
+ }
+ notice('Running paired controls on unchanged mission state...');
+ showEvidence(await api('/api/evidence',{seed,trials,changed}));
+ notice('Paired comparison complete. Download its full seed-level evidence.');
+});
+el('download-evidence').onclick=()=>{
+ if(!evidence)return;
+ const blob=new Blob([JSON.stringify(evidence,null,2)],{type:'application/json'});
+ const url=URL.createObjectURL(blob),link=document.createElement('a');
+ link.href=url;link.download='emergent-cells-paired-'+evidence.protocol.seed_start+'.json';
+ document.body.appendChild(link);link.click();link.remove();URL.revokeObjectURL(url);
+};
 function addMessage(text,type,src){
  const div=document.createElement('div');div.className='msg '+type;
  div.textContent=text;if(src){let small=document.createElement('small');small.textContent=src;div.appendChild(small)}
@@ -156,7 +209,7 @@ async function ask(q){
  addMessage(q,'user');el('message').value='';
  await handle(async()=>{
   notice('Processing local request…');
-  const result=await api('/api/chat',{message:q});
+  const result=await api('/api/chat',{message:q,provider:el('provider').value});
   addMessage(result.answer,'ai',result.powered_by.toUpperCase());
   if(result.status)render(result.status);notice('Ready');
  });
