@@ -17,6 +17,8 @@ Open **http://127.0.0.1:8765/**, start a seeded mission, advance the cellular na
 
 **[Product + scientific validation](docs/EMERGENT_CELLS_STUDIO_AND_R2_EVENTS_2026-10-29.md)**
 
+**October 30 Studio upgrade:** Compare three deterministic controllers on matched seeds in the new **Counterfactual evidence** panel, disable queued messages interactively, and export the paired seed-level record as JSON. The disabled-queue comparator retains direct observed-neighbor handshakes; it is *not* a fully disconnected cell network. The active mission is not changed by comparisons. Optional **Meta Muse Spark 1.3** explanations are supported through `MODEL_API_KEY`; without that key, offline local Qwen remains available. The external language model never controls the scientific policy. See [the strategic review and upgrade notes](docs/STRATEGIC_REVIEW_AND_STUDIO_UPGRADE_2026-10-30.md).
+
 ## Active research objective
 
 **Eliminate two artificial dependencies:**
@@ -28,7 +30,7 @@ The environment may hold hidden truth **only for evaluation**. An agent must not
 
 **[Full research roadmap (R0-R5)](docs/RESEARCH_ROADMAP_NO_ORACLES_2026-10-28.md)** | **[R1: predictive latent state](https://github.com/orlandobatistac/emergent-cells-meta-2026/issues/21)**
 
-## Current status (October 29, 2026)
+## Current status (scientific results through October 29, 2026)
 
 | Research line | Evidence | Status |
 |---|---|---|

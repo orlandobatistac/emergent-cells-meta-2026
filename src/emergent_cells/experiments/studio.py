@@ -18,6 +18,8 @@ from urllib import error, request
 
 from .belief_navigation import BeliefExplorer
 from .event_cells import EventDrivenCells
+from .studio_evidence import compare_controllers
+from .studio_meta import ask_meta_model, is_configured, MODEL as META_MODEL
 from .local_value_cells import LocalValueCells
 from .stochastic_motor import SlipWorld, calibrate
 from .sensor_world import SensorEpisode
@@ -41,8 +43,8 @@ class Laboratory:
             raise ValueError("seed must be an integer in [0,10000000]")
         if type(changed) is not bool or type(stochastic) is not bool:
             raise ValueError("world flags must be booleans")
-        if controller not in ("event","local"):
-            raise ValueError("controller must be event or local")
+        if controller not in ("event","no_messages","local"):
+            raise ValueError("controller must be event, no_messages or local")
         with self._guard:
             self.seed=seed
             self.changed=changed
@@ -60,8 +62,8 @@ class Laboratory:
                                            aggregation="best")
             else:
                 self.world=SensorEpisode(changed=changed,limit=160)
-                self.policy=(EventDrivenCells(seed,budget=80)
-                             if controller=="event" else
+                self.policy=(EventDrivenCells(seed,budget=(80 if controller=="event" else 0))
+                             if controller in ("event","no_messages") else
                              LocalValueCells(seed,mode="diffusion",rounds=10))
             self.reading=self.world.reset(seed) if stochastic else self.world.reset(seed,goals=3)
             if stochastic:self.policy.reset(self.reading)
@@ -75,7 +77,7 @@ class Laboratory:
         if self.stochastic:
             p=self.policy.beam[0]
             return p.walls, p.position, len(self.policy.beam)
-        if self.controller=="event":
+        if self.controller in ("event","no_messages"):
             return {pos:tuple(c.walls) for pos,c in self.policy.cells.items()},self.policy.position,1
         return {pos:tuple(a not in actions for a in range(4))
                 for pos,actions in self.policy.open_actions.items()}, self.policy.position,1
@@ -102,22 +104,25 @@ class Laboratory:
             "current_reading":current,
             "estimated_position":list(pos),
             "hypotheses":hypotheses,
-            "faults_injected":(0 if self.stochastic or self.controller!="event"
+            "faults_injected":(0 if self.stochastic or self.controller not in ("event","no_messages")
                                else self.policy.failures_injected),
-            "cells_relearned":(0 if self.stochastic or self.controller!="event"
+            "cells_relearned":(0 if self.stochastic or self.controller not in ("event","no_messages")
                                else self.policy.reobserved_failed_cells),
             "discovered_cells":len(cells),
             "cells":[{"x":x,"y":y,"walls":list(walls)}
                      for (x,y),walls in sorted(cells.items())],
             "messages":(self.policy.message_ops if self.stochastic else
-                        self.policy.messages_delivered if self.controller=="event" else
+                        self.policy.messages_delivered if self.controller in ("event","no_messages") else
                         self.policy.local_message_updates),
             "latest_actions":self.history[-12:],
             "policy":("multi-hypothesis belief explorer" if self.stochastic
                       else "event-driven local cells" if self.controller=="event"
+                      else "event-driven cells without queued messages" if self.controller=="no_messages"
                       else "synchronous local value propagation"),
             "policy_disclosure":"Engineered local planning and relative motor priors; not a general learned AGI.",
             "language_model":MODEL,
+            "meta_model":META_MODEL,
+            "meta_configured":is_configured(),
             "foundation_model_distinct_from_cells":True,
         }
 
@@ -149,7 +154,7 @@ class Laboratory:
     def inject_cell_failure(self):
         """Erase a visited noncurrent cell. Models memory loss, not a PC failure."""
         with self._guard:
-            if self.stochastic or self.controller!="event":
+            if self.stochastic or self.controller not in ("event","no_messages"):
                 raise ValueError("Cell failure simulation requires event-driven cells")
             candidates=[p for p in self.policy.cells if p!=self.policy.position]
             if not candidates:
@@ -231,6 +236,12 @@ def create_app(lab=None):
 
     class Chat(BaseModel):
         message: str = Field(min_length=1,max_length=1000)
+        provider: str = "local"
+
+    class EvidenceRequest(BaseModel):
+        seed: int = Field(ge=0,le=10000000)
+        trials: int = Field(default=8,ge=1,le=12)
+        changed: bool = False
 
     @app.get("/",response_class=HTMLResponse)
     def home():
@@ -260,12 +271,30 @@ def create_app(lab=None):
         try:return laboratory.inject_cell_failure()
         except ValueError as exc:raise HTTPException(status_code=422,detail=str(exc))
 
+    @app.post("/api/evidence")
+    def evidence(data:EvidenceRequest):
+        try:
+            return compare_controllers(start_seed=data.seed, trials=data.trials,
+                                       changed=data.changed)
+        except ValueError as exc:
+            raise HTTPException(status_code=422,detail=str(exc))
+
     @app.post("/api/chat")
     def chat(data:Chat):
+        if data.provider not in ("local","meta"):
+            raise HTTPException(status_code=422,detail="Unsupported language provider")
         result=laboratory.local_command(data.message)
         if result is not None:
             answer,state=result
             return {"answer":answer,"status":state,"powered_by":"local engine"}
+        if data.provider=="meta":
+            state=laboratory.status()
+            safe={k:state[k] for k in
+                  ("seed","steps","waypoints","completed","discovered_cells",
+                   "hypotheses","controller","policy")}
+            return {"answer":ask_meta_model(data.message,safe),
+                    "status":state,
+                    "powered_by":"optional separate Meta Muse Spark model"}
         return {"answer":laboratory.ask_local_model(data.message),
                 "status":laboratory.status(),
                 "powered_by":"optional separate local Ollama model"}
