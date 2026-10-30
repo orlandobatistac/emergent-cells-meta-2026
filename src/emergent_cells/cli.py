@@ -37,6 +37,12 @@ EXPERIMENTS = {
     "learned-motor-code": "learned_motor_code",
     "stochastic-motor": "stochastic_motor",
     "switching-motor": "switching_motor",
+    "belief-navigation": "belief_navigation",
+    "studio": "studio",
+    "event-cells": "event_cells",
+    "event-fault": "event_cell_fault",
+    "event-cpu-profile": "event_cpu_profile",
+    "event-weight-tuning": "event_reward_tuning",
 }
 
 
