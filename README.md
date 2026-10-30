@@ -4,6 +4,19 @@
 
 Emergent Cells Lab investigates whether modular learners can build useful world representations, share knowledge, and act toward multi-step goals without an externally supplied global map or a hand-coded central planner. Our target is an experimentally verifiable architecture that can train and run on ordinary computers, not a claim of artificial general intelligence.
 
+## Launch the working local product
+
+**Emergent Cells Studio** runs on an ordinary laptop as an interactive research agent, not just command-line benchmarks.
+
+```powershell
+python -m pip install -e ".[studio]"
+python run.py studio --host 127.0.0.1 --port 8765
+```
+
+Open **http://127.0.0.1:8765/**, start a seeded mission, advance the cellular navigator, view its *locally observed map* and bounded messages, **simulate the loss of one cell's local memory** (not a physical node), and issue chat commands such as `run 20` or `status`. Optional open-ended chat is powered by a **separate existing local Ollama Qwen 2.5 Coder 7B** model, not a model learned by emergent cells. No cloud API, external account or browser automation is required.
+
+**[Product + scientific validation](docs/EMERGENT_CELLS_STUDIO_AND_R2_EVENTS_2026-10-29.md)**
+
 ## Active research objective
 
 **Eliminate two artificial dependencies:**
@@ -30,7 +43,10 @@ The environment may hold hidden truth **only for evaluation**. An agent must not
 | **R1: local-value spatial-memory baseline (Oct 29)** | Programmed relative odometry plus locally observed cell-memory/value diffusion completed **97/100** stable and **88/100** closed-passage three-goal missions (and **95/100** on separately generated new same-family maps) in an isolated sandbox **and reproduced identically on LANDITO-LAPTOP**, versus matched history **50/100** and **31/100**. The relative motor model and value-update policy are authored | **Strong engineered non-oracle baseline; learned recurrent motor-state/planning still unsolved** |
 | **R1: learned motor command calibration (Oct 29)** | A Bayesian 24-permutation motor-code learner identifies commands using locally observed compass-wall sensors and new bumper feedback. **100/100 mappings** recovered under 8% contact noise, with **93/100** three-goal completions in each stable/changed maze, matching the known-mapping control; at 20% training noise on 50 procedural layouts **47/50** completed, versus zero without calibration | **Motor-code mapping learned; relative coordinate basis, wall orientation, and value propagation still programmed** |
 | **R1: stochastic motor dynamics and hidden remapping (Oct 29)** | Local-noise calibration plus sensor fusion achieved **87.4%** movement-outcome prediction on original-world trials (versus **66.3%** assume-move); uncertain slip navigation remains challenging. Under unannounced motor remapping after 35 actions, online adaptation completed **66/100** matched missions across two world settings versus **4/100** frozen (50 seeds per setting) | **Online dynamics adaptation demonstrated; unknown geometry, robust localization and learned local messaging remain open** |
-| R2-R5 | Communication, decentralized planning, generalization, and measured efficiency | Planned; no success claims |
+| **R2: bounded local event-driven cells (Oct 29)** | New agent controls and local-cell messages completed **92/100 stable**, **91/100 changed** and **94/100 procedural** three-goal missions with at most 80 local messages delivered per action. Zero-message ablation: **77% / 63% / 78%**. Mean observed neighbor-update operations about **40x fewer** than global synchronous sweeps; separate 30-seed process CPU profile about **10.8x faster** | **Working event-driven messaging baseline; shared update rule authored, central Python delivery scheduler still present** |
+| **Belief-driven uncertain-motor navigation (Oct 29)** | Eight parallel local-motion hypotheses with weighted action consensus solved **17/40 stable** vs **6/40** with a single hypothesis; **13/40 changed** vs **9/40**, with substantial extra compute | **Partial benefit at higher cost, general robust localization still open** |
+| **Emergent Cells Studio (Oct 29)** | A functional localhost FastAPI browser application runs a 160-step agent mission, visualizes discovered relative cells and exposes bounded offline chat commands, with optional distinct local Ollama assistant | **Runnable restricted lab product; not a learned language model/AGI** |
+| R2-R5 | Communication, decentralized planning, generalization, and measured efficiency | Other stages open; no general intelligence claims |
 
 Tests verify a defined source-code observation contract, **not** a sandboxed security barrier against a malicious agent. Python world attributes remain available to the evaluation harness. We have not demonstrated a decentralized reasoning agent.
 
@@ -79,6 +95,18 @@ python run.py stochastic-motor --seeds 32001,32002,32003,32004,32005 --calibrati
 # R1 hidden command remapping with online recovery:
 python run.py switching-motor --seeds 31001,31002,31003,31004,31005 --switch-at 35 --window 28 --margin 4 --output results/runs/motor-switch.json
 
+# Local multi-hypothesis belief-state under stochastic motor slip (research):
+python run.py belief-navigation --seeds 43001,43002,43003,43004,43005 --width 8 --rounds 2 --output results/runs/belief.json
+
+# Bounded direct-neighbor message-passing with zero-message controls:
+python run.py event-cells --seeds 41001,41002,41003,41004,41005 --budget 80 --output results/runs/events.json
+
+# New same-family layouts with bounded local event delivery:
+python run.py event-cells --seeds 42001,42002,42003,42004,42005 --procedural --budget 80 --output results/runs/events-procedural.json
+
+# Interactive browser product:
+python run.py studio --host 127.0.0.1 --port 8765
+
 # Earlier privileged coordinate+BFS comparison (not the target architecture):
 python run.py multistep-world --seeds 2001,2002,2003,2004,2005,2006,2007,2008,2009,2010 --train-steps 7000 --missions 30 --output results/runs/multistep.json
 
@@ -98,6 +126,7 @@ For specific runner options, use `python run.py <experiment> --help`. Results wr
 - **[R1 locally observed value cells](docs/R1_LOCAL_VALUE_CELLS_2026-10-29.md)**: 100-seed validation reproduced exactly on LANDITO-LAPTOP, with internal odometry, local diffusion and explicit engineering limitations.
 - **[R1 learned motor-code calibration](docs/R1_MOTOR_CALIBRATION_2026-10-29.md)**: Bayesian calibration from local wall/contact sensors, noise/sample-efficiency tests and 100-seed laptop validation.
 - **[R1 stochastic motor dynamics and switching](docs/R1_STOCHASTIC_SWITCHING_MOTOR_2026-10-29.md)**: noisy sensor fusion, online remapping, independent seeded validations and negative spatial-drift findings.
+- **[Emergent Cells Studio and event-driven messages](docs/EMERGENT_CELLS_STUDIO_AND_R2_EVENTS_2026-10-29.md)**: actual localhost agent product; 300 held-out original, changed and procedural experiments; CPU/process benchmark, and probabilistic-belief limitations.
 - **[R1 reward-trained recurrent policies](docs/R1_REWARD_TRAINED_POLICY_2026-10-28.md)**: delayed-cue memory-dependent success, failed sparse-maze REINFORCE, higher-resolution state controls and full raw evidence.
 - **[Three-waypoint model study](docs/MULTISTEP_WORLD_TRANSFER_2026-10-28.md)**: positive transfer and explicit coordinate/BFS limitations.
 - **[Sequential transfer study](docs/SEQUENTIAL_TRANSFER_2026-10-28.md)**: local memory recombination and negative transfer controls.

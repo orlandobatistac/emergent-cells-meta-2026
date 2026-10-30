@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Emergent Cells Studio — Local AI Laboratory</title>
+<style>
+:root{color-scheme:dark;--bg:#080c14;--panel:#111926;--edge:#283449;--ink:#e9eef9;--muted:#8796ae;--teal:#4fe0bc;--amber:#f9b864;--violet:#b7a3ff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 45% -10%,#182b41 0%,#090d15 50%);color:var(--ink);font-family:Inter,"Segoe UI",system-ui,sans-serif;font-size:14px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:20px 30px;border-bottom:1px solid #ffffff13}
+.brand{display:flex;align-items:center;gap:12px}.mark{width:38px;height:38px;background:linear-gradient(150deg,#45e0be,#6d78f2);border-radius:12px;display:grid;place-items:center;color:#091523;font-weight:900;font-size:23px;box-shadow:0 0 20px #4fe0bc33}
+h1{font-size:19px;font-weight:720;letter-spacing:-.6px;margin:0}header small{display:block;color:var(--muted);margin-top:3px;letter-spacing:.5px;font-size:10px}
+.health{display:flex;align-items:center;gap:9px;font-size:12px;color:#acdcca;border:1px solid #274e45;padding:9px 12px;border-radius:50px;background:#122d27}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--teal);box-shadow:0 0 9px var(--teal)}
+main{max-width:1540px;padding:24px 28px 36px;margin:0 auto;display:grid;grid-template-columns:265px minmax(340px,1fr) 345px;gap:17px}
+.panel{border:1px solid var(--edge);background:linear-gradient(145deg,#141e2b,#0d1421);border-radius:17px;padding:20px;min-width:0;box-shadow:0 12px 35px #0003}
+.panel h2{margin:0 0 5px;font-size:15px;font-weight:680}.sub{font-size:11px;line-height:1.6;color:var(--muted);margin:0 0 19px}
+h3{font-size:11px;letter-spacing:1.2px;color:#a1afc3;margin:20px 0 12px;text-transform:uppercase}
+label{display:block;font-size:12px;color:#b5c3d4;margin-bottom:7px}
+input,select{background:#0b121d;border:1px solid #334057;border-radius:10px;padding:10px 11px;color:#eaf3fb;font:inherit;width:100%;outline:none}
+input:focus,select:focus{border-color:var(--teal)}
+.field{margin-bottom:17px}
+button{border-radius:10px;background:#1a2937;border:1px solid #405169;color:var(--ink);padding:11px 12px;font:inherit;font-size:12px;cursor:pointer;transition:background .15s,transform .15s}
+button:hover{background:#2a3d51;transform:translateY(-1px)}button:disabled{opacity:.45;cursor:not-allowed;transform:none}
+button.primary{background:var(--teal);color:#072b27;border-color:var(--teal);font-weight:740}button.primary:hover{background:#91ffe2}
+.controls{display:grid;grid-template-columns:1fr 1fr;gap:8px}.wide{grid-column:span 2}
+.note{font-size:11px;line-height:1.65;color:var(--muted);border-top:1px solid var(--edge);padding-top:16px;margin-top:20px}
+small.kicker{display:block;color:var(--teal);text-transform:uppercase;font-size:10px;letter-spacing:1.6px;margin-bottom:7px}
+.visual-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}.visual-head h2{font-size:18px;margin-bottom:5px}
+#gridwrap{min-height:390px;display:grid;place-items:center;background:radial-gradient(circle,#102336 0,#0d1522 65%);border:1px solid #263648;border-radius:13px;margin-top:20px;overflow:hidden;position:relative}
+#grid{width:min(100%,515px);height:auto;max-height:570px}
+.legend{display:flex;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:11px;margin:13px 0 5px}
+.legend b{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px}
+.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:18px}.metric{background:#0b1522;border:1px solid #243247;padding:12px;border-radius:12px}.metric strong{font-size:22px;display:block;font-variant-numeric:tabular-nums;letter-spacing:-1px}.metric span{font-size:10px;color:var(--muted)}
+#actions{padding-top:10px;display:flex;flex-wrap:wrap;gap:5px}#actions span{font-size:10px;border:1px solid #304359;color:#a8bdcf;background:#132231;padding:5px 7px;border-radius:6px}
+.chat{display:flex;flex-direction:column;min-height:650px}.chat .sub{margin-bottom:10px}
+#messages{flex:1;min-height:430px;max-height:600px;overflow-y:auto;display:flex;flex-direction:column;gap:12px;padding:12px 1px}
+.msg{max-width:95%;font-size:12px;line-height:1.6;padding:11px 13px;border-radius:12px;white-space:pre-wrap;word-break:break-word}
+.msg.ai{background:#1b2b3c;border:1px solid #30465c;align-self:flex-start}
+.msg.user{background:#25483f;color:#d9fff1;border:1px solid #3c7164;align-self:flex-end}
+.msg small{display:block;color:#8296aa;font-size:9px;margin-top:7px}
+.chatbar{display:flex;gap:7px;margin-top:12px}.chatbar input{flex:1;min-width:0}.chatbar button{min-width:60px}
+.suggestions{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}.suggestions button{padding:6px 9px;font-size:10px;border-radius:99px}
+.disclaimer{max-width:1500px;margin:0 auto 25px;padding:0 28px;color:#8294a9;font-size:11px;line-height:1.7}
+#notice{font-size:11px;color:var(--teal);margin:12px 0 0;min-height:17px}
+@media(max-width:1250px){main{grid-template-columns:240px minmax(340px,1fr)}.chat{grid-column:1/-1;min-height:360px}#messages{max-height:270px;min-height:220px}}
+@media(max-width:720px){header{padding:18px}main{padding:12px;grid-template-columns:1fr}.chat{grid-column:auto}.metrics{grid-template-columns:repeat(2,1fr)}.panel{padding:16px}#gridwrap{min-height:300px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><div class="mark">◈</div><div><h1>Emergent Cells <span style="font-weight:350;color:#aabccf">Studio</span></h1><small>LOCAL INTELLIGENCE RESEARCH · INTERACTIVE LAB v0.1</small></div></div>
+  <div class="health"><span class="dot"></span><span>Runs locally · CPU-first</span></div>
+</header>
+<main>
+<section class="panel">
+ <small class="kicker">01 / Environment</small><h2>Experiment setup</h2>
+ <p class="sub">Agent observes nearby walls, adjacent targets, actions and rewards. No global map enters the policy.</p>
+ <div class="field"><label for="seed">Deterministic seed</label><input id="seed" type="number" value="13001" min="0" max="10000000"/></div>
+ <div class="field"><label for="mode">World dynamics</label><select id="mode">
+ <option value="normal">Local sensor-only maze</option>
+ <option value="changed">Maze with a closed passage</option>
+ <option value="stochastic">Stochastic motors · belief memory</option>
+ <option value="both">Stochastic motors + closed passage</option>
+ </select></div>
+ <div class="field"><label for="controller">Navigation network</label><select id="controller"><option value="event">Event-driven local cells</option><option value="local">Synchronous diffusion</option></select></div>
+ <div class="controls"><button id="reset" class="wide primary">Start new mission</button><button id="step">Advance 1</button><button id="run20">Advance 20</button><button id="finish" class="wide">Autopilot · up to 160 steps</button><button id="fault" class="wide">Simulate loss of one cell</button></div>
+ <p id="notice"></p>
+ <h3>Scientific boundaries</h3>
+ <p class="note">The navigator includes engineered relative motor geometry, local exploration values and (in stochastic mode) an authored probabilistic beam filter. The optional chat uses an existing <b>Qwen via local Ollama</b> model. Neither is proof of emergent general intelligence.</p>
+</section>
+<section class="panel">
+ <div class="visual-head"><div><small class="kicker">02 / Cellular world</small><h2>Learned spatial memory</h2><p class="sub">Only visited locations appear. The origin is relative to the agent's starting position.</p></div><span id="mission" style="font-size:11px;color:var(--teal);border:1px solid #2b655a;border-radius:12px;padding:7px">READY</span></div>
+ <div id="gridwrap"><canvas id="grid" width="560" height="520"></canvas></div>
+ <div class="legend"><span><b style="background:#4fe0bc"></b>Estimated agent</span><span><b style="background:#18364a"></b>Observed cell</span><span><b style="background:#e8ad65"></b>Possible location</span><span><b style="background:#334356"></b>Unknown</span></div>
+ <div class="metrics">
+   <div class="metric"><strong id="goals">0/3</strong><span>Goals reached</span></div>
+   <div class="metric"><strong id="steps">0</strong><span>Actions / 160</span></div>
+   <div class="metric"><strong id="cells">0</strong><span>Cells learned</span></div>
+   <div class="metric"><strong id="hypotheses">1</strong><span>Pose hypotheses</span></div>
+ </div>
+ <h3>Messages and recent actions</h3><p class="sub">Messages: <b id="messages-delivered">0</b></p><div id="actions"></div>
+</section>
+<section class="panel chat">
+  <small class="kicker">03 / Local interaction</small><h2>Research assistant</h2>
+  <p class="sub">Built-in agent commands work offline. Open-ended explanations use an optional separate local Qwen language model.</p>
+  <div id="messages"><div class="msg ai">Welcome to Emergent Cells Studio. Start a mission, explore the local world or ask about its internal state.<small>LOCAL ENGINE</small></div></div>
+  <div class="suggestions">
+    <button data-q="status">Show status</button>
+    <button data-q="run 20">Explore 20 steps</button>
+    <button data-q="What are the scientific limitations?">Explain architecture</button>
+  </div>
+  <div class="chatbar"><input id="message" placeholder="Ask a question or type run 20"/><button id="send" class="primary">Send</button></div>
+</section>
+</main>
+<p class="disclaimer">Research prototype. Agent input is limited to local sensor readings; the on-screen telemetry is for human inspection. The local language model is a pre-existing foundation model, not a model trained from cellular interactions. No external account, cloud API or privileged robot hardware is required.</p>
+<script>
+"use strict";
+let state=null,busy=false;
+const el=id=>document.getElementById(id);
+const api=async(path,data)=>{let o=await fetch(path,{method:data?'POST':'GET',headers:{'Content-Type':'application/json'},body:data?JSON.stringify(data):undefined});if(!o.ok){const e=await o.text();throw new Error(e.slice(0,190))}return await o.json()};
+const notice=t=>el('notice').textContent=t;
+function draw(s){
+ const cv=el('grid'),ctx=cv.getContext('2d');ctx.clearRect(0,0,560,520);
+ ctx.fillStyle='#0b1624';ctx.fillRect(0,0,560,520);
+ const cells=s.cells||[],positions=cells.map(c=>[c.x,c.y]),[px,py]=s.estimated_position;
+ positions.push([px,py]);
+ const xs=positions.map(p=>p[0]),ys=positions.map(p=>p[1]);
+ let minx=Math.min(...xs)-2,maxx=Math.max(...xs)+2,miny=Math.min(...ys)-2,maxy=Math.max(...ys)+2;
+ let n=Math.max(maxx-minx+1,maxy-miny+1,9),size=Math.max(9,Math.min(36,Math.floor(465/n)));
+ const x0=280-(maxx-minx+1)*size/2,y0=255-(maxy-miny+1)*size/2;
+ let known=new Map(cells.map(c=>[c.x+','+c.y,c]));
+ const cpos=(x,y)=>[x0+(x-minx)*size,y0+(y-miny)*size];
+ ctx.strokeStyle='#25364a';ctx.lineWidth=1;
+ for(let x=minx;x<=maxx;x++)for(let y=miny;y<=maxy;y++){
+   let [sx,sy]=cpos(x,y);ctx.fillStyle=known.has(x+','+y)?'#15384a':'#122030';
+   ctx.fillRect(sx+1,sy+1,size-2,size-2);
+ }
+ for(let c of cells){
+   let [sx,sy]=cpos(c.x,c.y);ctx.strokeStyle='#8db0be';ctx.lineWidth=Math.max(2,size*.075);
+   let w=c.walls;if(w[0]){ctx.beginPath();ctx.moveTo(sx,sy);ctx.lineTo(sx+size,sy);ctx.stroke()}
+   if(w[1]){ctx.beginPath();ctx.moveTo(sx,sy+size);ctx.lineTo(sx+size,sy+size);ctx.stroke()}
+   if(w[2]){ctx.beginPath();ctx.moveTo(sx,sy);ctx.lineTo(sx,sy+size);ctx.stroke()}
+   if(w[3]){ctx.beginPath();ctx.moveTo(sx+size,sy);ctx.lineTo(sx+size,sy+size);ctx.stroke()}
+ }
+ const [ax,ay]=cpos(px,py);ctx.shadowBlur=22;ctx.shadowColor='#4fe0bc';ctx.fillStyle='#4fe0bc';ctx.beginPath();ctx.arc(ax+size/2,ay+size/2,Math.max(4,size*.28),0,Math.PI*2);ctx.fill();ctx.shadowBlur=0;
+ const [ox,oy]=cpos(0,0);ctx.font='bold 10px Segoe UI';ctx.fillStyle='#f3b96c';ctx.fillText('START',ox,oy-6);
+}
+function render(s){
+ state=s;el('goals').textContent=s.waypoints+'/3';el('steps').textContent=s.steps;el('cells').textContent=s.discovered_cells;el('hypotheses').textContent=s.hypotheses;
+ el('mission').textContent=s.completed?'COMPLETED':s.done?'BUDGET EXHAUSTED':'EXPLORING';el('mission').style.color=s.completed?'#4fe0bc':'#b4bacd';
+ el('messages-delivered').textContent=(s.messages||0).toLocaleString();
+ el('actions').innerHTML=(s.latest_actions||[]).map(x=>'<span>#'+x.step+' '+x.direction+' '+(x.reward>0?'✦':'')+'</span>').join('');
+ draw(s);
+}
+async function handle(fn){
+ if(busy)return;busy=true;['reset','step','run20','finish','fault','send'].forEach(x=>el(x).disabled=true);
+ try{await fn()}catch(e){notice('Request failed: '+e.message)}finally{busy=false;['reset','step','run20','finish','fault','send'].forEach(x=>el(x).disabled=false)}
+}
+el('reset').onclick=()=>handle(async()=>{
+ const m=el('mode').value,v=parseInt(el('seed').value,10);
+ let s=await api('/api/reset',{seed:v,changed:m==='changed'||m==='both',stochastic:m==='stochastic'||m==='both',controller:el('controller').value});
+ render(s);notice('New mission. Only local readings enter the policy.');
+});
+el('step').onclick=()=>handle(async()=>{render(await api('/api/step',{count:1}));notice('One local action executed.')});
+el('run20').onclick=()=>handle(async()=>{render(await api('/api/step',{count:20}));notice('Agent advanced with local observations.')});
+el('finish').onclick=()=>handle(async()=>{render(await api('/api/step',{count:160}));notice('Agent reached a terminal state or exhausted 160 actions.')});
+el('fault').onclick=()=>handle(async()=>{render(await api('/api/fault',{}));notice('Simulated local cell-memory failure. Other cells continue operating.')});
+function addMessage(text,type,src){
+ const div=document.createElement('div');div.className='msg '+type;
+ div.textContent=text;if(src){let small=document.createElement('small');small.textContent=src;div.appendChild(small)}
+ el('messages').appendChild(div);el('messages').scrollTop=el('messages').scrollHeight;
+}
+async function ask(q){
+ if(!q.trim())return;
+ addMessage(q,'user');el('message').value='';
+ await handle(async()=>{
+  notice('Processing local request…');
+  const result=await api('/api/chat',{message:q});
+  addMessage(result.answer,'ai',result.powered_by.toUpperCase());
+  if(result.status)render(result.status);notice('Ready');
+ });
+}
+el('send').onclick=()=>ask(el('message').value);
+el('message').addEventListener('keydown',e=>{if(e.key==='Enter')ask(el('message').value)});
+document.querySelectorAll('[data-q]').forEach(x=>x.onclick=()=>ask(x.dataset.q));
+api('/api/status').then(render).catch(e=>notice('Connection failed: '+e.message));
+</script>
+</body>
+</html>
